@@ -167,13 +167,23 @@ x <- simec_atraso %>%
 
 simec_atraso_concluidas <- simec_atraso %>%
   filter(Situação == "Concluída") %>%
-  mutate(atraso_datas_finais = ifelse(Data.Prevista.de.Conclusão.da.Obra < 
-                                        Data.da.Última.Vistoria.do.Estado.ou.Município, "atraso", "sem atraso"),
-         data_prevista_cronograma = Data.de.Assinatura.do.Contrato + tempo_exe_dias ,
-         duracao = Data.Prevista.de.Conclusão.da.Obra - Data.de.Assinatura.do.Contrato) 
+  mutate(data_ideal = Data.de.Assinatura.do.Contrato + tempo_exe_dias,
+         data_final_gov = Data.Prevista.de.Conclusão.da.Obra, 
+         data_final_gov = ifelse(is.na(Data.Prevista.de.Conclusão.da.Obra), Data.da.Última.Vistoria.do.Estado.ou.Município,
+                                 Data.Prevista.de.Conclusão.da.Obra))
+simec_atraso_concluidas$data_ideal <- as.Date(simec_atraso_concluidas$data_ideal , "%Y-%m-%d")
+simec_atraso_concluidas$data_final_gov <- as.Date(simec_atraso_concluidas$data_final_gov , "%Y-%m-%d")
 
-simec_atraso_concluidas
-##
+simec_atraso_concluidas <- simec_atraso_concluidas %>%
+  mutate(atraso = data_final_gov - data_ideal,
+         entregue_atrasada = ifelse(atraso > 0, "sim", "não"))
+
+simec_atraso_concluidas %>%
+  group_by(entregue_atrasada) %>%
+  summarise(atraso = mean(atraso))
+
+
+## Easter Egg
 
 simec_atraso_concluidas_pagto <- simec_atraso_concluidas %>%
   group_by(Tipo.do.Projeto) %>%
