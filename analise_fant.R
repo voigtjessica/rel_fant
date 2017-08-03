@@ -244,153 +244,88 @@ graf_pagto_ano %>%
   geom_line() + xlab("") + ylab("") + scale_y_continuous(labels = scales::dollar) +
   scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw()
 
+#6. obras em execução e iniciadas
+#todas as obras que têm Data de assinatura do contrato foram consideradas como iniciadas
 
+obras_iniciadas <- simec_atraso %>%
+  filter(!is.na(Data.de.Assinatura.do.Contrato),
+         Situação != "Concluída") %>%
+  group_by(Situação) %>%
+  summarise(obras = n())
 
-  
+sum(obras_iniciadas$obras) - 120 #obras canceladas #numero de obras iniciadas exceto canceladas e concluidas
+
 #quantas obras já deveriam ter sido concluídas de fato foram?
 
 dia_final <- as.Date("2017-07-27")
 
-#das obras que deveriam estar prontas até 27/27/2017 , quantas foram entregues e quantas estão atrasadas?
+#7. Obras iniciadas e atrasadas:
 
-#obras concluidas:
+#para obras que ainda não foram concluidas
+#e que não foram canceladas
+#e que possuem Data de assinatura de contrato ou constam como "em execução
+#e cujos projetos tem tempo de execução conhecida
 
-simec_gastos_tb1   #4333 obras concluídas
-
-simec_atraso %>%
-  filter(Situação == "Execução", 
-         is.na(Data.Prevista.de.Conclusão.da.Obra)) %>%
-  mutate(num = 1) %>%
-  group_by(Data.Prevista.de.Conclusão.da.Obra) %>%
-  summarise(obras_sem_data = sum(num))   #95 obras em execução não têm data prevista de entrega
-
-simec_atraso %>%
-  filter(is.na(tempo_exe_dias),
-         is.na(Data.Prevista.de.Conclusão.da.Obra),
-         Situação != "Concluída",
-         !is.na(primeira_data)) %>%
-  group_by(Situação) %>%
-  summarise(obras_projetos_sem_prazo = n())
-#14+2+27+7+19 = 69 # Em 69 casos as obras já registraram ao menos um repasse mas não contam com 
-#data de entrega ou projeto com execução conhecida de modo que seja possível estipular uma data de entrega
+#OBS: A data da última vistoria como procy da entrega vale só para as obras já concluídas
 
 execucao_e_atrasos <- simec_atraso %>%
-  filter(Situação != "Concluída",                           #para obras que ainda não foram concluidas
-         !is.na(primeira_data) | Situação == "Execução",    #e que já receberam ao menos um repasse ou constam como "em execução
-         !is.na(tempo_exe_dias) | !is.na(Data.Prevista.de.Conclusão.da.Obra),         #e cujos projetos tem tempo de execução conhecida  
-         Situação!= "Cancelada") %>%    #e que não foram canceladas
+  filter(Situação != "Concluída",           
+         Situação!= "Obra Cancelada",
+         !is.na(Data.de.Assinatura.do.Contrato),    
+         !is.na(tempo_exe_dias) | !is.na(Data.Prevista.de.Conclusão.da.Obra)) %>%  
   mutate(data_estimada_de_entrega = Data.Prevista.de.Conclusão.da.Obra,
          data_estimada_de_entrega = case_when(!is.na(Data.Prevista.de.Conclusão.da.Obra) ~ data_estimada_de_entrega,
-                                              TRUE ~ primeira_data + tempo_exe_dias),
-         data_extracao_planilha = dia_final,
-         ja_devia_estar_concluida = ifelse(data_estimada_de_entrega <= data_extracao_planilha ,
+                                              TRUE ~ Data.de.Assinatura.do.Contrato + tempo_exe_dias),
+         dia_final = dia_final,
+         ja_devia_estar_concluida = ifelse(data_estimada_de_entrega <= dia_final ,
                                            "sim", "não"),
          tempo_de_atraso = dia_final,
          tempo_de_atraso = dia_final - data_estimada_de_entrega)
 
+# 7 Quantidade de obras atrasadas -
 
-sum(is.na(execucao_e_atrasos$data_estimada_de_entrega)) #deu conta de todos os casos
-sum(is.na(execucao_e_atrasos$ja_devia_estar_concluida)) 
-sum(is.na(execucao_e_atrasos$primeira_data)) 
-
-execucao_e_atrasos %>%
+obras_atrasadas <- execucao_e_atrasos %>%
   group_by(ja_devia_estar_concluida) %>%
   summarise(obras = n())
 
-# não  1701
-# sim  3258 66%
-# total 4959
+#Quantas obras já deviam estar concluídas e qual é a situação de cada uma delas:
 
-execucao_e_atrasos %>%
-  filter(Situação == "Execução") %>%
-  group_by(ja_devia_estar_concluida) %>%
+obras_atrasadas_sit <- execucao_e_atrasos %>%
+  filter(ja_devia_estar_concluida == "sim") %>%
+  group_by(Situação) %>%
   summarise(obras = n())
 
-# ja_devia_estar_concluida obras
-# <chr> <int>
-# 1                      não  1327
-# 2                      sim   708 35%
+### Qual é o atraso médio das obras iniciadas?
 
-
-execucao_e_atrasos %>%
-  group_by(Situação, ja_devia_estar_concluida ) %>%
-  summarise(obras = n()) %>%
-  spread(ja_devia_estar_concluida, obras) %>%
-  rename(iniciada_sem_atraso = não,
-         iniciada_com_atraso = sim,
-         situacao = Situação) %>%
-  mutate(total_iniciadas = iniciada_sem_atraso + iniciada_com_atraso) %>%
-  left_join(simec_gastos_tb1) %>%
-  rename(obras_totais = obras) %>%
-  select(situacao, obras_totais, total_iniciadas, iniciada_sem_atraso, iniciada_com_atraso)
-
-# # Groups:   situacao [8]
-#                      situacao       obras_totais   total_iniciadas   iniciada_sem_atraso    iniciada_com_atraso
-# <chr>        <dbl>           <int>               <int>               <int>
-# 1                  Contratação          155             141                  10                 131
-# 2              Em Reformulação          315             315                   3                 312
-# 3                     Execução         2037            2035                1327                 708
-# 4                    Inacabada          566             566                  19                 547
-# 5                    Licitação          330             303                   3                 300
-# 6               Obra Cancelada          314             307                   1                 306
-# 7                   Paralisada          584             584                 292                 292
-# 8 Planejamento pelo proponente          727             708                  46                 662
-# 
-
-
-simec_atraso  %>%
-  filter(is.na(tempo_exe_meses),
-         is.na(Data.Prevista.de.Conclusão.da.Obra),
-         Situação != "Concluída",
-         !is.na(primeira_data)) %>%
-  group_by(Tipo.do.Projeto) %>%
-  summarise(obras = n())
-
-
-# Qual é o atraso médio das obras iniciadas?
-
-execucao_e_atrasos %>%
+atraso_medio_execucao <- execucao_e_atrasos %>%
   filter(ja_devia_estar_concluida == "sim",
          Situação == "Execução") %>%
   group_by(ja_devia_estar_concluida) %>%
   summarise(tempo_medio_atraso = mean(tempo_de_atraso)) #331 days
 
-execucao_e_atrasos %>%
-  filter(ja_devia_estar_concluida == "sim",
-         Situação != "Execução") %>%
+atraso_medio_iniciadas <- execucao_e_atrasos %>%
+  filter(ja_devia_estar_concluida == "sim") %>%
   group_by(ja_devia_estar_concluida) %>%
-  summarise(tempo_medio_atraso = mean(tempo_de_atraso)) #1088 days ou 2.9 anos de atraso entre as 
-#obras que estão paralizadas
+  summarise(tempo_medio_atraso = mean(tempo_de_atraso)) 
 
+# 9. Obras entregues por ano
 
-obras_iniciadas <-  execucao_e_atrasos %>%
-  group_by(Situação) %>%
-  summarise(obras = n()) %>%
-  arrange(desc(obras))
-
-total <- c("Total", sum(obras_iniciadas$obras))
-
-obras_iniciadas  <- obras_iniciadas  %>%
-  rbind(total)
-
-setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\tadepe\\fantastico")
-write.table(obras_iniciadas, file="obras_iniciadas.csv", row.names = FALSE, sep=";", dec=",")
-
-#data de conclusão da obra com Data prevista
-
-ano_entrega <- simec_atraso %>%
+ano_conclusao <- simec_atraso%>%
   filter(Situação == "Concluída") %>%
-  select(Data.Prevista.de.Conclusão.da.Obra)
+  mutate(ano_prev_concl = format(Data.Prevista.de.Conclusão.da.Obra, "%Y"),
+         ano_data.vist = format(Data.da.Última.Vistoria.do.Estado.ou.Município, "%Y"),
+         ano_concluida = ano_prev_concl , 
+         ano_concluida = ifelse(is.na(ano_concluida), ano_data.vist, ano_concluida))
 
-count(ano_entrega$Data.Prevista.de.Conclusão.da.Obra)
-##
-programas <- simec_gastos %>%
-  mutate(programa = ifelse(Tipo.do.Projeto == "Espaço Educativo - 08 Salas" |
-                             Tipo.do.Projeto == "Espaço Educativo - 10 Salas", 
-                           "Fundaescola", "Proinfância"),
-         num = 1) %>%
-  filter(Situação != "Concluída") %>%   #obras que não foram concluídas
-  group_by(programa, Situação) %>%
-  summarise(obras = sum(num))
+graf_ano_conclusao <- ano_conclusao %>%
+  group_by(ano_concluida) %>%
+  summarise(obras = n()) %>%
+  filter(ano_concluida != "<NA>",
+         ano_concluida != "2018") %>%
+  mutate(obras = as.numeric(obras),
+         ano_concluida = as.numeric(ano_concluida))
 
-programas
+graf_ano_conclusao %>%
+  ggplot(aes(x=ano_concluida, y=obras, group=1)) +
+  geom_line() + xlab("") + ylab("") +
+  scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw()
