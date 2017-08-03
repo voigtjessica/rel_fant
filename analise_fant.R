@@ -183,7 +183,7 @@ simec_atraso_concluidas %>%
   summarise(atraso = mean(atraso))
 
 
-## Easter Egg
+## Easter Egg 22
 
 simec_atraso_concluidas_pagto <- simec_atraso_concluidas %>%
   group_by(Tipo.do.Projeto) %>%
