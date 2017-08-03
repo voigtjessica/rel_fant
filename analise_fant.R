@@ -4,7 +4,7 @@ library(tidyverse)
 library(stringr)
 library(tidyr)
 
-
+#Endereço para achar as obras: http://simec.mec.gov.br/painelObras/dadosobra.php?obra=
 setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\planilhas\\tadepe")
 load("arquivos_simec_fin_v2.RData")
 
@@ -183,7 +183,7 @@ simec_atraso_concluidas %>%
   summarise(atraso = mean(atraso))
 
 
-## Easter Egg
+##4. Total gasto até hoje (nas concluídas) e total pactuado até hoje
 
 simec_atraso_concluidas_pagto <- simec_atraso_concluidas %>%
   group_by(Tipo.do.Projeto) %>%
@@ -194,12 +194,59 @@ simec_atraso_concluidas_pagto <- simec_atraso_concluidas %>%
 
 simec_atraso_concluidas_pagto
 
-x <- sum(simec_atraso_concluidas_pagto$valor_total_gasto) 
-y <- sum(simec_atraso_concluidas_pagto$valor_total_pactuado) 
-x/y - 1 #foi gasto 4% a mais do que o pactuado
-x - y   #259.056.016 ou cerca de 259 mil reais
+total_pagto_concluidas <- sum(simec_atraso_concluidas_pagto$valor_total_gasto) 
+total_pactuado_concluidas <- sum(simec_atraso_concluidas_pagto$valor_total_pactuado) 
+total_pagto_concluidas/total_pactuado_concluidas - 1 #foi gasto 4% a mais do que o pactuado
+total_pagto_concluidas - total_pactuado_concluidas   #259.056.016 ou cerca de 259 mil reais
+
+# 5. Gasto por ano (efeito da eleição)
+
+library(scales)
+locale("pt", decimal_mark = ",")
+
+pagamentos_ano_simec1 <- simec_fin1 %>%
+  mutate(Valor.do.Pagamento = str_trim(Valor.do.Pagamento),
+         Valor.do.Pagamento = gsub("R\\$ ", "", Valor.do.Pagamento),
+         Valor.do.Pagamento = gsub("\\.", "", Valor.do.Pagamento),
+         Valor.do.Pagamento = as.numeric(gsub(",", "\\.", Valor.do.Pagamento)),
+         Data.de.Pagamento = as.Date(Data.de.Pagamento, "%d/%m/%Y")) %>%
+  rename(data_pagamento_ou_repasse = Data.de.Pagamento,
+         valor_pagamento_ou_repasse = Valor.do.Pagamento) %>%
+  select(id, data_pagamento_ou_repasse, valor_pagamento_ou_repasse)
+
+pagamentos_ano_simec2 <- simec_fin2 %>%
+  mutate(Valor.Repassado = str_trim(Valor.Repassado),
+         Valor.Repassado = gsub("R\\$ ", "", Valor.Repassado),
+         Valor.Repassado = gsub("\\.", "", Valor.Repassado),
+         Valor.Repassado = as.numeric(gsub(",", "\\.", Valor.Repassado)),
+         Data.do.Repasse = as.Date(Data.do.Repasse, "%d/%m/%Y")) %>%
+  rename(data_pagamento_ou_repasse = Data.do.Repasse,
+         valor_pagamento_ou_repasse = Valor.Repassado) %>%
+  select(id, data_pagamento_ou_repasse, valor_pagamento_ou_repasse)
+
+pagamento_ano_simec <- bind_rows(pagamentos_ano_simec1, pagamentos_ano_simec2) %>%
+  mutate(mes_ano = format(data_pagamento_ou_repasse, "%m/%Y")) %>%
+  left_join(ipca, by="mes_ano") %>%
+  mutate(pagto_repasse_cte_jun17 = valor_pagamento_ou_repasse/indice,
+         ano = format(data_pagamento_ou_repasse, "%Y",
+                      ano_eleitoral = ifelse(ano == 2002 |
+                                               ano == 2006 | 
+                                               ano == 2010 | 
+                                               ano == 2014 , 
+                                             "sim", "não"))) 
+graf_pagto_ano <- pagamento_ano_simec %>%
+  group_by(ano) %>%
+  summarise(total_pagto_repasse_cte_jun17 = sum(pagto_repasse_cte_jun17)) %>%
+  mutate(ano = as.numeric(ano))
+
+graf_pagto_ano %>%
+  ggplot(aes(x=ano, y=total_pagto_repasse_cte_jun17)) +
+  geom_line() + xlab("") + ylab("") + scale_y_continuous(labels = scales::dollar) +
+  scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw()
 
 
+
+  
 #quantas obras já deveriam ter sido concluídas de fato foram?
 
 dia_final <- as.Date("2017-07-27")
