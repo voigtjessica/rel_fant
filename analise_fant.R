@@ -2,6 +2,7 @@
 
 library(tidyverse)
 library(stringr)
+library(tidyr)
 
 
 setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\planilhas\\tadepe")
@@ -46,6 +47,7 @@ pagamentos_simec1 <- simec_fin1 %>%
   group_by(id) %>%
   summarise(pagamento = sum(Valor.do.Pagamento),
             primeira_data = min(Data.de.Pagamento),
+            segunda_data = rev(sort(Data.de.Pagamento)[2]),
             ultima_data = max(Data.de.Pagamento))
 
 pagamentos_simec2 <- simec_fin2 %>%
@@ -98,8 +100,7 @@ simec_gastos %>%
 ######################################################################################################
 #Jessica começou a partir daqui 
 
-#Quantas escolas foram pactuadas no âmbito do proinfância e qual é a situação de cada
-#uma delas?
+#1 Tabela de obras do proinfância e situação de cada uma das obras
 
 simec_gastos_tb <- simec_gastos %>%
   mutate(num=1) %>%
@@ -115,10 +116,10 @@ linha_final <- data.frame(situacao = "total", pagto, obras)
 
 simec_gastos_tb1 <- bind_rows(simec_gastos_tb, linha_final) %>%
   mutate(perc_pagto = round(pagto/9656262359 ,2) ,
-         pecr_obras = round( obras/9375 ,2))
+         pecr_obras = round( obras/9375 ,2))    #1
 
 
-#Calculando obras atrasadas
+#2. Calculando tempo de duração das obras
 
 Tipo.do.Projeto <- c("Escola de Educação Infantil Tipo B",
                      "Escola de Educação Infantil Tipo C",
@@ -136,21 +137,40 @@ tempo_exe_meses <- c(9,6,6,4,13,5,5,7,7,11,9)
 
 execucao <- data.frame(Tipo.do.Projeto, tempo_exe_meses)
 
-simec_atraso <- simec_gastos %>%
+simec_atraso <- simec_gastos %>%   #2
   left_join(execucao) %>%
   mutate(tempo_exe_dias = tempo_exe_meses*30)
 
-simec_atraso$Data.Prevista.de.Conclusão.da.Obra <- as.Date(simec_atraso$Data.Prevista.de.Conclusão.da.Obra ,
-                                                           "%d/%m/%Y")
-simec_atraso$Data.da.Última.Vistoria.do.Estado.ou.Município <- as.Date(simec_atraso$Data.da.Última.Vistoria.do.Estado.ou.Município , 
-                                                                       "%Y-%m-%d")
+simec_atraso$Data.Prevista.de.Conclusão.da.Obra <- as.Date(simec_atraso$Data.Prevista.de.Conclusão.da.Obra , "%d/%m/%Y")
+simec_atraso$Data.da.Última.Vistoria.do.Estado.ou.Município <- as.Date(simec_atraso$Data.da.Última.Vistoria.do.Estado.ou.Município , "%Y-%m-%d")
 simec_atraso$primeira_data <- as.Date(simec_atraso$primeira_data ,  "%Y-%m-%d")
+simec_atraso$Data.de.Assinatura.do.Contrato <- as.Date(simec_atraso$Data.de.Assinatura.do.Contrato, "%Y-%m-%d")
+
+#teste se podemos usar tanto Data.Prevista.de.Conclusão.da.Obra quanto Data.da.Última.Vistoria.do.Estado.ou.Município
+
+j <- simec_atraso %>%
+  filter(Situação == "Concluída",
+         !is.na(Data.Prevista.de.Conclusão.da.Obra)) %>%
+  mutate(dif_finais = Data.Prevista.de.Conclusão.da.Obra - Data.da.Última.Vistoria.do.Estado.ou.Município, na.rm=T)
+
+j %>%
+  ggplot(aes(dif_finais)) + geom_histogram() #são muito próximas
+
+x <- simec_atraso %>%
+  filter(Situação == "Concluída") %>%  #4333 obras
+  filter(!is.na(Data.Prevista.de.Conclusão.da.Obra) | !is.na(Data.da.Última.Vistoria.do.Estado.ou.Município))   #4322
+
+#Observação : teremos como data de término oficial da obra Data.Prevista.de.Conclusão.da.Obra |
+# Data.da.Última.Vistoria.do.Estado.ou.Município
+
+#3. Atraso das obras concluidas
 
 simec_atraso_concluidas <- simec_atraso %>%
   filter(Situação == "Concluída") %>%
-  mutate(atraso_datas_finais = ifelse(Data.Prevista.de.Conclusão.da.Obra < Data.da.Última.Vistoria.do.Estado.ou.Município, "atraso", "sem atraso"),
-         data_prevista_cronograma = primeira_data + tempo_exe_dias ,
-         duracao = Data.Prevista.de.Conclusão.da.Obra - primeira_data ) 
+  mutate(atraso_datas_finais = ifelse(Data.Prevista.de.Conclusão.da.Obra < 
+                                        Data.da.Última.Vistoria.do.Estado.ou.Município, "atraso", "sem atraso"),
+         data_prevista_cronograma = Data.de.Assinatura.do.Contrato + tempo_exe_dias ,
+         duracao = Data.Prevista.de.Conclusão.da.Obra - Data.de.Assinatura.do.Contrato) 
 
 simec_atraso_concluidas
 ##
@@ -317,4 +337,3 @@ programas <- simec_gastos %>%
   summarise(obras = sum(num))
 
 programas
-
