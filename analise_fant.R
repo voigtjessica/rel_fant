@@ -187,7 +187,11 @@ simec_atraso_concluidas %>%
   summarise(atraso = mean(atraso))
 
 
+<<<<<<< HEAD
 ##4. Total gasto até hoje (nas concluídas) e total pactuado até hoje
+=======
+## Easter Egg 22
+>>>>>>> f440e4f8ed9745696f3e1a4fbe3d9384ce6d3c34
 
 simec_atraso_concluidas_pagto <- simec_atraso_concluidas %>%
   group_by(Tipo.do.Projeto) %>%
