@@ -290,6 +290,16 @@ sum(custo_paralisadas$Obras)
 
 write.table(custo_paralisadas, file="custo_paralisadas.csv", row.names = F, sep=";")
 
+custo_paradas_abandonadas <- simec_atraso %>%
+  filter(!is.na(Data.de.Assinatura.do.Contrato),
+         Situação != "Concluída",
+         Situação != "Execução") %>%
+  group_by(Situação) %>%
+  summarise(Obras = n(), Custo = sum(pagamento_cte_jun17)) %>%
+  mutate(Custo = round(Custo/1000000, 2))
+
+sum(custo_paradas_abandonadas$Custo)
+
 #quantas obras já deveriam ter sido concluídas de fato foram?
 
 dia_final <- as.Date("2017-07-27")
