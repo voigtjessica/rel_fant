@@ -329,3 +329,5 @@ graf_ano_conclusao %>%
   ggplot(aes(x=ano_concluida, y=obras, group=1)) +
   geom_line() + xlab("") + ylab("") +
   scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw()
+
+#Dados inconsistentes e inexistentes
