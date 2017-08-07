@@ -1,8 +1,11 @@
 ## Análise dos dados pós-raspagem
 
+library(dplyr)
 library(tidyverse)
 library(stringr)
 library(tidyr)
+library(lubridate)
+library(scales)
 
 #Endereço para achar as obras: http://simec.mec.gov.br/painelObras/dadosobra.php?obra=
 setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\planilhas\\tadepe")
@@ -204,7 +207,6 @@ total_pagto_concluidas - total_pactuado_concluidas   #259.056.016 ou cerca de 25
 
 # 5. Gasto por ano (efeito da eleição)
 
-library(scales)
 locale("pt", decimal_mark = ",")
 
 pagamentos_ano_simec1 <- simec_fin1 %>%
@@ -255,50 +257,56 @@ graf_pagto_ano %>%
   scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
   theme(panel.grid.minor = element_blank())
 
-
-
-
 #6. obras em execução e iniciadas
 #todas as obras que têm Data de assinatura do contrato foram consideradas como iniciadas
 
 obras_iniciadas <- simec_atraso %>%
   filter(!is.na(Data.de.Assinatura.do.Contrato),
          Situação != "Concluída") %>%
+  mutate(data_estimada_de_entrega = Data.Prevista.de.Conclusão.da.Obra,
+         data_estimada_de_entrega = case_when(!is.na(Data.Prevista.de.Conclusão.da.Obra) ~ data_estimada_de_entrega,
+                                              TRUE ~ Data.de.Assinatura.do.Contrato + tempo_exe_dias),
+         dia_final = dia_final,
+         ja_devia_estar_concluida = ifelse(data_estimada_de_entrega <= dia_final ,
+                                           "sim", "não"),
+         tempo_de_atraso = dia_final,
+         tempo_de_atraso = dia_final - data_estimada_de_entrega)
+
+obras_iniciadas_tb <- obras_iniciadas %>%
   group_by(Situação) %>%
   summarise(Obras = n(), Custo = sum(pagamento_cte_jun17)) %>%
   mutate(Custo = round(Custo/1000000, 2)) %>%
   arrange(desc(Custo)) %>%
   mutate(Custo = as.character(Custo))
-  
-
-obras_iniciadas$Custo <- paste(obras_iniciadas$Custo, "mi")
-obras_iniciadas$Custo <- gsub("[.]", ",", obras_iniciadas$Custo)
-
-obras_iniciadas         
 
 
-sum(obras_iniciadas$obras) - 120 #obras canceladas #numero de obras iniciadas exceto canceladas e concluidas
+obras_iniciadas_tb$Custo <- paste(obras_iniciadas_tb$Custo, "mi")
+obras_iniciadas_tb$Custo <- gsub("[.]", ",", obras_iniciadas_tb$Custo)
 
-write.table(obras_iniciadas, file="obras_iniciadas.csv", row.names = F, sep=";")
+obras_iniciadas_tb     
+
+sum(obras_iniciadas_tb$Obras) - 120 #obras canceladas 
+#numero de obras iniciadas exceto canceladas e concluidas
+
 
 custo_paralisadas <- obras_iniciadas %>%
   filter(Situação != "Obra Cancelada",
-         Situação != "Execução")
+         Situação != "Execução",
+         Situação != "Contratação")
 
-custo_paralisadas
-sum(custo_paralisadas$Obras)
+
+custo_paralisadas %>%
+  group_by(Situação) %>%
+  summarise(obras = n())   #aqui tem 567 paralisadas, mas o governo alega (simec_gastos_tb1)
+                           #que são 584 paralisadas, então no N final precisamos somar 17 aqui:
+
+custo_paralisadas %>%
+summarise(n() + 17)    #1681 obras paralisadas
+
+custo_paralisadas %>%
+  summarise(custo = sum(pagamento_cte_jun17)/1000000000) #1.429633 bilhões
 
 write.table(custo_paralisadas, file="custo_paralisadas.csv", row.names = F, sep=";")
-
-custo_paradas_abandonadas <- simec_atraso %>%
-  filter(!is.na(Data.de.Assinatura.do.Contrato),
-         Situação != "Concluída",
-         Situação != "Execução") %>%
-  group_by(Situação) %>%
-  summarise(Obras = n(), Custo = sum(pagamento_cte_jun17)) %>%
-  mutate(Custo = round(Custo/1000000, 2))
-
-sum(custo_paradas_abandonadas$Custo)
 
 #quantas obras já deveriam ter sido concluídas de fato foram?
 
@@ -330,6 +338,7 @@ execucao_e_atrasos <- simec_atraso %>%
 # 7 Quantidade de obras atrasadas -
 
 obras_atrasadas <- execucao_e_atrasos %>%
+  filter(Situação == "Execução") %>%
   group_by(ja_devia_estar_concluida) %>%
   summarise(obras = n())
 
@@ -338,7 +347,7 @@ obras_atrasadas
 #Quantas obras já deviam estar concluídas e qual é a situação de cada uma delas:
 
 obras_atrasadas_sit <- execucao_e_atrasos %>%
-  filter(ja_devia_estar_concluida == "sim") %>%
+  filter(Situação == "Execução") %>%
   group_by(Situação) %>%
   summarise(Obras = n(), Custo = sum(pagamento_cte_jun17)) %>%
   mutate(Custo = round(Custo/1000000, 2)) %>%
@@ -362,13 +371,14 @@ atraso_medio_execucao <- execucao_e_atrasos %>%
 atraso_medio_execucao 
 
 atraso_medio_iniciadas <- execucao_e_atrasos %>%
-  filter(ja_devia_estar_concluida == "sim") %>%
+  filter(ja_devia_estar_concluida == "sim",
+         Situação != "Contratação") %>%
   group_by(ja_devia_estar_concluida) %>%
   summarise(tempo_medio_atraso = mean(tempo_de_atraso)) 
 
 atraso_medio_iniciadas
 
-atraso_medio_paralisadas <- execucao_e_atrasos %>%
+atraso_medio_paralisadas <- custo_paralisadas %>%
   filter(ja_devia_estar_concluida == "sim",
          Situação != "Execução") %>%
   group_by(ja_devia_estar_concluida) %>%
@@ -395,7 +405,7 @@ graf_ano_conclusao <- ano_conclusao %>%
 
 graf_ano_conclusao %>%
   ggplot(aes(x=ano_concluida, y=obras, group=1)) +
-  labs(title="Obras entregues", 
+  labs(title="Obras Proinfância entregues", 
        subtitle="Obras concluídas por ano", 
        caption="Fonte: SIMEC. Elaborado por Transparência Brasil") +
   geom_line() + xlab("") + ylab("") +
@@ -480,4 +490,49 @@ simec %>%
   filter(Situação == "Licitação" & !is.na(Percentual.de.Execução) & Percentual.de.Execução >= 0.01) %>%
   summarise( casos = n()) #227
 
-#Easter Egg
+#e. Obras em contratação que já tem data de assinatura do contrato #387
+
+simec %>%
+  filter(Situação == "Contratação",
+         !is.na(Data.de.Assinatura.do.Contrato)) %>%
+  summarise( casos = n())
+
+#Quando foram pactuadas as obras?
+
+convenios_pactuados <- simec_atraso %>%
+  mutate(ano_pacto = str_sub(Termo.Convênio, start = -4)) %>%
+  mutate(ano_pacto = as.Date(ano_pacto, "%Y"))
+
+convenios_pactuados$ano_pacto <- lubridate::year(convenios_pactuados$ano_pacto)
+
+convenios_pactuados <- convenios_pactuados%>%
+group_by(ano_pacto) %>%
+  summarise(obras = n()) %>%
+  filter(!is.na(ano_pacto))
+
+convenios_pactuados  
+sum(convenios_pactuados$obras)
+
+convenios_pactuados %>%
+  ggplot(aes(x=ano_pacto, y=obras)) + geom_line() +
+  labs(title="Obras pactuadas por ano", 
+       subtitle="Convênios com prefeituras pactuados por ano", 
+       caption="Fonte: SIMEC. Elaborado por Transparência Brasil", 
+       y="", x="") +
+  scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
+  theme(panel.grid.minor = element_blank())
+
+#(2255-752)/752 = aumento de 1.99867 entre 2010 ew 2014
+#Queda de 98% entre 2014 e 2015 ((2255-33)/2255 )
+
+
+obras_pactuadas <- simec_atraso %>%
+  mutate(ano_pacto = str_sub(Termo.Convênio, start = -4)) %>%
+  mutate(ano_pacto = as.Date(ano_pacto, "%Y"))
+
+obras_pactuadas$ano_pacto <- lubridate::year(obras_pactuadas$ano_pacto)
+
+obras_pactuadas <- obras_pactuadas%>%
+  group_by(Termo.Convênio) %>%
+  summarise(obras = n()) %>%
+  filter(!is.na(Termo.Convênio))
