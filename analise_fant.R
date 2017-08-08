@@ -243,7 +243,7 @@ graf_pagto_ano <- pagamento_ano_simec %>%
   group_by(ano) %>%
   summarise(total_pagto_repasse_cte_jun17 = sum(pagto_repasse_cte_jun17)) %>%
   mutate(ano = as.numeric(ano),
-         total_pagto = total_pagto_repasse_cte_jun17 / 100000000)
+         total_pagto = total_pagto_repasse_cte_jun17 / 1000000000)
 
 graf_pagto_ano %>%
   ggplot(aes(x=ano, y=total_pagto)) +
@@ -256,6 +256,30 @@ graf_pagto_ano %>%
                                                                                 big.mark = " ")) +
   scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
   theme(panel.grid.minor = element_blank())
+
+#Repasses feitos para obras que não foram concluídas:
+
+graf_pagto_ano_naoconl <- pagamento_ano_simec %>%
+  group_by(ano) %>%
+  summarise(repasses_concluidas = sum(pagto_repasse_cte_jun17
+                                      
+                                      )) %>%
+  mutate(ano = as.numeric(ano),
+         total_pagto = total_pagto_repasse_cte_jun17 / 1000000000)
+
+graf_pagto_ano %>%
+  ggplot(aes(x=ano, y=total_pagto)) +
+  labs(title="Repasses Proinfância", 
+       subtitle="Repasses efetuados pelo Governo Federal às prefeituras", 
+       caption="Fonte: SIMEC. Elaborado por Transparência Brasil", 
+       y="Repasse") +
+  geom_line() + xlab("") + ylab("") + scale_y_continuous(labels = dollar_format(suffix = " bi", prefix = "R$ ",
+                                                                                decimal.mark = ",",
+                                                                                big.mark = " ")) +
+  scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
+  theme(panel.grid.minor = element_blank())
+
+
 
 #6. obras em execução e iniciadas
 #todas as obras que têm Data de assinatura do contrato foram consideradas como iniciadas
@@ -285,7 +309,8 @@ obras_iniciadas_tb$Custo <- gsub("[.]", ",", obras_iniciadas_tb$Custo)
 
 obras_iniciadas_tb     
 
-sum(obras_iniciadas_tb$Obras) - 120 #obras canceladas 
+sum(obras_iniciadas_tb$Obras) - 120 - 119
+#obras canceladas 
 #numero de obras iniciadas exceto canceladas e concluidas
 
 
@@ -295,18 +320,21 @@ custo_paralisadas <- obras_iniciadas %>%
          Situação != "Contratação")
 
 
-custo_paralisadas %>%
+custo_paralisadas_tb <- custo_paralisadas %>%
   group_by(Situação) %>%
   summarise(obras = n())   #aqui tem 567 paralisadas, mas o governo alega (simec_gastos_tb1)
                            #que são 584 paralisadas, então no N final precisamos somar 17 aqui:
 
-custo_paralisadas %>%
-summarise(n() + 17)    #1681 obras paralisadas
+custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$Situação == "Paralisada",
+                                      custo_paralisadas_tb$obras + 17, custo_paralisadas_tb$obras))
+
+custo_paralisadas_tb
+sum(custo_paralisadas_tb$obras)
 
 custo_paralisadas %>%
   summarise(custo = sum(pagamento_cte_jun17)/1000000000) #1.429633 bilhões
 
-write.table(custo_paralisadas, file="custo_paralisadas.csv", row.names = F, sep=";")
+write.table(custo_paralisadas_tb, file="custo_paralisadas_tb.csv", row.names = F, sep=";")
 
 #quantas obras já deveriam ter sido concluídas de fato foram?
 
@@ -561,3 +589,25 @@ y_conv <- y_conv%>%
   
 y_conv
 sum(y_conv$obras)
+
+#####
+# Dados do pedido do Manoel
+
+library(readr)
+pedido_supervisao_in_loco <- read_delim("~/tadepe/fantastico/rel_fant/pedido_supervisao_in_loco.csv", 
+                                        ";", escape_double = FALSE, col_types = cols(`Ano Termo/Convjnio` = col_date(format = "%Y"), 
+                                                                                     ID = col_character(), `N: Processo` = col_character(), 
+                                                                                     `Termo/N: Convjnio` = col_character(), 
+                                                                                     perc_executado_empresa = col_number(), 
+                                                                                     perc_informado_munic = col_number()), 
+                                        locale = locale(encoding = "ASCII"), 
+                                        trim_ws = TRUE)
+
+#Vou verificar a diferença entre o que foi atestado percentualmente pelos engenheiros e 
+#o que a verificação in loco demonstrou ser o verdadeiro percentual
+
+dif_execucao_ver_in_loco <- pedido_supervisao_in_loco %>%
+  mutate(dif_vistoria = perc_informado_munic - perc_executado_empresa)
+
+mean(dif_execucao_ver_in_loco$dif_vistoria)  #20.93389
+median(dif_execucao_ver_in_loco$dif_vistoria) #12.23
