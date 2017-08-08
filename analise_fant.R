@@ -536,3 +536,28 @@ obras_pactuadas <- obras_pactuadas%>%
   group_by(Termo.Convênio) %>%
   summarise(obras = n()) %>%
   filter(!is.na(Termo.Convênio))
+
+#Quando foram pactuadas as obras que ainda precisam ser entregues?
+
+x <- simec_atraso %>%
+  filter(Situação != "Canceladas",
+         Situação != "Concluída") %>%
+  group_by(Município, UF) %>%
+  summarise(obras = n()) 
+
+#2211 municípios
+
+y_conv <- simec_atraso %>%
+  mutate(ano_pacto = str_sub(Termo.Convênio, start = -4)) %>%
+  mutate(ano_pacto = as.Date(ano_pacto, "%Y"))
+
+y_conv$ano_pacto <- lubridate::year(y_conv$ano_pacto)
+
+y_conv <- y_conv%>%
+  filter(Situação != "Obra Cancelada",
+        Situação != "Concluída") %>%
+  group_by(ano_pacto) %>%
+  summarise(obras = n())
+  
+y_conv
+sum(y_conv$obras)
