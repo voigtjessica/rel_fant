@@ -122,6 +122,8 @@ simec_gastos_tb1 <- bind_rows(simec_gastos_tb, linha_final) %>%
          pecr_obras = round( obras/9375 ,2))    #1
 simec_gastos_tb1
 
+#Existem 4728 obras a serem entregues pelo proinfância
+
 #2. Calculando tempo de duração das obras
 
 Tipo.do.Projeto <- c("Escola de Educação Infantil Tipo B",
@@ -585,9 +587,19 @@ y_conv <- y_conv%>%
   filter(Situação != "Obra Cancelada",
         Situação != "Concluída") %>%
   group_by(ano_pacto) %>%
-  summarise(obras = n())
-  
-y_conv
+  summarise(obras = n()) %>%
+  filter(!is.na(ano_pacto))
+
+y_conv  
+y_conv %>%
+ggplot(aes(x=ano_pacto, y=obras)) + geom_line() +
+  labs(title="Obras em construção pactuadas por ano", 
+       subtitle="Quando foram pactuadas as obras que ainda precisam ser entregues?", 
+       caption="Fonte: SIMEC. Elaborado por Transparência Brasil", 
+       y="", x="") +
+  scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
+  theme(panel.grid.minor = element_blank())
+
 sum(y_conv$obras)
 
 #####
@@ -611,3 +623,18 @@ dif_execucao_ver_in_loco <- pedido_supervisao_in_loco %>%
 
 mean(dif_execucao_ver_in_loco$dif_vistoria)  #20.93389
 median(dif_execucao_ver_in_loco$dif_vistoria) #12.23
+
+dif_execucao_ver_in_loco %>%
+  select(ID) %>%
+  distinct(ID, .keep_all = TRUE) %>%
+  summarise(n())    #15529 - número de obras que tiveram ao menos uma vistoria
+
+base_vist <- simec %>%
+  mutate(ano_pacto = str_sub(Termo.Convênio, start = -4)) %>%
+  filter(ano_pacto <= 2016) %>%
+  group_by(ano_pacto) %>%
+  summarise(obras = n())
+
+sum(base_vist$obras)  #27266
+
+15529/27266 #0.5695372 - estimativa percentual de obras vistoriadas pelo CGIMP
