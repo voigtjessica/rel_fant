@@ -245,7 +245,8 @@ graf_pagto_ano <- pagamento_ano_simec %>%
   group_by(ano) %>%
   summarise(total_pagto_repasse_cte_jun17 = sum(pagto_repasse_cte_jun17)) %>%
   mutate(ano = as.numeric(ano),
-         total_pagto = total_pagto_repasse_cte_jun17 / 1000000000)
+         total_pagto = total_pagto_repasse_cte_jun17 / 1000000000) %>%
+  filter(ano != 2017)
 
 graf_pagto_ano %>%
   ggplot(aes(x=ano, y=total_pagto)) +
@@ -491,6 +492,15 @@ inexistentes
 
 write.table(inexistentes, file="inexistentes.csv", row.names = F, sep=";")
 
+ww <- simec_atraso %>%
+  filter(Situação != "Concluída",
+         Situação != "Obra Cancelada") %>%
+  filter(is.na(Total.Pago)) %>%
+  select(Fim.da.Vigência.Termo.Convênio, Total.Pago)  #Essas duas colunas são ausentes nos mesmos casos
+
+sum(is.na(ww$Fim.da.Vigência.Termo.Convênio)) 
+sum(is.na(ww$Total.Pago)) 
+
 #inconsistências:
 #a. Obras em execução sem data de assinatura de contrato: #16
 
@@ -583,24 +593,56 @@ y_conv <- simec_atraso %>%
 
 y_conv$ano_pacto <- lubridate::year(y_conv$ano_pacto)
 
-y_conv <- y_conv%>%
-  filter(Situação != "Obra Cancelada",
-        Situação != "Concluída") %>%
+y_conv <- y_conv %>%
+  filter(Situação != "Obra Cancelada") %>%
+  mutate(count_concluida = ifelse(Situação == "Concluída", 1,0),
+         count_andamento = ifelse(Situação != "Concluída", 1,0)) %>%
   group_by(ano_pacto) %>%
-  summarise(obras = n()) %>%
-  filter(!is.na(ano_pacto))
-
+  summarise(obras_concluidas = sum(count_concluida),
+            obras_andamento = sum(count_andamento)) %>%
+  filter(!is.na(ano_pacto)) %>%
+  mutate(prop_andamento = obras_andamento / (obras_concluidas + obras_andamento))
+  
 y_conv  
 y_conv %>%
-ggplot(aes(x=ano_pacto, y=obras)) + geom_line() +
-  labs(title="Obras em construção pactuadas por ano", 
-       subtitle="Quando foram pactuadas as obras que ainda precisam ser entregues?", 
+ggplot(aes(x=ano_pacto, y=prop_andamento)) + geom_line() +
+  labs(title="Proporção descumprimento da entrega", 
+       subtitle="Proporção de obras entregues de acordo com o ano que foram pactuadas", 
        caption="Fonte: SIMEC. Elaborado por Transparência Brasil", 
        y="", x="") +
   scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
   theme(panel.grid.minor = element_blank())
 
 sum(y_conv$obras)
+
+
+pacto_concluidas_andamento <- simec_atraso %>%
+  mutate(ano_pacto = str_sub(Termo.Convênio, start = -4)) %>%
+  mutate(ano_pacto = as.Date(ano_pacto, "%Y"))
+
+pacto_concluidas_andamento$ano_pacto <- lubridate::year(pacto_concluidas_andamento$ano_pacto)
+
+pacto_concluidas_andamento <- pacto_concluidas_andamento %>%
+  filter(Situação != "Obra Cancelada") %>%
+  mutate(count_concluida = ifelse(Situação == "Concluída", 1,0),
+         count_andamento = ifelse(Situação != "Concluída", 1,0)) %>%
+  group_by(ano_pacto) %>%
+  summarise(obras_concluidas = sum(count_concluida),
+            obras_andamento = sum(count_andamento)) %>%
+  filter(!is.na(ano_pacto)) %>%
+  gather(situacao_obra, obras, obras_concluidas, obras_andamento )
+
+pacto_concluidas_andamento
+
+pacto_concluidas_andamento %>%
+  ggplot(aes(x=ano_pacto, y=obras, colour = situacao_obra)) + geom_line() +
+  labs(title="Proporção descumprimento da entrega", 
+       subtitle="Proporção de obras entregues de acordo com o ano que foram pactuadas", 
+       caption="Fonte: SIMEC. Elaborado por Transparência Brasil", 
+       y="", x="") +
+  scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
+  theme(panel.grid.minor = element_blank())
+
 
 #####
 # Dados do pedido do Manoel
@@ -638,3 +680,140 @@ base_vist <- simec %>%
 sum(base_vist$obras)  #27266
 
 15529/27266 #0.5695372 - estimativa percentual de obras vistoriadas pelo CGIMP
+
+#Quanto dinheiro ainda precisa para terminar as obras em execução
+
+dinheiro_falta_exe <- simec_atraso %>%
+  filter(Situação == "Execução") %>%
+  mutate(falta = valor_pactuado_fnde_cte_jun17 - pagamento_cte_jun17) 
+
+sum(dinheiro_falta_exe$falta, na.rm=TRUE) # 1,280.999.379 ainda precisam ser investidos nas obras em execução
+sum(is.na(dinheiro_falta_exe$falta)) #16 obras não temos informações
+
+dinheiro_falta_todas <- simec_atraso %>%
+  filter(Situação != "Concluída",
+         Situação != "Obra Cancelada") %>%
+  mutate(falta = valor_pactuado_fnde_cte_jun17 - pagamento_cte_jun17) 
+
+sum(dinheiro_falta_todas$falta, na.rm = TRUE) #2,535.293.840
+sum(is.na(dinheiro_falta_todas$Valor.Pactuado.pelo.FNDE)) #9 obras
+
+dinheiro_falta_todas %>%
+  filter(Valor.Pactuado.pelo.FNDE = 0) %>%
+  summarise(n())
+
+dinheiro_falta_todas %>%
+  filter(is.na(falta))
+
+graf_pagto_ano # 521.445.932 foram pagos em 2016 
+
+  
+# Anexo I - Obras por estado 
+# (Obras total, em execução, atrasadas, paralisadas e dinheiro investido nessas obras)
+
+anexo1_atrasadas <- execucao_e_atrasos %>%
+  filter(Situação == "Execução",
+         ja_devia_estar_concluida == "sim") %>%
+  group_by(UF) %>%
+  summarise(obras_atrasadas = n(),
+            gasto_atrasadas = sum(pagamento_cte_jun17),
+            gasto_atrasadas_mi = round(gasto_atrasadas/1000000, 2))
+
+anexo1_paralisadas <- obras_iniciadas %>%
+  filter(Situação != "Obra Cancelada",
+         Situação != "Execução",
+         Situação != "Contratação") %>%
+  group_by(UF) %>%
+  summarise(obras_paralisadas = n(),
+            gasto_paralisadas = sum(pagamento_cte_jun17),
+            gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
+
+anexo1 <- simec_atraso %>%
+  filter(Situação != "Concluída",
+         Situação != "Obra Cancelada") %>%
+  group_by(UF) %>%
+  summarise(total_obras = n(),
+            gasto_total = sum(pagamento_cte_jun17),
+            gasto_total_mi = round(gasto_total /1000000,2)) %>%
+  left_join(anexo1_atrasadas) %>%
+  left_join(anexo1_paralisadas) %>%
+  mutate(perc_atrasada = round(obras_atrasadas / total_obras, 2),
+         perc_paralisada = round(obras_paralisadas / total_obras, 2)) %>%
+  select(UF, total_obras, gasto_total_mi, obras_atrasadas,  perc_atrasada, gasto_atrasadas_mi,
+         obras_paralisadas, perc_paralisada, gasto_paralisadas_mi) %>%
+  mutate(obras_atrasadas = ifelse(is.na(obras_atrasadas), 0, obras_atrasadas),
+         perc_atrasada = ifelse(is.na(perc_atrasada), 0, perc_atrasada))
+  
+View(anexo1)  
+
+write.table(anexo1, file="anexo1.csv", sep=";", dec=",", row.names = FALSE)
+
+
+## Escolas Rio de Janeiro UF
+## Nome , endereço, % de execução, Calssificação (atrasada , paralisada) 
+
+escolas_rj_atraso <- execucao_e_atrasos %>%
+  filter(UF == "RJ",
+         Situação == "Execução",
+         ja_devia_estar_concluida == "sim") %>%
+  mutate(classificação_tb = "atrasada") %>%
+  select(ID, Nome, Logradouro, Município, Percentual.de.Execução, classificação_tb,
+         pagamento_cte_jun17)
+
+
+escolas_rj_paralisadas <- obras_iniciadas %>%
+  filter( UF == "RJ",
+         Situação != "Obra Cancelada",
+         Situação != "Execução",
+         Situação != "Contratação") %>%
+  mutate(classificação_tb = "paralisada") %>%
+  select(ID, Nome, Logradouro, Município, Percentual.de.Execução, classificação_tb,
+         pagamento_cte_jun17)
+
+escolas_rj <- escolas_rj_atraso %>%
+  bind_rows(escolas_rj_paralisadas) %>%
+  rename(total_repassado =  pagamento_cte_jun17)
+
+View(escolas_rj)
+
+setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\tadepe\\fantastico\\rel_fant")
+write.table(escolas_rj, file="escolas_rj.csv", sep=";", dec=",", row.names = FALSE)
+
+## Anexo 2 - obras por munic
+
+anexo2_atrasadas <- execucao_e_atrasos %>%
+  filter(Situação == "Execução",
+         ja_devia_estar_concluida == "sim") %>%
+  group_by(Município, UF) %>%
+  summarise(obras_atrasadas = n(),
+            gasto_atrasadas = sum(pagamento_cte_jun17),
+            gasto_atrasadas_mi = round(gasto_atrasadas/1000000, 2))
+
+anexo2_paralisadas <- obras_iniciadas %>%
+  filter(Situação != "Obra Cancelada",
+         Situação != "Execução",
+         Situação != "Contratação") %>%
+  group_by(Município, UF) %>%
+  summarise(obras_paralisadas = n(),
+            gasto_paralisadas = sum(pagamento_cte_jun17),
+            gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
+
+anexo2 <- simec_atraso %>%
+  filter(Situação != "Concluída",
+         Situação != "Obra Cancelada") %>%
+  group_by(Município, UF) %>%
+  summarise(total_obras = n(),
+            gasto_total = sum(pagamento_cte_jun17),
+            gasto_total_mi = round(gasto_total /1000000,2)) %>%
+  left_join(anexo2_atrasadas) %>%
+  left_join(anexo2_paralisadas) %>%
+  mutate(perc_atrasada = round(obras_atrasadas / total_obras, 2),
+         perc_paralisada = round(obras_paralisadas / total_obras, 2)) %>%
+  select(UF, total_obras, gasto_total_mi, obras_atrasadas,  perc_atrasada, gasto_atrasadas_mi,
+         obras_paralisadas, perc_paralisada, gasto_paralisadas_mi) %>%
+  mutate(obras_atrasadas = ifelse(is.na(obras_atrasadas), 0, obras_atrasadas),
+         perc_atrasada = ifelse(is.na(perc_atrasada), 0, perc_atrasada))
+
+View(anexo2)  
+
+write.table(anexo2, file="anexo2.csv", sep=";", dec=",", row.names = FALSE)
