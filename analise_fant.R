@@ -688,7 +688,7 @@ pedido_supervisao_in_loco <- read_delim("~/tadepe/fantastico/rel_fant/pedido_sup
                                         trim_ws = TRUE)
 
 #Vou verificar a diferença entre o que foi atestado percentualmente pelos engenheiros e 
-#o que a verificação in loco demonstrou ser o verdadeiro percentual
+#o que a verificação in loco demonstrou ser o verdadeiro percentual #
 
 dif_execucao_ver_in_loco <- pedido_supervisao_in_loco %>%
   mutate(dif_vistoria = perc_informado_munic - perc_executado_empresa)
