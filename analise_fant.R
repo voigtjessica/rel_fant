@@ -1,9 +1,7 @@
 ## Análise dos dados pós-raspagem
 
-library(dplyr)
 library(tidyverse)
 library(stringr)
-library(tidyr)
 library(lubridate)
 library(scales)
 
@@ -273,7 +271,7 @@ graf_pagto_ano_naoconl <- pagamento_ano_simec %>%
                                       
                                       )) %>%
   mutate(ano = as.numeric(ano),
-         total_pagto = total_pagto_repasse_cte_jun17 / 1000000000)
+         total_pagto = repasses_concluidas / 1000000000)
 
 graf_pagto_ano %>%
   ggplot(aes(x=ano, y=total_pagto)) +
@@ -288,6 +286,7 @@ graf_pagto_ano %>%
   theme(panel.grid.minor = element_blank())
 
 
+dia_final <- as.Date("2017-07-27")
 
 #6. obras em execução e iniciadas
 #todas as obras que têm Data de assinatura do contrato foram consideradas como iniciadas
@@ -347,8 +346,6 @@ custo_paralisadas %>%
 write.table(custo_paralisadas_tb, file="custo_paralisadas_tb.csv", row.names = F, sep=";")
 
 #quantas obras já deveriam ter sido concluídas de fato foram?
-
-dia_final <- as.Date("2017-07-27")
 
 #7. Obras iniciadas e atrasadas:
 
@@ -617,34 +614,6 @@ x <- simec_atraso %>%
 
 #2211 municípios
 
-y_conv <- simec_atraso %>%
-  mutate(ano_pacto = str_sub(Termo.Convênio, start = -4)) %>%
-  mutate(ano_pacto = as.Date(ano_pacto, "%Y"))
-
-y_conv$ano_pacto <- lubridate::year(y_conv$ano_pacto)
-
-y_conv <- y_conv %>%
-  filter(Situação != "Obra Cancelada") %>%
-  mutate(count_concluida = ifelse(Situação == "Concluída", 1,0),
-         count_andamento = ifelse(Situação != "Concluída", 1,0)) %>%
-  group_by(ano_pacto) %>%
-  summarise(obras_concluidas = sum(count_concluida),
-            obras_andamento = sum(count_andamento)) %>%
-  filter(!is.na(ano_pacto)) %>%
-  mutate(prop_andamento = obras_andamento / (obras_concluidas + obras_andamento))
-  
-y_conv  
-y_conv %>%
-ggplot(aes(x=ano_pacto, y=prop_andamento)) + geom_line() +
-  labs(title="Proporção descumprimento da entrega", 
-       subtitle="Proporção de obras entregues de acordo com o ano que foram pactuadas", 
-       caption="Fonte: SIMEC. Elaborado por Transparência Brasil", 
-       y="", x="") +
-  scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
-  theme(panel.grid.minor = element_blank())
-
-sum(y_conv$obras)
-
 
 pacto_concluidas_andamento <- simec_atraso %>%
   mutate(ano_pacto = str_sub(Termo.Convênio, start = -4)) %>%
@@ -710,6 +679,10 @@ base_vist <- simec %>%
 sum(base_vist$obras)  #27266
 
 15529/27266 #0.5695372 - estimativa percentual de obras vistoriadas pelo CGIMP
+
+dif_execucao_ver_in_loco %>%
+  filter(dif_vistoria >= 90) %>%
+  summarise(n())
 
 #Quanto dinheiro ainda precisa para terminar as obras em execução
 
