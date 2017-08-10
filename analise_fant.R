@@ -443,10 +443,10 @@ graf_ano_conclusao %>%
   scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw()
 
 #Dados inconsistentes e inexistentes
-
+# base para cálculo da falta de informações: as obras 
 names(simec_atraso)
 
-inex <- simec_atraso %>%
+inex <- simec_atraso %>%           #página 4 base de todos os 
   filter(is.na(Município)|
          is.na(UF)|
          is.na(CEP)|
@@ -501,6 +501,7 @@ ww <- simec_atraso %>%
 sum(is.na(ww$Fim.da.Vigência.Termo.Convênio)) 
 sum(is.na(ww$Total.Pago)) 
 
+
 #inconsistências:
 #a. Obras em execução sem data de assinatura de contrato: #16
 
@@ -536,6 +537,27 @@ simec %>%
   filter(Situação == "Contratação",
          !is.na(Data.de.Assinatura.do.Contrato)) %>%
   summarise( casos = n())
+
+#página 3 - % de escolas sem número
+
+simec_atraso %>%
+  filter(Situação != "Obra Cancelada",
+         is.na(Logradouro)) %>%
+  summarise(n())    #929 escolas sem endereço ou 10%
+
+
+simec_atraso %>%
+  filter(Situação != "Obra Cancelada") %>%
+  mutate(end_sem_num = as.numeric(grepl("[0-9]", Logradouro))) %>%
+  group_by(end_sem_num) %>%
+  summarise(n())
+
+# end_sem_num `n()`
+# <dbl> <int>
+# 1           0  8099   escolas sem número ou sem endereço
+# 2           1   948   escolas com número
+
+8099 - 929 # = 7170 ou 76% das escolas
 
 #Quando foram pactuadas as obras?
 
