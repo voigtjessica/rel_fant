@@ -94,12 +94,14 @@ simec_gastos <- simec %>%
   mutate(mes_ano_assinatura_contrato = ifelse(is.na(mes_ano_assinatura_contrato), 
                                               primeira_data, mes_ano_assinatura_contrato)) %>%
   full_join(ipca, by=c("mes_ano_assinatura_contrato" = "mes_ano")) %>%
-  mutate(valor_pactuado_fnde_cte_jun17 = Valor.Pactuado.com.o.FNDE/indice.y)
+  mutate(valor_pactuado_fnde_cte_jun17 = Valor.Pactuado.com.o.FNDE/indice.y) %>%
+  filter(!is.na(ID))
 
 # total de gasto por situação, com soma burra (sem considerar inflação)
 simec_gastos %>%
   group_by(Situação) %>%
   summarise(sum(pagamento_cte_jun17))
+
 ######################################################################################################
 #Jessica começou a partir daqui 
 
@@ -121,6 +123,9 @@ simec_gastos_tb1 <- bind_rows(simec_gastos_tb, linha_final) %>%
   mutate(perc_pagto = round(pagto/9656262359 ,2) ,
          pecr_obras = round( obras/9375 ,2))    #1
 simec_gastos_tb1
+
+write.table(simec_gastos_tb1, file="simec_gastos_tb1_v2.csv", sep=";", row.names = FALSE,
+            dec = ",")
 
 #Existem 4728 obras a serem entregues pelo proinfância
 
@@ -543,6 +548,7 @@ simec %>%
 simec_atraso %>%
   filter(Situação != "Obra Cancelada",
          is.na(Logradouro)) %>%
+  group_by(Situação)%>%
   summarise(n())    #929 escolas sem endereço ou 10%
 
 
@@ -839,3 +845,11 @@ anexo2 <- simec_atraso %>%
 View(anexo2)  
 
 write.table(anexo2, file="anexo2.csv", sep=";", dec=",", row.names = FALSE)
+
+
+#Situação == NA
+
+isnaid <- simec_gastos %>%
+  filter(is.na(Situação))
+
+View(isnaid)
