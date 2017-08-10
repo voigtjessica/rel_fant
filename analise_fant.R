@@ -317,7 +317,7 @@ obras_iniciadas_tb$Custo <- gsub("[.]", ",", obras_iniciadas_tb$Custo)
 
 obras_iniciadas_tb     
 
-sum(obras_iniciadas_tb$Obras) - 120 - 119
+sum(obras_iniciadas_tb$Obras) 
 #obras canceladas 
 #numero de obras iniciadas exceto canceladas e concluidas
 
@@ -335,6 +335,8 @@ custo_paralisadas_tb <- custo_paralisadas %>%
 
 custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$Situação == "Paralisada",
                                       custo_paralisadas_tb$obras + 17, custo_paralisadas_tb$obras))
+custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$Situação == "Inacabada",
+                                      566, custo_paralisadas_tb$obras))
 
 custo_paralisadas_tb
 sum(custo_paralisadas_tb$obras)
