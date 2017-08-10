@@ -93,42 +93,10 @@ simec_gastos <- simec %>%
   mutate(mes_ano_assinatura_contrato = ifelse(is.na(mes_ano_assinatura_contrato), 
                                               primeira_data, mes_ano_assinatura_contrato)) %>%
   full_join(ipca, by=c("mes_ano_assinatura_contrato" = "mes_ano")) %>%
-  mutate(valor_pactuado_fnde_cte_jun17 = Valor.Pactuado.com.o.FNDE/indice.y) %>%
-  filter(!is.na(ID))
+  mutate(valor_pactuado_fnde_cte_jun17 = Valor.Pactuado.com.o.FNDE/indice.y)
 
-# total de gasto por situação, com soma burra (sem considerar inflação)
-simec_gastos %>%
-  group_by(Situação) %>%
-  summarise(sum(pagamento_cte_jun17))
+## filtrando para projetos que entram na análise
 
-######################################################################################################
-#Jessica começou a partir daqui 
-
-#1 Tabela de obras do proinfância e situação de cada uma das obras
-
-simec_gastos_tb <- simec_gastos %>%
-  mutate(num=1) %>%
-  group_by(Situação) %>%
-  summarise(pagto = sum(pagamento_cte_jun17),
-            obras = sum(num)) %>%
-  rename(situacao = Situação)
-
-pagto <- sum(simec_gastos_tb$pagto, na.rm = T)
-obras <- sum(simec_gastos_tb$obras)
-
-linha_final <- data.frame(situacao = "total", pagto, obras)
-
-simec_gastos_tb1 <- bind_rows(simec_gastos_tb, linha_final) %>%
-  mutate(perc_pagto = round(pagto/9656262359 ,2) ,
-         pecr_obras = round( obras/9375 ,2))    #1
-simec_gastos_tb1
-
-write.table(simec_gastos_tb1, file="simec_gastos_tb1_v2.csv", sep=";", row.names = FALSE,
-            dec = ",")
-
-#Existem 4728 obras a serem entregues pelo proinfância
-
-#2. Calculando tempo de duração das obras
 
 Tipo.do.Projeto <- c("Escola de Educação Infantil Tipo B",
                      "Escola de Educação Infantil Tipo C",
@@ -146,8 +114,10 @@ tempo_exe_meses <- c(9,6,6,4,13,5,5,7,7,11,9)
 
 execucao <- data.frame(Tipo.do.Projeto, tempo_exe_meses)
 
+# criando df filtrado por tipo de projeto, construção (contém algumas obras sem dado de gasto, pois webscraping n achou nada)
 simec_atraso <- simec_gastos %>%   #2
-  left_join(execucao) %>%
+  filter(Tipo.da.Obra == "Construção") %>%
+  inner_join(execucao) %>%
   mutate(tempo_exe_dias = tempo_exe_meses*30)
 
 simec_atraso$Data.Prevista.de.Conclusão.da.Obra <- as.Date(simec_atraso$Data.Prevista.de.Conclusão.da.Obra , "%d/%m/%Y")
@@ -155,19 +125,39 @@ simec_atraso$Data.da.Última.Vistoria.do.Estado.ou.Município <- as.Date(simec_atr
 simec_atraso$primeira_data <- as.Date(simec_atraso$primeira_data ,  "%Y-%m-%d")
 simec_atraso$Data.de.Assinatura.do.Contrato <- as.Date(simec_atraso$Data.de.Assinatura.do.Contrato, "%Y-%m-%d")
 
+
+# total de gasto por situação, com soma burra (sem considerar inflação)
+simec_gastos_tb <- simec_atraso %>%
+  group_by(Situação) %>%
+  summarise(gasto = sum(pagamento_cte_jun17, na.rm=T),
+            num_obras = n(),
+            pactuado = sum(valor_pactuado_fnde_cte_jun17, na.rm=T),
+            medio_pactuado = mean(valor_pactuado_fnde_cte_jun17, na.rm=T)) %>%
+  bind_rows(data.frame(Situação = "total", 
+                       gasto = sum(simec_atraso$pagamento_cte_jun17, na.rm=T),
+                       num_obras = length(simec_atraso$ID),
+                       pactuado = sum(simec_atraso$valor_pactuado_fnde_cte_jun17, na.rm=T))) %>%
+  ungroup() %>%
+  mutate(perc_gasto_realizado = round(gasto/max(gasto),2),
+         perc_obras = round(num_obras/max(num_obras),2),
+         perc_gasto_pactuado = round(pactuado/max(pactuado),2))
+
+
+write.table(simec_gastos_tb, file="simec_gastos_tb.csv", sep=";", row.names = FALSE,
+            dec = ",")
+
+######################################################################################################
+#Jessica começou a partir daqui 
+
+#1 Tabela de obras do proinfância e situação de cada uma das obras
+
+
+
+#Existem 4728 obras a serem entregues pelo proinfância
+
+#2. Calculando tempo de duração das obras
+
 #teste se podemos usar tanto Data.Prevista.de.Conclusão.da.Obra quanto Data.da.Última.Vistoria.do.Estado.ou.Município
-
-j <- simec_atraso %>%
-  filter(Situação == "Concluída",
-         !is.na(Data.Prevista.de.Conclusão.da.Obra)) %>%
-  mutate(dif_finais = Data.Prevista.de.Conclusão.da.Obra - Data.da.Última.Vistoria.do.Estado.ou.Município, na.rm=T)
-
-j %>%
-  ggplot(aes(dif_finais)) + geom_histogram() #são muito próximas
-
-x <- simec_atraso %>%
-  filter(Situação == "Concluída") %>%  #4333 obras
-  filter(!is.na(Data.Prevista.de.Conclusão.da.Obra) | !is.na(Data.da.Última.Vistoria.do.Estado.ou.Município))   #4322
 
 #Observação : teremos como data de término oficial da obra Data.Prevista.de.Conclusão.da.Obra |
 # Data.da.Última.Vistoria.do.Estado.ou.Município
@@ -200,7 +190,7 @@ simec_atraso_concluidas %>%
 simec_atraso_concluidas_pagto <- simec_atraso_concluidas %>%
   group_by(Tipo.do.Projeto) %>%
   summarise(valor_total_pactuado = sum(valor_pactuado_fnde_cte_jun17, na.rm=T),
-            valor_total_gasto = sum(pagamento_cte_jun17, na.rn=T),
+            valor_total_gasto = sum(pagamento_cte_jun17, na.rm=T),
             obras = n()) %>%
   mutate(dif_per = (valor_total_gasto - valor_total_pactuado)/valor_total_pactuado)
 
@@ -302,11 +292,64 @@ obras_iniciadas <- simec_atraso %>%
          ja_devia_estar_concluida = ifelse(data_estimada_de_entrega <= dia_final ,
                                            "sim", "não"),
          tempo_de_atraso = dia_final,
-         tempo_de_atraso = dia_final - data_estimada_de_entrega)
+         tempo_de_atraso = dia_final - data_estimada_de_entrega) %>%
+  select(ID, Situação, ja_devia_estar_concluida) %>%
+  mutate(situacao_tb = ifelse(!Situação %in% c("Obra Cancelada","Execução","Contratação"), 
+         "paralisada", "não-paralisada")) %>%
+  select(-Situação)
+
+## da tb
+obras_iniciadas %>%
+  group_by(ja_devia_estar_concluida) %>%
+  summarise(total=n()) %>%
+  ungroup() %>%
+  mutate(obras_a_serem_entregues = sum(total),
+         perc = round(total/obras_a_serem_entregues, 2))
+
+obras_situacao_tb <- obras_iniciadas %>%
+  right_join(simec_atraso, by="ID") %>%
+  mutate(paralisada_tb = ifelse(Situação %in% c("Paralisada", "Inacabada"), "paralisada",
+                                ifelse(!is.na(situacao_tb) & situacao_tb == "paralisada", 
+                                       "paralisada", "não-paralisada")),
+         atrasada = ifelse(is.na(ja_devia_estar_concluida), "não", ja_devia_estar_concluida),
+         obra_a_ser_entregue = ifelse(Situação %in% c("Obra Cancelada", "Concluída"), "não", "sim"))
+
+
+obras_situacao_tb %>%
+  filter(obra_a_ser_entregue == "sim") %>%
+  group_by(paralisada_tb) %>%
+  summarise(total=n()) %>%
+  ungroup() %>%
+  mutate(obras_a_serem_entregues = sum(total),
+         perc = round(total/obras_a_serem_entregues, 2))
+
+obras_situacao_tb %>%
+  filter(obra_a_ser_entregue == "sim") %>%
+  group_by(atrasada) %>%
+  summarise(total=n()) %>%
+  ungroup() %>%
+  mutate(obras_a_serem_entregues = sum(total),
+         perc = round(total/obras_a_serem_entregues, 2))
+
+obras_situacao_tb %>%
+  filter(obra_a_ser_entregue == "sim") %>%
+  group_by(paralisada_tb, atrasada) %>%
+  summarise(total=n()) %>%
+  ungroup() %>%
+  mutate(obras_a_serem_entregues = sum(total),
+         perc = round(total/obras_a_serem_entregues, 2))
+
+
+obras_situacao_tb %>%
+  group_by(paralisada_tb) %>%
+  summarise(n(), custo = sum(pagamento_cte_jun17, na.rm=T), 
+            num_com_custo = sum(!is.na(pagamento_cte_jun17)))
+  
+ 
 
 obras_iniciadas_tb <- obras_iniciadas %>%
   group_by(Situação) %>%
-  summarise(Obras = n(), Custo = sum(pagamento_cte_jun17)) %>%
+  summarise(Obras = n(), Custo = sum(pagamento_cte_jun17, na.rm=T)) %>%
   mutate(Custo = round(Custo/1000000, 2)) %>%
   arrange(desc(Custo)) %>%
   mutate(Custo = as.character(Custo))
@@ -315,7 +358,7 @@ obras_iniciadas_tb <- obras_iniciadas %>%
 obras_iniciadas_tb$Custo <- paste(obras_iniciadas_tb$Custo, "mi")
 obras_iniciadas_tb$Custo <- gsub("[.]", ",", obras_iniciadas_tb$Custo)
 
-obras_iniciadas_tb     
+  
 
 sum(obras_iniciadas_tb$Obras) 
 #obras canceladas 
@@ -330,19 +373,18 @@ custo_paralisadas <- obras_iniciadas %>%
 
 custo_paralisadas_tb <- custo_paralisadas %>%
   group_by(Situação) %>%
-  summarise(obras = n())   #aqui tem 567 paralisadas, mas o governo alega (simec_gastos_tb1)
-                           #que são 584 paralisadas, então no N final precisamos somar 17 aqui:
+  summarise(obras = n())   
 
 custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$Situação == "Paralisada",
-                                      custo_paralisadas_tb$obras + 17, custo_paralisadas_tb$obras))
+                                      simec_gastos_tb$num_obras[simec_gastos_tb$Situação == "Paralisada"], custo_paralisadas_tb$obras))
 custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$Situação == "Inacabada",
-                                      566, custo_paralisadas_tb$obras))
+                                      simec_gastos_tb$num_obras[simec_gastos_tb$Situação == "Inacabada"], custo_paralisadas_tb$obras))
 
 custo_paralisadas_tb
 sum(custo_paralisadas_tb$obras)
 
 custo_paralisadas %>%
-  summarise(custo = sum(pagamento_cte_jun17)/1000000000) #1.429633 bilhões
+  summarise(custo = sum(pagamento_cte_jun17, na.rm=T)/1000000000) #1.429633 bilhões
 
 write.table(custo_paralisadas_tb, file="custo_paralisadas_tb.csv", row.names = F, sep=";")
 
