@@ -1,11 +1,11 @@
-## An·lise dos dados pÛs-raspagem
+## An√°lise dos dados p√≥s-raspagem
 
 library(tidyverse)
 library(stringr)
 library(lubridate)
 library(scales)
 
-#EndereÁo para achar as obras: http://simec.mec.gov.br/painelObras/dadosobra.php?obra=
+#Endere√ßo para achar as obras: http://simec.mec.gov.br/painelObras/dadosobra.php?obra=
 setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\planilhas\\tadepe")
 load("arquivos_simec_fin_v2.RData")
 load("pagamento_simec_complemento.RData")
@@ -17,7 +17,7 @@ simec <- read.table(file="obras28072017.csv", sep=";",
                     header=T, encoding="utf-8", comment.char = "", quote = "\"", as.is = TRUE,
                     na.strings="")
 
-## n˙meros r·pidos
+## n√∫meros r√°pidos
 # fonte dos dados do ipca http://dadosabertos.bcb.gov.br/dataset/4447-indice-nacional-de-precos-ao-consumidor-amplo-ipca---comercializaveis
 
 # criando indice para atualizar para junho de 2017
@@ -69,7 +69,7 @@ pagamento_simec <- bind_rows(pagamentos_simec1, pagamentos_simec2, pagamento_sim
 pagamento_simec <- pagamento_simec %>%
   mutate(mes_ano = format(primeira_data, "%m/%Y"))
 
-# descontando inflaÁ„o
+# descontando infla√ß√£o
 pagamento_simec_inflacao <- pagamento_simec %>%
   left_join(ipca, by="mes_ano") %>%
   mutate(pagamento_cte_jun17 = pagamento/indice)
@@ -95,18 +95,18 @@ simec_gastos <- simec %>%
   full_join(ipca, by=c("mes_ano_assinatura_contrato" = "mes_ano")) %>%
   mutate(valor_pactuado_fnde_cte_jun17 = Valor.Pactuado.com.o.FNDE/indice.y)
 
-## filtrando para projetos que entram na an·lise
+## filtrando para projetos que entram na an√°lise
 
 
-Tipo.do.Projeto <- c("Escola de EducaÁ„o Infantil Tipo B",
-                     "Escola de EducaÁ„o Infantil Tipo C",
-                     "MI - Escola de EducaÁ„o Infantil Tipo B",
-                     "MI - Escola de EducaÁ„o Infantil Tipo C",
-                     "EspaÁo Educativo - 12 Salas",
-                     "EspaÁo Educativo - 01 Sala",
-                     "EspaÁo Educativo - 02 Salas",
-                     "EspaÁo Educativo - 04 Salas",
-                     "EspaÁo Educativo - 06 Salas",
+Tipo.do.Projeto <- c("Escola de Educa√ß√£o Infantil Tipo B",
+                     "Escola de Educa√ß√£o Infantil Tipo C",
+                     "MI - Escola de Educa√ß√£o Infantil Tipo B",
+                     "MI - Escola de Educa√ß√£o Infantil Tipo C",
+                     "Espa√ßo Educativo - 12 Salas",
+                     "Espa√ßo Educativo - 01 Sala",
+                     "Espa√ßo Educativo - 02 Salas",
+                     "Espa√ßo Educativo - 04 Salas",
+                     "Espa√ßo Educativo - 06 Salas",
                      "Projeto 1 Convencional",
                      "Projeto 2 Convencional")
 
@@ -114,26 +114,37 @@ tempo_exe_meses <- c(9,6,6,4,13,5,5,7,7,11,9)
 
 execucao <- data.frame(Tipo.do.Projeto, tempo_exe_meses)
 
-# criando df filtrado por tipo de projeto, construÁ„o (contÈm algumas obras sem dado de gasto, pois webscraping n achou nada)
+# criando df filtrado por tipo de projeto, constru√ß√£o (cont√©m algumas obras sem dado de gasto, pois webscraping n achou nada)
 simec_atraso <- simec_gastos %>%   #2
-  filter(Tipo.da.Obra == "ConstruÁ„o") %>%
-  inner_join(execucao) %>%
-  mutate(tempo_exe_dias = tempo_exe_meses*30)
+  filter(Tipo.da.Obra == "Constru√ß√£o") %>%
+  inner_join(execucao)
 
-simec_atraso$Data.Prevista.de.Conclus„o.da.Obra <- as.Date(simec_atraso$Data.Prevista.de.Conclus„o.da.Obra , "%d/%m/%Y")
-simec_atraso$Data.da.⁄ltima.Vistoria.do.Estado.ou.MunicÌpio <- as.Date(simec_atraso$Data.da.⁄ltima.Vistoria.do.Estado.ou.MunicÌpio , "%Y-%m-%d")
+simec_atraso$Data.Prevista.de.Conclus√£o.da.Obra <- as.Date(simec_atraso$Data.Prevista.de.Conclus√£o.da.Obra , "%d/%m/%Y")
+simec_atraso$Data.da.√öltima.Vistoria.do.Estado.ou.Munic√≠pio <- as.Date(simec_atraso$Data.da.√öltima.Vistoria.do.Estado.ou.Munic√≠pio , "%Y-%m-%d")
 simec_atraso$primeira_data <- as.Date(simec_atraso$primeira_data ,  "%Y-%m-%d")
 simec_atraso$Data.de.Assinatura.do.Contrato <- as.Date(simec_atraso$Data.de.Assinatura.do.Contrato, "%Y-%m-%d")
 
+simec_atraso <- simec_atraso %>%
+  mutate(tempo_exe_dias = tempo_exe_meses*30,
+         data_concluida = as.Date("01-01-2017"),
+         data_concluida = case_when(is.na(Data.Prevista.de.Conclus√£o.da.Obra) ~
+                                Data.da.√öltima.Vistoria.do.Estado.ou.Munic√≠pio,
+                                TRUE ~ Data.Prevista.de.Conclus√£o.da.Obra),
+         ano_concluida = format(data_concluida, "%Y"),
+         tempo_exec_real = as.numeric(data_concluida - Data.de.Assinatura.do.Contrato))
 
-# total de gasto por situaÁ„o, com soma burra (sem considerar inflaÁ„o)
+mean(simec_atraso$tempo_exec_real[simec_atraso$Situa√ß√£o == "Conclu√≠da"], na.rm=TRUE)
+#Tempo de execu√ß√£o m√©dio das obras j√° conclu√≠das foi de 860 dias ou mais de 2 anos
+
+# total de gasto por situa√ß√£o, com soma burra (sem considerar infla√ß√£o)
+
 simec_gastos_tb <- simec_atraso %>%
-  group_by(SituaÁ„o) %>%
+  group_by(Situa√ß√£o) %>%
   summarise(gasto = sum(pagamento_cte_jun17, na.rm=T),
             num_obras = n(),
             pactuado = sum(valor_pactuado_fnde_cte_jun17, na.rm=T),
             medio_pactuado = mean(valor_pactuado_fnde_cte_jun17, na.rm=T)) %>%
-  bind_rows(data.frame(SituaÁ„o = "total", 
+  bind_rows(data.frame(Situa√ß√£o = "total", 
                        gasto = sum(simec_atraso$pagamento_cte_jun17, na.rm=T),
                        num_obras = length(simec_atraso$ID),
                        pactuado = sum(simec_atraso$valor_pactuado_fnde_cte_jun17, na.rm=T))) %>%
@@ -147,45 +158,45 @@ write.table(simec_gastos_tb, file="simec_gastos_tb.csv", sep=";", row.names = FA
             dec = ",")
 
 ######################################################################################################
-#Jessica comeÁou a partir daqui 
+#Jessica come√ßou a partir daqui 
 
-#1 Tabela de obras do proinf‚ncia e situaÁ„o de cada uma das obras
+#1 Tabela de obras do proinf√¢ncia e situa√ß√£o de cada uma das obras
 
 
 
-#Existem 4728 obras a serem entregues pelo proinf‚ncia
+#Existem 4728 obras a serem entregues pelo proinf√¢ncia
 
-#2. Calculando tempo de duraÁ„o das obras
+#2. Calculando tempo de dura√ß√£o das obras
 
-#teste se podemos usar tanto Data.Prevista.de.Conclus„o.da.Obra quanto Data.da.⁄ltima.Vistoria.do.Estado.ou.MunicÌpio
+#teste se podemos usar tanto Data.Prevista.de.Conclus√£o.da.Obra quanto Data.da.√öltima.Vistoria.do.Estado.ou.Munic√≠pio
 
-#ObservaÁ„o : teremos como data de tÈrmino oficial da obra Data.Prevista.de.Conclus„o.da.Obra |
-# Data.da.⁄ltima.Vistoria.do.Estado.ou.MunicÌpio
+#Observa√ß√£o : teremos como data de t√©rmino oficial da obra Data.Prevista.de.Conclus√£o.da.Obra |
+# Data.da.√öltima.Vistoria.do.Estado.ou.Munic√≠pio
 
 #3. Atraso das obras concluidas
 
-simec_atraso$Data.Prevista.de.Conclus„o.da.Obra <- as.Date(simec_atraso$Data.Prevista.de.Conclus„o.da.Obra)
+simec_atraso$Data.Prevista.de.Conclus√£o.da.Obra <- as.Date(simec_atraso$Data.Prevista.de.Conclus√£o.da.Obra)
 
 simec_atraso_concluidas <- simec_atraso %>%
-  filter(SituaÁ„o == "ConcluÌda") %>%
+  filter(Situa√ß√£o == "Conclu√≠da") %>%
   mutate(data_ideal = Data.de.Assinatura.do.Contrato + tempo_exe_dias,
-         data_final_gov = Data.Prevista.de.Conclus„o.da.Obra,
+         data_final_gov = Data.Prevista.de.Conclus√£o.da.Obra,
          data_final_gov = case_when(
-           is.na(Data.Prevista.de.Conclus„o.da.Obra) ~ Data.da.⁄ltima.Vistoria.do.Estado.ou.MunicÌpio,
-           TRUE ~ Data.Prevista.de.Conclus„o.da.Obra))
+           is.na(Data.Prevista.de.Conclus√£o.da.Obra) ~ Data.da.√öltima.Vistoria.do.Estado.ou.Munic√≠pio,
+           TRUE ~ Data.Prevista.de.Conclus√£o.da.Obra))
 
 simec_atraso_concluidas$data_ideal <- as.Date(simec_atraso_concluidas$data_ideal , "%Y-%m-%d")
 simec_atraso_concluidas$data_final_gov <- as.Date(simec_atraso_concluidas$data_final_gov , "%Y-%m-%d")
 
 simec_atraso_concluidas <- simec_atraso_concluidas %>%
   mutate(atraso = data_final_gov - data_ideal,
-         entregue_atrasada = ifelse(atraso > 0, "sim", "n„o"))
+         entregue_atrasada = ifelse(atraso > 0, "sim", "n√£o"))
 
 simec_atraso_concluidas %>%
   group_by(entregue_atrasada) %>%
   summarise(atraso = mean(atraso))
 
-##4. Total gasto atÈ hoje (nas concluÌdas) e total pactuado atÈ hoje
+##4. Total gasto at√© hoje (nas conclu√≠das) e total pactuado at√© hoje
 
 simec_atraso_concluidas_pagto <- simec_atraso_concluidas %>%
   group_by(Tipo.do.Projeto) %>%
@@ -201,7 +212,7 @@ total_pactuado_concluidas <- sum(simec_atraso_concluidas_pagto$valor_total_pactu
 total_pagto_concluidas/total_pactuado_concluidas - 1 #foi gasto 4% a mais do que o pactuado
 total_pagto_concluidas - total_pactuado_concluidas   #259.056.016 ou cerca de 259 mil reais
 
-# 5. Gasto por ano (efeito da eleiÁ„o)
+# 5. Gasto por ano (efeito da elei√ß√£o)
 
 locale("pt", decimal_mark = ",")
 
@@ -234,7 +245,7 @@ pagamento_ano_simec <- bind_rows(pagamentos_ano_simec1, pagamentos_ano_simec2) %
                                                ano == 2006 | 
                                                ano == 2010 | 
                                                ano == 2014 , 
-                                             "sim", "n„o"))) 
+                                             "sim", "n√£o"))) 
 graf_pagto_ano <- pagamento_ano_simec %>%
   group_by(ano) %>%
   summarise(total_pagto_repasse_cte_jun17 = sum(pagto_repasse_cte_jun17)) %>%
@@ -244,9 +255,9 @@ graf_pagto_ano <- pagamento_ano_simec %>%
 
 graf_pagto_ano %>%
   ggplot(aes(x=ano, y=total_pagto)) +
-  labs(title="Repasses Proinf‚ncia", 
-       subtitle="Repasses efetuados pelo Governo Federal ‡s prefeituras", 
-       caption="Fonte: SIMEC. Elaborado por TransparÍncia Brasil", 
+  labs(title="Repasses Proinf√¢ncia", 
+       subtitle="Repasses efetuados pelo Governo Federal √†s prefeituras", 
+       caption="Fonte: SIMEC. Elaborado por Transpar√™ncia Brasil", 
        y="Repasse") +
   geom_line() + xlab("") + ylab("") + scale_y_continuous(labels = dollar_format(suffix = " bi", prefix = "R$ ",
                                                                                                   decimal.mark = ",",
@@ -254,7 +265,7 @@ graf_pagto_ano %>%
   scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
   theme(panel.grid.minor = element_blank())
 
-#Repasses feitos para obras que n„o foram concluÌdas:
+#Repasses feitos para obras que n√£o foram conclu√≠das:
 
 graf_pagto_ano_naoconl <- pagamento_ano_simec %>%
   group_by(ano) %>%
@@ -266,9 +277,9 @@ graf_pagto_ano_naoconl <- pagamento_ano_simec %>%
 
 graf_pagto_ano %>%
   ggplot(aes(x=ano, y=total_pagto)) +
-  labs(title="Repasses Proinf‚ncia", 
-       subtitle="Repasses efetuados pelo Governo Federal ‡s prefeituras", 
-       caption="Fonte: SIMEC. Elaborado por TransparÍncia Brasil", 
+  labs(title="Repasses Proinf√¢ncia", 
+       subtitle="Repasses efetuados pelo Governo Federal √†s prefeituras", 
+       caption="Fonte: SIMEC. Elaborado por Transpar√™ncia Brasil", 
        y="Repasse") +
   geom_line() + xlab("") + ylab("") + scale_y_continuous(labels = dollar_format(suffix = " bi", prefix = "R$ ",
                                                                                 decimal.mark = ",",
@@ -279,24 +290,24 @@ graf_pagto_ano %>%
 
 dia_final <- as.Date("2017-07-27")
 
-#6. obras em execuÁ„o e iniciadas
-#todas as obras que tÍm Data de assinatura do contrato foram consideradas como iniciadas
+#6. obras em execu√ß√£o e iniciadas
+#todas as obras que t√™m Data de assinatura do contrato foram consideradas como iniciadas
 
 obras_iniciadas <- simec_atraso %>%
   filter(!is.na(Data.de.Assinatura.do.Contrato),
-         SituaÁ„o != "ConcluÌda") %>%
-  mutate(data_estimada_de_entrega = Data.Prevista.de.Conclus„o.da.Obra,
-         data_estimada_de_entrega = case_when(!is.na(Data.Prevista.de.Conclus„o.da.Obra) ~ data_estimada_de_entrega,
+         Situa√ß√£o != "Conclu√≠da") %>%
+  mutate(data_estimada_de_entrega = Data.Prevista.de.Conclus√£o.da.Obra,
+         data_estimada_de_entrega = case_when(!is.na(Data.Prevista.de.Conclus√£o.da.Obra) ~ data_estimada_de_entrega,
                                               TRUE ~ Data.de.Assinatura.do.Contrato + tempo_exe_dias),
          dia_final = dia_final,
          ja_devia_estar_concluida = ifelse(data_estimada_de_entrega <= dia_final ,
-                                           "sim", "n„o"),
+                                           "sim", "n√£o"),
          tempo_de_atraso = dia_final,
          tempo_de_atraso = dia_final - data_estimada_de_entrega) %>%
-  select(ID, SituaÁ„o, ja_devia_estar_concluida) %>%
-  mutate(situacao_tb = ifelse(!SituaÁ„o %in% c("Obra Cancelada","ExecuÁ„o","ContrataÁ„o"), 
-         "paralisada", "n„o-paralisada")) %>%
-  select(-SituaÁ„o)
+  select(ID, Situa√ß√£o, ja_devia_estar_concluida) %>%
+  mutate(situacao_tb = ifelse(!Situa√ß√£o %in% c("Obra Cancelada","Execu√ß√£o","Contrata√ß√£o"), 
+         "paralisada", "n√£o-paralisada")) %>%
+  select(-Situa√ß√£o)
 
 ## da tb
 obras_iniciadas %>%
@@ -308,11 +319,11 @@ obras_iniciadas %>%
 
 obras_situacao_tb <- obras_iniciadas %>%
   right_join(simec_atraso, by="ID") %>%
-  mutate(paralisada_tb = ifelse(SituaÁ„o %in% c("Paralisada", "Inacabada"), "paralisada",
+  mutate(paralisada_tb = ifelse(Situa√ß√£o %in% c("Paralisada", "Inacabada"), "paralisada",
                                 ifelse(!is.na(situacao_tb) & situacao_tb == "paralisada", 
-                                       "paralisada", "n„o-paralisada")),
-         atrasada = ifelse(is.na(ja_devia_estar_concluida), "n„o", ja_devia_estar_concluida),
-         obra_a_ser_entregue = ifelse(SituaÁ„o %in% c("Obra Cancelada", "ConcluÌda"), "n„o", "sim"))
+                                       "paralisada", "n√£o-paralisada")),
+         atrasada = ifelse(is.na(ja_devia_estar_concluida), "n√£o", ja_devia_estar_concluida),
+         obra_a_ser_entregue = ifelse(Situa√ß√£o %in% c("Obra Cancelada", "Conclu√≠da"), "n√£o", "sim"))
 
 
 obras_situacao_tb %>%
@@ -334,99 +345,71 @@ obras_situacao_tb %>%
 obras_situacao_tb %>%
   filter(obra_a_ser_entregue == "sim") %>%
   group_by(paralisada_tb, atrasada) %>%
-  summarise(total=n()) %>%
+  summarise(total=n(), 
+            custo = sum(pagamento_cte_jun17, na.rm=T),
+            num_obras_custo = sum(!is.na(pagamento_cte_jun17))) %>%
   ungroup() %>%
   mutate(obras_a_serem_entregues = sum(total),
          perc = round(total/obras_a_serem_entregues, 2))
 
 
-obras_situacao_tb %>%
-  group_by(paralisada_tb) %>%
-  summarise(n(), custo = sum(pagamento_cte_jun17, na.rm=T), 
-            num_com_custo = sum(!is.na(pagamento_cte_jun17)))
-  
- 
-
-obras_iniciadas_tb <- obras_iniciadas %>%
-  group_by(SituaÁ„o) %>%
-  summarise(Obras = n(), Custo = sum(pagamento_cte_jun17, na.rm=T)) %>%
-  mutate(Custo = round(Custo/1000000, 2)) %>%
-  arrange(desc(Custo)) %>%
-  mutate(Custo = as.character(Custo))
-
-
-obras_iniciadas_tb$Custo <- paste(obras_iniciadas_tb$Custo, "mi")
-obras_iniciadas_tb$Custo <- gsub("[.]", ",", obras_iniciadas_tb$Custo)
-
-  
-
-sum(obras_iniciadas_tb$Obras) 
 #obras canceladas 
 #numero de obras iniciadas exceto canceladas e concluidas
+3083 +1189 +510 +1414 #temos informa√ß√£o de gastos de apenas 6.196
+ 
 
-
-custo_paralisadas <- obras_iniciadas %>%
-  filter(SituaÁ„o != "Obra Cancelada",
-         SituaÁ„o != "ExecuÁ„o",
-         SituaÁ„o != "ContrataÁ„o")
-
-
-custo_paralisadas_tb <- custo_paralisadas %>%
-  group_by(SituaÁ„o) %>%
-  summarise(obras = n())   
-
-custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$SituaÁ„o == "Paralisada",
-                                      simec_gastos_tb$num_obras[simec_gastos_tb$SituaÁ„o == "Paralisada"], custo_paralisadas_tb$obras))
-custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$SituaÁ„o == "Inacabada",
-                                      simec_gastos_tb$num_obras[simec_gastos_tb$SituaÁ„o == "Inacabada"], custo_paralisadas_tb$obras))
+custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$Situa√ß√£o == "Paralisada",
+                                      simec_gastos_tb$num_obras[simec_gastos_tb$Situa√ß√£o == "Paralisada"], custo_paralisadas_tb$obras))
+custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$Situa√ß√£o == "Inacabada",
+                                      simec_gastos_tb$num_obras[simec_gastos_tb$Situa√ß√£o == "Inacabada"], custo_paralisadas_tb$obras))
 
 custo_paralisadas_tb
 sum(custo_paralisadas_tb$obras)
 
 custo_paralisadas %>%
-  summarise(custo = sum(pagamento_cte_jun17, na.rm=T)/1000000000) #1.429633 bilhıes
+  summarise(custo = sum(pagamento_cte_jun17, na.rm=T)/1000000000) #1.429633 bilh√µes
 
 write.table(custo_paralisadas_tb, file="custo_paralisadas_tb.csv", row.names = F, sep=";")
 
-#quantas obras j· deveriam ter sido concluÌdas de fato foram?
+#quantas obras j√° deveriam ter sido conclu√≠das de fato foram?
 
 #7. Obras iniciadas e atrasadas:
 
-#para obras que ainda n„o foram concluidas
-#e que n„o foram canceladas
-#e que possuem Data de assinatura de contrato ou constam como "em execuÁ„o
-#e cujos projetos tem tempo de execuÁ„o conhecida
+#para obras que ainda n√£o foram concluidas
+#e que n√£o foram canceladas
+#e que possuem Data de assinatura de contrato ou constam como "em execu√ß√£o
+#e cujos projetos tem tempo de execu√ß√£o conhecida
 
-#OBS: A data da ˙ltima vistoria como procy da entrega vale sÛ para as obras j· concluÌdas
+#OBS: A data da √∫ltima vistoria como procy da entrega vale s√≥ para as obras j√° conclu√≠das
 
 execucao_e_atrasos <- simec_atraso %>%
-  filter(SituaÁ„o != "ConcluÌda",           
-         SituaÁ„o!= "Obra Cancelada",
+  filter(Situa√ß√£o != "Conclu√≠da",           
+         Situa√ß√£o!= "Obra Cancelada",
          !is.na(Data.de.Assinatura.do.Contrato),    
-         !is.na(tempo_exe_dias) | !is.na(Data.Prevista.de.Conclus„o.da.Obra)) %>%  
-  mutate(data_estimada_de_entrega = Data.Prevista.de.Conclus„o.da.Obra,
-         data_estimada_de_entrega = case_when(!is.na(Data.Prevista.de.Conclus„o.da.Obra) ~ data_estimada_de_entrega,
+         !is.na(tempo_exe_dias) | !is.na(Data.Prevista.de.Conclus√£o.da.Obra)) %>%  
+  mutate(data_estimada_de_entrega = Data.Prevista.de.Conclus√£o.da.Obra,
+         data_estimada_de_entrega = case_when(!is.na(Data.Prevista.de.Conclus√£o.da.Obra) ~ data_estimada_de_entrega,
                                               TRUE ~ Data.de.Assinatura.do.Contrato + tempo_exe_dias),
          dia_final = dia_final,
          ja_devia_estar_concluida = ifelse(data_estimada_de_entrega <= dia_final ,
-                                           "sim", "n„o"),
+                                           "sim", "n√£o"),
          tempo_de_atraso = dia_final,
          tempo_de_atraso = dia_final - data_estimada_de_entrega)
 
 # 7 Quantidade de obras atrasadas -
 
 obras_atrasadas <- execucao_e_atrasos %>%
-  filter(SituaÁ„o == "ExecuÁ„o") %>%
+  filter(Situa√ß√£o == "Execu√ß√£o") %>%
   group_by(ja_devia_estar_concluida) %>%
   summarise(obras = n())
 
 obras_atrasadas
 
-#Quantas obras j· deviam estar concluÌdas e qual È a situaÁ„o de cada uma delas:
+#Quantas obras j√° deviam estar conclu√≠das e qual √© a situa√ß√£o de cada uma delas:
 
 obras_atrasadas_sit <- execucao_e_atrasos %>%
-  filter(SituaÁ„o == "ExecuÁ„o") %>%
-  group_by(SituaÁ„o) %>%
+  filter(Situa√ß√£o == "Execu√ß√£o") %>%
+  group_by(Situa√ß√£o) %>%
   summarise(Obras = n(), Custo = sum(pagamento_cte_jun17)) %>%
   mutate(Custo = round(Custo/1000000, 2)) %>%
   arrange(desc(Custo)) %>%
@@ -439,18 +422,18 @@ obras_atrasadas_sit$Custo <- gsub("[.]", ",", obras_atrasadas_sit$Custo)
 obras_atrasadas_sit
 write.table(obras_atrasadas_sit, file="obras_atrasadas_sit.csv", row.names = F, sep=";")
 
-### Qual È o atraso mÈdio das obras iniciadas?
+### Qual √© o atraso m√©dio das obras iniciadas?
 
 atraso_medio_execucao <- execucao_e_atrasos %>%
   filter(ja_devia_estar_concluida == "sim",
-         SituaÁ„o == "ExecuÁ„o") %>%
+         Situa√ß√£o == "Execu√ß√£o") %>%
   group_by(ja_devia_estar_concluida) %>%
   summarise(tempo_medio_atraso = mean(tempo_de_atraso)) 
 atraso_medio_execucao 
 
 atraso_medio_iniciadas <- execucao_e_atrasos %>%
   filter(ja_devia_estar_concluida == "sim",
-         SituaÁ„o != "ContrataÁ„o") %>%
+         Situa√ß√£o != "Contrata√ß√£o") %>%
   group_by(ja_devia_estar_concluida) %>%
   summarise(tempo_medio_atraso = mean(tempo_de_atraso)) 
 
@@ -458,7 +441,7 @@ atraso_medio_iniciadas
 
 atraso_medio_paralisadas <- custo_paralisadas %>%
   filter(ja_devia_estar_concluida == "sim",
-         SituaÁ„o != "ExecuÁ„o") %>%
+         Situa√ß√£o != "Execu√ß√£o") %>%
   group_by(ja_devia_estar_concluida) %>%
   summarise(tempo_medio_atraso = mean(tempo_de_atraso)) 
 
@@ -466,151 +449,175 @@ atraso_medio_paralisadas
 
 # 9. Obras entregues por ano
 
-ano_conclusao <- simec_atraso%>%
-  filter(SituaÁ„o == "ConcluÌda") %>%
-  mutate(ano_prev_concl = format(Data.Prevista.de.Conclus„o.da.Obra, "%Y"),
-         ano_data.vist = format(Data.da.⁄ltima.Vistoria.do.Estado.ou.MunicÌpio, "%Y"),
-         ano_concluida = ano_prev_concl , 
-         ano_concluida = ifelse(is.na(ano_concluida), ano_data.vist, ano_concluida))
+ano_conclusao <- simec_atraso %>%
+  filter(Situa√ß√£o == "Conclu√≠da") %>%
+  mutate(ano_assinatura = format(Data.de.Assinatura.do.Contrato, "%Y"))
 
 graf_ano_conclusao <- ano_conclusao %>%
   group_by(ano_concluida) %>%
-  summarise(obras = n()) %>%
+  summarise(obras = n(), 
+            tempo_medio = mean(tempo_exec_real, na.rm=T)) %>%
   filter(ano_concluida != "<NA>",
          ano_concluida != "2018") %>%
-  mutate(obras = as.numeric(obras),
-         ano_concluida = as.numeric(ano_concluida))
+  mutate(ano_concluida = as.numeric(ano_concluida))
 
 graf_ano_conclusao %>%
   ggplot(aes(x=ano_concluida, y=obras, group=1)) +
-  labs(title="Obras Proinf‚ncia entregues", 
-       subtitle="Obras concluÌdas por ano", 
-       caption="Fonte: SIMEC. Elaborado por TransparÍncia Brasil") +
+  labs(title="Obras Proinf√¢ncia entregues", 
+       subtitle="Obras conclu√≠das por ano", 
+       caption="Fonte: SIMEC. Elaborado por Transpar√™ncia Brasil") +
   geom_line() + xlab("") + ylab("") +
   scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw()
 
+
+
+graf_ano_conclusao %>%
+  ggplot(aes(x=ano_concluida, y=tempo_medio, group=1)) +
+  labs(title="Obras Proinf√¢ncia entregues", 
+       subtitle="Obras conclu√≠das por ano", 
+       caption="Fonte: SIMEC. Elaborado por Transpar√™ncia Brasil") +
+  geom_line() + xlab("") + ylab("") + facet_wfrap(~ano_assinatura) +
+  scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw()
+
+graf_ano_conclusao1 <- ano_conclusao %>%
+  group_by(ano_concluida, ano_assinatura) %>%
+  summarise(obras = n(), 
+            tempo_medio = mean(tempo_exec_real, na.rm=T)) %>%
+  ungroup() %>%
+  filter(ano_concluida != "<NA>",
+         ano_concluida != "2018") %>%
+  mutate(ano_concluida = as.numeric(ano_concluida))
+
+graf_ano_conclusao1 %>%
+  ggplot(aes(x=ano_concluida, y=tempo_medio, group=1)) +
+  labs(title="Obras Proinf√¢ncia entregues", 
+       subtitle="Obras conclu√≠das por ano", 
+       caption="Fonte: SIMEC. Elaborado por Transpar√™ncia Brasil") +
+  geom_line() + xlab("") + ylab("") + facet_wrap(~ ano_assinatura) +
+  scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw()
+
 #Dados inconsistentes e inexistentes
-# base para c·lculo da falta de informaÁıes: as obras 
+# base para c√°lculo da falta de informa√ß√µes: as obras 
 names(simec_atraso)
 
-inex <- simec_atraso %>%           #p·gina 4 base de todos os 
-  filter(is.na(MunicÌpio)|
+inex <- simec_atraso %>%           #p√°gina 4 base de todos os 
+  filter(is.na(Munic√≠pio)|
          is.na(UF)|
          is.na(CEP)|
-         is.na(SituaÁ„o)|
+         is.na(Situa√ß√£o)|
          is.na(Logradouro)|
-         is.na(Termo.ConvÍnio)|
-         is.na(Fim.da.VigÍncia.Termo.ConvÍnio)|
+         is.na(Termo.Conv√™nio)|
+         is.na(Fim.da.Vig√™ncia.Termo.Conv√™nio)|
          is.na(Tipo.do.Projeto)|
          is.na(Valor.Pactuado.pelo.FNDE)|
          is.na(Email)|
          is.na(Total.Pago)) %>%
-  mutate(MunicÌpio = ifelse(is.na(MunicÌpio), 1 ,0),
+  mutate(Munic√≠pio = ifelse(is.na(Munic√≠pio), 1 ,0),
          UF = ifelse(is.na(UF), 1 ,0),
          CEP = ifelse(is.na(CEP), 1 ,0),
          Logradouro = ifelse(is.na(Logradouro), 1 ,0),
-         Termo.ConvÍnio = ifelse(is.na(Termo.ConvÍnio), 1 ,0),
-         Fim.da.VigÍncia.Termo.ConvÍnio = ifelse(is.na(Fim.da.VigÍncia.Termo.ConvÍnio), 1 ,0),
+         Termo.Conv√™nio = ifelse(is.na(Termo.Conv√™nio), 1 ,0),
+         Fim.da.Vig√™ncia.Termo.Conv√™nio = ifelse(is.na(Fim.da.Vig√™ncia.Termo.Conv√™nio), 1 ,0),
          Tipo.do.Projeto = ifelse(is.na(Tipo.do.Projeto), 1 ,0),
          Valor.Pactuado.pelo.FNDE = ifelse(is.na(Valor.Pactuado.pelo.FNDE), 1 ,0),
          Email = ifelse(is.na(Email), 1 ,0),
          Total.Pago = ifelse(is.na(Total.Pago), 1 ,0),
-         SituaÁ„o = ifelse(is.na(SituaÁ„o),1,0)) %>%
-  select(MunicÌpio, UF, CEP, Logradouro, Termo.ConvÍnio, Fim.da.VigÍncia.Termo.ConvÍnio,
-         Tipo.do.Projeto, Valor.Pactuado.pelo.FNDE, Email, Total.Pago, SituaÁ„o)
+         Situa√ß√£o = ifelse(is.na(Situa√ß√£o),1,0)) %>%
+  select(Munic√≠pio, UF, CEP, Logradouro, Termo.Conv√™nio, Fim.da.Vig√™ncia.Termo.Conv√™nio,
+         Tipo.do.Projeto, Valor.Pactuado.pelo.FNDE, Email, Total.Pago, Situa√ß√£o)
 
-MunicÌpio <- sum(inex$MunicÌpio)
+Munic√≠pio <- sum(inex$Munic√≠pio)
 UF <- sum(inex$UF) 
 CEP <- sum(inex$CEP)
 Logradouro <- sum(inex$Logradouro)
-Termo.ConvÍnio <- sum(inex$Termo.ConvÍnio)
-Fim.da.VigÍncia.Termo.ConvÍnio <- sum(inex$Fim.da.VigÍncia.Termo.ConvÍnio)
+Termo.Conv√™nio <- sum(inex$Termo.Conv√™nio)
+Fim.da.Vig√™ncia.Termo.Conv√™nio <- sum(inex$Fim.da.Vig√™ncia.Termo.Conv√™nio)
 Tipo.do.Projeto <- sum(inex$Tipo.do.Projeto)
 Valor.Pactuado.pelo.FNDE <- sum(inex$Valor.Pactuado.pelo.FNDE)
 Email <- sum(inex$Email)
 Total.Pago <- sum(inex$Total.Pago)
-SituaÁ„o <- sum(inex$SituaÁ„o)
+Situa√ß√£o <- sum(inex$Situa√ß√£o)
 
-inexistentes <- data.frame(MunicÌpio, UF, CEP, Logradouro, Termo.ConvÍnio,
-                           Fim.da.VigÍncia.Termo.ConvÍnio, Tipo.do.Projeto,
+inexistentes <- data.frame(Munic√≠pio, UF, CEP, Logradouro, Termo.Conv√™nio,
+                           Fim.da.Vig√™ncia.Termo.Conv√™nio, Tipo.do.Projeto,
                            Valor.Pactuado.pelo.FNDE, Email, 
-                           Total.Pago, SituaÁ„o)
+                           Total.Pago, Situa√ß√£o)
 inexistentes
 
 write.table(inexistentes, file="inexistentes.csv", row.names = F, sep=";")
 
 ww <- simec_atraso %>%
-  filter(SituaÁ„o != "ConcluÌda",
-         SituaÁ„o != "Obra Cancelada") %>%
+  filter(Situa√ß√£o != "Conclu√≠da",
+         Situa√ß√£o != "Obra Cancelada") %>%
   filter(is.na(Total.Pago)) %>%
-  select(Fim.da.VigÍncia.Termo.ConvÍnio, Total.Pago)  #Essas duas colunas s„o ausentes nos mesmos casos
+  select(Fim.da.Vig√™ncia.Termo.Conv√™nio, Total.Pago)  #Essas duas colunas s√£o ausentes nos mesmos casos
 
-sum(is.na(ww$Fim.da.VigÍncia.Termo.ConvÍnio)) 
+sum(is.na(ww$Fim.da.Vig√™ncia.Termo.Conv√™nio)) 
 sum(is.na(ww$Total.Pago)) 
 
 
-#inconsistÍncias:
-#a. Obras em execuÁ„o sem data de assinatura de contrato: #16
+#inconsist√™ncias:
+#a. Obras em execu√ß√£o sem data de assinatura de contrato: #16
 
 simec %>%
-  filter(SituaÁ„o == "ExecuÁ„o" & is.na(Data.de.Assinatura.do.Contrato)) %>%
+  filter(Situa√ß√£o == "Execu√ß√£o" & is.na(Data.de.Assinatura.do.Contrato)) %>%
   summarise(n())   #16
 
-#b. Obras em execuÁ„o que n„o possuem data prevista de entrega 279
+#b. Obras em execu√ß√£o que n√£o possuem data prevista de entrega 279
 
 simec %>%
-  filter(SituaÁ„o == "ExecuÁ„o" & is.na(Data.Prevista.de.Conclus„o.da.Obra)) %>%
+  filter(Situa√ß√£o == "Execu√ß√£o" & is.na(Data.Prevista.de.Conclus√£o.da.Obra)) %>%
   summarise(n()) #279
 
-#c. Obras concluÌdas que constam que a ˙ltima data de vistoria do municÌpio foi em 2018: 5
+#c. Obras conclu√≠das que constam que a √∫ltima data de vistoria do munic√≠pio foi em 2018: 5
 
 simec %>%
   mutate(dia_final = dia_final) %>%
-  mutate(Data.da.⁄ltima.Vistoria.do.Estado.ou.MunicÌpio = 
-           as.Date(Data.da.⁄ltima.Vistoria.do.Estado.ou.MunicÌpio)) %>%
-  filter(SituaÁ„o == "ConcluÌda",
-         Data.da.⁄ltima.Vistoria.do.Estado.ou.MunicÌpio > dia_final) %>%
+  mutate(Data.da.√öltima.Vistoria.do.Estado.ou.Munic√≠pio = 
+           as.Date(Data.da.√öltima.Vistoria.do.Estado.ou.Munic√≠pio)) %>%
+  filter(Situa√ß√£o == "Conclu√≠da",
+         Data.da.√öltima.Vistoria.do.Estado.ou.Munic√≠pio > dia_final) %>%
   summarise(n()) #5
 
-#d. Obras em licitaÁ„o que tem percentual de execuÁ„o da obra > 0 #227
+#d. Obras em licita√ß√£o que tem percentual de execu√ß√£o da obra > 0 #227
 
 simec %>%
-  filter(SituaÁ„o == "LicitaÁ„o" & !is.na(Percentual.de.ExecuÁ„o) & Percentual.de.ExecuÁ„o >= 0.01) %>%
+  filter(Situa√ß√£o == "Licita√ß√£o" & !is.na(Percentual.de.Execu√ß√£o) & Percentual.de.Execu√ß√£o >= 0.01) %>%
   summarise( casos = n()) #227
 
-#e. Obras em contrataÁ„o que j· tem data de assinatura do contrato #387
+#e. Obras em contrata√ß√£o que j√° tem data de assinatura do contrato #387
 
 simec %>%
-  filter(SituaÁ„o == "ContrataÁ„o",
+  filter(Situa√ß√£o == "Contrata√ß√£o",
          !is.na(Data.de.Assinatura.do.Contrato)) %>%
   summarise( casos = n())
 
-#p·gina 3 - % de escolas sem n˙mero
+#p√°gina 3 - % de escolas sem n√∫mero
 
 simec_atraso %>%
-  filter(SituaÁ„o != "Obra Cancelada",
+  filter(Situa√ß√£o != "Obra Cancelada",
          is.na(Logradouro)) %>%
-  group_by(SituaÁ„o)%>%
-  summarise(n())    #929 escolas sem endereÁo ou 10%
+  group_by(Situa√ß√£o)%>%
+  summarise(n())    #929 escolas sem endere√ßo ou 10%
 
 
 simec_atraso %>%
-  filter(SituaÁ„o != "Obra Cancelada") %>%
+  filter(Situa√ß√£o != "Obra Cancelada") %>%
   mutate(end_sem_num = as.numeric(grepl("[0-9]", Logradouro))) %>%
   group_by(end_sem_num) %>%
   summarise(n())
 
 # end_sem_num `n()`
 # <dbl> <int>
-# 1           0  8099   escolas sem n˙mero ou sem endereÁo
-# 2           1   948   escolas com n˙mero
+# 1           0  8099   escolas sem n√∫mero ou sem endere√ßo
+# 2           1   948   escolas com n√∫mero
 
 8099 - 929 # = 7170 ou 76% das escolas
 
 #Quando foram pactuadas as obras?
 
 convenios_pactuados <- simec_atraso %>%
-  mutate(ano_pacto = str_sub(Termo.ConvÍnio, start = -4)) %>%
+  mutate(ano_pacto = str_sub(Termo.Conv√™nio, start = -4)) %>%
   mutate(ano_pacto = as.Date(ano_pacto, "%Y"))
 
 convenios_pactuados$ano_pacto <- lubridate::year(convenios_pactuados$ano_pacto)
@@ -626,8 +633,8 @@ sum(convenios_pactuados$obras)
 convenios_pactuados %>%
   ggplot(aes(x=ano_pacto, y=obras)) + geom_line() +
   labs(title="Obras pactuadas por ano", 
-       subtitle="ConvÍnios com prefeituras pactuados por ano", 
-       caption="Fonte: SIMEC. Elaborado por TransparÍncia Brasil", 
+       subtitle="Conv√™nios com prefeituras pactuados por ano", 
+       caption="Fonte: SIMEC. Elaborado por Transpar√™ncia Brasil", 
        y="", x="") +
   scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
   theme(panel.grid.minor = element_blank())
@@ -637,37 +644,37 @@ convenios_pactuados %>%
 
 
 obras_pactuadas <- simec_atraso %>%
-  mutate(ano_pacto = str_sub(Termo.ConvÍnio, start = -4)) %>%
+  mutate(ano_pacto = str_sub(Termo.Conv√™nio, start = -4)) %>%
   mutate(ano_pacto = as.Date(ano_pacto, "%Y"))
 
 obras_pactuadas$ano_pacto <- lubridate::year(obras_pactuadas$ano_pacto)
 
 obras_pactuadas <- obras_pactuadas%>%
-  group_by(Termo.ConvÍnio) %>%
+  group_by(Termo.Conv√™nio) %>%
   summarise(obras = n()) %>%
-  filter(!is.na(Termo.ConvÍnio))
+  filter(!is.na(Termo.Conv√™nio))
 
 #Quando foram pactuadas as obras que ainda precisam ser entregues?
 
 x <- simec_atraso %>%
-  filter(SituaÁ„o != "Canceladas",
-         SituaÁ„o != "ConcluÌda") %>%
-  group_by(MunicÌpio, UF) %>%
+  filter(Situa√ß√£o != "Canceladas",
+         Situa√ß√£o != "Conclu√≠da") %>%
+  group_by(Munic√≠pio, UF) %>%
   summarise(obras = n()) 
 
-#2211 municÌpios
+#2211 munic√≠pios
 
 
 pacto_concluidas_andamento <- simec_atraso %>%
-  mutate(ano_pacto = str_sub(Termo.ConvÍnio, start = -4)) %>%
+  mutate(ano_pacto = str_sub(Termo.Conv√™nio, start = -4)) %>%
   mutate(ano_pacto = as.Date(ano_pacto, "%Y"))
 
 pacto_concluidas_andamento$ano_pacto <- lubridate::year(pacto_concluidas_andamento$ano_pacto)
 
 pacto_concluidas_andamento <- pacto_concluidas_andamento %>%
-  filter(SituaÁ„o != "Obra Cancelada") %>%
-  mutate(count_concluida = ifelse(SituaÁ„o == "ConcluÌda", 1,0),
-         count_andamento = ifelse(SituaÁ„o != "ConcluÌda", 1,0)) %>%
+  filter(Situa√ß√£o != "Obra Cancelada") %>%
+  mutate(count_concluida = ifelse(Situa√ß√£o == "Conclu√≠da", 1,0),
+         count_andamento = ifelse(Situa√ß√£o != "Conclu√≠da", 1,0)) %>%
   group_by(ano_pacto) %>%
   summarise(obras_concluidas = sum(count_concluida),
             obras_andamento = sum(count_andamento)) %>%
@@ -678,9 +685,9 @@ pacto_concluidas_andamento
 
 pacto_concluidas_andamento %>%
   ggplot(aes(x=ano_pacto, y=obras, colour = situacao_obra)) + geom_line() +
-  labs(title="ProporÁ„o descumprimento da entrega", 
-       subtitle="ProporÁ„o de obras entregues de acordo com o ano que foram pactuadas", 
-       caption="Fonte: SIMEC. Elaborado por TransparÍncia Brasil", 
+  labs(title="Propor√ß√£o descumprimento da entrega", 
+       subtitle="Propor√ß√£o de obras entregues de acordo com o ano que foram pactuadas", 
+       caption="Fonte: SIMEC. Elaborado por Transpar√™ncia Brasil", 
        y="", x="") +
   scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) + theme_bw() +
   theme(panel.grid.minor = element_blank())
@@ -699,8 +706,8 @@ pedido_supervisao_in_loco <- read_delim("~/tadepe/fantastico/rel_fant/pedido_sup
                                         locale = locale(encoding = "ASCII"), 
                                         trim_ws = TRUE)
 
-#Vou verificar a diferenÁa entre o que foi atestado percentualmente pelos engenheiros e 
-#o que a verificaÁ„o in loco demonstrou ser o verdadeiro percentual #
+#Vou verificar a diferen√ßa entre o que foi atestado percentualmente pelos engenheiros e 
+#o que a verifica√ß√£o in loco demonstrou ser o verdadeiro percentual #
 
 dif_execucao_ver_in_loco <- pedido_supervisao_in_loco %>%
   mutate(dif_vistoria = perc_informado_munic - perc_executado_empresa)
@@ -711,10 +718,10 @@ median(dif_execucao_ver_in_loco$dif_vistoria) #12.23
 dif_execucao_ver_in_loco %>%
   select(ID) %>%
   distinct(ID, .keep_all = TRUE) %>%
-  summarise(n())    #15529 - n˙mero de obras que tiveram ao menos uma vistoria
+  summarise(n())    #15529 - n√∫mero de obras que tiveram ao menos uma vistoria
 
 base_vist <- simec %>%
-  mutate(ano_pacto = str_sub(Termo.ConvÍnio, start = -4)) %>%
+  mutate(ano_pacto = str_sub(Termo.Conv√™nio, start = -4)) %>%
   filter(ano_pacto <= 2016) %>%
   group_by(ano_pacto) %>%
   summarise(obras = n())
@@ -727,18 +734,18 @@ dif_execucao_ver_in_loco %>%
   filter(dif_vistoria >= 90) %>%
   summarise(n())
 
-#Quanto dinheiro ainda precisa para terminar as obras em execuÁ„o
+#Quanto dinheiro ainda precisa para terminar as obras em execu√ß√£o
 
 dinheiro_falta_exe <- simec_atraso %>%
-  filter(SituaÁ„o == "ExecuÁ„o") %>%
+  filter(Situa√ß√£o == "Execu√ß√£o") %>%
   mutate(falta = valor_pactuado_fnde_cte_jun17 - pagamento_cte_jun17) 
 
-sum(dinheiro_falta_exe$falta, na.rm=TRUE) # 1,280.999.379 ainda precisam ser investidos nas obras em execuÁ„o
-sum(is.na(dinheiro_falta_exe$falta)) #16 obras n„o temos informaÁıes
+sum(dinheiro_falta_exe$falta, na.rm=TRUE) # 1,280.999.379 ainda precisam ser investidos nas obras em execu√ß√£o
+sum(is.na(dinheiro_falta_exe$falta)) #16 obras n√£o temos informa√ß√µes
 
 dinheiro_falta_todas <- simec_atraso %>%
-  filter(SituaÁ„o != "ConcluÌda",
-         SituaÁ„o != "Obra Cancelada") %>%
+  filter(Situa√ß√£o != "Conclu√≠da",
+         Situa√ß√£o != "Obra Cancelada") %>%
   mutate(falta = valor_pactuado_fnde_cte_jun17 - pagamento_cte_jun17) 
 
 sum(dinheiro_falta_todas$falta, na.rm = TRUE) #2,535.293.840
@@ -755,10 +762,10 @@ graf_pagto_ano # 521.445.932 foram pagos em 2016
 
   
 # Anexo I - Obras por estado 
-# (Obras total, em execuÁ„o, atrasadas, paralisadas e dinheiro investido nessas obras)
+# (Obras total, em execu√ß√£o, atrasadas, paralisadas e dinheiro investido nessas obras)
 
 anexo1_atrasadas <- execucao_e_atrasos %>%
-  filter(SituaÁ„o == "ExecuÁ„o",
+  filter(Situa√ß√£o == "Execu√ß√£o",
          ja_devia_estar_concluida == "sim") %>%
   group_by(UF) %>%
   summarise(obras_atrasadas = n(),
@@ -766,17 +773,17 @@ anexo1_atrasadas <- execucao_e_atrasos %>%
             gasto_atrasadas_mi = round(gasto_atrasadas/1000000, 2))
 
 anexo1_paralisadas <- obras_iniciadas %>%
-  filter(SituaÁ„o != "Obra Cancelada",
-         SituaÁ„o != "ExecuÁ„o",
-         SituaÁ„o != "ContrataÁ„o") %>%
+  filter(Situa√ß√£o != "Obra Cancelada",
+         Situa√ß√£o != "Execu√ß√£o",
+         Situa√ß√£o != "Contrata√ß√£o") %>%
   group_by(UF) %>%
   summarise(obras_paralisadas = n(),
             gasto_paralisadas = sum(pagamento_cte_jun17),
             gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
 
 anexo1 <- simec_atraso %>%
-  filter(SituaÁ„o != "ConcluÌda",
-         SituaÁ„o != "Obra Cancelada") %>%
+  filter(Situa√ß√£o != "Conclu√≠da",
+         Situa√ß√£o != "Obra Cancelada") %>%
   group_by(UF) %>%
   summarise(total_obras = n(),
             gasto_total = sum(pagamento_cte_jun17),
@@ -796,24 +803,24 @@ write.table(anexo1, file="anexo1.csv", sep=";", dec=",", row.names = FALSE)
 
 
 ## Escolas Rio de Janeiro UF
-## Nome , endereÁo, % de execuÁ„o, CalssificaÁ„o (atrasada , paralisada) 
+## Nome , endere√ßo, % de execu√ß√£o, Calssifica√ß√£o (atrasada , paralisada) 
 
 escolas_rj_atraso <- execucao_e_atrasos %>%
   filter(UF == "RJ",
-         SituaÁ„o == "ExecuÁ„o",
+         Situa√ß√£o == "Execu√ß√£o",
          ja_devia_estar_concluida == "sim") %>%
-  mutate(classificaÁ„o_tb = "atrasada") %>%
-  select(ID, Nome, Logradouro, MunicÌpio, Percentual.de.ExecuÁ„o, classificaÁ„o_tb,
+  mutate(classifica√ß√£o_tb = "atrasada") %>%
+  select(ID, Nome, Logradouro, Munic√≠pio, Percentual.de.Execu√ß√£o, classifica√ß√£o_tb,
          pagamento_cte_jun17)
 
 
 escolas_rj_paralisadas <- obras_iniciadas %>%
   filter( UF == "RJ",
-         SituaÁ„o != "Obra Cancelada",
-         SituaÁ„o != "ExecuÁ„o",
-         SituaÁ„o != "ContrataÁ„o") %>%
-  mutate(classificaÁ„o_tb = "paralisada") %>%
-  select(ID, Nome, Logradouro, MunicÌpio, Percentual.de.ExecuÁ„o, classificaÁ„o_tb,
+         Situa√ß√£o != "Obra Cancelada",
+         Situa√ß√£o != "Execu√ß√£o",
+         Situa√ß√£o != "Contrata√ß√£o") %>%
+  mutate(classifica√ß√£o_tb = "paralisada") %>%
+  select(ID, Nome, Logradouro, Munic√≠pio, Percentual.de.Execu√ß√£o, classifica√ß√£o_tb,
          pagamento_cte_jun17)
 
 escolas_rj <- escolas_rj_atraso %>%
@@ -828,26 +835,26 @@ write.table(escolas_rj, file="escolas_rj.csv", sep=";", dec=",", row.names = FAL
 ## Anexo 2 - obras por munic
 
 anexo2_atrasadas <- execucao_e_atrasos %>%
-  filter(SituaÁ„o == "ExecuÁ„o",
+  filter(Situa√ß√£o == "Execu√ß√£o",
          ja_devia_estar_concluida == "sim") %>%
-  group_by(MunicÌpio, UF) %>%
+  group_by(Munic√≠pio, UF) %>%
   summarise(obras_atrasadas = n(),
             gasto_atrasadas = sum(pagamento_cte_jun17),
             gasto_atrasadas_mi = round(gasto_atrasadas/1000000, 2))
 
 anexo2_paralisadas <- obras_iniciadas %>%
-  filter(SituaÁ„o != "Obra Cancelada",
-         SituaÁ„o != "ExecuÁ„o",
-         SituaÁ„o != "ContrataÁ„o") %>%
-  group_by(MunicÌpio, UF) %>%
+  filter(Situa√ß√£o != "Obra Cancelada",
+         Situa√ß√£o != "Execu√ß√£o",
+         Situa√ß√£o != "Contrata√ß√£o") %>%
+  group_by(Munic√≠pio, UF) %>%
   summarise(obras_paralisadas = n(),
             gasto_paralisadas = sum(pagamento_cte_jun17),
             gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
 
 anexo2 <- simec_atraso %>%
-  filter(SituaÁ„o != "ConcluÌda",
-         SituaÁ„o != "Obra Cancelada") %>%
-  group_by(MunicÌpio, UF) %>%
+  filter(Situa√ß√£o != "Conclu√≠da",
+         Situa√ß√£o != "Obra Cancelada") %>%
+  group_by(Munic√≠pio, UF) %>%
   summarise(total_obras = n(),
             gasto_total = sum(pagamento_cte_jun17),
             gasto_total_mi = round(gasto_total /1000000,2)) %>%
