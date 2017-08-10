@@ -8,6 +8,7 @@ library(scales)
 #Endereço para achar as obras: http://simec.mec.gov.br/painelObras/dadosobra.php?obra=
 setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\planilhas\\tadepe")
 load("arquivos_simec_fin_v2.RData")
+load("pagamento_simec_complemento.RData")
 
 simec_fin1 <- lista_objetos[[3]]
 simec_fin2 <- lista_objetos[[4]]
@@ -63,7 +64,7 @@ pagamentos_simec2 <- simec_fin2 %>%
             ultima_data = max(Data.do.Repasse))        #ultima data registrada do repasse
 
 # juntando as duas tabelas
-pagamento_simec <- bind_rows(pagamentos_simec1, pagamentos_simec2)
+pagamento_simec <- bind_rows(pagamentos_simec1, pagamentos_simec2, pagamento_simec_complemento)
 
 pagamento_simec <- pagamento_simec %>%
   mutate(mes_ano = format(primeira_data, "%m/%Y"))
@@ -88,7 +89,7 @@ pagamento_simec_inflacao %>%
 
 # juntando com tabela original do simec
 simec_gastos <- simec %>%
-  inner_join(pagamento_simec_inflacao, by = c("ID" = "id")) %>%
+  left_join(pagamento_simec_inflacao, by = c("ID" = "id")) %>%
   mutate(mes_ano_assinatura_contrato = ifelse(is.na(mes_ano_assinatura_contrato), 
                                               primeira_data, mes_ano_assinatura_contrato)) %>%
   full_join(ipca, by=c("mes_ano_assinatura_contrato" = "mes_ano")) %>%
@@ -822,9 +823,3 @@ View(anexo2)
 write.table(anexo2, file="anexo2.csv", sep=";", dec=",", row.names = FALSE)
 
 
-#Situação == NA
-
-isnaid <- simec_gastos %>%
-  filter(is.na(Situação))
-
-View(isnaid)
