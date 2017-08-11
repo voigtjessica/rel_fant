@@ -1,32 +1,50 @@
 "Município";"UF";"total_obras";"gasto_total_mi";"obras_atrasadas";"perc_atrasada";"gasto_atrasadas_mi";"obras_paralisadas";"perc_paralisada";"gasto_paralisadas_mi"
+"Abadia dos Dourados";"MG";1;0,18;1;1;0,18;NA;NA;NA
+"Abadiânia";"GO";2;0,61;0;0;NA;1;0,5;0,22
+"Abaeté";"MG";1;0,36;0;0;NA;1;1;0,36
 "Abaetetuba";"PA";2;2,1;1;0,5;1,57;NA;NA;NA
+"Abaiara";"CE";2;1,03;0;0;NA;NA;NA;NA
+"Abaíra";"BA";1;0,26;0;0;NA;NA;NA;NA
+"Abaré";"BA";1;0;0;0;NA;NA;NA;NA
 "Abatiá";"PR";1;1,11;0;0;NA;1;1;1,11
+"Abel Figueiredo";"PA";1;0,72;0;0;NA;1;1;0,72
 "Abelardo Luz";"SC";3;2,6;1;0,33;1,11;NA;NA;NA
+"Abre Campo";"MG";1;0,29;0;0;NA;1;1;0,29
+"Abreu e Lima";"PE";5;0;0;0;NA;NA;NA;NA
 "Abreulândia";"TO";3;1,47;0;0;NA;1;0,33;0,93
 "Açailândia";"MA";6;5,37;0;0;NA;1;0,17;0,49
-"Acará";"PA";2;1,47;0;0;NA;1;0,5;1,37
-"Acarape";"CE";1;0,82;0;0;NA;NA;NA;NA
-"Acaraú";"CE";1;0,73;1;1;0,73;NA;NA;NA
-"Acauã";"PI";1;0,37;0;0;NA;NA;NA;NA
+"Acajutiba";"BA";1;0,48;0;0;NA;1;1;0,48
+"Acará";"PA";5;1,76;0;0;NA;1;0,2;1,37
+"Acarape";"CE";2;0,82;0;0;NA;NA;NA;NA
+"Acaraú";"CE";2;0,73;1;0,5;0,73;1;0,5;0
+"Acauã";"PI";2;1,17;0;0;NA;NA;NA;NA
 "Acopiara";"CE";3;2,33;0;0;NA;1;0,33;0,86
 "Acrelândia";"AC";1;0,2;0;0;NA;NA;NA;NA
-"Acreúna";"GO";2;2,76;1;0,5;0,43;NA;NA;NA
-"Adrianópolis";"PR";1;0,59;1;1;0,59;NA;NA;NA
-"Afonso Cláudio";"ES";1;0,7;1;1;0,7;NA;NA;NA
-"Afonso Cunha";"MA";6;1,47;5;0,83;1,33;1;0,17;0,14
-"Afrânio";"PE";5;3,91;0;0;NA;1;0,2;0,86
+"Acreúna";"GO";3;2,76;2;0,67;0,43;NA;NA;NA
+"Açu";"RN";1;0,7;0;0;NA;NA;NA;NA
+"Adrianópolis";"PR";4;0,59;1;0,25;0,59;1;0,25;0
+"Afonso Bezerra";"RN";1;0,45;0;0;NA;1;1;0,45
+"Afonso Cláudio";"ES";3;0,7;1;0,33;0,7;NA;NA;NA
+"Afonso Cunha";"MA";9;1,75;5;0,56;1,33;1;0,11;0,14
+"Afrânio";"PE";7;5,64;0;0;NA;1;0,14;0,86
 "Agrestina";"PE";1;0,85;1;1;0,85;NA;NA;NA
 "Agricolândia";"PI";1;1,88;0;0;NA;NA;NA;NA
+"Agronômica";"SC";1;0,4;0;0;NA;NA;NA;NA
 "Água Boa";"MG";1;0,68;1;1;0,68;NA;NA;NA
+"Água Boa";"MT";1;0,84;1;1;0,84;NA;NA;NA
 "Água Branca";"AL";1;1,59;1;1;1,59;NA;NA;NA
-"Água Branca";"PI";1;0,53;0;0;NA;NA;NA;NA
-"Água Doce do Maranhão";"MA";1;0,79;0;0;NA;1;1;0,79
+"Água Branca";"PI";3;0,72;0;0;NA;NA;NA;NA
+"Água Doce";"SC";3;1,08;0;0;NA;NA;NA;NA
+"Água Doce do Maranhão";"MA";6;2,17;0;0;NA;1;0,17;0,79
 "Aguanil";"MG";1;0,89;1;1;0,89;NA;NA;NA
 "Águas Belas";"PE";4;0,82;0;0;NA;3;0,75;0,66
+"Águas da Prata";"SP";1;0;0;0;NA;NA;NA;NA
+"Águas de Lindóia";"SP";1;0,19;0;0;NA;NA;NA;NA
 "Águas Formosas";"MG";1;1,5;0;0;NA;1;1;1,5
-"Águas Lindas de Goiás";"GO";7;4,69;0;0;NA;NA;NA;NA
-"Águas Vermelhas";"MG";1;1,71;0;0;NA;NA;NA;NA
+"Águas Lindas de Goiás";"GO";19;4,76;1;0,05;0;NA;NA;NA
+"Águas Vermelhas";"MG";1;1,71;0;0;NA;1;1;1,71
 "Agudo";"RS";2;2,02;1;0,5;0,91;NA;NA;NA
+"Agudos";"SP";1;0;0;0;NA;NA;NA;NA
 "Águia Branca";"ES";1;1,11;1;1;1,11;NA;NA;NA
 "Aimorés";"MG";1;1,52;1;1;1,52;NA;NA;NA
 "Aiuaba";"CE";1;0,5;0;0;NA;NA;NA;NA
@@ -34,28 +52,39 @@
 "Alagoa Nova";"PB";1;0,92;0;0;NA;NA;NA;NA
 "Alagoinha";"PB";1;0,28;0;0;NA;NA;NA;NA
 "Alagoinha";"PE";2;1,18;0;0;NA;NA;NA;NA
-"Alagoinhas";"BA";5;2,84;0;0;NA;5;1;2,84
+"Alagoinha do Piauí";"PI";1;0;0;0;NA;NA;NA;NA
+"Alagoinhas";"BA";10;3,68;0;0;NA;6;0,6;2,84
 "Alambari";"SP";1;0,65;1;1;0,65;NA;NA;NA
-"Alcântara";"MA";1;0,5;0;0;NA;1;1;0,5
+"Alcântara";"MA";2;1,65;0;0;NA;1;0,5;0,5
 "Alcantil";"PB";1;1,78;1;1;1,78;NA;NA;NA
-"Alcobaça";"BA";1;1,53;0;0;NA;1;1;1,53
+"Alcobaça";"BA";6;6,63;0;0;NA;1;0,17;1,53
+"Aldeias Altas";"MA";1;0;0;0;NA;NA;NA;NA
 "Alecrim";"RS";1;0,42;0;0;NA;NA;NA;NA
 "Alegrete";"RS";1;0,45;0;0;NA;1;1;0,45
 "Além Paraíba";"MG";1;0,81;0;0;NA;NA;NA;NA
 "Alexandria";"RN";1;0,52;0;0;NA;NA;NA;NA
-"Alexânia";"GO";1;0,67;0;0;NA;NA;NA;NA
+"Alexânia";"GO";3;0,86;0;0;NA;1;0,33;0
 "Alfenas";"MG";1;0,87;0;0;NA;NA;NA;NA
+"Alfredo Vasconcelos";"MG";1;0,44;0;0;NA;NA;NA;NA
+"Alfredo Wagner";"SC";1;1,16;0;0;NA;NA;NA;NA
+"Alhandra";"PB";1;0,27;1;1;0,27;NA;NA;NA
 "Aliança";"PE";1;0,16;0;0;NA;NA;NA;NA
 "Aliança do Tocantins";"TO";1;1,45;0;0;NA;1;1;1,45
 "Almeirim";"PA";3;1,86;0;0;NA;NA;NA;NA
 "Almenara";"MG";1;1,71;1;1;1,71;NA;NA;NA
-"Almirante Tamandaré";"PR";3;2,65;2;0,67;2,19;NA;NA;NA
-"Alta Floresta";"MT";2;1,76;1;0,5;1,4;NA;NA;NA
-"Alta Floresta D'Oeste";"RO";2;0,9;1;0,5;0,53;NA;NA;NA
+"Almirante Tamandaré";"PR";6;3,22;3;0,5;2,76;NA;NA;NA
+"Alpinópolis";"MG";2;0,93;0;0;NA;NA;NA;NA
+"Alta Floresta";"MT";4;2,59;1;0,25;1,4;NA;NA;NA
+"Alta Floresta D'Oeste";"RO";3;0,9;1;0,33;0,53;NA;NA;NA
+"Altamira";"PA";4;0;0;0;NA;NA;NA;NA
+"Altamira do Maranhão";"MA";1;0,17;0;0;NA;NA;NA;NA
+"Altamira do Paraná";"PR";1;0;0;0;NA;NA;NA;NA
 "Altinho";"PE";1;1,71;0;0;NA;NA;NA;NA
+"Alto Alegre";"RR";7;1,2;4;0,57;0,22;NA;NA;NA
+"Alto Alegre";"SP";1;0,42;0;0;NA;NA;NA;NA
 "Alto Alegre do Maranhão";"MA";1;1,84;1;1;1,84;NA;NA;NA
-"Alto Alegre do Pindaré";"MA";1;0,88;0;0;NA;1;1;0,88
-"Alto Alegre dos Parecis";"RO";2;3,12;0;0;NA;1;0,5;0,53
+"Alto Alegre do Pindaré";"MA";4;1,35;0;0;NA;2;0,5;0,88
+"Alto Alegre dos Parecis";"RO";3;3,35;1;0,33;0,23;1;0,33;0,53
 "Alto Araguaia";"MT";1;1,07;0;0;NA;1;1;1,07
 "Alto Caparaó";"MG";1;1,49;0;0;NA;1;1;1,49
 "Alto do Rodrigues";"RN";1;0,85;1;1;0,85;NA;NA;NA
@@ -63,339 +92,466 @@
 "Alto Paraguai";"MT";3;2,5;0;0;NA;3;1;2,5
 "Alto Paraíso";"RO";1;0,5;0;0;NA;NA;NA;NA
 "Alto Parnaíba";"MA";1;0,88;0;0;NA;1;1;0,88
-"Alto Santo";"CE";3;2,9;2;0,67;2,03;1;0,33;0,87
-"Alto Taquari";"MT";1;0,56;0;0;NA;NA;NA;NA
+"Alto Santo";"CE";6;4,47;4;0,67;3,02;1;0,17;0,87
+"Alto Taquari";"MT";2;0,56;0;0;NA;NA;NA;NA
 "Altônia";"PR";1;1,31;0;0;NA;1;1;1,31
 "Altos";"PI";1;1,81;0;0;NA;1;1;1,81
-"Alvarães";"AM";1;0,89;0;0;NA;1;1;0,89
+"Alvarães";"AM";2;0,89;0;0;NA;1;0,5;0,89
 "Álvaro de Carvalho";"SP";1;0,88;0;0;NA;NA;NA;NA
 "Alvinlândia";"SP";1;1,84;0;0;NA;NA;NA;NA
-"Alvorada";"RS";14;6,55;0;0;NA;10;0,71;3,92
-"Alvorada do Gurguéia";"PI";1;0,63;0;0;NA;NA;NA;NA
-"Amajari";"RR";1;0,4;0;0;NA;1;1;0,4
+"Alvinópolis";"MG";1;0;0;0;NA;NA;NA;NA
+"Alvorada";"RS";15;6,55;0;0;NA;10;0,67;3,92
+"Alvorada D'Oeste";"RO";2;1,48;0;0;NA;NA;NA;NA
+"Alvorada do Gurguéia";"PI";2;0,83;0;0;NA;NA;NA;NA
+"Amajari";"RR";3;1,3;0;0;NA;1;0,33;0,4
 "Amambaí";"MS";4;4,2;0;0;NA;3;0,75;2,83
+"Amapá";"AP";1;0;0;0;NA;NA;NA;NA
+"Amapá do Maranhão";"MA";2;0,25;0;0;NA;1;0,5;0
 "Amaraji";"PE";1;0,69;0;0;NA;NA;NA;NA
-"Amarante do Maranhão";"MA";5;3,18;0;0;NA;NA;NA;NA
+"Amarante";"PI";1;0,81;0;0;NA;1;1;0,81
+"Amarante do Maranhão";"MA";6;3,18;0;0;NA;1;0,17;0
 "Amargosa";"BA";1;1,7;0;0;NA;1;1;1,7
+"Amaturá";"AM";8;1,02;8;1;1,02;NA;NA;NA
 "Americana";"SP";2;2,29;0;0;NA;2;1;2,29
 "Américo Brasiliense";"SP";1;1,23;0;0;NA;NA;NA;NA
-"Amontada";"CE";9;11,38;0;0;NA;NA;NA;NA
+"Ametista do Sul";"RS";1;0,99;0;0;NA;NA;NA;NA
+"Amontada";"CE";10;11,91;1;0,1;0,53;NA;NA;NA
 "Amorinópolis";"GO";1;0,85;0;0;NA;1;1;0,85
 "Anadia";"AL";2;1,36;0;0;NA;1;0,5;0,57
-"Anajás";"PA";2;2,82;0;0;NA;2;1;2,82
-"Anajatuba";"MA";2;1,1;0;0;NA;1;0,5;0,62
-"Ananindeua";"PA";1;0,89;1;1;0,89;NA;NA;NA
+"Anagé";"BA";3;2,5;1;0,33;0,85;NA;NA;NA
+"Anahy";"PR";1;0;0;0;NA;NA;NA;NA
+"Anajás";"PA";4;2,82;0;0;NA;2;0,5;2,82
+"Anajatuba";"MA";10;2,17;1;0,1;0,16;6;0,6;1,54
+"Ananindeua";"PA";2;1,44;1;0,5;0,89;NA;NA;NA
 "Anápolis";"GO";11;14,01;3;0,27;8,92;2;0,18;0,72
-"Anapu";"PA";22;3,13;0;0;NA;16;0,73;1,87
-"Anapurus";"MA";1;0,48;1;1;0,48;NA;NA;NA
-"Anastácio";"MS";1;0,8;0;0;NA;NA;NA;NA
+"Anapu";"PA";23;3,13;0;0;NA;17;0,74;2,15
+"Anapurus";"MA";5;1,74;3;0,6;1,29;NA;NA;NA
+"Anastácio";"MS";3;1,51;0;0;NA;NA;NA;NA
+"Andaraí";"BA";1;0,53;0;0;NA;NA;NA;NA
 "Andirá";"PR";1;0,66;1;1;0,66;NA;NA;NA
-"Andorinha";"BA";3;1,98;0;0;NA;NA;NA;NA
+"Andorinha";"BA";5;3,41;0;0;NA;NA;NA;NA
 "Andradas";"MG";1;1,96;1;1;1,96;NA;NA;NA
 "Andradina";"SP";1;0,93;0;0;NA;NA;NA;NA
 "Andrelândia";"MG";1;0,55;0;0;NA;NA;NA;NA
 "Angelândia";"MG";1;0,71;0;0;NA;NA;NA;NA
 "Angélica";"MS";1;0,44;0;0;NA;NA;NA;NA
 "Angelim";"PE";2;0,94;0;0;NA;NA;NA;NA
-"Angical do Piauí";"PI";1;0,69;1;1;0,69;NA;NA;NA
+"Angical";"BA";1;0;0;0;NA;NA;NA;NA
+"Angical do Piauí";"PI";2;0,69;1;0,5;0,69;1;0,5;0
 "Angico";"TO";1;0,83;0;0;NA;1;1;0,83
 "Angra dos Reis";"RJ";3;2,77;0;0;NA;NA;NA;NA
 "Anicuns";"GO";1;0,44;0;0;NA;1;1;0,44
 "Anísio de Abreu";"PI";1;1,09;0;0;NA;1;1;1,09
+"Anita Garibaldi";"SC";1;0,44;0;0;NA;NA;NA;NA
 "Anori";"AM";1;1,47;0;0;NA;1;1;1,47
 "Antas";"BA";1;0,93;0;0;NA;1;1;0,93
+"Antonina";"PR";1;0;0;0;NA;NA;NA;NA
 "Antônio Carlos";"MG";1;0,48;0;0;NA;NA;NA;NA
 "Antônio Carlos";"SC";1;0,25;0;0;NA;NA;NA;NA
+"Antônio Dias";"MG";2;0,38;1;0,5;0,38;NA;NA;NA
 "Antônio João";"MS";1;1,45;0;0;NA;1;1;1,45
-"Aparecida de Goiânia";"GO";16;8,11;0;0;NA;10;0,62;5,47
+"Aparecida de Goiânia";"GO";26;19,25;1;0,04;0;12;0,46;5,47
 "Aparecida do Rio Doce";"GO";1;1,11;0;0;NA;1;1;1,11
 "Aparecida do Taboado";"MS";1;0,86;0;0;NA;NA;NA;NA
-"Apiacás";"MT";1;0,42;0;0;NA;NA;NA;NA
+"Apiacás";"MT";3;0,42;0;0;NA;NA;NA;NA
 "Apiaí";"SP";1;0,25;0;0;NA;NA;NA;NA
-"Apicum-Açu";"MA";3;2,94;3;1;2,94;NA;NA;NA
+"Apicum-Açu";"MA";9;6,37;9;1;6,37;NA;NA;NA
 "Apodi";"RN";2;1,97;0;0;NA;NA;NA;NA
 "Aporá";"BA";1;0,54;0;0;NA;1;1;0,54
-"Aporé";"GO";1;1,48;0;0;NA;NA;NA;NA
+"Aporé";"GO";1;1,48;0;0;NA;1;1;1,48
 "Apuarema";"BA";1;0,64;0;0;NA;1;1;0,64
 "Apucarana";"PR";3;1,63;0;0;NA;NA;NA;NA
 "Apuí";"AM";1;0,29;0;0;NA;NA;NA;NA
-"Aquidabã";"SE";1;0,39;0;0;NA;NA;NA;NA
+"Apuiarés";"CE";1;0,14;1;1;0,14;NA;NA;NA
+"Aquidabã";"SE";1;0,39;0;0;NA;1;1;0,39
 "Aquidauana";"MS";2;2,39;0;0;NA;NA;NA;NA
-"Aquiraz";"CE";1;0,39;0;0;NA;1;1;0,39
+"Aquiraz";"CE";2;0,67;0;0;NA;1;0,5;0,39
 "Araçagi";"PB";1;1,8;0;0;NA;1;1;1,8
-"Aracaju";"SE";3;1,71;0;0;NA;1;0,33;0,39
-"Aracati";"CE";4;1,43;0;0;NA;NA;NA;NA
-"Araci";"BA";4;3,8;0;0;NA;4;1;3,8
+"Araçaí";"MG";1;0;0;0;NA;NA;NA;NA
+"Aracaju";"SE";10;1,71;0;0;NA;2;0,2;0,39
+"Araças";"BA";1;0,95;0;0;NA;NA;NA;NA
+"Aracati";"CE";6;1,43;0;0;NA;NA;NA;NA
+"Araçatuba";"SP";1;0;0;0;NA;1;1;0
+"Araci";"BA";5;3,8;0;0;NA;4;0,8;3,8
+"Aracoiaba";"CE";3;1,83;3;1;1,83;NA;NA;NA
 "Araçoiaba da Serra";"SP";1;0,92;0;0;NA;NA;NA;NA
 "Aracruz";"ES";2;1,5;0;0;NA;1;0,5;1,11
 "Araçuaí";"MG";2;2,92;2;1;2,92;NA;NA;NA
+"Aragarças";"GO";1;0;0;0;NA;NA;NA;NA
 "Aragoiânia";"GO";1;0,53;0;0;NA;NA;NA;NA
 "Aragominas";"TO";2;1,32;1;0,5;0,89;1;0,5;0,43
 "Araguacema";"TO";1;0,97;0;0;NA;1;1;0,97
 "Araguaçu";"TO";1;0,71;1;1;0,71;NA;NA;NA
-"Araguaína";"TO";6;3,04;0;0;NA;1;0,17;0,44
-"Araguanã";"MA";1;1,95;0;0;NA;1;1;1,95
-"Araguari";"MG";3;1,14;1;0,33;0,46;NA;NA;NA
+"Araguaína";"TO";9;5,63;1;0,11;1,99;1;0,11;0,44
+"Araguanã";"MA";2;2,38;0;0;NA;1;0,5;1,95
+"Araguari";"MG";5;1,14;1;0,2;0,46;NA;NA;NA
 "Araguatins";"TO";4;5,67;0;0;NA;4;1;5,67
 "Araioses";"MA";2;3,41;0;0;NA;2;1;3,41
-"Arame";"MA";8;1,61;2;0,25;0,06;1;0,12;0,12
-"Arapiraca";"AL";7;4,88;0;0;NA;6;0,86;4,45
+"Aral Moreira";"MS";1;0;0;0;NA;NA;NA;NA
+"Aramari";"BA";1;0,24;0;0;NA;NA;NA;NA
+"Arame";"MA";13;2,57;2;0,15;0,06;5;0,38;0,9
+"Arapiraca";"AL";11;8,06;3;0,27;2,96;7;0,64;4,67
 "Arapoema";"TO";1;0,42;0;0;NA;1;1;0,42
+"Araponga";"MG";1;0,49;0;0;NA;NA;NA;NA
 "Arapongas";"PR";1;0,45;0;0;NA;NA;NA;NA
 "Araporã";"MG";1;1,51;0;0;NA;1;1;1,51
+"Arapoti";"PR";1;3,69;1;1;3,69;NA;NA;NA
 "Arapuá";"MG";1;0,45;0;0;NA;1;1;0,45
-"Araquari";"SC";1;0,85;0;0;NA;NA;NA;NA
+"Arapuã";"PR";1;0,29;1;1;0,29;NA;NA;NA
+"Araquari";"SC";3;0,85;0;0;NA;NA;NA;NA
 "Arara";"PB";1;1,82;0;0;NA;1;1;1,82
 "Araranguá";"SC";4;5,28;1;0,25;3,05;NA;NA;NA
-"Arari";"MA";7;6,57;5;0,71;4,9;NA;NA;NA
+"Araraquara";"SP";6;0,46;0;0;NA;NA;NA;NA
+"Araras";"SP";2;3,73;0;0;NA;2;1;3,73
+"Ararendá";"CE";1;0;0;0;NA;NA;NA;NA
+"Arari";"MA";13;8,08;9;0,69;5,65;NA;NA;NA
 "Araricá";"RS";1;0,66;0;0;NA;NA;NA;NA
-"Araripina";"PE";1;0,65;0;0;NA;NA;NA;NA
+"Araripe";"CE";4;1,23;0;0;NA;NA;NA;NA
+"Araripina";"PE";12;4,93;0;0;NA;3;0,25;0,47
 "Araruama";"RJ";4;3,23;3;0,75;2,39;1;0,25;0,85
 "Araruna";"PB";1;0,28;0;0;NA;NA;NA;NA
-"Araruna";"PR";1;0,45;1;1;0,45;NA;NA;NA
-"Arataca";"BA";1;0,99;0;0;NA;NA;NA;NA
-"Aratuípe";"BA";2;0,97;0;0;NA;NA;NA;NA
+"Araruna";"PR";2;1,83;2;1;1,83;NA;NA;NA
+"Arataca";"BA";2;1,26;0;0;NA;1;0,5;0,27
+"Aratuípe";"BA";2;0,97;0;0;NA;1;0,5;0,53
 "Arauá";"SE";2;0,97;0;0;NA;1;0,5;0,22
-"Araucária";"PR";7;3,37;0;0;NA;5;0,71;2,16
-"Arcoverde";"PE";3;2,88;0;0;NA;1;0,33;0,43
+"Araucária";"PR";9;4,21;0;0;NA;5;0,56;2,16
+"Araújos";"MG";1;0;0;0;NA;NA;NA;NA
+"Araxá";"MG";1;0;0;0;NA;NA;NA;NA
+"Arcoverde";"PE";4;3,41;0;0;NA;1;0,25;0,43
 "Areado";"MG";1;0,47;0;0;NA;NA;NA;NA
+"Areia";"PB";1;0;0;0;NA;NA;NA;NA
+"Areia Branca";"RN";1;0,18;1;1;0,18;NA;NA;NA
 "Areia de Baraúnas";"PB";1;0,82;0;0;NA;1;1;0,82
 "Arenápolis";"MT";1;0,88;0;0;NA;NA;NA;NA
 "Arenópolis";"GO";1;0,65;0;0;NA;1;1;0,65
 "Arês";"RN";1;0,93;0;0;NA;NA;NA;NA
-"Arinos";"MG";1;1,39;1;1;1,39;NA;NA;NA
-"Aripuanã";"MT";2;3,61;0;0;NA;NA;NA;NA
+"Arinos";"MG";2;1,6;1;0,5;1,39;NA;NA;NA
+"Aripuanã";"MT";3;3,97;1;0,33;0,37;NA;NA;NA
 "Ariquemes";"RO";4;4,5;0;0;NA;4;1;4,5
+"Ariranha do Ivaí";"PR";4;0;0;0;NA;NA;NA;NA
 "Armação dos Búzios";"RJ";1;0,65;0;0;NA;NA;NA;NA
-"Aroazes";"PI";4;1,09;4;1;1,09;NA;NA;NA
+"Aroazes";"PI";5;1,09;4;0,8;1,09;NA;NA;NA
 "Aroeiras";"PB";1;0,84;0;0;NA;1;1;0,84
+"Arraial";"PI";1;0,22;0;0;NA;NA;NA;NA
 "Arraias";"TO";1;1,13;0;0;NA;1;1;1,13
 "Arroio do Padre";"RS";1;0,83;0;0;NA;NA;NA;NA
-"Arroio do Tigre";"RS";1;0,28;0;0;NA;NA;NA;NA
-"Arroio Grande";"RS";1;0,47;0;0;NA;1;1;0,47
-"Arujá";"SP";1;0,25;0;0;NA;NA;NA;NA
+"Arroio do Tigre";"RS";2;0,46;1;0,5;0,18;NA;NA;NA
+"Arroio dos Ratos";"RS";1;1,54;0;0;NA;1;1;1,54
+"Arujá";"SP";3;0,25;0;0;NA;NA;NA;NA
 "Assaí";"PR";1;1,09;1;1;1,09;NA;NA;NA
-"Assaré";"CE";1;0,52;1;1;0,52;NA;NA;NA
-"Assis";"SP";1;0,46;0;0;NA;1;1;0,46
-"Atalaia";"AL";1;1,32;0;0;NA;1;1;1,32
+"Assaré";"CE";2;1,52;2;1;1,52;NA;NA;NA
+"Assis";"SP";2;3,23;1;0,5;2,77;1;0,5;0,46
+"Assunção do Piauí";"PI";1;0,35;0;0;NA;NA;NA;NA
+"Astolfo Dutra";"MG";1;0,78;0;0;NA;NA;NA;NA
+"Atalaia";"AL";2;1,32;0;0;NA;1;0,5;1,32
+"Atalaia do Norte";"AM";20;1,3;0;0;NA;6;0,3;0
+"Atibaia";"SP";1;0;0;0;NA;NA;NA;NA
 "Augustinópolis";"TO";1;0,23;0;0;NA;NA;NA;NA
-"Augusto Corrêa";"PA";2;0,57;0;0;NA;1;0,5;0,29
+"Augusto Corrêa";"PA";8;1,53;0;0;NA;1;0,12;0,29
+"Augusto de Lima";"MG";1;0,24;0;0;NA;1;1;0,24
+"Augusto Severo";"RN";1;0;0;0;NA;NA;NA;NA
 "Aurelino Leal";"BA";1;0,97;0;0;NA;NA;NA;NA
-"Aurora";"CE";1;1,79;0;0;NA;NA;NA;NA
+"Aurora do Pará";"PA";1;0,42;0;0;NA;NA;NA;NA
 "Aurora do Tocantins";"TO";1;0,45;0;0;NA;1;1;0,45
-"Autazes";"AM";13;7,35;2;0,15;0,73;10;0,77;6,45
+"Autazes";"AM";15;7,88;2;0,13;0,73;10;0,67;6,45
 "Avaí";"SP";1;0,65;0;0;NA;1;1;0,65
 "Avaré";"SP";2;1,24;0;0;NA;NA;NA;NA
-"Aveiro";"PA";6;1,39;0;0;NA;NA;NA;NA
+"Aveiro";"PA";15;2,97;0;0;NA;4;0,27;1,02
 "Avelino Lopes";"PI";1;1,3;1;1;1,3;NA;NA;NA
-"Axixá";"MA";2;1,11;0;0;NA;2;1;1,11
-"Axixá do Tocantins";"TO";1;0,06;0;0;NA;1;1;0,06
+"Axixá";"MA";3;1,11;0;0;NA;2;0,67;1,11
+"Axixá do Tocantins";"TO";3;0,36;0;0;NA;3;1;0,36
 "Babaçulândia";"TO";1;0,54;0;0;NA;NA;NA;NA
-"Bacabal";"MA";2;1,35;1;0,5;0,49;1;0,5;0,86
+"Bacabal";"MA";6;2,44;5;0,83;1,58;1;0,17;0,86
 "Bacurituba";"MA";1;0,43;0;0;NA;1;1;0,43
 "Baependi";"MG";1;0,42;0;0;NA;NA;NA;NA
-"Bagé";"RS";4;2,11;0;0;NA;2;0,5;0,78
-"Bagre";"PA";5;3,15;0;0;NA;4;0,8;3,09
+"Bagé";"RS";3;1,63;0;0;NA;2;0,67;0,78
+"Bagre";"PA";11;3,15;0;0;NA;4;0,36;3,09
 "Baía da Traição";"PB";2;1,42;1;0,5;0,89;NA;NA;NA
-"Baião";"PA";16;4,9;4;0,25;0,37;2;0,12;0,12
+"Baião";"PA";17;5,22;5;0,29;0,7;2;0,12;0,12
 "Baixio";"CE";1;0,88;0;0;NA;1;1;0,88
-"Baixo Guandu";"ES";1;0,82;0;0;NA;1;1;0,82
+"Baixo Guandu";"ES";2;0,82;0;0;NA;1;0,5;0,82
 "Balbinos";"SP";1;0,41;0;0;NA;1;1;0,41
 "Baliza";"GO";2;0,98;0;0;NA;2;1;0,98
+"Balneário Arroio do Silva";"SC";1;0,71;0;0;NA;NA;NA;NA
 "Balneário Barra do Sul";"SC";1;1,72;0;0;NA;NA;NA;NA
-"Balsas";"MA";9;10,61;1;0,11;0,85;8;0,89;9,76
+"Balneário Piçarras";"SC";1;0,38;0;0;NA;NA;NA;NA
+"Balneário Rincão";"SC";1;1,14;0;0;NA;1;1;1,14
+"Balsa Nova";"PR";1;0;0;0;NA;NA;NA;NA
+"Balsas";"MA";11;12,15;3;0,27;2,39;8;0,73;9,76
+"Banabuiú";"CE";1;2,7;0;0;NA;NA;NA;NA
 "Bandeirantes";"MS";2;1,79;0;0;NA;1;0,5;0,9
+"Barão";"RS";2;1,58;0;0;NA;NA;NA;NA
 "Barão de Cocais";"MG";1;0,48;0;0;NA;NA;NA;NA
-"Barão de Grajaú";"MA";1;0,83;0;0;NA;1;1;0,83
+"Barão de Grajaú";"MA";2;1,07;0;0;NA;1;0,5;0,83
+"Barão de Melgaço";"MT";1;0;0;0;NA;NA;NA;NA
+"Barão de Monte Alto";"MG";1;0,6;1;1;0,6;NA;NA;NA
+"Barão do Triunfo";"RS";1;0,23;0;0;NA;1;1;0,23
+"Baraúna";"RN";10;1,11;0;0;NA;NA;NA;NA
 "Barbacena";"MG";2;0,78;0;0;NA;1;0,5;0,39
 "Barcarena";"PA";7;10,98;0;0;NA;7;1;10,98
-"Barcelos";"AM";1;0,31;0;0;NA;NA;NA;NA
-"Barra";"BA";1;0,99;0;0;NA;NA;NA;NA
+"Barcelos";"AM";2;0,61;0;0;NA;NA;NA;NA
+"Barra";"BA";2;0,99;0;0;NA;2;1;0,99
 "Barra D'Alcântara";"PI";1;0,59;0;0;NA;1;1;0,59
 "Barra de Guabiraba";"PE";1;0,97;0;0;NA;1;1;0,97
-"Barra de Santa Rosa";"PB";1;0,46;0;0;NA;1;1;0,46
+"Barra de Santa Rosa";"PB";3;0,57;1;0,33;0,11;1;0,33;0,46
 "Barra de Santana";"PB";2;2,01;1;0,5;1,38;1;0,5;0,63
 "Barra de Santo Antônio";"AL";1;0,35;0;0;NA;NA;NA;NA
 "Barra de São Francisco";"ES";1;0,84;1;1;0,84;NA;NA;NA
-"Barra de São Miguel";"AL";1;0,48;0;0;NA;1;1;0,48
+"Barra de São Miguel";"AL";2;0,86;0;0;NA;1;0,5;0,48
 "Barra do Bugres";"MT";6;2,46;0;0;NA;2;0,33;1,59
-"Barra do Choça";"BA";1;1,09;0;0;NA;1;1;1,09
-"Barra do Corda";"MA";2;1,16;0;0;NA;NA;NA;NA
-"Barra do Garças";"MT";1;0,5;0;0;NA;NA;NA;NA
+"Barra do Choça";"BA";4;3,43;0;0;NA;1;0,25;1,09
+"Barra do Corda";"MA";16;5,4;0;0;NA;4;0,25;0
+"Barra do Garças";"MT";6;1,46;0;0;NA;NA;NA;NA
+"Barra do Jacaré";"PR";1;0,41;1;1;0,41;NA;NA;NA
 "Barra do Mendes";"BA";1;1,01;0;0;NA;1;1;1,01
+"Barra do Piraí";"RJ";1;0,24;0;0;NA;1;1;0,24
+"Barra do Ribeiro";"RS";1;0,43;0;0;NA;NA;NA;NA
 "Barra Funda";"RS";1;1,11;1;1;1,11;NA;NA;NA
-"Barracão";"PR";1;0,62;0;0;NA;1;1;0,62
+"Barra Mansa";"RJ";1;0;0;0;NA;1;1;0
+"Barracão";"PR";2;0,81;0;0;NA;1;0,5;0,62
 "Barras";"PI";2;1,89;0;0;NA;2;1;1,89
-"Barreiras";"BA";9;7,51;3;0,33;1,97;NA;NA;NA
-"Barreirinha";"AM";1;0,98;0;0;NA;1;1;0,98
+"Barreiras";"BA";10;7,51;3;0,3;1,97;NA;NA;NA
+"Barreirinha";"AM";3;0,98;0;0;NA;1;0,33;0,98
+"Barreirinhas";"MA";15;2,64;0;0;NA;NA;NA;NA
 "Barretos";"SP";2;0,94;0;0;NA;2;1;0,94
+"Barro";"CE";1;0;0;0;NA;NA;NA;NA
+"Barro Alto";"BA";4;1,52;0;0;NA;NA;NA;NA
+"Barro Alto";"GO";2;0,19;0;0;NA;2;1;0,19
+"Barro Duro";"PI";1;0,12;0;0;NA;NA;NA;NA
+"Barro Preto";"BA";1;0,45;0;0;NA;NA;NA;NA
 "Barrocas";"BA";1;1,13;0;0;NA;1;1;1,13
 "Barroquinha";"CE";1;0,67;0;0;NA;NA;NA;NA
 "Barros Cassal";"RS";2;0,5;0;0;NA;NA;NA;NA
-"Bataguassu";"MS";1;1,11;1;1;1,11;NA;NA;NA
+"Barroso";"MG";1;0,23;0;0;NA;1;1;0,23
+"Bataguassu";"MS";2;1,11;1;0,5;1,11;NA;NA;NA
 "Batalha";"AL";1;0,41;0;0;NA;1;1;0,41
 "Batalha";"PI";1;0,77;0;0;NA;1;1;0,77
+"Batatais";"SP";1;0,45;0;0;NA;NA;NA;NA
 "Batayporã";"MS";1;1,09;0;0;NA;NA;NA;NA
-"Baturité";"CE";2;2,45;0;0;NA;2;1;2,45
+"Baturité";"CE";1;0,93;0;0;NA;1;1;0,93
 "Bauru";"SP";5;4,09;0;0;NA;4;0,8;3,62
 "Bayeux";"PB";5;1,84;1;0,2;0,18;NA;NA;NA
-"Beberibe";"CE";4;6,03;0;0;NA;1;0,25;1,93
-"Bela Cruz";"CE";1;0,51;0;0;NA;NA;NA;NA
-"Bela Vista";"MS";1;0,4;0;0;NA;NA;NA;NA
+"Bebedouro";"SP";1;0;0;0;NA;NA;NA;NA
+"Beberibe";"CE";5;7,01;0;0;NA;2;0,4;2,9
+"Bela Cruz";"CE";2;0,66;0;0;NA;NA;NA;NA
+"Bela Vista";"MS";2;0,4;0;0;NA;NA;NA;NA
 "Bela Vista da Caroba";"PR";1;0,97;0;0;NA;NA;NA;NA
+"Bela Vista de Goiás";"GO";1;0,46;0;0;NA;1;1;0,46
 "Bela Vista do Maranhão";"MA";3;1,53;1;0,33;0,68;2;0,67;0,85
-"Belágua";"MA";1;0,42;0;0;NA;1;1;0,42
+"Belágua";"MA";9;0,94;3;0,33;0,1;1;0,11;0,42
+"Belém";"PA";3;0,9;0;0;NA;NA;NA;NA
 "Belém";"PB";1;1,65;0;0;NA;1;1;1,65
+"Belém de Maria";"PE";1;0;0;0;NA;1;1;0
+"Belém do Brejo do Cruz";"PB";2;1,49;0;0;NA;NA;NA;NA
 "Belém do São Francisco";"PE";1;0,88;0;0;NA;1;1;0,88
-"Belford Roxo";"RJ";3;1,95;0;0;NA;2;0,67;1,53
-"Belo Horizonte";"MG";1;1,86;0;0;NA;NA;NA;NA
-"Belo Jardim";"PE";2;1,59;1;0,5;0,63;1;0,5;0,96
+"Belford Roxo";"RJ";20;5,97;0;0;NA;3;0,15;1,53
+"Belmonte";"BA";4;2,46;0;0;NA;NA;NA;NA
+"Belo Campo";"BA";2;0,24;0;0;NA;NA;NA;NA
+"Belo Jardim";"PE";4;1,88;1;0,25;0,63;2;0,5;0,96
+"Belo Monte";"AL";1;0,42;0;0;NA;NA;NA;NA
 "Belo Oriente";"MG";1;0,88;0;0;NA;NA;NA;NA
+"Belo Vale";"MG";1;0,18;0;0;NA;NA;NA;NA
 "Belterra";"PA";1;0,24;1;1;0,24;NA;NA;NA
+"Benedito Leite";"MA";2;0,76;2;1;0,76;NA;NA;NA
 "Benevides";"PA";2;3,03;0;0;NA;2;1;3,03
-"Benjamin Constant";"AM";2;1,85;1;0,5;1,14;NA;NA;NA
-"Bequimão";"MA";2;0,61;2;1;0,61;NA;NA;NA
+"Benjamin Constant";"AM";7;3,64;3;0,43;2,93;2;0,29;0
+"Bequimão";"MA";9;1,32;9;1;1,32;NA;NA;NA
+"Berilo";"MG";1;0,12;1;1;0,12;NA;NA;NA
 "Bernardo do Mearim";"MA";7;1,24;0;0;NA;1;0,14;0,09
 "Bernardo Sayão";"TO";1;0,84;0;0;NA;1;1;0,84
-"Beruri";"AM";3;1,89;0;0;NA;2;0,67;0,52
+"Bertioga";"SP";1;0;0;0;NA;NA;NA;NA
+"Bertolínia";"PI";1;0,72;0;0;NA;NA;NA;NA
+"Beruri";"AM";3;1,89;0;0;NA;3;1;1,89
 "Betânia";"PE";1;0,79;0;0;NA;NA;NA;NA
-"Betânia do Piauí";"PI";2;1,7;0;0;NA;NA;NA;NA
+"Betânia do Piauí";"PI";3;2,03;0;0;NA;NA;NA;NA
 "Betim";"MG";13;3,82;0;0;NA;7;0,54;2,3
-"Bezerros";"PE";1;0,42;0;0;NA;NA;NA;NA
+"Bezerros";"PE";2;0,42;0;0;NA;NA;NA;NA
 "Biguaçu";"SC";2;0,77;0;0;NA;NA;NA;NA
+"Birigui";"SP";1;0;0;0;NA;NA;NA;NA
+"Bituruna";"PR";1;0;0;0;NA;NA;NA;NA
+"Blumenau";"SC";7;0;2;0,29;0;NA;NA;NA
 "Boa Esperança";"MG";2;2,87;1;0,5;1,77;1;0,5;1,11
+"Boa Ventura de São Roque";"PR";1;0,19;0;0;NA;NA;NA;NA
 "Boa Viagem";"CE";2;2,44;2;1;2,44;NA;NA;NA
-"Boa Vista";"RR";20;16,31;9;0,45;10,24;4;0,2;3,38
-"Boa Vista do Tupim";"BA";1;1,84;0;0;NA;1;1;1,84
+"Boa Vista";"PB";1;0;0;0;NA;NA;NA;NA
+"Boa Vista";"RR";30;17,1;9;0,3;10,24;5;0,17;4,17
+"Boa Vista do Gurupi";"MA";2;0,28;0;0;NA;2;1;0,28
+"Boa Vista do Ramos";"AM";7;0,83;0;0;NA;4;0,57;0,48
+"Boa Vista do Tupim";"BA";10;4,61;1;0,1;0,97;1;0,1;1,84
 "Boca da Mata";"AL";1;0,7;0;0;NA;NA;NA;NA
-"Boca do Acre";"AM";1;0,37;0;0;NA;1;1;0,37
+"Boca do Acre";"AM";4;0,37;0;0;NA;1;0,25;0,37
 "Bocaiúva";"MG";1;0,47;0;0;NA;NA;NA;NA
-"Bocaiúva do Sul";"PR";2;1,55;0;0;NA;2;1;1,55
+"Bocaiúva do Sul";"PR";5;2,39;0;0;NA;2;0,4;1,55
 "Bodocó";"PE";4;0,68;0;0;NA;NA;NA;NA
 "Bodoquena";"MS";1;0,71;0;0;NA;NA;NA;NA
 "Boituva";"SP";1;0,46;0;0;NA;1;1;0,46
-"Bom Conselho";"PE";3;0,83;0;0;NA;2;0,67;0,66
-"Bom Despacho";"MG";1;0,55;0;0;NA;NA;NA;NA
-"Bom Jardim";"MA";4;1,47;1;0,25;0,8;3;0,75;0,67
+"Bom Conselho";"PE";7;1,4;0;0;NA;2;0,29;0,66
+"Bom Despacho";"MG";2;0,55;0;0;NA;NA;NA;NA
+"Bom Jardim";"MA";10;1,77;2;0,2;1,04;3;0,3;0,67
 "Bom Jardim";"PE";1;0,17;0;0;NA;NA;NA;NA
 "Bom Jardim da Serra";"SC";1;0,41;1;1;0,41;NA;NA;NA
+"Bom Jesus";"PB";1;0;0;0;NA;NA;NA;NA
+"Bom Jesus";"PI";1;0,62;0;0;NA;NA;NA;NA
 "Bom Jesus";"RS";1;1,12;0;0;NA;1;1;1,12
-"Bom Jesus da Lapa";"BA";3;1,49;0;0;NA;NA;NA;NA
-"Bom Jesus das Selvas";"MA";2;1,83;0;0;NA;NA;NA;NA
+"Bom Jesus da Lapa";"BA";4;1,49;1;0,25;0;NA;NA;NA
+"Bom Jesus das Selvas";"MA";2;1,83;0;0;NA;1;0,5;1,34
 "Bom Jesus do Norte";"ES";1;1,04;1;1;1,04;NA;NA;NA
 "Bom Jesus do Tocantins";"PA";1;0,56;1;1;0,56;NA;NA;NA
 "Bom Jesus do Tocantins";"TO";2;1,62;0;0;NA;2;1;1,62
 "Bom Jesus dos Perdões";"SP";1;0,98;0;0;NA;NA;NA;NA
-"Bom Retiro";"SC";1;0,77;0;0;NA;NA;NA;NA
+"Bom Princípio";"RS";2;2,04;2;1;2,04;NA;NA;NA
+"Bom Princípio do Piauí";"PI";1;0,21;1;1;0,21;NA;NA;NA
+"Bom Retiro";"SC";2;0,95;0;0;NA;NA;NA;NA
 "Bom Retiro do Sul";"RS";1;1,71;1;1;1,71;NA;NA;NA
 "Bom Sucesso";"MG";1;1,86;0;0;NA;NA;NA;NA
 "Bom Sucesso";"PR";1;0,9;0;0;NA;1;1;0,9
 "Bom Sucesso de Itararé";"SP";1;0,62;0;0;NA;1;1;0,62
+"Bonfim";"RR";3;0,27;1;0,33;0;NA;NA;NA
+"Bonfim do Piauí";"PI";1;0,19;0;0;NA;NA;NA;NA
 "Boninal";"BA";1;1,76;0;0;NA;NA;NA;NA
 "Bonito";"MS";1;0,9;0;0;NA;NA;NA;NA
 "Bonito";"PA";1;0,89;0;0;NA;NA;NA;NA
 "Bonito";"PE";1;0,46;0;0;NA;1;1;0,46
 "Bonito de Minas";"MG";2;2,06;0;0;NA;NA;NA;NA
+"Boqueirão";"PB";1;0,27;0;0;NA;NA;NA;NA
+"Boqueirão do Piauí";"PI";1;0,19;1;1;0,19;NA;NA;NA
 "Boquim";"SE";1;0,83;0;0;NA;NA;NA;NA
-"Borba";"AM";4;3,02;4;1;3,02;NA;NA;NA
+"Boquira";"BA";1;0,17;0;0;NA;NA;NA;NA
+"Borba";"AM";5;3,02;4;0,8;3,02;NA;NA;NA
 "Borborema";"SP";1;0,46;0;0;NA;NA;NA;NA
 "Borda da Mata";"MG";1;0,42;1;1;0,42;NA;NA;NA
+"Bossoroca";"RS";1;0,24;0;0;NA;1;1;0,24
 "Botelhos";"MG";1;0,47;0;0;NA;NA;NA;NA
 "Botucatu";"SP";1;0,56;0;0;NA;1;1;0,56
+"Botumirim";"MG";1;0,19;0;0;NA;NA;NA;NA
 "Botuporã";"BA";1;1,83;0;0;NA;1;1;1,83
-"Bragança";"PA";18;3,43;0;0;NA;NA;NA;NA
-"Bragança Paulista";"SP";1;0,92;0;0;NA;NA;NA;NA
+"Bragança";"PA";27;4,24;0;0;NA;7;0,26;0,81
+"Bragança Paulista";"SP";2;2,38;0;0;NA;NA;NA;NA
+"Branquinha";"AL";4;0;0;0;NA;3;0,75;0
 "Brás Pires";"MG";2;1,09;0;0;NA;NA;NA;NA
-"Brasil Novo";"PA";1;0,83;0;0;NA;NA;NA;NA
+"Brasil Novo";"PA";9;1,33;0;0;NA;NA;NA;NA
+"Brasilândia do Tocantins";"TO";1;0,59;0;0;NA;NA;NA;NA
 "Brasiléia";"AC";1;0,28;0;0;NA;NA;NA;NA
+"Brasileira";"PI";1;0,37;1;1;0,37;NA;NA;NA
+"Brasília";"DF";60;0;1;0,02;0;10;0,17;0
+"Brasília de Minas";"MG";1;0;0;0;NA;NA;NA;NA
 "Brasópolis";"MG";1;0,26;0;0;NA;1;1;0,26
-"Brejo";"MA";4;3,67;1;0,25;1,43;NA;NA;NA
-"Brejo da Madre de Deus";"PE";2;1,18;0;0;NA;2;1;1,18
+"Brejão";"PE";1;0,2;1;1;0,2;NA;NA;NA
+"Brejinho";"PE";1;0;0;0;NA;NA;NA;NA
+"Brejinho de Nazaré";"TO";1;0,43;0;0;NA;NA;NA;NA
+"Brejo";"MA";7;3,67;1;0,14;1,43;NA;NA;NA
+"Brejo da Madre de Deus";"PE";3;2,11;0;0;NA;2;0,67;1,18
 "Brejo de Areia";"MA";1;0,43;0;0;NA;NA;NA;NA
+"Brejo do Piauí";"PI";1;0,26;0;0;NA;NA;NA;NA
 "Brejo dos Santos";"PB";1;0,42;0;0;NA;1;1;0,42
 "Brejo Grande";"SE";1;0,44;0;0;NA;1;1;0,44
-"Brejo Grande do Araguaia";"PA";1;0,79;0;0;NA;NA;NA;NA
+"Brejo Grande do Araguaia";"PA";3;2,34;0;0;NA;NA;NA;NA
 "Brejo Santo";"CE";1;1,06;0;0;NA;NA;NA;NA
+"Brejões";"BA";3;0,38;0;0;NA;NA;NA;NA
 "Brejolândia";"BA";1;0,39;0;0;NA;1;1;0,39
-"Breu Branco";"PA";4;3,8;1;0,25;1,05;3;0,75;2,76
-"Breves";"PA";23;16,57;0;0;NA;6;0,26;5,66
+"Breu Branco";"PA";6;4,03;1;0,17;1,05;4;0,67;2,76
+"Breves";"PA";10;8,92;0;0;NA;5;0,5;5,07
 "Brumadinho";"MG";1;2,14;1;1;2,14;NA;NA;NA
 "Brumado";"BA";1;0,27;0;0;NA;1;1;0,27
 "Brusque";"SC";1;1,15;0;0;NA;NA;NA;NA
 "Bueno Brandão";"MG";1;0,62;0;0;NA;1;1;0,62
 "Buenos Aires";"PE";4;0,51;1;0,25;0,06;1;0,25;0,25
-"Buerarema";"BA";1;1,14;1;1;1,14;NA;NA;NA
-"Buíque";"PE";1;0,92;0;0;NA;1;1;0,92
-"Bujaru";"PA";4;0,68;1;0,25;0,08;1;0,25;0,53
+"Buerarema";"BA";2;1,14;1;0,5;1,14;NA;NA;NA
+"Buíque";"PE";4;0,92;0;0;NA;1;0,25;0,92
+"Bujari";"AC";3;4,81;0;0;NA;1;0,33;0,31
+"Bujaru";"PA";7;0,68;1;0,14;0,08;1;0,14;0,53
+"Buritama";"SP";1;0,34;0;0;NA;NA;NA;NA
 "Buriti";"MA";10;2,67;9;0,9;2,25;1;0,1;0,42
-"Buriti Bravo";"MA";4;0,94;0;0;NA;1;0,25;0,49
-"Buriti do Tocantins";"TO";1;1,76;0;0;NA;1;1;1,76
+"Buriti Bravo";"MA";7;2,86;0;0;NA;1;0,14;0,49
+"Buriti do Tocantins";"TO";2;1,86;0;0;NA;2;1;1,86
 "Buriti dos Lopes";"PI";1;1,91;1;1;1,91;NA;NA;NA
+"Buriti dos Montes";"PI";2;1,15;0;0;NA;NA;NA;NA
 "Buriticupu";"MA";7;5,25;0;0;NA;NA;NA;NA
-"Buritirama";"BA";1;0,99;0;0;NA;NA;NA;NA
-"Buritirana";"MA";1;0,88;0;0;NA;NA;NA;NA
+"Buritirama";"BA";1;0,99;0;0;NA;1;1;0,99
+"Buritirana";"MA";3;1,35;0;0;NA;NA;NA;NA
 "Buritis";"MG";2;2,71;0;0;NA;NA;NA;NA
 "Buritis";"RO";3;1,05;1;0,33;0,39;NA;NA;NA
 "Buritizeiro";"MG";3;2,37;0;0;NA;1;0,33;1,65
+"Caapiranga";"AM";2;0,2;1;0,5;0,2;NA;NA;NA
 "Caarapó";"MS";1;0,29;0;0;NA;NA;NA;NA
-"Caatiba";"BA";1;0,91;0;0;NA;1;1;0,91
+"Caatiba";"BA";2;0,91;0;0;NA;1;0,5;0,91
+"Cabaceiras do Paraguaçu";"BA";3;4,37;0;0;NA;NA;NA;NA
 "Cabeceira Grande";"MG";1;1,67;0;0;NA;NA;NA;NA
 "Cabeceiras do Piauí";"PI";2;1,8;0;0;NA;1;0,5;0,91
 "Cabedelo";"PB";3;0,53;0;0;NA;1;0,33;0,17
+"Cabixi";"RO";1;0;0;0;NA;NA;NA;NA
 "Cabo Frio";"RJ";6;3,42;0;0;NA;4;0,67;2,76
-"Cabreúva";"SP";1;0,45;0;0;NA;NA;NA;NA
+"Cabreúva";"SP";2;0,45;0;0;NA;NA;NA;NA
 "Cabrobó";"PE";8;6,53;0;0;NA;1;0,12;1,79
 "Caçador";"SC";3;3,73;1;0,33;1,71;1;0,33;1,58
 "Caçapava";"SP";2;0,78;0;0;NA;NA;NA;NA
-"Caçapava do Sul";"RS";2;1,57;0;0;NA;1;0,5;0,46
-"Cacaulândia";"RO";1;0,17;0;0;NA;1;1;0,17
-"Cáceres";"MT";4;2,41;2;0,5;1,84;2;0,5;0,58
+"Caçapava do Sul";"RS";2;1,57;0;0;NA;2;1;1,57
+"Cacaulândia";"RO";3;0,4;0;0;NA;1;0,33;0,17
+"Cáceres";"MT";6;2,41;2;0,33;1,84;2;0,33;0,58
+"Cachoeira Alta";"GO";3;1,25;1;0,33;0,65;NA;NA;NA
 "Cachoeira de Minas";"MG";1;0,29;0;0;NA;1;1;0,29
 "Cachoeira de Pajeú";"MG";2;1,41;0;0;NA;NA;NA;NA
-"Cachoeira do Arari";"PA";4;0,88;3;0,75;0,76;NA;NA;NA
-"Cachoeira do Piriá";"PA";1;0,3;0;0;NA;NA;NA;NA
-"Cachoeira do Sul";"RS";1;0,31;0;0;NA;1;1;0,31
-"Cachoeiras de Macacu";"RJ";2;2,24;1;0,5;1,83;1;0,5;0,41
+"Cachoeira do Arari";"PA";6;1,74;3;0,5;0,76;1;0,17;0,86
+"Cachoeira do Piriá";"PA";4;1,42;0;0;NA;NA;NA;NA
+"Cachoeira do Sul";"RS";2;0,54;0;0;NA;2;1;0,54
+"Cachoeira Dourada";"GO";1;0,82;0;0;NA;1;1;0,82
+"Cachoeiras de Macacu";"RJ";3;2,24;1;0,33;1,83;1;0,33;0,41
 "Cachoeirinha";"PE";1;1,35;0;0;NA;NA;NA;NA
 "Cachoeirinha";"RS";5;5,46;2;0,4;2,99;1;0,2;1,23
 "Cachoeiro de Itapemirim";"ES";1;1,29;0;0;NA;1;1;1,29
 "Cacimbas";"PB";1;0,85;0;0;NA;1;1;0,85
+"Cacique Doble";"RS";1;0,1;0;0;NA;1;1;0,1
 "Cacoal";"RO";3;1,76;0;0;NA;NA;NA;NA
 "Caçu";"GO";2;1,05;0;0;NA;1;0,5;0,43
 "Caculé";"BA";1;0,99;0;0;NA;1;1;0,99
-"Caém";"BA";1;0,58;0;0;NA;1;1;0,58
+"Caém";"BA";2;1,57;0;0;NA;1;0,5;0,58
+"Caetanópolis";"MG";1;0;0;0;NA;NA;NA;NA
 "Caetanos";"BA";1;0,66;1;1;0,66;NA;NA;NA
 "Caeté";"MG";1;0,26;0;0;NA;NA;NA;NA
-"Caetés";"PE";3;2,65;0;0;NA;1;0,33;0,28
-"Caetité";"BA";1;2,06;0;0;NA;1;1;2,06
+"Caetés";"PE";5;2,94;0;0;NA;1;0,2;0,28
+"Caetité";"BA";4;4,11;0;0;NA;1;0,25;2,06
 "Cafarnaum";"BA";3;2,41;2;0,67;1,13;NA;NA;NA
+"Caiapônia";"GO";1;0,89;0;0;NA;NA;NA;NA
 "Caiçara";"RS";1;0,4;0;0;NA;NA;NA;NA
+"Caiçara do Norte";"RN";1;0;0;0;NA;NA;NA;NA
 "Caiçara do Rio do Vento";"RN";1;0,17;0;0;NA;NA;NA;NA
 "Cairu";"BA";1;0,98;0;0;NA;NA;NA;NA
 "Cajamar";"SP";1;1,45;0;0;NA;NA;NA;NA
+"Cajapió";"MA";2;0,43;0;0;NA;1;0,5;0
+"Cajari";"MA";1;0;0;0;NA;NA;NA;NA
 "Cajati";"SP";1;0,46;0;0;NA;NA;NA;NA
-"Cajazeiras";"PB";1;0,36;0;0;NA;NA;NA;NA
-"Cajazeiras do Piauí";"PI";1;0,42;0;0;NA;1;1;0,42
+"Cajazeiras";"PB";5;0,6;0;0;NA;NA;NA;NA
+"Cajazeiras do Piauí";"PI";2;0,68;0;0;NA;1;0,5;0,42
 "Cajobi";"SP";1;0,72;0;0;NA;1;1;0,72
+"Cajueiro";"AL";1;0;0;0;NA;NA;NA;NA
 "Cajuru";"SP";1;0,59;0;0;NA;1;1;0,59
 "Caldas Novas";"GO";1;1,06;0;0;NA;1;1;1,06
-"Calmon";"SC";1;1,11;0;0;NA;NA;NA;NA
+"Caldazinha";"GO";1;0,49;0;0;NA;NA;NA;NA
+"Caldeirão Grande";"BA";1;0;0;0;NA;NA;NA;NA
+"Califórnia";"PR";1;0,72;0;0;NA;NA;NA;NA
+"Calmon";"SC";3;1,69;0;0;NA;NA;NA;NA
 "Calumbi";"PE";1;0,06;0;0;NA;1;1;0,06
-"Camacan";"BA";1;0,27;0;0;NA;NA;NA;NA
-"Camamu";"BA";4;4,11;1;0,25;1,15;2;0,5;2,47
-"Camaquã";"RS";3;2,36;0;0;NA;2;0,67;1,51
+"Camacan";"BA";2;0,27;0;0;NA;NA;NA;NA
+"Camamu";"BA";6;5,34;1;0,17;1,15;3;0,5;2,47
+"Camaquã";"RS";3;2,36;0;0;NA;3;1;2,36
 "Cambará";"PR";1;1,19;0;0;NA;1;1;1,19
+"Cambará do Sul";"RS";1;0,28;0;0;NA;NA;NA;NA
 "Cambé";"PR";2;1,57;0;0;NA;NA;NA;NA
-"Camboriú";"SC";1;0,59;0;0;NA;NA;NA;NA
-"Cametá";"PA";3;1,75;0;0;NA;1;0,33;0,69
-"Camocim";"CE";1;0,62;0;0;NA;NA;NA;NA
-"Camocim de São Félix";"PE";2;0,84;0;0;NA;2;1;0,84
+"Camboriú";"SC";3;2,25;0;0;NA;NA;NA;NA
+"Cambuí";"MG";1;0,18;1;1;0,18;NA;NA;NA
+"Cametá";"PA";8;1,75;0;0;NA;1;0,12;0,69
+"Camocim";"CE";2;1,51;0;0;NA;NA;NA;NA
+"Camocim de São Félix";"PE";3;1,17;0;0;NA;3;1;1,17
 "Campanha";"MG";1;0,47;0;0;NA;NA;NA;NA
-"Campina da Lagoa";"PR";1;0,96;1;1;0,96;NA;NA;NA
-"Campina Grande";"PB";13;8,99;0;0;NA;1;0,08;0,97
+"Campestre";"AL";1;0,37;0;0;NA;NA;NA;NA
+"Campestre do Maranhão";"MA";1;0,52;0;0;NA;NA;NA;NA
+"Campina da Lagoa";"PR";2;5;1;0,5;0,96;NA;NA;NA
+"Campina do Simão";"PR";1;0,19;1;1;0,19;NA;NA;NA
+"Campina Grande";"PB";14;8,99;0;0;NA;1;0,07;0,97
 "Campina Grande do Sul";"PR";2;1,37;0;0;NA;NA;NA;NA
-"Campinápolis";"MT";7;18,53;0;0;NA;NA;NA;NA
-"Campinas";"SP";5;3,31;0;0;NA;NA;NA;NA
+"Campina Verde";"MG";1;0;0;0;NA;NA;NA;NA
+"Campinápolis";"MT";8;18,73;0;0;NA;NA;NA;NA
+"Campinas";"SP";6;3,31;0;0;NA;NA;NA;NA
 "Campinas do Piauí";"PI";2;0,71;0;0;NA;NA;NA;NA
 "Campinorte";"GO";1;1,5;0;0;NA;1;1;1,5
 "Campo Alegre";"AL";1;0,84;0;0;NA;1;1;0,84
@@ -403,248 +559,349 @@
 "Campo Alegre de Lourdes";"BA";1;0,27;0;0;NA;1;1;0,27
 "Campo Belo";"MG";2;0,94;0;0;NA;NA;NA;NA
 "Campo Florido";"MG";1;3,77;0;0;NA;NA;NA;NA
-"Campo Formoso";"BA";1;0,27;0;0;NA;1;1;0,27
-"Campo Grande";"MS";25;21,17;0;0;NA;12;0,48;9,35
-"Campo Largo";"PR";4;1,76;0;0;NA;3;0,75;1,27
+"Campo Formoso";"BA";2;0,53;0;0;NA;2;1;0,53
+"Campo Grande";"AL";1;0;0;0;NA;1;1;0
+"Campo Grande";"MS";27;21,98;0;0;NA;12;0,44;9,35
+"Campo Largo";"PR";6;1,76;0;0;NA;3;0,5;1,27
+"Campo Largo do Piauí";"PI";3;0,96;0;0;NA;2;0,67;0,48
 "Campo Limpo Paulista";"SP";1;0,46;0;0;NA;NA;NA;NA
-"Campo Maior";"PI";3;0,74;1;0,33;0,1;1;0,33;0,15
+"Campo Maior";"PI";9;2,8;3;0,33;0,74;3;0,33;0,63
 "Campo Mourão";"PR";3;1,26;0;0;NA;NA;NA;NA
+"Campo Novo";"RS";1;1,12;1;1;1,12;NA;NA;NA
+"Campo Novo de Rondônia";"RO";5;1,79;4;0,8;1,79;NA;NA;NA
 "Campo Redondo";"RN";1;0,41;0;0;NA;NA;NA;NA
 "Campo Verde";"MT";1;0,53;0;0;NA;NA;NA;NA
 "Campos de Júlio";"MT";1;0,72;0;0;NA;NA;NA;NA
-"Campos dos Goytacazes";"RJ";8;5,38;1;0,12;1,79;5;0,62;2,92
+"Campos dos Goytacazes";"RJ";10;5,38;1;0,1;1,79;5;0,5;2,92
 "Campos Lindos";"TO";1;0,96;0;0;NA;NA;NA;NA
-"Campos Sales";"CE";1;1,95;0;0;NA;1;1;1,95
-"Canaã dos Carajás";"PA";2;1,76;0;0;NA;2;1;1,76
+"Campos Novos";"SC";1;0,24;0;0;NA;NA;NA;NA
+"Campos Sales";"CE";1;1,32;0;0;NA;NA;NA;NA
+"Canaã dos Carajás";"PA";3;1,76;0;0;NA;2;0,67;1,76
 "Canabrava do Norte";"MT";1;0,42;0;0;NA;1;1;0,42
+"Canapi";"AL";1;0,42;0;0;NA;NA;NA;NA
+"Canápolis";"BA";4;2,35;0;0;NA;NA;NA;NA
 "Canápolis";"MG";1;1,77;0;0;NA;NA;NA;NA
 "Canarana";"BA";1;0,85;0;0;NA;1;1;0,85
 "Canarana";"MT";4;3,16;0;0;NA;4;1;3,16
 "Canavieiras";"BA";1;1,91;0;0;NA;1;1;1,91
+"Candeias";"BA";5;2,02;0;0;NA;4;0,8;0,64
 "Candeias";"MG";1;0,47;0;0;NA;NA;NA;NA
-"Candelária";"RS";1;0,54;0;0;NA;1;1;0,54
+"Candeias do Jamari";"RO";1;0;0;0;NA;NA;NA;NA
+"Candelária";"RS";2;0,54;0;0;NA;1;0,5;0,54
 "Cândido de Abreu";"PR";1;0,46;0;0;NA;NA;NA;NA
 "Cândido Mendes";"MA";5;2,36;4;0,8;1,51;1;0,2;0,85
-"Cândido Sales";"BA";2;3,04;0;0;NA;2;1;3,04
+"Cândido Mota";"SP";1;1,76;0;0;NA;NA;NA;NA
+"Cândido Sales";"BA";4;3,04;0;0;NA;4;1;3,04
+"Candói";"PR";1;0,53;0;0;NA;NA;NA;NA
 "Canela";"RS";1;0,39;0;0;NA;1;1;0,39
+"Canelinha";"SC";1;0,19;0;0;NA;NA;NA;NA
 "Canguaretama";"RN";3;2,11;0;0;NA;1;0,33;1,11
 "Canguçu";"RS";3;4,44;0;0;NA;1;0,33;1,76
 "Canindé";"CE";1;0,49;0;0;NA;NA;NA;NA
-"Canindé de São Francisco";"SE";1;0,42;0;0;NA;1;1;0,42
+"Canindé de São Francisco";"SE";3;1,25;0;0;NA;1;0,33;0,42
 "Canoas";"RS";7;18,44;0;0;NA;6;0,86;17,99
-"Cantá";"RR";1;0,38;0;0;NA;1;1;0,38
-"Cantagalo";"PR";1;1,07;0;0;NA;NA;NA;NA
+"Cantá";"RR";3;0,49;2;0,67;0,11;1;0,33;0,38
+"Cantagalo";"PR";3;5,5;0;0;NA;NA;NA;NA
+"Cantanhede";"MA";1;0,51;0;0;NA;NA;NA;NA
 "Canto do Buriti";"PI";2;2,86;2;1;2,86;NA;NA;NA
-"Canudos";"BA";2;4,96;0;0;NA;NA;NA;NA
+"Canudos";"BA";1;3,85;0;0;NA;NA;NA;NA
 "Canudos do Vale";"RS";1;0,97;0;0;NA;NA;NA;NA
-"Capanema";"PA";2;1,1;0;0;NA;1;0,5;0,55
-"Capão Alto";"SC";1;0,7;0;0;NA;NA;NA;NA
+"Capanema";"PA";5;1,1;0;0;NA;4;0,8;0,55
+"Capão Alto";"SC";2;0,99;0;0;NA;NA;NA;NA
 "Capão Bonito";"SP";1;0,99;0;0;NA;NA;NA;NA
+"Capão da Canoa";"RS";1;0;0;0;NA;NA;NA;NA
 "Capão do Cipó";"RS";1;0,89;0;0;NA;NA;NA;NA
 "Capão do Leão";"RS";2;1,83;0;0;NA;2;1;1,83
-"Capela";"AL";1;0,42;0;0;NA;1;1;0,42
-"Capela";"SE";1;1,49;0;0;NA;1;1;1,49
+"Caparaó";"MG";1;0,3;0;0;NA;NA;NA;NA
+"Capela";"AL";4;0,42;0;0;NA;3;0,75;0,42
+"Capela";"SE";2;1,76;0;0;NA;1;0,5;1,49
+"Capela do Alto";"SP";1;0,91;0;0;NA;NA;NA;NA
+"Capela Nova";"MG";1;0;0;0;NA;NA;NA;NA
 "Capelinha";"MG";3;1,66;3;1;1,66;NA;NA;NA
-"Capinzal do Norte";"MA";4;3,78;4;1;3,78;NA;NA;NA
+"Capetinga";"MG";1;0;0;0;NA;NA;NA;NA
+"Capim Grosso";"BA";1;0,77;0;0;NA;1;1;0,77
+"Capinzal";"SC";1;0,46;0;0;NA;NA;NA;NA
+"Capinzal do Norte";"MA";5;3,78;4;0,8;3,78;NA;NA;NA
 "Capistrano";"CE";3;1,19;0;0;NA;3;1;1,19
+"Capitão Andrade";"MG";1;0;0;0;NA;NA;NA;NA
 "Capitão Enéas";"MG";1;1,85;0;0;NA;1;1;1,85
-"Capitão Poço";"PA";3;2,9;0;0;NA;NA;NA;NA
+"Capitão Gervásio Oliveira";"PI";1;0;0;0;NA;1;1;0
+"Capitão Leônidas Marques";"PR";1;3,13;0;0;NA;NA;NA;NA
+"Capitão Poço";"PA";8;2,9;0;0;NA;2;0,25;1,83
 "Capivari";"SP";2;0,77;0;0;NA;NA;NA;NA
+"Capivari de Baixo";"SC";1;0;0;0;NA;NA;NA;NA
 "Capixaba";"AC";1;0,83;0;0;NA;NA;NA;NA
 "Capoeiras";"PE";1;0,26;0;0;NA;NA;NA;NA
 "Caputira";"MG";1;0,46;0;0;NA;1;1;0,46
-"Caracol";"PI";1;0,29;1;1;0,29;NA;NA;NA
-"Caraí";"MG";1;0,91;0;0;NA;1;1;0,91
+"Caracol";"PI";2;0,63;2;1;0,63;NA;NA;NA
+"Caraguatatuba";"SP";2;0;0;0;NA;NA;NA;NA
+"Caraí";"MG";2;1,19;0;0;NA;2;1;1,19
+"Carandaí";"MG";1;0,54;1;1;0,54;NA;NA;NA
 "Carangola";"MG";2;0,51;1;0,5;0,26;1;0,5;0,26
 "Carapebus";"RJ";1;0,43;0;0;NA;NA;NA;NA
-"Carapicuíba";"SP";10;9,82;6;0,6;3,43;2;0,2;1,01
+"Carapicuíba";"SP";16;11,82;8;0,5;5,24;3;0,19;1,21
 "Caratinga";"MG";1;0,94;0;0;NA;NA;NA;NA
-"Carauari";"AM";2;1,98;0;0;NA;NA;NA;NA
+"Carauari";"AM";4;4,02;0;0;NA;NA;NA;NA
 "Caraúbas";"RN";1;0,92;0;0;NA;1;1;0,92
-"Caravelas";"BA";1;0,25;0;0;NA;NA;NA;NA
+"Caraúbas do Piauí";"PI";2;1,56;2;1;1,56;NA;NA;NA
+"Caravelas";"BA";5;2,86;0;0;NA;NA;NA;NA
 "Carazinho";"RS";1;0,73;0;0;NA;1;1;0,73
-"Careiro";"AM";1;1,84;0;0;NA;1;1;1,84
-"Cariacica";"ES";3;1,14;0;0;NA;NA;NA;NA
-"Caridade";"CE";2;2,43;0;0;NA;NA;NA;NA
-"Carinhanha";"BA";2;4,11;0;0;NA;2;1;4,11
+"Carbonita";"MG";2;2,59;0;0;NA;NA;NA;NA
+"Careiro";"AM";6;1,9;0;0;NA;1;0,17;1,84
+"Careiro da Várzea";"AM";2;0;0;0;NA;NA;NA;NA
+"Cariacica";"ES";6;1,14;0;0;NA;NA;NA;NA
+"Caridade";"CE";5;1,78;0;0;NA;NA;NA;NA
+"Caridade do Piauí";"PI";1;0,44;0;0;NA;NA;NA;NA
+"Carinhanha";"BA";3;4,38;0;0;NA;2;0,67;4,11
 "Carira";"SE";1;0,28;0;0;NA;NA;NA;NA
-"Cariré";"CE";1;0,59;0;0;NA;NA;NA;NA
+"Cariré";"CE";2;2,83;0;0;NA;NA;NA;NA
 "Caririaçu";"CE";1;0,87;0;0;NA;1;1;0,87
 "Carlinda";"MT";1;1,28;1;1;1,28;NA;NA;NA
-"Carlos Barbosa";"RS";1;0,76;0;0;NA;NA;NA;NA
+"Carlos Barbosa";"RS";2;3,58;0;0;NA;NA;NA;NA
+"Carlos Chagas";"MG";1;0,39;0;0;NA;NA;NA;NA
+"Carmo de Minas";"MG";1;0,37;0;0;NA;NA;NA;NA
 "Carmo do Rio Claro";"MG";1;0,41;0;0;NA;NA;NA;NA
+"Carmo do Rio Verde";"GO";1;1,19;0;0;NA;NA;NA;NA
 "Carmópolis";"SE";1;0,4;0;0;NA;NA;NA;NA
 "Carmópolis de Minas";"MG";1;0,62;0;0;NA;NA;NA;NA
 "Carnaíba";"PE";1;1,18;0;0;NA;NA;NA;NA
 "Carnaubal";"CE";1;1,63;0;0;NA;1;1;1,63
-"Carnaubeira da Penha";"PE";1;0,27;1;1;0,27;NA;NA;NA
+"Carnaubeira da Penha";"PE";5;0,27;1;0,2;0,27;NA;NA;NA
+"Carneirinho";"MG";1;0;0;0;NA;NA;NA;NA
 "Carolina";"MA";5;2,86;1;0,2;0,15;3;0,6;2,16
-"Carpina";"PE";2;1,42;2;1;1,42;NA;NA;NA
-"Caruaru";"PE";11;5,87;0;0;NA;5;0,45;2,8
+"Carpina";"PE";3;1,69;2;0,67;1,42;NA;NA;NA
+"Caruaru";"PE";15;5,87;0;0;NA;5;0,33;2,8
 "Carvalhos";"MG";1;0,38;0;0;NA;NA;NA;NA
 "Casa Branca";"SP";1;1,3;0;0;NA;1;1;1,3
-"Casa Nova";"BA";5;3,51;0;0;NA;5;1;3,51
-"Cascavel";"CE";2;2,53;0;0;NA;1;0,5;1,51
-"Cascavel";"PR";3;1,53;0;0;NA;1;0,33;0,63
-"Caseiros";"RS";1;0,11;0;0;NA;NA;NA;NA
+"Casa Nova";"BA";6;3,75;0;0;NA;5;0,83;3,51
+"Casca";"RS";1;2,54;0;0;NA;NA;NA;NA
+"Cascavel";"CE";5;3,44;0;0;NA;1;0,2;1,51
+"Cascavel";"PR";4;2,4;0;0;NA;1;0,25;0,63
 "Casimiro de Abreu";"RJ";1;0,86;0;0;NA;NA;NA;NA
+"Casserengue";"PB";1;0;0;0;NA;NA;NA;NA
 "Cassilândia";"MS";1;1,25;0;0;NA;NA;NA;NA
 "Castanhal";"PA";8;5,25;1;0,12;1,75;5;0,62;2,7
-"Castanheira";"MT";1;0,53;0;0;NA;NA;NA;NA
-"Castelo";"ES";1;1,56;0;0;NA;NA;NA;NA
-"Castelo do Piauí";"PI";1;2,93;0;0;NA;NA;NA;NA
+"Castanheira";"MT";4;3,34;0;0;NA;NA;NA;NA
+"Castelo";"ES";1;1,56;0;0;NA;1;1;1,56
+"Castelo do Piauí";"PI";2;3,46;0;0;NA;NA;NA;NA
 "Castilho";"SP";1;0,46;0;0;NA;NA;NA;NA
-"Cataguases";"MG";1;2,04;0;0;NA;NA;NA;NA
-"Catalão";"GO";2;0,86;0;0;NA;NA;NA;NA
+"Castro";"PR";3;0,71;0;0;NA;NA;NA;NA
+"Cataguases";"MG";2;3,37;0;0;NA;NA;NA;NA
+"Catalão";"GO";4;1,87;1;0,25;1,01;NA;NA;NA
 "Catanduva";"SP";1;1,11;0;0;NA;1;1;1,11
 "Catende";"PE";2;0,7;0;0;NA;1;0,5;0,42
 "Catingueira";"PB";1;1,11;0;0;NA;1;1;1,11
 "Catu";"BA";2;0,76;0;0;NA;NA;NA;NA
 "Catuípe";"RS";1;2,74;1;1;2,74;NA;NA;NA
-"Caucaia";"CE";8;5,73;1;0,12;0,9;6;0,75;4,42
-"Cavalcante";"GO";4;4,8;1;0,25;1,43;3;0,75;3,37
-"Caxias";"MA";1;1,19;0;0;NA;NA;NA;NA
-"Caxingó";"PI";2;0,43;0;0;NA;NA;NA;NA
-"Ceará-Mirim";"RN";4;3,97;0;0;NA;1;0,25;0,91
-"Celso Ramos";"SC";1;0,75;0;0;NA;NA;NA;NA
+"Catuji";"MG";2;0,38;0;0;NA;NA;NA;NA
+"Caucaia";"CE";14;5,73;1;0,07;0,9;6;0,43;4,42
+"Cavalcante";"GO";7;7,05;1;0,14;1,43;3;0,43;3,37
+"Caxambu";"MG";1;0,42;0;0;NA;NA;NA;NA
+"Caxias";"MA";7;2,72;0;0;NA;NA;NA;NA
+"Caxias do Sul";"RS";8;0,46;0;0;NA;6;0,75;0
+"Caxingó";"PI";4;0,61;0;0;NA;NA;NA;NA
+"Ceará-Mirim";"RN";8;4,56;0;0;NA;1;0,12;0,91
+"Cedral";"MA";3;1,63;3;1;1,63;NA;NA;NA
+"Cedro";"CE";1;0,78;0;0;NA;NA;NA;NA
+"Celso Ramos";"SC";2;0,9;0;0;NA;NA;NA;NA
 "Centenário";"TO";1;0,89;0;0;NA;1;1;0,89
+"Centenário do Sul";"PR";1;0,24;1;1;0,24;NA;NA;NA
 "Central";"BA";6;2,76;1;0,17;0,06;3;0,5;2,36
-"Cerro Azul";"PR";1;0,6;0;0;NA;1;1;0,6
+"Centro Novo do Maranhão";"MA";5;2,15;2;0,4;0,72;NA;NA;NA
+"Cerro Azul";"PR";4;1,08;0;0;NA;2;0,5;1,08
+"Cerro Grande";"RS";1;0,82;0;0;NA;NA;NA;NA
 "Cesário Lange";"SP";1;1,49;0;0;NA;1;1;1,49
 "Cezarina";"GO";1;1,38;1;1;1,38;NA;NA;NA
 "Chã de Alegria";"PE";1;0,33;1;1;0,33;NA;NA;NA
 "Chã Grande";"PE";1;0,83;0;0;NA;1;1;0,83
 "Chã Preta";"AL";1;0,27;0;0;NA;1;1;0,27
-"Chapada Gaúcha";"MG";1;0,9;0;0;NA;NA;NA;NA
-"Chapadinha";"MA";3;2,51;3;1;2,51;NA;NA;NA
+"Chapada Gaúcha";"MG";2;1,7;0;0;NA;NA;NA;NA
+"Chapadinha";"MA";6;4,3;6;1;4,3;NA;NA;NA
 "Chapecó";"SC";1;0,45;0;0;NA;NA;NA;NA
-"Charqueadas";"RS";1;0,24;0;0;NA;NA;NA;NA
+"Charqueadas";"RS";1;0;1;1;0;NA;NA;NA
 "Chaval";"CE";1;0,43;1;1;0,43;NA;NA;NA
 "Chavantes";"SP";1;0,25;0;0;NA;NA;NA;NA
-"Chaves";"PA";33;1,48;17;0,52;0,73;9;0,27;0,5
+"Chaves";"PA";34;1,76;18;0,53;1,01;9;0,26;0,5
 "Chopinzinho";"PR";1;0,29;0;0;NA;NA;NA;NA
 "Chorozinho";"CE";1;0,64;0;0;NA;NA;NA;NA
-"Chorrochó";"BA";1;0,49;0;0;NA;1;1;0,49
-"Cianorte";"PR";1;1,62;0;0;NA;NA;NA;NA
-"Cícero Dantas";"BA";1;0,57;0;0;NA;NA;NA;NA
+"Chorrochó";"BA";5;1,77;0;0;NA;1;0,2;0,49
+"Cianorte";"PR";3;3,72;0;0;NA;NA;NA;NA
+"Cícero Dantas";"BA";2;1,01;0;0;NA;NA;NA;NA
 "Cidade Gaúcha";"PR";2;2,73;0;0;NA;2;1;2,73
-"Cidade Ocidental";"GO";2;1,92;0;0;NA;2;1;1,92
+"Cidade Ocidental";"GO";6;2,8;0;0;NA;2;0,33;1,92
 "Cidelândia";"MA";4;3,7;2;0,5;1;1;0,25;1,78
-"Cipó";"BA";1;0,83;0;0;NA;NA;NA;NA
+"Cidreira";"RS";1;0,45;0;0;NA;1;1;0,45
+"Cipó";"BA";3;0,83;0;0;NA;1;0,33;0
+"Cipotânea";"MG";1;0,18;0;0;NA;NA;NA;NA
 "Cláudia";"MT";1;0,29;0;0;NA;1;1;0,29
 "Cláudio";"MG";1;1,04;0;0;NA;NA;NA;NA
 "Clevelândia";"PR";1;1,01;0;0;NA;1;1;1,01
 "Coari";"AM";9;7,36;0;0;NA;7;0,78;7,34
 "Cocal";"PI";2;1,41;1;0,5;0,43;1;0,5;0,98
-"Cocalzinho de Goiás";"GO";1;1,71;0;0;NA;NA;NA;NA
+"Cocal dos Alves";"PI";1;0,53;1;1;0,53;NA;NA;NA
+"Cocalinho";"MT";2;0,35;2;1;0,35;NA;NA;NA
+"Cocalzinho de Goiás";"GO";2;1,71;0;0;NA;1;0,5;0
 "Cocos";"BA";1;1,76;1;1;1,76;NA;NA;NA
 "Codajás";"AM";1;0,95;0;0;NA;1;1;0,95
 "Codó";"MA";5;4,83;0;0;NA;NA;NA;NA
 "Coelho Neto";"MA";8;12,19;0;0;NA;8;1;12,19
 "Coité do Nóia";"AL";1;0,56;0;0;NA;1;1;0,56
-"Colares";"PA";3;0,94;0;0;NA;3;1;0,94
-"Colina";"SP";1;1,51;1;1;1,51;NA;NA;NA
+"Colares";"PA";7;0,94;0;0;NA;3;0,43;0,94
+"Colina";"SP";2;1,79;1;0,5;1,51;NA;NA;NA
 "Colinas";"MA";3;3,53;0;0;NA;3;1;3,53
+"Colinas do Tocantins";"TO";3;2,9;0;0;NA;NA;NA;NA
+"Colméia";"TO";2;3,72;0;0;NA;NA;NA;NA
 "Colniza";"MT";3;3,53;0;0;NA;2;0,67;3,08
 "Colômbia";"SP";1;1,37;0;0;NA;NA;NA;NA
-"Colombo";"PR";5;1,99;0;0;NA;3;0,6;1,34
+"Colombo";"PR";8;1,99;0;0;NA;3;0,38;1,34
+"Colônia do Piauí";"PI";1;1,19;0;0;NA;NA;NA;NA
 "Colônia Leopoldina";"AL";3;1,41;0;0;NA;2;0,67;1,14
-"Colorado";"PR";1;0,46;1;1;0,46;NA;NA;NA
+"Colorado";"PR";2;0,46;1;0,5;0,46;NA;NA;NA
 "Coluna";"MG";1;0,26;0;0;NA;NA;NA;NA
+"Comercinho";"MG";1;0;0;0;NA;NA;NA;NA
 "Comodoro";"MT";9;2,42;0;0;NA;1;0,11;0,56
 "Conceição";"PB";1;1,46;0;0;NA;1;1;1,46
-"Conceição da Feira";"BA";1;1,26;1;1;1,26;NA;NA;NA
-"Conceição das Alagoas";"MG";1;2,24;0;0;NA;NA;NA;NA
+"Conceição da Aparecida";"MG";1;0,18;1;1;0,18;NA;NA;NA
+"Conceição da Feira";"BA";3;2,8;1;0,33;1,26;NA;NA;NA
+"Conceição das Alagoas";"MG";2;2,4;0;0;NA;1;0,5;0,15
+"Conceição das Pedras";"MG";1;0;0;0;NA;NA;NA;NA
 "Conceição de Ipanema";"MG";1;0,64;0;0;NA;1;1;0,64
 "Conceição de Macabu";"RJ";1;0,43;0;0;NA;NA;NA;NA
 "Conceição do Almeida";"BA";1;0,78;1;1;0,78;NA;NA;NA
 "Conceição do Araguaia";"PA";4;3,97;0;0;NA;3;0,75;3,43
+"Conceição do Canindé";"PI";1;1,08;0;0;NA;NA;NA;NA
+"Conceição do Castelo";"ES";1;0;0;0;NA;NA;NA;NA
+"Conceição do Coité";"BA";1;1,05;0;0;NA;NA;NA;NA
 "Conceição do Jacuípe";"BA";1;0,16;0;0;NA;NA;NA;NA
 "Conceição do Lago-Açu";"MA";1;0,98;0;0;NA;NA;NA;NA
 "Conceição do Mato Dentro";"MG";1;1,95;0;0;NA;1;1;1,95
 "Conceição do Rio Verde";"MG";1;1,51;0;0;NA;1;1;1,51
-"Conceição do Tocantins";"TO";2;1,81;0;0;NA;1;0,5;0,88
+"Conceição do Tocantins";"TO";2;1,81;0;0;NA;2;1;1,81
 "Conchal";"SP";2;0,12;0;0;NA;NA;NA;NA
+"Conchas";"SP";1;0,19;0;0;NA;NA;NA;NA
 "Concórdia";"SC";2;1,34;0;0;NA;NA;NA;NA
-"Concórdia do Pará";"PA";12;2,8;0;0;NA;NA;NA;NA
+"Concórdia do Pará";"PA";14;2,8;0;0;NA;NA;NA;NA
 "Condado";"PB";1;1,39;0;0;NA;1;1;1,39
-"Condado";"PE";2;3,09;0;0;NA;1;0,5;1,77
+"Condado";"PE";2;3,09;0;0;NA;2;1;3,09
 "Conde";"BA";5;3,97;0;0;NA;3;0,6;2,73
-"Conde";"PB";1;0,28;0;0;NA;NA;NA;NA
-"Condeúba";"BA";1;1,36;0;0;NA;1;1;1,36
+"Conde";"PB";4;1,51;0;0;NA;NA;NA;NA
+"Condeúba";"BA";3;2,32;0;0;NA;1;0,33;1,36
 "Cônego Marinho";"MG";1;0,38;0;0;NA;1;1;0,38
+"Confresa";"MT";2;3,72;0;0;NA;NA;NA;NA
+"Congo";"PB";1;0,83;0;0;NA;NA;NA;NA
 "Congonhas";"MG";2;1,82;1;0,5;1,34;NA;NA;NA
+"Congonhas do Norte";"MG";1;0;0;0;NA;NA;NA;NA
 "Conquista";"MG";1;0,43;0;0;NA;NA;NA;NA
 "Conselheiro Lafaiete";"MG";2;2,28;0;0;NA;NA;NA;NA
 "Constantina";"RS";1;1,97;0;0;NA;NA;NA;NA
-"Contagem";"MG";6;2,79;1;0,17;0,58;NA;NA;NA
-"Coração de Jesus";"MG";2;1,79;0;0;NA;1;0,5;0,46
+"Contagem";"MG";10;1,81;0;0;NA;NA;NA;NA
+"Coração de Jesus";"MG";2;1,79;0;0;NA;2;1;1,79
+"Coração de Maria";"BA";1;0,48;0;0;NA;NA;NA;NA
+"Corbélia";"PR";1;0;0;0;NA;NA;NA;NA
 "Cordeiro";"RJ";1;0,25;0;0;NA;1;1;0,25
 "Cordeirópolis";"SP";1;0,87;0;0;NA;NA;NA;NA
-"Cordeiros";"BA";2;2,03;0;0;NA;NA;NA;NA
+"Cordeiros";"BA";3;2,18;0;0;NA;NA;NA;NA
 "Coremas";"PB";1;1,04;0;0;NA;NA;NA;NA
-"Coribe";"BA";1;0,51;0;0;NA;NA;NA;NA
+"Coribe";"BA";2;0,51;0;0;NA;NA;NA;NA
 "Corinto";"MG";1;0,39;0;0;NA;NA;NA;NA
 "Cornélio Procópio";"PR";2;2,17;2;1;2,17;NA;NA;NA
-"Coroatá";"MA";2;2,2;0;0;NA;2;1;2,2
-"Coronel Fabriciano";"MG";1;0,42;0;0;NA;NA;NA;NA
+"Coroaci";"MG";1;0;0;0;NA;NA;NA;NA
+"Coroatá";"MA";3;2,54;0;0;NA;2;0,67;2,2
+"Coromandel";"MG";1;0,19;0;0;NA;NA;NA;NA
+"Coronel Domingos Soares";"PR";1;0,22;0;0;NA;1;1;0,22
+"Coronel Fabriciano";"MG";2;0,42;0;0;NA;NA;NA;NA
+"Coronel Freitas";"SC";1;1,1;0;0;NA;NA;NA;NA
 "Coronel João Pessoa";"RN";1;0,4;0;0;NA;1;1;0,4
 "Coronel João Sá";"BA";1;0,64;0;0;NA;1;1;0,64
+"Coronel José Dias";"PI";2;1,3;0;0;NA;1;0,5;0,53
+"Coronel Martins";"SC";1;0,96;0;0;NA;NA;NA;NA
+"Coronel Murta";"MG";1;0,18;1;1;0,18;NA;NA;NA
 "Coronel Sapucaia";"MS";1;1,11;0;0;NA;1;1;1,11
 "Correia Pinto";"SC";1;0,59;0;0;NA;NA;NA;NA
+"Corrente";"PI";1;1,02;0;0;NA;NA;NA;NA
 "Correntes";"PE";1;0,25;0;0;NA;1;1;0,25
-"Correntina";"BA";1;1,61;0;0;NA;1;1;1,61
+"Correntina";"BA";2;1,94;0;0;NA;1;0,5;1,61
 "Cortês";"PE";2;1,55;0;0;NA;NA;NA;NA
-"Corumbá";"MS";2;2,45;1;0,5;1,54;NA;NA;NA
-"Corumbá de Goiás";"GO";1;0,98;0;0;NA;1;1;0,98
+"Corumbá";"MS";4;2,45;1;0,25;1,54;NA;NA;NA
+"Corumbá de Goiás";"GO";2;0,98;0;0;NA;2;1;0,98
+"Coruripe";"AL";2;1,14;1;0,5;0,68;NA;NA;NA
 "Cosmópolis";"SP";1;0,9;0;0;NA;1;1;0,9
-"Costa Rica";"MS";1;1,07;0;0;NA;1;1;1,07
+"Costa Marques";"RO";1;0,52;0;0;NA;NA;NA;NA
+"Costa Rica";"MS";2;2,95;1;0,5;1,88;1;0,5;1,07
 "Cotegipe";"BA";2;1,15;0;0;NA;NA;NA;NA
-"Cotia";"SP";5;2;0;0;NA;2;0,4;0,78
-"Couto Magalhães";"TO";2;2,38;0;0;NA;1;0,5;1,27
-"Coxim";"MS";1;1,11;0;0;NA;1;1;1,11
-"Crato";"CE";3;2,08;0;0;NA;NA;NA;NA
+"Cotia";"SP";7;2;0;0;NA;2;0,29;0,78
+"Couto Magalhães";"TO";3;3,14;0;0;NA;1;0,33;1,27
+"Coxim";"MS";3;1,11;0;0;NA;1;0,33;1,11
+"Craíbas";"AL";1;0,59;0;0;NA;NA;NA;NA
+"Crateús";"CE";3;1,93;0;0;NA;NA;NA;NA
+"Crato";"CE";4;2,08;0;0;NA;1;0,25;1,04
+"Cravinhos";"SP";1;0,59;0;0;NA;NA;NA;NA
+"Cravolândia";"BA";1;0,17;0;0;NA;NA;NA;NA
+"Crisólita";"MG";1;0,25;0;0;NA;NA;NA;NA
 "Crisópolis";"BA";1;0,54;0;0;NA;NA;NA;NA
+"Crissiumal";"RS";1;0,37;0;0;NA;NA;NA;NA
 "Cristal";"RS";1;1,08;1;1;1,08;NA;NA;NA
-"Cristinápolis";"SE";1;0,89;0;0;NA;1;1;0,89
-"Cristino Castro";"PI";1;0,79;0;0;NA;NA;NA;NA
-"Cristópolis";"BA";1;0,98;0;0;NA;1;1;0,98
-"Cromínia";"GO";1;1,11;0;0;NA;NA;NA;NA
-"Cruz Alta";"RS";2;1,51;0;0;NA;NA;NA;NA
+"Cristal do Sul";"RS";1;0,71;0;0;NA;NA;NA;NA
+"Cristalândia";"TO";1;0,45;0;0;NA;NA;NA;NA
+"Cristalândia do Piauí";"PI";1;0,19;0;0;NA;NA;NA;NA
+"Cristalina";"GO";2;0;0;0;NA;NA;NA;NA
+"Cristina";"MG";1;0;0;0;NA;NA;NA;NA
+"Cristinápolis";"SE";3;1,94;0;0;NA;2;0,67;1,39
+"Cristino Castro";"PI";2;1,24;0;0;NA;NA;NA;NA
+"Cristópolis";"BA";2;1,13;0;0;NA;1;0,5;0,98
+"Croatá";"CE";1;1,46;1;1;1,46;NA;NA;NA
+"Cromínia";"GO";1;1,11;0;0;NA;1;1;1,11
+"Cruz";"CE";3;1,1;0;0;NA;NA;NA;NA
+"Cruz Alta";"RS";3;2,14;0;0;NA;NA;NA;NA
 "Cruz das Almas";"BA";2;1,09;1;0,5;0,6;NA;NA;NA
-"Cruz Machado";"PR";1;0,46;0;0;NA;NA;NA;NA
-"Cruzeiro";"SP";1;0,74;0;0;NA;NA;NA;NA
-"Cruzeiro do Sul";"AC";5;2,42;0;0;NA;1;0,2;0,27
+"Cruz do Espírito Santo";"PB";1;0;0;0;NA;NA;NA;NA
+"Cruz Machado";"PR";2;2,82;0;0;NA;NA;NA;NA
+"Cruzeiro";"SP";3;2,68;0;0;NA;NA;NA;NA
+"Cruzeiro do Iguaçu";"PR";1;0,97;0;0;NA;NA;NA;NA
+"Cruzeiro do Sul";"AC";6;2,69;0;0;NA;1;0,17;0,27
 "Cruzeiro do Sul";"RS";1;0,98;1;1;0,98;NA;NA;NA
 "Cubatão";"SP";4;1,45;0;0;NA;NA;NA;NA
 "Cubati";"PB";1;0,49;0;0;NA;NA;NA;NA
-"Cuiabá";"MT";11;15,55;0;0;NA;2;0,18;6,92
+"Cuiabá";"MT";15;17,49;0;0;NA;2;0,13;6,92
+"Cuitegi";"PB";1;0,21;0;0;NA;NA;NA;NA
+"Cujubim";"RO";1;0;0;0;NA;NA;NA;NA
 "Cumaru";"PE";1;0,42;0;0;NA;1;1;0,42
 "Cumbe";"SE";1;0,56;0;0;NA;1;1;0,56
 "Cunha";"SP";1;0,69;0;0;NA;1;1;0,69
 "Cupira";"PE";1;0,43;0;0;NA;NA;NA;NA
-"Curaçá";"BA";3;3,54;0;0;NA;3;1;3,54
-"Curitiba";"PR";1;1,24;0;0;NA;1;1;1,24
+"Curaçá";"BA";4;4,09;0;0;NA;4;1;4,09
+"Curimatá";"PI";1;0,39;0;0;NA;NA;NA;NA
+"Curitiba";"PR";1;0;0;0;NA;NA;NA;NA
 "Curitibanos";"SC";1;0,66;0;0;NA;NA;NA;NA
 "Curiúva";"PR";1;0,39;0;0;NA;1;1;0,39
 "Currais";"PI";1;0,42;0;0;NA;NA;NA;NA
 "Currais Novos";"RN";2;1,74;1;0,5;1,11;NA;NA;NA
-"Curral de Dentro";"MG";1;1,01;0;0;NA;NA;NA;NA
-"Curralinho";"PA";22;4,79;0;0;NA;18;0,82;3,2
-"Curuçá";"PA";5;3,85;2;0,4;1,14;2;0,4;2,38
+"Curral de Dentro";"MG";2;1,25;0;0;NA;NA;NA;NA
+"Curral Novo do Piauí";"PI";1;0,19;0;0;NA;NA;NA;NA
+"Curralinho";"PA";23;5,03;0;0;NA;18;0,78;3,2
+"Curuá";"PA";1;0,56;0;0;NA;NA;NA;NA
+"Curuçá";"PA";7;3,85;2;0,29;1,14;2;0,29;2,38
 "Cururupu";"MA";2;2,94;0;0;NA;2;1;2,94
+"Curvelo";"MG";1;0,78;0;0;NA;NA;NA;NA
 "Custódia";"PE";1;0,42;0;0;NA;NA;NA;NA
 "Damianópolis";"GO";1;0,41;0;0;NA;1;1;0,41
 "Darcinópolis";"TO";1;1,33;0;0;NA;1;1;1,33
-"Delmiro Gouveia";"AL";4;1,75;0;0;NA;2;0,5;0,85
-"Demerval Lobão";"PI";1;0,58;1;1;0,58;NA;NA;NA
-"Denise";"MT";1;1,06;0;0;NA;NA;NA;NA
+"Dário Meira";"BA";1;0,49;0;0;NA;NA;NA;NA
+"David Canabarro";"RS";1;0;0;0;NA;NA;NA;NA
+"Davinópolis";"MA";1;0;0;0;NA;1;1;0
+"Delmiro Gouveia";"AL";5;1,75;0;0;NA;2;0,4;0,85
+"Demerval Lobão";"PI";2;0,88;1;0,5;0,58;NA;NA;NA
+"Denise";"MT";2;1,22;1;0,5;0,15;NA;NA;NA
 "Deodápolis";"MS";1;0,97;1;1;0,97;NA;NA;NA
-"Deputado Irapuan Pinheiro";"CE";1;0,46;0;0;NA;NA;NA;NA
-"Diadema";"SP";3;3,89;0;0;NA;NA;NA;NA
+"Deputado Irapuan Pinheiro";"CE";2;0,68;0;0;NA;NA;NA;NA
+"Descanso";"SC";1;0;0;0;NA;NA;NA;NA
+"Diamante";"PB";1;0;0;0;NA;NA;NA;NA
 "Diamante D'Oeste";"PR";1;1,16;0;0;NA;NA;NA;NA
 "Diamantina";"MG";1;0,47;0;0;NA;NA;NA;NA
-"Dionísio Cerqueira";"SC";1;0,25;0;0;NA;NA;NA;NA
+"Dianópolis";"TO";1;0;0;0;NA;NA;NA;NA
+"Dias d'Ávila";"BA";1;0;0;0;NA;NA;NA;NA
+"Dionísio";"MG";1;0,44;1;1;0,44;NA;NA;NA
+"Dionísio Cerqueira";"SC";2;1,5;0;0;NA;NA;NA;NA
 "Dirceu Arcoverde";"PI";1;0,95;0;0;NA;1;1;0,95
 "Divina Pastora";"SE";1;0,42;0;0;NA;NA;NA;NA
 "Divino";"MG";2;0,91;0;0;NA;NA;NA;NA
@@ -652,159 +909,232 @@
 "Divinópolis";"MG";2;0,94;0;0;NA;NA;NA;NA
 "Divinópolis de Goiás";"GO";1;1,9;0;0;NA;1;1;1,9
 "Divinópolis do Tocantins";"TO";1;1,09;0;0;NA;1;1;1,09
+"Divisa Alegre";"MG";1;0,18;0;0;NA;NA;NA;NA
 "Dois Córregos";"SP";1;1,35;0;0;NA;1;1;1,35
 "Dois Irmãos do Buriti";"MS";1;1,06;0;0;NA;1;1;1,06
 "Dois Lajeados";"RS";1;1,78;1;1;1,78;NA;NA;NA
-"Dois Vizinhos";"PR";2;1,85;0;0;NA;NA;NA;NA
+"Dois Vizinhos";"PR";4;2,39;0;0;NA;NA;NA;NA
+"Dom Aquino";"MT";1;0;0;0;NA;NA;NA;NA
 "Dom Bosco";"MG";1;0,42;0;0;NA;1;1;0,42
-"Dom Eliseu";"PA";2;1,58;0;0;NA;2;1;1,58
+"Dom Eliseu";"PA";4;1,58;0;0;NA;2;0,5;1,58
 "Dom Inocêncio";"PI";1;0,98;0;0;NA;1;1;0,98
-"Dom Pedro";"MA";5;4,65;0;0;NA;1;0,2;0,49
+"Dom Macedo Costa";"BA";1;0;0;0;NA;NA;NA;NA
+"Dom Pedrito";"RS";1;0;0;0;NA;NA;NA;NA
+"Dom Pedro";"MA";6;5,27;0;0;NA;1;0,17;0,49
+"Dom Pedro de Alcântara";"RS";1;0,22;1;1;0,22;NA;NA;NA
+"Domingos Martins";"ES";1;0,24;0;0;NA;1;1;0,24
 "Domingos Mourão";"PI";1;0,83;0;0;NA;1;1;0,83
+"Dona Eusébia";"MG";1;0,19;1;1;0,19;NA;NA;NA
+"Dores de Campos";"MG";1;0,19;0;0;NA;NA;NA;NA
+"Dores do Indaiá";"MG";1;0,53;0;0;NA;NA;NA;NA
+"Dormentes";"PE";3;0,53;0;0;NA;NA;NA;NA
 "Douradina";"MS";1;0,42;0;0;NA;1;1;0,42
-"Dourados";"MS";7;7,47;1;0,14;1,16;NA;NA;NA
+"Dourados";"MS";12;7,47;1;0,08;1,16;NA;NA;NA
+"Doutor Camargo";"PR";1;0,55;0;0;NA;NA;NA;NA
 "Doutor Severiano";"RN";1;1,37;0;0;NA;NA;NA;NA
+"Doutor Ulysses";"PR";1;0,72;0;0;NA;NA;NA;NA
+"Dracena";"SP";1;0;0;0;NA;NA;NA;NA
+"Duas Barras";"RJ";1;0,24;0;0;NA;NA;NA;NA
 "Duas Estradas";"PB";1;0,61;0;0;NA;NA;NA;NA
 "Duque Bacelar";"MA";1;0,92;0;0;NA;1;1;0,92
-"Duque de Caxias";"RJ";5;3,98;0;0;NA;NA;NA;NA
+"Duque de Caxias";"RJ";16;3,98;0;0;NA;NA;NA;NA
+"Durandé";"MG";1;0,72;0;0;NA;NA;NA;NA
+"Ecoporanga";"ES";1;0;0;0;NA;1;1;0
 "Eirunepé";"AM";3;1,73;0;0;NA;NA;NA;NA
 "Eldorado do Sul";"RS";1;1,43;1;1;1,43;NA;NA;NA
 "Eldorado dos Carajás";"PA";2;1,75;0;0;NA;NA;NA;NA
+"Elesbão Veloso";"PI";1;1,08;0;0;NA;NA;NA;NA
+"Elias Fausto";"SP";1;0,8;0;0;NA;NA;NA;NA
+"Emas";"PB";1;0,53;0;0;NA;1;1;0,53
 "Embu das Artes";"SP";1;0,8;0;0;NA;NA;NA;NA
 "Encantado";"RS";1;2,2;0;0;NA;NA;NA;NA
 "Encanto";"RN";1;1,06;0;0;NA;NA;NA;NA
+"Encruzilhada";"BA";1;0;0;0;NA;NA;NA;NA
+"Encruzilhada do Sul";"RS";2;0;0;0;NA;NA;NA;NA
+"Enéas Marques";"PR";2;3,85;0;0;NA;NA;NA;NA
 "Engenheiro Beltrão";"PR";2;3,15;0;0;NA;NA;NA;NA
-"Entre Rios";"BA";2;1,81;2;1;1,81;NA;NA;NA
-"Envira";"AM";1;0,91;0;0;NA;1;1;0,91
-"Erechim";"RS";2;1,45;0;0;NA;1;0,5;0,95
+"Engenheiro Navarro";"MG";1;0,18;0;0;NA;NA;NA;NA
+"Entre-Ijuís";"RS";1;0,19;1;1;0,19;NA;NA;NA
+"Entre Rios";"BA";3;2,06;2;0,67;1,81;NA;NA;NA
+"Entre Rios";"SC";1;0,71;0;0;NA;NA;NA;NA
+"Entre Rios do Sul";"RS";1;1,03;0;0;NA;NA;NA;NA
+"Envira";"AM";7;1,2;2;0,29;0;1;0,14;0,91
+"Erechim";"RS";1;0,95;0;0;NA;1;1;0,95
+"Ererê";"CE";1;0,17;1;1;0,17;NA;NA;NA
 "Érico Cardoso";"BA";1;0,85;0;0;NA;NA;NA;NA
 "Erval Grande";"RS";1;0,68;0;0;NA;NA;NA;NA
+"Erval Seco";"RS";1;0,19;0;0;NA;NA;NA;NA
+"Ervália";"MG";1;1,54;0;0;NA;NA;NA;NA
+"Escada";"PE";1;0,36;0;0;NA;NA;NA;NA
 "Esmeraldas";"MG";3;1,13;0;0;NA;3;1;1,13
 "Espera Feliz";"MG";1;0,48;0;0;NA;NA;NA;NA
 "Esperança";"PB";1;0,17;0;0;NA;NA;NA;NA
-"Esperantina";"PI";2;1,58;1;0,5;1;NA;NA;NA
-"Esperantina";"TO";1;0,38;0;0;NA;NA;NA;NA
-"Esperantinópolis";"MA";1;0,23;0;0;NA;NA;NA;NA
-"Espinosa";"MG";1;0,7;0;0;NA;NA;NA;NA
+"Esperantina";"PI";5;3,08;3;0,6;2,28;NA;NA;NA
+"Esperantina";"TO";2;0,59;0;0;NA;NA;NA;NA
+"Esperantinópolis";"MA";2;0,59;0;0;NA;NA;NA;NA
+"Espigão D'Oeste";"RO";1;0,5;0;0;NA;NA;NA;NA
+"Espinosa";"MG";2;0,86;0;0;NA;NA;NA;NA
 "Espírito Santo";"RN";1;0,5;0;0;NA;NA;NA;NA
 "Espírito Santo do Turvo";"SP";1;0,99;0;0;NA;1;1;0,99
 "Esplanada";"BA";2;4,5;0;0;NA;NA;NA;NA
-"Estância";"SE";4;2,15;0;0;NA;1;0,25;0,17
+"Espumoso";"RS";2;0;0;0;NA;NA;NA;NA
+"Estância";"SE";5;2,15;0;0;NA;1;0,2;0,17
 "Esteio";"RS";2;2,56;1;0,5;1,44;1;0,5;1,12
-"Estreito";"MA";3;2,49;0;0;NA;1;0,33;0,5
+"Estiva";"MG";1;0;0;0;NA;NA;NA;NA
+"Estreito";"MA";2;1,42;0;0;NA;1;0,5;0,5
 "Estrela de Alagoas";"AL";1;0,42;0;0;NA;NA;NA;NA
 "Euclides da Cunha";"BA";1;0,97;0;0;NA;NA;NA;NA
 "Eugenópolis";"MG";2;2,09;0;0;NA;NA;NA;NA
 "Eunápolis";"BA";5;5,81;0;0;NA;1;0,2;0,49
-"Eusébio";"CE";2;1,19;0;0;NA;NA;NA;NA
+"Eusébio";"CE";3;1,19;0;0;NA;NA;NA;NA
 "Extrema";"MG";1;0,47;1;1;0,47;NA;NA;NA
 "Fagundes";"PB";1;0,43;0;0;NA;1;1;0,43
 "Faina";"GO";2;1,24;0;0;NA;2;1;1,24
-"Farroupilha";"RS";1;0,47;0;0;NA;1;1;0,47
-"Fátima";"BA";2;1,52;0;0;NA;NA;NA;NA
+"Farroupilha";"RS";2;1,37;0;0;NA;2;1;1,37
+"Fátima";"BA";3;1,89;1;0,33;0,37;NA;NA;NA
 "Faxinal dos Guedes";"SC";1;0,32;1;1;0,32;NA;NA;NA
-"Fazenda Nova";"GO";1;0,53;1;1;0,53;NA;NA;NA
-"Fazenda Rio Grande";"PR";4;5,56;1;0,25;1,51;NA;NA;NA
+"Fazenda Nova";"GO";2;0,72;2;1;0,72;NA;NA;NA
+"Fazenda Rio Grande";"PR";5;5,56;1;0,2;1,51;NA;NA;NA
 "Feijó";"AC";5;1,79;0;0;NA;1;0,2;0,36
 "Feira de Santana";"BA";3;1,43;0;0;NA;NA;NA;NA
 "Feira Grande";"AL";2;0,83;0;0;NA;1;0,5;0,41
 "Feira Nova";"PE";1;0,17;0;0;NA;1;1;0,17
+"Feira Nova do Maranhão";"MA";2;0,18;1;0,5;0,18;NA;NA;NA
+"Felisburgo";"MG";1;0;0;0;NA;NA;NA;NA
 "Felixlândia";"MG";1;1,93;0;0;NA;1;1;1,93
 "Feliz";"RS";1;0,44;1;1;0,44;NA;NA;NA
 "Feliz Natal";"MT";1;0,98;0;0;NA;NA;NA;NA
+"Fernandes Pinheiro";"PR";1;0,96;0;0;NA;NA;NA;NA
 "Fernando Falcão";"MA";1;0,91;0;0;NA;1;1;0,91
+"Ferraz de Vasconcelos";"SP";2;0,78;0;0;NA;NA;NA;NA
+"Ferreiros";"PE";1;0;0;0;NA;NA;NA;NA
 "Fervedouro";"MG";1;0,87;0;0;NA;1;1;0,87
+"Figueira";"PR";2;2,1;0;0;NA;NA;NA;NA
 "Figueirão";"MS";1;0,67;0;0;NA;NA;NA;NA
 "Filadélfia";"BA";2;2,1;0;0;NA;NA;NA;NA
-"Filadélfia";"TO";1;1,95;0;0;NA;1;1;1,95
+"Filadélfia";"TO";3;3,83;0;0;NA;2;0,67;2,06
 "Flexeiras";"AL";1;0,27;0;0;NA;NA;NA;NA
 "Floraí";"PR";1;1,11;0;0;NA;NA;NA;NA
 "Florânia";"RN";1;1,86;0;0;NA;1;1;1,86
-"Flores do Piauí";"PI";1;0,77;0;0;NA;1;1;0,77
-"Floresta";"PE";3;2,94;0;0;NA;2;0,67;1,89
+"Flores de Goiás";"GO";1;0,19;0;0;NA;NA;NA;NA
+"Flores do Piauí";"PI";3;1,1;0;0;NA;2;0,67;1,1
+"Floresta";"PE";4;3,09;0;0;NA;2;0,5;1,89
+"Floresta";"PR";1;0,49;0;0;NA;NA;NA;NA
 "Floresta do Araguaia";"PA";1;0,54;0;0;NA;1;1;0,54
-"Florianópolis";"SC";3;1,79;0;0;NA;NA;NA;NA
+"Florianópolis";"SC";7;2,66;0;0;NA;1;0,14;0,28
 "Flórida Paulista";"SP";1;0,64;0;0;NA;NA;NA;NA
 "Fonte Boa";"AM";2;0,99;0;0;NA;2;1;0,99
 "Formiga";"MG";1;0,26;0;0;NA;NA;NA;NA
-"Formosa";"GO";2;1,23;0;0;NA;NA;NA;NA
-"Formosa da Serra Negra";"MA";3;2,98;0;0;NA;2;0,67;1,59
-"Formosa do Rio Preto";"BA";2;1,99;0;0;NA;2;1;1,99
+"Formigueiro";"RS";1;0,18;0;0;NA;NA;NA;NA
+"Formosa";"GO";6;1,42;3;0,5;0;NA;NA;NA
+"Formosa da Serra Negra";"MA";5;4,23;0;0;NA;4;0,8;2,84
+"Formosa do Rio Preto";"BA";1;0,99;0;0;NA;1;1;0,99
 "Formoso";"MG";2;2,59;0;0;NA;2;1;2,59
 "Formoso do Araguaia";"TO";1;1,47;0;0;NA;1;1;1,47
-"Fortaleza";"CE";85;57,27;2;0,02;1,62;26;0,31;11,92
+"Forquilhinha";"SC";1;0,47;0;0;NA;NA;NA;NA
+"Fortaleza";"CE";101;43,79;2;0,02;1,62;27;0,27;11,92
 "Fortaleza do Tabocão";"TO";1;0,62;1;1;0,62;NA;NA;NA
-"Fortaleza dos Nogueiras";"MA";1;0,69;0;0;NA;NA;NA;NA
-"Fortim";"CE";1;1,5;0;0;NA;1;1;1,5
-"Foz do Iguaçu";"PR";4;1,78;0;0;NA;NA;NA;NA
-"Franca";"SP";1;1,95;1;1;1,95;NA;NA;NA
+"Fortaleza dos Nogueiras";"MA";1;0,69;0;0;NA;1;1;0,69
+"Fortuna";"MA";3;0,59;0;0;NA;NA;NA;NA
+"Foz do Iguaçu";"PR";8;1,78;0;0;NA;NA;NA;NA
+"Foz do Jordão";"PR";1;0,26;0;0;NA;NA;NA;NA
+"Franca";"SP";4;1,95;1;0,25;1,95;NA;NA;NA
+"Francinópolis";"PI";2;0,62;0;0;NA;1;0,5;0,44
 "Francisco Alves";"PR";1;3,75;0;0;NA;NA;NA;NA
-"Francisco Beltrão";"PR";3;6,32;2;0,67;3,28;NA;NA;NA
-"Francisco Morato";"SP";2;1,83;0;0;NA;2;1;1,83
+"Francisco Badaró";"MG";1;0,62;1;1;0,62;NA;NA;NA
+"Francisco Beltrão";"PR";5;8,06;4;0,8;5,02;NA;NA;NA
+"Francisco Macedo";"PI";1;0,25;0;0;NA;NA;NA;NA
+"Francisco Morato";"SP";3;2,73;0;0;NA;2;0,67;1,83
 "Francisco Sá";"MG";2;1,97;0;0;NA;2;1;1,97
-"Franco da Rocha";"SP";2;2,63;0;0;NA;NA;NA;NA
+"Francisco Santos";"PI";2;1,33;0;0;NA;NA;NA;NA
+"Franco da Rocha";"SP";4;2,63;0;0;NA;2;0,5;0
 "Frederico Westphalen";"RS";1;0,47;0;0;NA;NA;NA;NA
+"Frei Gaspar";"MG";1;0,19;0;0;NA;NA;NA;NA
 "Frei Inocêncio";"MG";1;1,34;0;0;NA;1;1;1,34
 "Frei Martinho";"PB";1;0,64;0;0;NA;1;1;0,64
 "Frei Paulo";"SE";1;0,42;1;1;0,42;NA;NA;NA
+"Frei Rogério";"SC";1;0,66;0;0;NA;NA;NA;NA
+"Fronteira dos Vales";"MG";1;0,42;0;0;NA;NA;NA;NA
+"Fronteiras";"PI";2;1,23;0;0;NA;NA;NA;NA
 "Fruta de Leite";"MG";1;0,59;1;1;0,59;NA;NA;NA
-"Fundão";"ES";1;0,69;0;0;NA;NA;NA;NA
+"Frutal";"MG";2;0,59;1;0,5;0,59;NA;NA;NA
+"Fundão";"ES";3;1,18;0;0;NA;1;0,33;0,49
 "Gado Bravo";"PB";1;0,87;0;0;NA;NA;NA;NA
-"Gameleira";"PE";2;0,42;0;0;NA;1;0,5;0,06
+"Gameleira";"PE";3;0,64;0;0;NA;1;0,33;0,06
 "Gameleiras";"MG";1;0,42;0;0;NA;1;1;0,42
 "Gandu";"BA";2;1,2;0;0;NA;1;0,5;0,43
-"Garanhuns";"PE";6;5,92;4;0,67;4,59;NA;NA;NA
-"Gararu";"SE";1;0,41;0;0;NA;NA;NA;NA
+"Garanhuns";"PE";7;5,92;4;0,57;4,59;NA;NA;NA
+"Gararu";"SE";2;0,41;0;0;NA;NA;NA;NA
 "Garibaldi";"RS";1;1,88;0;0;NA;1;1;1,88
-"Garrafão do Norte";"PA";2;2,17;1;0,5;1,33;1;0,5;0,84
+"Garopaba";"SC";1;0,9;1;1;0,9;NA;NA;NA
+"Garrafão do Norte";"PA";5;3,08;3;0,6;1,63;1;0,2;0,84
 "Garruchos";"RS";1;0,7;0;0;NA;NA;NA;NA
-"Gaspar";"SC";1;0,66;0;0;NA;1;1;0,66
+"Gaspar";"SC";3;1,13;0;0;NA;2;0,67;1,13
+"Gaúcha do Norte";"MT";5;0;0;0;NA;NA;NA;NA
 "Gaurama";"RS";1;3,75;0;0;NA;NA;NA;NA
 "Gavião";"BA";1;0,9;1;1;0,9;NA;NA;NA
+"General Carneiro";"MT";3;0,31;2;0,67;0,12;1;0,33;0,2
+"Gentio do Ouro";"BA";3;2,01;1;0,33;0,26;NA;NA;NA
 "Girau do Ponciano";"AL";1;0,41;0;0;NA;1;1;0,41
-"Giruá";"RS";1;0,62;0;0;NA;1;1;0,62
+"Giruá";"RS";2;1,48;1;0,5;0,86;1;0,5;0,62
+"Glória";"BA";1;0;0;0;NA;NA;NA;NA
 "Glória do Goitá";"PE";1;0,9;0;0;NA;1;1;0,9
-"Godofredo Viana";"MA";3;0,63;0;0;NA;2;0,67;0,35
-"Goiana";"PE";2;1,15;0;0;NA;2;1;1,15
+"Godofredo Viana";"MA";4;0,8;0;0;NA;3;0,75;0,52
+"Goiana";"PE";4;1,15;0;0;NA;2;0,5;1,15
 "Goianápolis";"GO";1;0,93;0;0;NA;1;1;0,93
-"Goianésia";"GO";1;1,8;1;1;1,8;NA;NA;NA
+"Goianésia";"GO";2;1,8;1;0,5;1,8;NA;NA;NA
 "Goianésia do Pará";"PA";1;0,91;0;0;NA;NA;NA;NA
-"Goiânia";"GO";45;18,84;0;0;NA;9;0,2;5,38
-"Goianira";"GO";3;5,3;0;0;NA;2;0,67;3,92
-"Goiatins";"TO";6;3,42;0;0;NA;1;0,17;0,84
+"Goiânia";"GO";52;14,61;0;0;NA;10;0,19;5,38
+"Goianira";"GO";5;5,3;0;0;NA;4;0,8;3,92
+"Goiás";"GO";1;0,27;0;0;NA;NA;NA;NA
+"Goiatins";"TO";8;3,75;0;0;NA;1;0,12;0,84
 "Goiatuba";"GO";2;2,06;0;0;NA;NA;NA;NA
 "Goioerê";"PR";2;3;0;0;NA;NA;NA;NA
-"Gonçalves Dias";"MA";1;1,4;0;0;NA;1;1;1,4
+"Goioxim";"PR";2;1,06;0;0;NA;2;1;1,06
+"Gonçalves Dias";"MA";2;1,94;0;0;NA;2;1;1,94
 "Gongogi";"BA";1;1,32;0;0;NA;1;1;1,32
+"Governador Archer";"MA";1;0;0;0;NA;1;1;0
 "Governador Dix-Sept Rosado";"RN";1;0,58;1;1;0,58;NA;NA;NA
 "Governador Edison Lobão";"MA";3;1,56;1;0,33;0,49;1;0,33;0,89
 "Governador Eugênio Barros";"MA";3;1,98;1;0,33;0,28;NA;NA;NA
+"Governador Jorge Teixeira";"RO";1;1,08;0;0;NA;1;1;1,08
 "Governador Lindenberg";"ES";1;1,08;0;0;NA;NA;NA;NA
-"Governador Luiz Rocha";"MA";5;2,23;3;0,6;1,04;2;0,4;1,19
+"Governador Luiz Rocha";"MA";6;2,4;4;0,67;1,21;2;0,33;1,19
 "Governador Mangabeira";"BA";1;0,86;0;0;NA;1;1;0,86
 "Governador Newton Bello";"MA";2;1,12;0;0;NA;2;1;1,12
-"Governador Nunes Freire";"MA";2;1,39;0;0;NA;2;1;1,39
+"Governador Nunes Freire";"MA";5;2,12;0;0;NA;5;1;2,12
 "Governador Valadares";"MG";6;1,84;0;0;NA;2;0,33;0,37
-"Grajaú";"MA";15;11,52;0;0;NA;4;0,27;6,39
+"Grajaú";"MA";18;11,86;0;0;NA;6;0,33;6,39
 "Gramado";"RS";1;0,71;0;0;NA;1;1;0,71
 "Gramado Xavier";"RS";1;0,25;0;0;NA;1;1;0,25
-"Granja";"CE";2;1,18;0;0;NA;NA;NA;NA
+"Grandes Rios";"PR";2;0,33;0;0;NA;NA;NA;NA
+"Granja";"CE";4;1,63;0;0;NA;NA;NA;NA
+"Granjeiro";"CE";2;1,55;0;0;NA;NA;NA;NA
 "Grão Mogol";"MG";1;0,42;0;0;NA;1;1;0,42
 "Gravatá";"PE";4;2,23;0;0;NA;2;0,5;1,79
-"Gravataí";"RS";13;7,78;0;0;NA;5;0,38;2,44
-"Guabiruba";"SC";1;1,16;0;0;NA;NA;NA;NA
+"Gravataí";"RS";15;8,12;0;0;NA;5;0,33;2,44
+"Groaíras";"CE";1;0,7;1;1;0,7;NA;NA;NA
+"Guabiruba";"SC";3;1,16;0;0;NA;NA;NA;NA
+"Guaçuí";"ES";1;0;0;0;NA;NA;NA;NA
+"Guadalupe";"PI";1;0;0;0;NA;NA;NA;NA
 "Guaíba";"RS";4;4,67;0;0;NA;4;1;4,67
-"Guaíra";"PR";1;0,81;0;0;NA;NA;NA;NA
-"Guaiúba";"CE";1;0,51;0;0;NA;1;1;0,51
+"Guaíra";"PR";2;1,79;1;0,5;0,98;NA;NA;NA
+"Guaiúba";"CE";2;1,1;0;0;NA;2;1;1,1
 "Guajará";"AM";3;2,04;2;0,67;1,76;1;0,33;0,29
 "Guajará-Mirim";"RO";1;1,44;0;0;NA;1;1;1,44
 "Guajeru";"BA";1;0,99;0;0;NA;1;1;0,99
-"Guanambi";"BA";1;0,59;0;0;NA;NA;NA;NA
-"Guapimirim";"RJ";1;0,97;0;0;NA;1;1;0,97
+"Guamiranga";"PR";2;1,33;0;0;NA;NA;NA;NA
+"Guanhães";"MG";1;0,27;0;0;NA;NA;NA;NA
+"Guapiara";"SP";1;0,24;0;0;NA;NA;NA;NA
+"Guapimirim";"RJ";2;0,97;0;0;NA;2;1;0,97
+"Guapirama";"PR";1;1,12;1;1;1,12;NA;NA;NA
 "Guapó";"GO";1;1,41;1;1;1,41;NA;NA;NA
+"Guará";"SP";1;0;0;0;NA;NA;NA;NA
 "Guarabira";"PB";2;2,13;1;0,5;1,95;NA;NA;NA
-"Guaraciaba do Norte";"CE";3;2,97;1;0,33;0,51;2;0,67;2,45
+"Guaraciaba";"MG";1;0,19;0;0;NA;NA;NA;NA
+"Guaraciaba do Norte";"CE";2;1,45;1;0,5;0,51;1;0,5;0,93
 "Guaraciama";"MG";1;1,03;0;0;NA;1;1;1,03
+"Guaraí";"TO";1;0;0;0;NA;NA;NA;NA
 "Guaramiranga";"CE";1;0,51;0;0;NA;NA;NA;NA
 "Guaranésia";"MG";1;0,59;1;1;0,59;NA;NA;NA
 "Guarani de Goiás";"GO";1;0,89;0;0;NA;1;1;0,89
@@ -813,649 +1143,954 @@
 "Guarapari";"ES";2;1,17;1;0,5;0,79;NA;NA;NA
 "Guarapuava";"PR";1;0,45;0;0;NA;NA;NA;NA
 "Guaraqueçaba";"PR";1;0,18;0;0;NA;NA;NA;NA
+"Guararema";"SP";1;0;0;0;NA;NA;NA;NA
 "Guaratinga";"BA";1;0,99;0;0;NA;NA;NA;NA
-"Guaratinguetá";"SP";1;0,45;0;0;NA;NA;NA;NA
+"Guaratinguetá";"SP";2;0,82;0;0;NA;NA;NA;NA
+"Guaratuba";"PR";1;0;0;0;NA;NA;NA;NA
 "Guarda-Mor";"MG";1;1,85;1;1;1,85;NA;NA;NA
+"Guareí";"SP";1;0;0;0;NA;1;1;0
 "Guariba";"SP";1;1,24;0;0;NA;NA;NA;NA
+"Guaribas";"PI";1;0;0;0;NA;1;1;0
+"Guarinos";"GO";1;0,43;0;0;NA;NA;NA;NA
 "Guarujá";"SP";2;0,73;0;0;NA;NA;NA;NA
-"Guarulhos";"SP";11;15,53;8;0,73;10,74;3;0,27;4,79
 "Guatapará";"SP";1;0,42;0;0;NA;1;1;0,42
+"Guidoval";"MG";2;1,36;0;0;NA;NA;NA;NA
+"Gurinhém";"PB";2;0,82;0;0;NA;NA;NA;NA
 "Gurupá";"PA";4;1,64;3;0,75;0,83;NA;NA;NA
 "Gurupi";"TO";3;1,87;0;0;NA;NA;NA;NA
+"Hidrolândia";"GO";1;0,33;0;0;NA;NA;NA;NA
+"Holambra";"SP";1;0;0;0;NA;NA;NA;NA
 "Honório Serpa";"PR";1;2,04;0;0;NA;NA;NA;NA
-"Horizonte";"CE";1;1,03;0;0;NA;NA;NA;NA
-"Hortolândia";"SP";1;0,45;0;0;NA;NA;NA;NA
-"Hulha Negra";"RS";1;1,02;0;0;NA;NA;NA;NA
+"Horizonte";"CE";3;3,73;0;0;NA;NA;NA;NA
+"Horizontina";"RS";2;0;0;0;NA;NA;NA;NA
+"Hortolândia";"SP";5;1,56;0;0;NA;NA;NA;NA
+"Hulha Negra";"RS";5;1,18;0;0;NA;4;0,8;0,16
+"Humaitá";"AM";2;0;0;0;NA;NA;NA;NA
+"Humberto de Campos";"MA";7;3,33;0;0;NA;1;0,14;0
 "Iaciara";"GO";1;0,64;0;0;NA;1;1;0,64
+"Iaçu";"BA";1;0;0;0;NA;NA;NA;NA
 "Iati";"PE";1;1,43;1;1;1,43;NA;NA;NA
 "Ibaiti";"PR";1;0,24;0;0;NA;NA;NA;NA
+"Ibarama";"RS";1;0,27;0;0;NA;NA;NA;NA
 "Ibaretama";"CE";1;0,36;0;0;NA;1;1;0,36
 "Ibateguara";"AL";1;0,98;0;0;NA;NA;NA;NA
 "Ibatiba";"ES";1;0,91;0;0;NA;1;1;0,91
-"Ibiá";"MG";1;1,02;0;0;NA;NA;NA;NA
+"Ibiá";"MG";3;1,35;0;0;NA;NA;NA;NA
 "Ibiaçá";"RS";1;1,14;1;1;1,14;NA;NA;NA
-"Ibiapina";"CE";1;1,91;0;0;NA;1;1;1,91
+"Ibiaí";"MG";2;0,14;0;0;NA;NA;NA;NA
+"Ibiapina";"CE";2;2,14;1;0,5;0,23;1;0,5;1,91
+"Ibiara";"PB";1;2,04;0;0;NA;1;1;2,04
+"Ibiassucê";"BA";1;0,27;0;0;NA;1;1;0,27
 "Ibicoara";"BA";1;0,39;0;0;NA;1;1;0,39
-"Ibimirim";"PE";1;0,17;0;0;NA;1;1;0,17
+"Ibicuí";"BA";1;0,5;0;0;NA;NA;NA;NA
+"Ibimirim";"PE";3;0,17;0;0;NA;1;0,33;0,17
+"Ibipitanga";"BA";2;3,18;0;0;NA;NA;NA;NA
+"Ibirá";"SP";1;0;0;0;NA;NA;NA;NA
 "Ibiracatu";"MG";1;0,24;0;0;NA;NA;NA;NA
-"Ibirama";"SC";1;1,16;0;0;NA;NA;NA;NA
+"Ibiraçu";"ES";1;0;0;0;NA;1;1;0
+"Ibirama";"SC";2;1,39;0;0;NA;NA;NA;NA
+"Ibirapitanga";"BA";1;0;0;0;NA;NA;NA;NA
 "Ibirapuitã";"RS";1;1,02;1;1;1,02;NA;NA;NA
 "Ibirité";"MG";2;2,23;2;1;2,23;NA;NA;NA
 "Ibitiara";"BA";1;0,71;0;0;NA;NA;NA;NA
-"Ibitinga";"SP";1;1,77;1;1;1,77;NA;NA;NA
+"Ibitinga";"SP";2;1,77;1;0,5;1,77;NA;NA;NA
 "Ibititá";"BA";2;3,15;1;0,5;0,71;NA;NA;NA
+"Ibiúna";"SP";2;0,78;2;1;0,78;NA;NA;NA
 "Ibotirama";"BA";1;0,85;0;0;NA;1;1;0,85
 "Içara";"SC";1;0,77;0;0;NA;NA;NA;NA
-"Icatu";"MA";2;4,49;0;0;NA;2;1;4,49
-"Icó";"CE";4;4,5;0;0;NA;3;0,75;4,13
-"Igaci";"AL";2;1,03;0;0;NA;1;0,5;0,41
-"Igaraçu do Tietê";"SP";1;1,64;0;0;NA;1;1;1,64
+"Icatu";"MA";4;5,42;0;0;NA;2;0,5;4,49
+"Icó";"CE";5;4,5;0;0;NA;4;0,8;4,13
+"Ielmo Marinho";"RN";2;0,84;0;0;NA;NA;NA;NA
+"Igaci";"AL";3;2,78;1;0,33;1,75;1;0,33;0,41
+"Igaraçu do Tietê";"SP";2;1,81;0;0;NA;1;0,5;1,64
 "Igarapava";"SP";1;1,43;0;0;NA;NA;NA;NA
 "Igarapé";"MG";1;0,85;0;0;NA;1;1;0,85
-"Igarapé-Açu";"PA";2;1,67;0;0;NA;NA;NA;NA
-"Igarapé-Miri";"PA";1;1,63;0;0;NA;1;1;1,63
+"Igarapé-Açu";"PA";5;1,67;0;0;NA;1;0,2;0
+"Igarapé-Miri";"PA";3;1,82;1;0,33;0,19;1;0,33;1,63
 "Igarapé do Meio";"MA";1;0,98;0;0;NA;1;1;0,98
-"Igrapiúna";"BA";1;0,48;0;0;NA;NA;NA;NA
+"Igarapé Grande";"MA";1;0;0;0;NA;1;1;0
+"Igarassu";"PE";2;0,62;0;0;NA;NA;NA;NA
+"Igrapiúna";"BA";4;1,49;0;0;NA;NA;NA;NA
 "Igreja Nova";"AL";1;0,28;0;0;NA;NA;NA;NA
 "Igrejinha";"RS";1;1,08;0;0;NA;NA;NA;NA
 "Iguaba Grande";"RJ";1;0,25;0;0;NA;NA;NA;NA
-"Iguaí";"BA";1;0,99;0;0;NA;NA;NA;NA
+"Iguaí";"BA";2;0,99;0;0;NA;1;0,5;0,99
+"Iguatemi";"MS";1;0;0;0;NA;NA;NA;NA
 "Iguatu";"CE";4;3,1;0;0;NA;NA;NA;NA
 "Ijuí";"RS";2;1,99;1;0,5;1,74;NA;NA;NA
+"Ilha Comprida";"SP";1;0;0;0;NA;NA;NA;NA
 "Ilha das Flores";"SE";1;0,83;0;0;NA;1;1;0,83
+"Ilha de Itamaracá";"PE";3;0;0;0;NA;NA;NA;NA
 "Ilha Grande";"PI";1;0,26;0;0;NA;NA;NA;NA
-"Ilhéus";"BA";6;2,62;0;0;NA;3;0,5;1
-"Ilicínea";"MG";2;1,58;0;0;NA;NA;NA;NA
+"Ilhéus";"BA";8;2,93;0;0;NA;3;0,38;1
+"Ilicínea";"MG";2;1,58;0;0;NA;1;0,5;1,11
 "Imaculada";"PB";1;1,94;0;0;NA;1;1;1,94
-"Imbé";"RS";1;0,74;1;1;0,74;NA;NA;NA
+"Imbaú";"PR";2;0;0;0;NA;NA;NA;NA
+"Imbé";"RS";2;2,36;1;0,5;0,74;NA;NA;NA
+"Imbé de Minas";"MG";1;0,31;0;0;NA;NA;NA;NA
 "Imbituba";"SC";2;1,91;1;0,5;1,46;NA;NA;NA
-"Imperatriz";"MA";3;2,71;0;0;NA;2;0,67;2,22
+"Imperatriz";"MA";8;2,96;1;0,12;0,26;2;0,25;2,22
 "Inácio Martins";"PR";1;0,79;0;0;NA;NA;NA;NA
-"Inajá";"PE";2;1,28;1;0,5;0,86;NA;NA;NA
+"Inajá";"PE";3;1,28;1;0,33;0,86;1;0,33;0
 "Indaial";"SC";1;0,54;0;0;NA;NA;NA;NA
+"Independência";"CE";1;1,02;0;0;NA;NA;NA;NA
 "Indiana";"SP";1;0,41;0;0;NA;1;1;0,41
 "Indiaporã";"SP";1;0,42;0;0;NA;1;1;0,42
 "Indiara";"GO";1;0,64;0;0;NA;1;1;0,64
+"Indiaroba";"SE";1;0;0;0;NA;NA;NA;NA
 "Ingá";"PB";1;0,94;0;0;NA;1;1;0,94
 "Inhambupe";"BA";3;1,24;0;0;NA;2;0,67;0,75
 "Inhangapi";"PA";1;1,32;0;0;NA;1;1;1,32
+"Inhapi";"AL";1;0;0;0;NA;NA;NA;NA
 "Inhapim";"MG";1;0,51;0;0;NA;NA;NA;NA
 "Inhumas";"GO";3;1,74;0;0;NA;3;1;1,74
 "Inimutaba";"MG";1;0,9;0;0;NA;NA;NA;NA
+"Iomerê";"SC";1;0,84;1;1;0,84;NA;NA;NA
+"Ipaba";"MG";1;0,34;0;0;NA;1;1;0,34
+"Ipameri";"GO";1;0;0;0;NA;NA;NA;NA
 "Ipanguaçu";"RN";1;0,42;0;0;NA;1;1;0,42
 "Ipaporanga";"CE";1;2,46;0;0;NA;NA;NA;NA
-"Ipatinga";"MG";4;3,84;1;0,25;1,14;NA;NA;NA
-"Ipecaetá";"BA";2;0,91;0;0;NA;1;0,5;0,49
+"Ipatinga";"MG";7;3,84;1;0,14;1,14;NA;NA;NA
+"Ipecaetá";"BA";3;1,15;1;0,33;0,24;1;0,33;0,49
+"Iperó";"SP";1;0;0;0;NA;NA;NA;NA
 "Ipeúna";"SP";1;0,17;0;0;NA;NA;NA;NA
+"Ipira";"SC";1;0,87;0;0;NA;1;1;0,87
+"Ipirá";"BA";6;3,27;0;0;NA;1;0,17;0
 "Ipiranga";"PR";1;0,39;0;0;NA;NA;NA;NA
+"Ipiranga de Goiás";"GO";1;0,42;0;0;NA;NA;NA;NA
+"Ipiranga do Piauí";"PI";1;0,44;0;0;NA;NA;NA;NA
 "Ipixuna do Pará";"PA";6;5,29;0;0;NA;4;0,67;2,94
 "Ipojuca";"PE";6;3,48;0;0;NA;5;0,83;2,93
+"Iporã";"PR";1;3,87;1;1;3,87;NA;NA;NA
 "Ipu";"CE";2;1,2;0;0;NA;1;0,5;0,92
 "Ipuaçu";"SC";1;0,64;0;0;NA;NA;NA;NA
-"Ipubi";"PE";1;0,64;0;0;NA;1;1;0,64
+"Ipubi";"PE";2;1,21;1;0,5;0,57;1;0,5;0,64
+"Ipueiras";"CE";1;0,28;0;0;NA;NA;NA;NA
 "Ipueiras";"TO";1;0,43;0;0;NA;1;1;0,43
 "Ipupiara";"BA";1;1,35;0;0;NA;1;1;1,35
-"Iranduba";"AM";1;1,82;0;0;NA;1;1;1,82
+"Iracema";"CE";1;3,07;0;0;NA;NA;NA;NA
+"Iraí";"RS";1;0,88;0;0;NA;NA;NA;NA
+"Iramaia";"BA";4;1,8;3;0,75;1,45;NA;NA;NA
+"Iranduba";"AM";3;1,82;0;0;NA;1;0,33;1,82
 "Irani";"SC";1;1,49;0;0;NA;1;1;1,49
-"Irati";"PR";3;0,92;2;0,67;0,53;1;0,33;0,39
+"Irati";"PR";4;1,07;2;0,5;0,53;1;0,25;0,39
 "Irauçuba";"CE";1;0,74;0;0;NA;NA;NA;NA
-"Irecê";"BA";1;1,84;0;0;NA;NA;NA;NA
+"Irecê";"BA";2;1,84;0;0;NA;NA;NA;NA
+"Iretama";"PR";1;0,19;0;0;NA;NA;NA;NA
 "Irineópolis";"SC";1;0,59;0;0;NA;NA;NA;NA
+"Irituia";"PA";2;0;0;0;NA;NA;NA;NA
+"Irupi";"ES";1;0,94;0;0;NA;NA;NA;NA
+"Isaías Coelho";"PI";1;0,24;0;0;NA;1;1;0,24
 "Israelândia";"GO";1;0,64;0;0;NA;1;1;0,64
-"Itabaiana";"SE";3;1,11;0;0;NA;2;0,67;0,84
+"Itabaiana";"PB";1;0,37;0;0;NA;NA;NA;NA
+"Itabaiana";"SE";4;1,11;0;0;NA;3;0,75;1,11
 "Itabaianinha";"SE";3;1,69;0;0;NA;2;0,67;1,3
-"Itabela";"BA";1;0,87;0;0;NA;1;1;0,87
+"Itabela";"BA";3;1,65;0;0;NA;1;0,33;0,87
 "Itaberaí";"GO";1;0,44;0;0;NA;1;1;0,44
-"Itabira";"MG";3;1,29;3;1;1,29;NA;NA;NA
+"Itabi";"SE";1;0;0;0;NA;NA;NA;NA
+"Itabira";"MG";5;1,29;3;0,6;1,29;NA;NA;NA
 "Itabirinha";"MG";1;0,3;0;0;NA;NA;NA;NA
-"Itabirito";"MG";1;0,33;0;0;NA;NA;NA;NA
-"Itaboraí";"RJ";6;3,61;1;0,17;1,33;NA;NA;NA
-"Itabuna";"BA";1;0,9;0;0;NA;NA;NA;NA
+"Itabirito";"MG";2;0,33;0;0;NA;NA;NA;NA
+"Itaboraí";"RJ";9;3,61;1;0,11;1,33;NA;NA;NA
+"Itabuna";"BA";9;4,9;0;0;NA;NA;NA;NA
+"Itacajá";"TO";1;0;0;0;NA;NA;NA;NA
 "Itacarambi";"MG";1;0,43;0;0;NA;1;1;0,43
 "Itacaré";"BA";2;1,47;1;0,5;0,98;1;0,5;0,49
-"Itacoatiara";"AM";6;6,88;0;0;NA;4;0,67;2,87
-"Itacuruba";"PE";2;1,51;0;0;NA;2;1;1,51
+"Itacoatiara";"AM";8;6,88;0;0;NA;4;0,5;2,87
+"Itacuruba";"PE";3;1,51;0;0;NA;2;0,67;1,51
+"Itacurubi";"RS";1;0,13;0;0;NA;NA;NA;NA
+"Itaeté";"BA";1;0,38;1;1;0,38;NA;NA;NA
+"Itagibá";"BA";1;0,29;0;0;NA;NA;NA;NA
 "Itagimirim";"BA";1;0,51;0;0;NA;1;1;0,51
-"Itaguaçu da Bahia";"BA";1;0,63;1;1;0,63;NA;NA;NA
+"Itaguaçu da Bahia";"BA";4;2,01;2;0,5;1,24;NA;NA;NA
+"Itaguaí";"RJ";4;0,68;0;0;NA;NA;NA;NA
+"Itaguajé";"PR";1;0,55;0;0;NA;NA;NA;NA
 "Itaguara";"MG";1;0,46;0;0;NA;NA;NA;NA
 "Itaguaru";"GO";1;0,71;0;0;NA;NA;NA;NA
 "Itaguatins";"TO";1;0,18;0;0;NA;1;1;0,18
 "Itaíba";"PE";2;1,71;0;0;NA;2;1;1,71
 "Itaiçaba";"CE";1;1,51;0;0;NA;1;1;1,51
+"Itainópolis";"PI";2;0;0;0;NA;1;0,5;0
 "Itaipava do Grajaú";"MA";1;1,04;0;0;NA;NA;NA;NA
-"Itaitinga";"CE";1;0,56;0;0;NA;1;1;0,56
-"Itaituba";"PA";3;3,5;0;0;NA;3;1;3,5
-"Itajaí";"SC";1;0,44;0;0;NA;NA;NA;NA
+"Itaipé";"MG";1;0,68;0;0;NA;NA;NA;NA
+"Itaitinga";"CE";3;0,56;0;0;NA;1;0,33;0,56
+"Itaituba";"PA";4;3,82;0;0;NA;3;0,75;3,5
+"Itajaí";"SC";3;1,23;1;0,33;0,19;NA;NA;NA
 "Itaju do Colônia";"BA";2;1,07;1;0,5;0,66;1;0,5;0,41
 "Itajubá";"MG";1;0,47;0;0;NA;NA;NA;NA
 "Itajuípe";"BA";1;1,26;0;0;NA;1;1;1,26
-"Itamaraju";"BA";2;1,47;0;0;NA;1;0,5;0,98
+"Italva";"RJ";1;0;0;0;NA;NA;NA;NA
+"Itamaraju";"BA";3;1,96;0;0;NA;1;0,33;0,98
 "Itamarandiba";"MG";2;2,86;0;0;NA;NA;NA;NA
-"Itamari";"BA";1;1,08;0;0;NA;NA;NA;NA
+"Itamari";"BA";2;1,48;0;0;NA;NA;NA;NA
 "Itambacuri";"MG";2;1,56;0;0;NA;NA;NA;NA
+"Itambaracá";"PR";1;1,08;0;0;NA;NA;NA;NA
 "Itambé";"BA";1;0,91;0;0;NA;1;1;0,91
-"Itambé";"PE";1;0,27;0;0;NA;1;1;0,27
+"Itambé";"PE";2;0,27;0;0;NA;1;0,5;0,27
+"Itamonte";"MG";1;0;0;0;NA;NA;NA;NA
 "Itanagra";"BA";1;0,4;1;1;0,4;NA;NA;NA
-"Itanhaém";"SP";2;1,69;0;0;NA;1;0,5;1,44
-"Itapagé";"CE";1;1,28;0;0;NA;NA;NA;NA
-"Itaparica";"BA";1;1,11;0;0;NA;1;1;1,11
+"Itanhaém";"SP";3;1,69;0;0;NA;1;0,33;1,44
+"Itanhém";"BA";1;0,55;0;0;NA;1;1;0,55
+"Itanhomi";"MG";1;0,38;0;0;NA;NA;NA;NA
+"Itapagé";"CE";2;1,89;1;0,5;0,6;NA;NA;NA
+"Itaparica";"BA";3;1,81;0;0;NA;1;0,33;1,11
+"Itapé";"BA";2;0,69;0;0;NA;1;0,5;0,48
+"Itapebi";"BA";1;0,16;0;0;NA;NA;NA;NA
 "Itapecerica";"MG";1;1,93;0;0;NA;1;1;1,93
-"Itapecerica da Serra";"SP";6;3,48;4;0,67;2,98;NA;NA;NA
+"Itapecerica da Serra";"SP";7;3,78;5;0,71;3,28;NA;NA;NA
 "Itapecuru Mirim";"MA";6;3,58;2;0,33;0,6;2;0,33;2,02
-"Itapema";"SC";1;0,99;0;0;NA;1;1;0,99
+"Itapema";"SC";3;0,99;1;0,33;0;1;0,33;0,99
 "Itapemirim";"ES";1;1,34;0;0;NA;NA;NA;NA
-"Itaperuçu";"PR";1;0,3;0;0;NA;NA;NA;NA
+"Itaperuçu";"PR";2;0,49;0;0;NA;NA;NA;NA
 "Itaperuna";"RJ";2;0,78;0;0;NA;1;0,5;0,39
 "Itapetinga";"BA";2;2,16;0;0;NA;NA;NA;NA
-"Itapeva";"SP";1;0,19;0;0;NA;NA;NA;NA
+"Itapetininga";"SP";2;0;0;0;NA;NA;NA;NA
+"Itapeva";"MG";1;0,63;0;0;NA;NA;NA;NA
+"Itapeva";"SP";2;0,49;0;0;NA;NA;NA;NA
 "Itapevi";"SP";1;0,26;0;0;NA;1;1;0,26
-"Itapicuru";"BA";2;0,53;0;0;NA;2;1;0,53
-"Itapipoca";"CE";5;2,01;0;0;NA;NA;NA;NA
+"Itapicuru";"BA";3;0,53;0;0;NA;2;0,67;0,53
+"Itapipoca";"CE";8;2,37;0;0;NA;NA;NA;NA
 "Itapiranga";"AM";1;0,64;0;0;NA;NA;NA;NA
+"Itapiranga";"SC";2;0,97;0;0;NA;NA;NA;NA
 "Itapirapuã Paulista";"SP";1;1,11;0;0;NA;1;1;1,11
-"Itapiratins";"TO";2;1,8;0;0;NA;1;0,5;0,92
+"Itapiratins";"TO";3;3,92;0;0;NA;1;0,33;0,92
+"Itapissuma";"PE";1;0;0;0;NA;NA;NA;NA
 "Itapitanga";"BA";1;0,63;0;0;NA;NA;NA;NA
-"Itaporã";"MS";1;0,92;0;0;NA;1;1;0,92
-"Itaporanga d'Ajuda";"SE";1;1;0;0;NA;NA;NA;NA
+"Itapoá";"SC";2;0;0;0;NA;NA;NA;NA
+"Itápolis";"SP";1;0;0;0;NA;NA;NA;NA
+"Itaporã";"MS";2;1,21;0;0;NA;1;0,5;0,92
+"Itaporanga";"PB";1;0,52;1;1;0,52;NA;NA;NA
+"Itaporanga d'Ajuda";"SE";3;1,89;0;0;NA;1;0,33;0,31
 "Itapororoca";"PB";1;1,8;0;0;NA;1;1;1,8
 "Itapuã do Oeste";"RO";1;0,41;0;0;NA;NA;NA;NA
-"Itapuranga";"GO";2;0,33;2;1;0,33;NA;NA;NA
-"Itaquaquecetuba";"SP";5;1,64;0;0;NA;NA;NA;NA
+"Itapuranga";"GO";3;0,33;3;1;0,33;NA;NA;NA
+"Itaquaquecetuba";"SP";12;2,48;0;0;NA;NA;NA;NA
+"Itaquara";"BA";1;0,28;0;0;NA;NA;NA;NA
 "Itaqui";"RS";2;1,44;0;0;NA;2;1;1,44
+"Itaquiraí";"MS";1;0,4;0;0;NA;NA;NA;NA
 "Itaquitinga";"PE";2;0,59;0;0;NA;1;0,5;0,42
 "Itararé";"SP";1;1,86;0;0;NA;1;1;1,86
-"Itarema";"CE";1;0,52;0;0;NA;NA;NA;NA
-"Itatiaia";"RJ";1;0,79;0;0;NA;NA;NA;NA
+"Itarema";"CE";3;0,79;0;0;NA;NA;NA;NA
+"Itati";"RS";1;0,73;0;0;NA;NA;NA;NA
+"Itatiaia";"RJ";2;1,21;0;0;NA;NA;NA;NA
 "Itatiba do Sul";"RS";1;1,05;0;0;NA;NA;NA;NA
-"Itatim";"BA";1;0,97;1;1;0,97;NA;NA;NA
+"Itatim";"BA";3;2,68;1;0,33;0,97;NA;NA;NA
+"Itatinga";"SP";1;0;0;0;NA;1;1;0
 "Itaú";"RN";1;0,95;0;0;NA;1;1;0,95
 "Itaú de Minas";"MG";1;0,55;0;0;NA;NA;NA;NA
-"Itaúna";"MG";1;0,9;0;0;NA;NA;NA;NA
+"Itauçu";"GO";1;0,14;1;1;0,14;NA;NA;NA
+"Itaueira";"PI";1;0,95;1;1;0,95;NA;NA;NA
+"Itaúna";"MG";2;1,41;0;0;NA;NA;NA;NA
 "Itaúna do Sul";"PR";1;1,49;0;0;NA;1;1;1,49
+"Itaverava";"MG";1;0;0;0;NA;NA;NA;NA
 "Itinga";"MG";1;0,79;0;0;NA;NA;NA;NA
-"Itinga do Maranhão";"MA";1;0,64;0;0;NA;1;1;0,64
+"Itinga do Maranhão";"MA";5;1,08;0;0;NA;2;0,4;0,83
+"Itirapina";"SP";1;0,25;0;0;NA;NA;NA;NA
 "Itiruçu";"BA";1;1,84;0;0;NA;NA;NA;NA
-"Itiúba";"BA";4;1,92;0;0;NA;2;0,5;0,76
-"Itororó";"BA";1;0,68;0;0;NA;1;1;0,68
+"Itiúba";"BA";9;3,73;0;0;NA;2;0,22;0,76
+"Itororó";"BA";2;0,9;0;0;NA;1;0,5;0,68
+"Itu";"SP";2;0;0;0;NA;NA;NA;NA
 "Ituaçu";"BA";1;0,33;0;0;NA;NA;NA;NA
-"Ituberá";"BA";1;1,79;0;0;NA;1;1;1,79
+"Ituberá";"BA";2;1,79;0;0;NA;1;0,5;1,79
+"Itueta";"MG";2;0,96;1;0,5;0,93;1;0,5;0,03
 "Ituiutaba";"MG";4;2,06;0;0;NA;NA;NA;NA
-"Itumbiara";"GO";1;0,88;0;0;NA;NA;NA;NA
-"Itupiranga";"PA";6;5,05;0;0;NA;4;0,67;3,95
+"Itumbiara";"GO";3;0,88;0;0;NA;NA;NA;NA
+"Itupiranga";"PA";9;5,11;0;0;NA;5;0,56;3,95
+"Ituverava";"SP";1;0;0;0;NA;NA;NA;NA
+"Iuiú";"BA";1;1,67;0;0;NA;1;1;1,67
 "Iúna";"ES";1;0,55;0;0;NA;NA;NA;NA
-"Jaboatão dos Guararapes";"PE";14;8,38;2;0,14;3,22;7;0,5;3,34
-"Jaborandi";"BA";1;0,43;0;0;NA;NA;NA;NA
+"Ivaí";"PR";1;1,29;0;0;NA;NA;NA;NA
+"Ivolândia";"GO";2;0,62;0;0;NA;NA;NA;NA
+"Jaboatão dos Guararapes";"PE";16;8,38;2;0,12;3,22;7;0,44;3,34
+"Jaborandi";"BA";3;2,81;0;0;NA;NA;NA;NA
+"Jaboti";"PR";1;1,07;0;0;NA;NA;NA;NA
+"Jaboticaba";"RS";1;0;0;0;NA;NA;NA;NA
 "Jaçanã";"RN";1;0,42;0;0;NA;NA;NA;NA
-"Jacaraci";"BA";1;0,99;0;0;NA;NA;NA;NA
+"Jacaraci";"BA";1;0;1;1;0;NA;NA;NA
 "Jacaraú";"PB";1;1,31;0;0;NA;1;1;1,31
-"Jacareí";"SP";2;0,59;0;0;NA;NA;NA;NA
-"Jacarezinho";"PR";1;1,59;0;0;NA;NA;NA;NA
+"Jacareacanga";"PA";2;0;0;0;NA;NA;NA;NA
+"Jacareí";"SP";4;1,79;1;0,25;1,01;NA;NA;NA
+"Jacarezinho";"PR";2;2,17;0;0;NA;NA;NA;NA
 "Jaciara";"MT";2;2,68;1;0,5;1,83;NA;NA;NA
 "Jacobina";"BA";3;3,31;2;0,67;1,96;1;0,33;1,35
+"Jacuípe";"AL";2;0;0;0;NA;NA;NA;NA
 "Jacundá";"PA";3;2,07;0;0;NA;1;0,33;1,18
 "Jacutinga";"MG";1;0,66;0;0;NA;NA;NA;NA
 "Jaguaquara";"BA";2;1,51;1;0,5;0,76;NA;NA;NA
 "Jaguarão";"RS";1;0,45;0;0;NA;NA;NA;NA
-"Jaguarari";"BA";1;0,77;1;1;0,77;NA;NA;NA
-"Jaguaretama";"CE";1;1,11;0;0;NA;1;1;1,11
+"Jaguarari";"BA";4;2,75;1;0,25;0,77;NA;NA;NA
+"Jaguaré";"ES";2;0,59;0;0;NA;NA;NA;NA
+"Jaguaretama";"CE";2;1,11;0;0;NA;1;0,5;1,11
+"Jaguari";"RS";1;0;0;0;NA;NA;NA;NA
 "Jaguaribe";"CE";2;1,39;0;0;NA;NA;NA;NA
 "Jaguaripe";"BA";1;0,17;0;0;NA;NA;NA;NA
-"Jaíba";"MG";1;0,49;0;0;NA;NA;NA;NA
+"Jaguaruana";"CE";2;1,9;0;0;NA;NA;NA;NA
+"Jaguaruna";"SC";1;0,72;1;1;0,72;NA;NA;NA
+"Jaíba";"MG";3;1,49;0;0;NA;NA;NA;NA
+"Jaicós";"PI";1;0,53;0;0;NA;NA;NA;NA
 "Jales";"SP";1;0,64;0;0;NA;NA;NA;NA
-"Janaúba";"MG";1;0,81;0;0;NA;1;1;0,81
-"Jandaia";"GO";1;0,31;0;0;NA;NA;NA;NA
+"Janaúba";"MG";2;0,81;0;0;NA;1;0,5;0,81
+"Jandaia";"GO";2;0,31;0;0;NA;NA;NA;NA
 "Jandaíra";"RN";1;1,11;0;0;NA;1;1;1,11
-"Januária";"MG";3;2,32;0;0;NA;1;0,33;0,73
+"Jandira";"SP";1;0;0;0;NA;NA;NA;NA
+"Janiópolis";"PR";1;0,87;0;0;NA;NA;NA;NA
+"Januária";"MG";5;2,32;0;0;NA;1;0,2;0,73
+"Januário Cicco";"RN";1;0;0;0;NA;NA;NA;NA
+"Japaratinga";"AL";1;0,41;0;0;NA;1;1;0,41
 "Japaratuba";"SE";1;0,4;0;0;NA;NA;NA;NA
 "Japeri";"RJ";4;1,65;0;0;NA;2;0,5;0,82
+"Japira";"PR";1;0;0;0;NA;NA;NA;NA
 "Japoatã";"SE";1;0,68;0;0;NA;NA;NA;NA
 "Japonvar";"MG";1;0,8;0;0;NA;NA;NA;NA
 "Japurá";"AM";1;0,85;0;0;NA;NA;NA;NA
+"Japurá";"PR";1;0,85;0;0;NA;NA;NA;NA
+"Jaqueira";"PE";1;0,4;0;0;NA;NA;NA;NA
 "Jaraguá";"GO";1;0,9;0;0;NA;NA;NA;NA
-"Jaraguá do Sul";"SC";1;0,45;0;0;NA;1;1;0,45
+"Jaraguá do Sul";"SC";2;0,45;0;0;NA;1;0,5;0,45
 "Jaraguari";"MS";2;0,6;1;0,5;0,34;NA;NA;NA
 "Jaramataia";"AL";2;1,33;1;0,5;1,21;NA;NA;NA
 "Jardim";"CE";1;1,04;0;0;NA;1;1;1,04
+"Jardim";"MS";1;0,29;0;0;NA;NA;NA;NA
 "Jardim Alegre";"PR";1;1,37;0;0;NA;NA;NA;NA
-"Jardim de Piranhas";"RN";1;0,08;0;0;NA;1;1;0,08
+"Jardim de Piranhas";"RN";2;0,53;0;0;NA;NA;NA;NA
+"Jardim do Mulato";"PI";1;0,38;1;1;0,38;NA;NA;NA
 "Jardim do Seridó";"RN";1;1,5;0;0;NA;1;1;1,5
-"Jaru";"RO";2;1,71;0;0;NA;1;0,5;0,23
-"Jataí";"GO";4;2,58;0;0;NA;3;0,75;1,56
+"Jarinu";"SP";1;0,3;1;1;0,3;NA;NA;NA
+"Jaru";"RO";3;2;0;0;NA;2;0,67;0,52
+"Jataí";"GO";6;4,44;1;0,17;1,86;4;0,67;1,56
 "Jataizinho";"PR";1;0,45;0;0;NA;NA;NA;NA
+"Jataúba";"PE";1;0,19;0;0;NA;NA;NA;NA
+"Jati";"CE";1;0,18;0;0;NA;NA;NA;NA
 "Jatobá";"MA";2;0,9;0;0;NA;1;0,5;0,74
-"Jatobá";"PE";2;0,9;0;0;NA;1;0,5;0,42
-"Jaú";"SP";2;0,67;1;0,5;0,42;1;0,5;0,26
+"Jatobá";"PE";4;1,43;0;0;NA;1;0,25;0,42
+"Jatobá do Piauí";"PI";2;0,78;2;1;0,78;NA;NA;NA
+"Jaú";"SP";3;0,67;1;0,33;0,42;1;0,33;0,26
 "Jaupaci";"GO";1;1,11;0;0;NA;1;1;1,11
+"Jauru";"MT";1;0,63;0;0;NA;NA;NA;NA
+"Jenipapo de Minas";"MG";1;0,18;0;0;NA;NA;NA;NA
 "Jenipapo dos Vieiras";"MA";5;2,2;0;0;NA;NA;NA;NA
 "Jequeri";"MG";1;0,66;0;0;NA;NA;NA;NA
+"Jequiá da Praia";"AL";1;0,85;0;0;NA;NA;NA;NA
 "Jequié";"BA";5;1,21;0;0;NA;1;0,2;0,17
 "Jequitinhonha";"MG";2;1,58;0;0;NA;1;0,5;0,82
 "Jeremoabo";"BA";3;2,64;1;0,33;1,42;1;0,33;0,57
-"Ji-Paraná";"RO";5;3,15;0;0;NA;1;0,2;1,05
+"Jerônimo Monteiro";"ES";1;0,7;0;0;NA;NA;NA;NA
+"Jesuítas";"PR";1;0,33;0;0;NA;NA;NA;NA
+"Jesúpolis";"GO";1;0;0;0;NA;NA;NA;NA
+"Ji-Paraná";"RO";8;4,36;0;0;NA;1;0,12;1,05
+"Jijoca de Jericoacoara";"CE";1;0,31;0;0;NA;NA;NA;NA
 "Jiquiriçá";"BA";1;0,83;0;0;NA;1;1;0,83
+"Jitaúna";"BA";1;0;0;0;NA;1;1;0
+"Joaíma";"MG";1;0,27;0;0;NA;NA;NA;NA
 "João Alfredo";"PE";1;0,89;0;0;NA;NA;NA;NA
-"João Câmara";"RN";1;0,26;0;0;NA;NA;NA;NA
+"João Câmara";"RN";2;0,26;0;0;NA;NA;NA;NA
+"João Costa";"PI";1;0,24;0;0;NA;NA;NA;NA
+"João Dias";"RN";1;0;0;0;NA;NA;NA;NA
 "João Monlevade";"MG";2;0,77;0;0;NA;NA;NA;NA
-"João Pessoa";"PB";29;16,46;2;0,07;4,73;15;0,52;7,25
+"João Pessoa";"PB";30;11,73;0;0;NA;15;0,5;7,25
 "João Pinheiro";"MG";2;0,92;2;1;0,92;NA;NA;NA
 "Joaquim Felício";"MG";1;0,53;0;0;NA;NA;NA;NA
+"Joaquim Gomes";"AL";1;0;0;0;NA;NA;NA;NA
 "Joaquim Távora";"PR";1;0,77;0;0;NA;NA;NA;NA
+"Joca Claudino";"PB";2;0,26;0;0;NA;1;0,5;0,05
+"Joca Marques";"PI";1;0;0;0;NA;NA;NA;NA
 "Joinville";"SC";4;3,65;4;1;3,65;NA;NA;NA
-"Jordão";"AC";1;0,27;0;0;NA;1;1;0,27
+"Jordão";"AC";2;1,81;0;0;NA;2;1;1,81
 "José Bonifácio";"SP";1;0,46;0;0;NA;NA;NA;NA
 "José de Freitas";"PI";4;2,87;0;0;NA;4;1;2,87
-"Joselândia";"MA";3;3,24;0;0;NA;NA;NA;NA
+"José Gonçalves de Minas";"MG";1;0,89;0;0;NA;NA;NA;NA
+"Joselândia";"MA";4;3,24;0;0;NA;NA;NA;NA
+"Josenópolis";"MG";1;0,34;1;1;0,34;NA;NA;NA
+"Juara";"MT";1;0,18;0;0;NA;1;1;0,18
 "Juatuba";"MG";1;0,94;0;0;NA;NA;NA;NA
 "Juazeirinho";"PB";1;0,87;0;0;NA;1;1;0,87
+"Juazeiro";"BA";2;0,24;0;0;NA;NA;NA;NA
 "Juazeiro do Norte";"CE";3;0,92;0;0;NA;NA;NA;NA
+"Juazeiro do Piauí";"PI";3;0,72;0;0;NA;3;1;0,72
+"Jucati";"PE";1;0,19;0;0;NA;NA;NA;NA
 "Jucurutu";"RN";1;0,86;0;0;NA;NA;NA;NA
-"Juína";"MT";2;1,27;0;0;NA;NA;NA;NA
-"Juiz de Fora";"MG";6;3,46;0;0;NA;1;0,17;0,42
+"Juína";"MT";3;1,95;1;0,33;0,68;NA;NA;NA
+"Juiz de Fora";"MG";10;3,46;0;0;NA;1;0,1;0,42
 "Júlio Borges";"PI";1;0,41;0;0;NA;1;1;0,41
-"Junco do Maranhão";"MA";3;0,51;3;1;0,51;NA;NA;NA
+"Junco do Maranhão";"MA";4;0,97;4;1;0,97;NA;NA;NA
+"Junco do Seridó";"PB";1;0,25;0;0;NA;NA;NA;NA
 "Jundiaí";"SP";2;0,93;0;0;NA;NA;NA;NA
 "Junqueiro";"AL";1;0,76;0;0;NA;1;1;0,76
-"Juquitiba";"SP";1;1,34;0;0;NA;NA;NA;NA
+"Juquitiba";"SP";1;1,34;0;0;NA;1;1;1,34
+"Jurema";"PE";2;0,53;0;0;NA;NA;NA;NA
 "Jurema";"PI";2;1,81;0;0;NA;NA;NA;NA
-"Juruá";"AM";2;0,07;0;0;NA;NA;NA;NA
-"Juruti";"PA";1;0,48;0;0;NA;1;1;0,48
+"Juruá";"AM";14;0,31;0;0;NA;NA;NA;NA
+"Juruti";"PA";4;0,66;1;0,25;0,19;1;0,25;0,48
 "Jussara";"BA";1;1,36;0;0;NA;1;1;1,36
-"Jutaí";"AM";1;0,3;1;1;0,3;NA;NA;NA
+"Jutaí";"AM";13;3,43;10;0,77;2,28;1;0,08;0,06
 "Juti";"MS";1;0,52;0;0;NA;1;1;0,52
-"Lábrea";"AM";3;3,72;0;0;NA;NA;NA;NA
+"Lábrea";"AM";8;6,34;1;0,12;0,77;NA;NA;NA
 "Lagamar";"MG";1;1,51;0;0;NA;1;1;1,51
 "Lagarto";"SE";4;2,33;0;0;NA;4;1;2,33
-"Lages";"SC";3;2,55;2;0,67;1,98;NA;NA;NA
+"Lages";"SC";4;2,83;2;0,5;1,98;NA;NA;NA
 "Lago da Pedra";"MA";2;3,42;0;0;NA;2;1;3,42
 "Lago do Junco";"MA";3;2,34;0;0;NA;NA;NA;NA
-"Lago Verde";"MA";1;0,22;1;1;0,22;NA;NA;NA
-"Lagoa Alegre";"PI";1;0,82;0;0;NA;1;1;0,82
+"Lago Verde";"MA";2;0,49;1;0,5;0,22;NA;NA;NA
+"Lagoa";"PB";1;0,89;0;0;NA;NA;NA;NA
+"Lagoa Alegre";"PI";2;0,82;1;0,5;0;1;0,5;0,82
 "Lagoa d'Anta";"RN";1;0,4;0;0;NA;1;1;0,4
-"Lagoa da Canoa";"AL";1;1,23;1;1;1,23;NA;NA;NA
+"Lagoa da Canoa";"AL";2;1,67;1;0,5;1,23;1;0,5;0,45
+"Lagoa da Confusão";"TO";1;0;0;0;NA;NA;NA;NA
+"Lagoa da Prata";"MG";1;0;0;0;NA;NA;NA;NA
 "Lagoa de Itaenga";"PE";1;0,42;0;0;NA;NA;NA;NA
 "Lagoa do Carro";"PE";1;0,42;0;0;NA;1;1;0,42
-"Lagoa do Mato";"MA";3;1,77;1;0,33;0,38;1;0,33;0,53
-"Lagoa do Sítio";"PI";2;0,51;0;0;NA;NA;NA;NA
+"Lagoa do Mato";"MA";4;1,93;1;0,25;0,38;1;0,25;0,53
+"Lagoa do Piauí";"PI";3;1,66;0;0;NA;1;0,33;0,06
+"Lagoa do Sítio";"PI";7;1,47;0;0;NA;NA;NA;NA
 "Lagoa Dourada";"MG";1;0,47;0;0;NA;NA;NA;NA
 "Lagoa Grande";"MG";1;0,84;0;0;NA;NA;NA;NA
 "Lagoa Grande";"PE";1;0,85;0;0;NA;NA;NA;NA
 "Lagoa Grande do Maranhão";"MA";6;1,69;2;0,33;0,47;4;0,67;1,22
 "Lagoa Nova";"RN";1;1,79;1;1;1,79;NA;NA;NA
+"Lagoa Salgada";"RN";1;0;0;0;NA;NA;NA;NA
+"Lagoa Santa";"MG";1;0;0;0;NA;NA;NA;NA
+"Lagoa Seca";"PB";2;0,71;0;0;NA;NA;NA;NA
 "Lagoão";"RS";1;0,85;0;0;NA;NA;NA;NA
-"Laguna";"SC";2;0,7;0;0;NA;1;0,5;0,25
-"Lajeado";"RS";1;0,46;0;0;NA;NA;NA;NA
+"Laguna";"SC";3;0,7;0;0;NA;1;0,33;0,25
+"Lajeado";"RS";2;0,46;0;0;NA;1;0,5;0
 "Lajeado do Bugre";"RS";1;1,01;1;1;1,01;NA;NA;NA
 "Lajeado Grande";"SC";1;0,92;1;1;0,92;NA;NA;NA
+"Lajeado Novo";"MA";1;0,79;0;0;NA;NA;NA;NA
+"Lajedo do Tabocal";"BA";2;0,66;0;0;NA;NA;NA;NA
 "Lajes";"RN";1;1,7;0;0;NA;1;1;1,7
+"Lajes Pintadas";"RN";1;0;0;0;NA;NA;NA;NA
+"Lajinha";"MG";1;0;0;0;NA;NA;NA;NA
 "Lamarão";"BA";1;0,67;0;0;NA;NA;NA;NA
 "Lambari";"MG";1;0,85;0;0;NA;NA;NA;NA
-"Lapa";"PR";1;1,11;0;0;NA;NA;NA;NA
-"Lapão";"BA";2;4,35;2;1;4,35;NA;NA;NA
-"Laranjal do Jari";"AP";7;17,34;0;0;NA;6;0,86;15,97
-"Laranjeiras";"SE";1;0,88;0;0;NA;1;1;0,88
+"Lambari D'Oeste";"MT";1;0,28;0;0;NA;NA;NA;NA
+"Lapa";"PR";2;1,11;0;0;NA;NA;NA;NA
+"Lapão";"BA";3;5,34;2;0,67;4,35;1;0,33;0,99
+"Laranjal";"PR";3;0,22;0;0;NA;3;1;0,22
+"Laranjal do Jari";"AP";32;17,49;0;0;NA;19;0,59;16,12
+"Laranjal Paulista";"SP";1;0;0;0;NA;NA;NA;NA
+"Laranjeiras";"SE";2;0,88;0;0;NA;1;0,5;0,88
+"Laranjeiras do Sul";"PR";1;0,77;0;0;NA;NA;NA;NA
+"Lassance";"MG";1;0,23;1;1;0,23;NA;NA;NA
 "Lastro";"PB";1;0,64;0;0;NA;NA;NA;NA
-"Lauro de Freitas";"BA";7;2,23;0;0;NA;5;0,71;1,87
-"Lavras";"MG";1;0,47;0;0;NA;NA;NA;NA
+"Lauro de Freitas";"BA";8;2,78;0;0;NA;5;0,62;1,87
+"Lavras";"MG";2;0,47;0;0;NA;NA;NA;NA
+"Lavras do Sul";"RS";2;1,13;0;0;NA;1;0,5;0,24
 "Leandro Ferreira";"MG";1;0,38;1;1;0,38;NA;NA;NA
-"Leme";"SP";1;0,46;0;0;NA;NA;NA;NA
+"Leme";"SP";3;0,91;0;0;NA;NA;NA;NA
+"Leme do Prado";"MG";1;0,64;0;0;NA;NA;NA;NA
 "Leopoldina";"MG";1;0,4;1;1;0,4;NA;NA;NA
+"Leopoldo de Bulhões";"GO";2;1,22;0;0;NA;NA;NA;NA
 "Liberdade";"MG";1;0,99;0;0;NA;NA;NA;NA
-"Lima Duarte";"MG";1;1,49;0;0;NA;1;1;1,49
-"Limeira";"SP";4;2,46;0;0;NA;3;0,75;2,07
-"Limoeiro de Anadia";"AL";1;0,56;0;0;NA;1;1;0,56
+"Lima Duarte";"MG";2;1,76;0;0;NA;1;0,5;1,49
+"Limeira";"SP";8;4,3;0;0;NA;3;0,38;2,07
+"Limeira do Oeste";"MG";1;0;0;0;NA;NA;NA;NA
+"Limoeiro de Anadia";"AL";4;3,16;3;0,75;2,6;1;0,25;0,56
 "Limoeiro do Ajuru";"PA";1;0,37;1;1;0,37;NA;NA;NA
-"Limoeiro do Norte";"CE";1;0,29;0;0;NA;NA;NA;NA
+"Limoeiro do Norte";"CE";2;0,49;0;0;NA;NA;NA;NA
 "Linhares";"ES";3;2,53;0;0;NA;1;0,33;0,84
+"Lins";"SP";1;0;0;0;NA;NA;NA;NA
 "Livramento";"PB";1;0,76;0;0;NA;1;1;0,76
+"Livramento de Nossa Senhora";"BA";1;0,27;0;0;NA;NA;NA;NA
 "Logradouro";"PB";1;0,37;0;0;NA;1;1;0,37
-"Londrina";"PR";14;6,5;0;0;NA;8;0,57;3,89
+"Londrina";"PR";16;6,5;0;0;NA;8;0,5;3,89
 "Lontra";"MG";2;2,15;0;0;NA;NA;NA;NA
+"Lontras";"SC";1;2,41;1;1;2,41;NA;NA;NA
 "Lorena";"SP";2;0,51;0;0;NA;1;0,5;0,26
 "Lucas do Rio Verde";"MT";1;1,05;0;0;NA;NA;NA;NA
 "Lucélia";"SP";1;0,63;0;0;NA;1;1;0,63
+"Luís Correia";"PI";3;0,81;2;0,67;0,81;NA;NA;NA
 "Luís Domingues";"MA";1;1,3;0;0;NA;1;1;1,3
-"Luís Gomes";"RN";1;1,06;0;0;NA;NA;NA;NA
+"Luís Gomes";"RN";2;1,63;0;0;NA;NA;NA;NA
+"Luisburgo";"MG";1;0,67;0;0;NA;NA;NA;NA
+"Luiz Alves";"SC";2;0,56;0;0;NA;1;0,5;0,56
 "Luiziana";"PR";2;1;1;0,5;0,77;1;0,5;0,23
-"Luziânia";"GO";10;5,34;1;0,1;0,87;3;0,3;1,42
-"Luzilândia";"PI";3;2,76;0;0;NA;NA;NA;NA
-"Macaé";"RJ";2;1,76;0;0;NA;1;0,5;0,86
-"Macaíba";"RN";1;0,99;1;1;0,99;NA;NA;NA
+"Luminárias";"MG";1;0;0;0;NA;NA;NA;NA
+"Luziânia";"GO";15;4,9;5;0,33;0,87;3;0,2;1,42
+"Luzilândia";"PI";10;2,98;0;0;NA;NA;NA;NA
+"Macaé";"RJ";7;3,86;0;0;NA;1;0,14;0,86
+"Macaíba";"RN";3;2,02;1;0,33;0,99;NA;NA;NA
 "Macajuba";"BA";1;0,86;0;0;NA;1;1;0,86
-"Macapá";"AP";3;2,05;0;0;NA;2;0,67;1,49
+"Maçambara";"RS";1;0,41;1;1;0,41;NA;NA;NA
+"Macapá";"AP";19;2,72;0;0;NA;7;0,37;1,49
 "Macaparana";"PE";1;0,63;0;0;NA;1;1;0,63
+"Macau";"RN";1;0,18;0;0;NA;NA;NA;NA
 "Macaúbas";"BA";2;1,48;0;0;NA;NA;NA;NA
-"Maceió";"AL";11;6,58;0;0;NA;9;0,82;5,16
-"Machadinho D Oeste";"RO";2;1,2;0;0;NA;NA;NA;NA
-"Machado";"MG";1;0,26;0;0;NA;1;1;0,26
+"Maceió";"AL";16;6,58;0;0;NA;9;0,56;5,16
+"Machadinho D Oeste";"RO";4;2,23;1;0,25;0,34;NA;NA;NA
+"Machado";"MG";2;0,26;0;0;NA;1;0,5;0,26
 "Machados";"PE";2;0,68;0;0;NA;1;0,5;0,27
+"Macururé";"BA";1;0,2;0;0;NA;NA;NA;NA
 "Madalena";"CE";4;4,19;0;0;NA;4;1;4,19
+"Madeiro";"PI";4;0,85;0;0;NA;NA;NA;NA
 "Mãe do Rio";"PA";1;0,38;1;1;0,38;NA;NA;NA
+"Maetinga";"BA";1;0,62;1;1;0,62;NA;NA;NA
 "Mafra";"SC";2;0,75;0;0;NA;NA;NA;NA
 "Magalhães Barata";"PA";1;0,68;0;0;NA;1;1;0,68
 "Magalhães de Almeida";"MA";7;9,61;0;0;NA;2;0,29;5,3
-"Magé";"RJ";2;0,47;0;0;NA;NA;NA;NA
+"Magé";"RJ";9;1,57;0;0;NA;NA;NA;NA
 "Maiquinique";"BA";1;0,49;0;0;NA;NA;NA;NA
 "Mairi";"BA";1;0,92;0;0;NA;1;1;0,92
 "Mairinque";"SP";1;0,93;0;0;NA;1;1;0,93
 "Major Sales";"RN";1;1,62;0;0;NA;1;1;1,62
 "Malacacheta";"MG";1;0,27;0;0;NA;NA;NA;NA
-"Malhada";"BA";1;0,06;0;0;NA;NA;NA;NA
-"Mamanguape";"PB";2;1,75;0;0;NA;2;1;1,75
+"Malhada";"BA";4;0,22;1;0,25;0,06;NA;NA;NA
+"Malhada de Pedras";"BA";1;1,76;0;0;NA;NA;NA;NA
+"Malhador";"SE";2;1,64;0;0;NA;2;1;1,64
+"Malta";"PB";1;0,18;0;0;NA;NA;NA;NA
+"Mamanguape";"PB";3;1,75;0;0;NA;2;0,67;1,75
 "Mambaí";"GO";1;0,63;0;0;NA;1;1;0,63
-"Mamborê";"PR";1;1,5;0;0;NA;1;1;1,5
-"Manacapuru";"AM";7;8,14;0;0;NA;7;1;8,14
+"Mamborê";"PR";2;1,88;0;0;NA;2;1;1,88
+"Manacapuru";"AM";12;9,4;1;0,08;0,2;7;0,58;8,14
+"Manaquiri";"AM";2;0,85;0;0;NA;NA;NA;NA
 "Manari";"PE";3;1,17;0;0;NA;2;0,67;0,7
-"Manaus";"AM";57;23,34;2;0,04;1,04;10;0,18;4,44
+"Manaus";"AM";64;23,34;3;0,05;1,04;12;0,19;4,44
 "Mandaguaçu";"PR";1;0,45;0;0;NA;NA;NA;NA
-"Mandaguari";"PR";1;1,47;1;1;1,47;NA;NA;NA
+"Mandaguari";"PR";2;1,86;2;1;1,86;NA;NA;NA
 "Mandirituba";"PR";1;1,58;0;0;NA;NA;NA;NA
 "Manga";"MG";2;1,65;0;0;NA;2;1;1,65
 "Mangueirinha";"PR";1;3,18;1;1;3,18;NA;NA;NA
-"Manhuaçu";"MG";1;0,46;0;0;NA;NA;NA;NA
+"Manhuaçu";"MG";4;0,46;1;0,25;0;NA;NA;NA
+"Manicoré";"AM";18;0,71;0;0;NA;NA;NA;NA
 "Manoel Urbano";"AC";1;1,61;0;0;NA;NA;NA;NA
 "Manoel Vitorino";"BA";1;0,49;1;1;0,49;NA;NA;NA
-"Mansidão";"BA";2;1,61;0;0;NA;1;0,5;0,99
+"Mansidão";"BA";3;1,91;0;0;NA;1;0,33;0,99
 "Mantena";"MG";1;0,74;0;0;NA;NA;NA;NA
 "Mantenópolis";"ES";1;0,9;0;0;NA;NA;NA;NA
+"Mar de Espanha";"MG";1;0,86;0;0;NA;NA;NA;NA
+"Mara Rosa";"GO";2;0,47;1;0,5;0,47;NA;NA;NA
 "Maraã";"AM";2;0,88;0;0;NA;2;1;0,88
-"Marabá";"PA";17;12,57;1;0,06;0,56;3;0,18;3,11
-"Maracaju";"MS";1;1,49;1;1;1,49;NA;NA;NA
+"Marabá";"PA";18;13,09;1;0,06;0,56;3;0,17;3,11
+"Maracaçumé";"MA";2;0,48;0;0;NA;NA;NA;NA
+"Maracajá";"SC";2;2,81;0;0;NA;NA;NA;NA
+"Maracaju";"MS";3;2,04;1;0,33;1,49;NA;NA;NA
 "Maracanã";"PA";1;1,44;0;0;NA;NA;NA;NA
-"Maracanaú";"CE";3;1,22;0;0;NA;NA;NA;NA
+"Maracanaú";"CE";8;1,22;0;0;NA;NA;NA;NA
 "Maracás";"BA";1;1,35;0;0;NA;NA;NA;NA
-"Maragogi";"AL";1;0,35;1;1;0,35;NA;NA;NA
-"Maragogipe";"BA";1;0,85;0;0;NA;NA;NA;NA
-"Maranguape";"CE";1;0,73;1;1;0,73;NA;NA;NA
-"Maranhãozinho";"MA";1;0,68;1;1;0,68;NA;NA;NA
-"Marapanim";"PA";1;0,31;0;0;NA;NA;NA;NA
-"Maraú";"BA";1;0,27;0;0;NA;NA;NA;NA
+"Maragogi";"AL";2;0,35;1;0,5;0,35;NA;NA;NA
+"Maragogipe";"BA";2;1,3;0;0;NA;NA;NA;NA
+"Maraial";"PE";1;0;0;0;NA;NA;NA;NA
+"Marajá do Sena";"MA";3;0,11;0;0;NA;1;0,33;0,06
+"Maranguape";"CE";7;1,22;2;0,29;1,22;1;0,14;0
+"Maranhãozinho";"MA";2;0,68;1;0,5;0,68;NA;NA;NA
+"Marapanim";"PA";4;0,59;1;0,25;0,28;NA;NA;NA
+"Maraú";"BA";2;0,54;0;0;NA;NA;NA;NA
 "Maravilha";"AL";1;1,67;0;0;NA;1;1;1,67
+"Maravilhas";"MG";1;0,25;0;0;NA;1;1;0,25
 "Marcelândia";"MT";1;0,43;0;0;NA;1;1;0,43
-"Marcelino Vieira";"RN";1;1,07;0;0;NA;NA;NA;NA
+"Marcelino Vieira";"RN";4;1,07;0;0;NA;1;0,25;1,07
 "Marcionílio Souza";"BA";1;0,98;0;0;NA;1;1;0,98
+"Marco";"CE";1;0,19;0;0;NA;1;1;0,19
 "Marcolândia";"PI";1;0,4;0;0;NA;1;1;0,4
-"Marechal Deodoro";"AL";1;1,4;0;0;NA;1;1;1,4
+"Marcos Parente";"PI";1;0,36;1;1;0,36;NA;NA;NA
+"Marechal Deodoro";"AL";3;1,4;0;0;NA;2;0,67;1,4
 "Mari";"PB";1;0,74;0;0;NA;NA;NA;NA
+"Maria da Fé";"MG";1;0;0;0;NA;NA;NA;NA
+"Marialva";"PR";1;3,07;1;1;3,07;NA;NA;NA
 "Mariana";"MG";2;3,76;1;0,5;1,96;1;0,5;1,8
+"Mariana Pimentel";"RS";1;0;0;0;NA;NA;NA;NA
 "Marianópolis do Tocantins";"TO";1;1,81;0;0;NA;NA;NA;NA
+"Maricá";"RJ";2;0;0;0;NA;1;0,5;0
+"Marilândia";"ES";1;1,17;0;0;NA;NA;NA;NA
+"Marília";"SP";2;0;0;0;NA;1;0,5;0
 "Mariluz";"PR";1;0,24;0;0;NA;NA;NA;NA
-"Maringá";"PR";1;2,2;0;0;NA;1;1;2,2
+"Maringá";"PR";3;3,12;0;0;NA;1;0,33;2,2
 "Marituba";"PA";4;1,92;0;0;NA;NA;NA;NA
+"Martinópole";"CE";1;0;0;0;NA;NA;NA;NA
+"Martins Soares";"MG";1;0,31;0;0;NA;NA;NA;NA
 "Maruim";"SE";1;0,46;1;1;0,46;NA;NA;NA
 "Marzagão";"GO";1;0,43;0;0;NA;NA;NA;NA
 "Mascote";"BA";1;0,93;0;0;NA;1;1;0,93
-"Massapê";"CE";1;0,98;0;0;NA;NA;NA;NA
+"Massapê";"CE";3;0,98;0;0;NA;NA;NA;NA
+"Massapê do Piauí";"PI";2;0,45;0;0;NA;NA;NA;NA
+"Massaranduba";"PB";1;0;0;0;NA;NA;NA;NA
 "Massaranduba";"SC";1;0,86;0;0;NA;1;1;0,86
 "Mata Grande";"AL";1;1,3;0;0;NA;NA;NA;NA
 "Mata Roma";"MA";1;0,97;0;0;NA;NA;NA;NA
 "Mata Verde";"MG";1;1,39;0;0;NA;1;1;1,39
 "Mateiros";"TO";1;0,86;0;0;NA;1;1;0,86
+"Matelândia";"PR";1;0;0;0;NA;NA;NA;NA
+"Mateus Leme";"MG";1;0,17;0;0;NA;NA;NA;NA
 "Mathias Lobato";"MG";1;0,85;0;0;NA;1;1;0,85
+"Matias Barbosa";"MG";1;0;0;0;NA;NA;NA;NA
 "Matias Cardoso";"MG";1;0,41;0;0;NA;NA;NA;NA
+"Matias Olímpio";"PI";1;0,52;1;1;0,52;NA;NA;NA
 "Matina";"BA";1;0,49;0;0;NA;1;1;0,49
-"Matinha";"MA";6;1,51;3;0,5;0,54;2;0,33;0,78
-"Mato Verde";"MG";2;1,49;0;0;NA;NA;NA;NA
-"Matões";"MA";1;0,53;1;1;0,53;NA;NA;NA
-"Matões do Norte";"MA";1;0,94;1;1;0,94;NA;NA;NA
+"Matinha";"MA";7;1,94;4;0,57;0,98;2;0,29;0,78
+"Mato Castelhano";"RS";1;1;0;0;NA;NA;NA;NA
+"Mato Verde";"MG";3;1,66;0;0;NA;NA;NA;NA
+"Matões";"MA";4;2,96;4;1;2,96;NA;NA;NA
+"Matões do Norte";"MA";3;2,21;3;1;2,21;NA;NA;NA
 "Matozinhos";"MG";1;0,35;0;0;NA;NA;NA;NA
 "Matrinchã";"GO";1;1,11;0;0;NA;1;1;1,11
-"Matriz de Camaragibe";"AL";1;0,4;0;0;NA;NA;NA;NA
+"Matriz de Camaragibe";"AL";4;1,06;0;0;NA;NA;NA;NA
 "Matupá";"MT";1;0,47;0;0;NA;NA;NA;NA
+"Maturéia";"PB";1;0,25;0;0;NA;NA;NA;NA
 "Maués";"AM";2;0,96;2;1;0,96;NA;NA;NA
 "Maurilândia";"GO";1;1,2;0;0;NA;1;1;1,2
 "Maurilândia do Tocantins";"TO";1;1,78;0;0;NA;1;1;1,78
 "Mauriti";"CE";2;1,89;0;0;NA;2;1;1,89
 "Maxaranguape";"RN";1;1,45;0;0;NA;1;1;1,45
+"Mazagão";"AP";2;0;0;0;NA;NA;NA;NA
 "Medianeira";"PR";1;1,27;0;0;NA;NA;NA;NA
-"Medicilândia";"PA";5;1,17;1;0,2;0,06;2;0,4;0,51
-"Melgaço";"PA";7;4,78;7;1;4,78;NA;NA;NA
-"Mesquita";"RJ";1;1,39;0;0;NA;1;1;1,39
-"Miguel Alves";"PI";5;2,01;0;0;NA;NA;NA;NA
+"Medicilândia";"PA";6;1,17;1;0,17;0,06;2;0,33;0,51
+"Melgaço";"PA";11;7,45;9;0,82;6,78;1;0,09;0,67
+"Mendes Pimentel";"MG";1;0,31;0;0;NA;NA;NA;NA
+"Mercês";"MG";1;1,1;0;0;NA;NA;NA;NA
+"Meruoca";"CE";1;0,19;0;0;NA;1;1;0,19
+"Mesquita";"RJ";3;1,73;0;0;NA;1;0,33;1,39
+"Miguel Alves";"PI";6;2,39;0;0;NA;NA;NA;NA
 "Miguel Calmon";"BA";1;0,96;1;1;0,96;NA;NA;NA
 "Miguel Pereira";"RJ";1;0,25;0;0;NA;NA;NA;NA
 "Milagres";"BA";1;0,49;0;0;NA;NA;NA;NA
-"Milagres do Maranhão";"MA";2;1,36;1;0,5;0,51;1;0,5;0,86
-"Milhã";"CE";1;2,02;0;0;NA;1;1;2,02
-"Minaçu";"GO";1;0,86;0;0;NA;1;1;0,86
+"Milagres do Maranhão";"MA";4;1,45;2;0,5;0,59;1;0,25;0,86
+"Milton Brandão";"PI";1;0,12;1;1;0,12;NA;NA;NA
+"Mimoso do Sul";"ES";1;0;0;0;NA;NA;NA;NA
+"Minaçu";"GO";2;1,02;0;0;NA;1;0,5;0,86
+"Minador do Negrão";"AL";1;0;0;0;NA;NA;NA;NA
 "Mineiros";"GO";2;1,32;0;0;NA;NA;NA;NA
+"Mirabela";"MG";1;0;0;0;NA;NA;NA;NA
 "Miracema do Tocantins";"TO";1;1,96;0;0;NA;NA;NA;NA
 "Mirador";"PR";1;0,44;1;1;0,44;NA;NA;NA
 "Miradouro";"MG";1;0,61;0;0;NA;NA;NA;NA
+"Miraí";"MG";1;0,57;0;0;NA;NA;NA;NA
 "Miraíma";"CE";1;0,85;0;0;NA;NA;NA;NA
-"Miranda";"MS";3;3;1;0,33;0,97;2;0,67;2,03
-"Miranda do Norte";"MA";1;0,35;0;0;NA;NA;NA;NA
-"Miranorte";"TO";1;1,09;0;0;NA;1;1;1,09
+"Miranda";"MS";4;3;1;0,25;0,97;2;0,5;2,03
+"Miranda do Norte";"MA";2;0,59;0;0;NA;NA;NA;NA
+"Mirandiba";"PE";2;0,21;2;1;0,21;NA;NA;NA
+"Miranorte";"TO";3;1,58;0;0;NA;1;0,33;1,09
 "Mirante da Serra";"RO";1;1,35;0;0;NA;1;1;1,35
+"Mirante do Paranapanema";"SP";1;0;0;0;NA;NA;NA;NA
 "Mirassol";"SP";1;0,46;0;0;NA;NA;NA;NA
 "Mirassol d'Oeste";"MT";1;0,53;0;0;NA;NA;NA;NA
 "Miravânia";"MG";1;0,87;0;0;NA;NA;NA;NA
 "Mirim Doce";"SC";1;1,01;1;1;1,01;NA;NA;NA
-"Mirinzal";"MA";5;3,05;0;0;NA;2;0,4;1,04
-"Missão Velha";"CE";1;2,07;0;0;NA;1;1;2,07
-"Mocajuba";"PA";3;2,2;2;0,67;2,14;1;0,33;0,05
-"Mogi Guaçu";"SP";2;2,19;2;1;2,19;NA;NA;NA
+"Mirinzal";"MA";8;4,23;1;0,12;0,38;2;0,25;1,04
+"Missão Velha";"CE";3;2,1;0;0;NA;1;0,33;0,26
+"Mocajuba";"PA";4;2,42;2;0,5;2,14;1;0,25;0,05
+"Mococa";"SP";2;0;0;0;NA;NA;NA;NA
+"Mogi das Cruzes";"SP";1;0;0;0;NA;NA;NA;NA
+"Mogi Guaçu";"SP";4;2,19;2;0,5;2,19;NA;NA;NA
 "Moita Bonita";"SE";1;0,44;1;1;0,44;NA;NA;NA
+"Moju";"PA";7;0,62;1;0,14;0,62;NA;NA;NA
 "Mombaça";"CE";6;4,55;0;0;NA;NA;NA;NA
 "Monção";"MA";2;0,81;0;0;NA;2;1;0,81
-"Monsenhor Gil";"PI";1;0,8;0;0;NA;NA;NA;NA
-"Monsenhor Hipólito";"PI";1;0,25;1;1;0,25;NA;NA;NA
-"Montanha";"ES";1;0,72;0;0;NA;NA;NA;NA
+"Monsenhor Gil";"PI";2;0,8;0;0;NA;NA;NA;NA
+"Monsenhor Hipólito";"PI";3;0,43;1;0,33;0,25;NA;NA;NA
+"Monsenhor Tabosa";"CE";2;0,76;0;0;NA;1;0,5;0
+"Montalvânia";"MG";2;1,83;0;0;NA;NA;NA;NA
+"Montanha";"ES";2;0,72;0;0;NA;NA;NA;NA
+"Montanhas";"RN";1;0,03;0;0;NA;NA;NA;NA
 "Monte Alegre";"PA";1;0,59;0;0;NA;1;1;0,59
 "Monte Alegre";"RN";2;1,57;0;0;NA;2;1;1,57
 "Monte Alegre de Goiás";"GO";1;0,42;0;0;NA;1;1;0,42
 "Monte Alegre de Minas";"MG";1;0,65;0;0;NA;NA;NA;NA
-"Monte Alegre de Sergipe";"SE";1;0,62;0;0;NA;1;1;0,62
+"Monte Alegre de Sergipe";"SE";4;1,59;0;0;NA;1;0,25;0,62
+"Monte Alegre do Piauí";"PI";1;0;0;0;NA;NA;NA;NA
 "Monte Alto";"SP";1;1,12;1;1;1,12;NA;NA;NA
-"Monte Azul";"MG";1;0,26;0;0;NA;1;1;0,26
-"Monte Carmelo";"MG";1;0,95;0;0;NA;NA;NA;NA
+"Monte Azul";"MG";2;0,96;0;0;NA;1;0,5;0,26
+"Monte Belo do Sul";"RS";1;0,4;0;0;NA;1;1;0,4
+"Monte Carmelo";"MG";2;0,95;0;0;NA;NA;NA;NA
 "Monte Castelo";"SP";1;1,11;0;0;NA;NA;NA;NA
 "Monte do Carmo";"TO";1;0,64;0;0;NA;1;1;0,64
 "Monte Horebe";"PB";1;0,42;0;0;NA;1;1;0,42
 "Monte Mor";"SP";1;0,91;1;1;0,91;NA;NA;NA
 "Monte Negro";"RO";1;1,27;1;1;1,27;NA;NA;NA
-"Monte Santo";"BA";2;1,39;0;0;NA;NA;NA;NA
+"Monte Santo";"BA";7;1,91;0;0;NA;NA;NA;NA
 "Monte Santo de Minas";"MG";1;1,34;0;0;NA;NA;NA;NA
-"Monteiro";"PB";1;0,28;0;0;NA;NA;NA;NA
+"Monteiro";"PB";4;2,44;0;0;NA;NA;NA;NA
 "Montenegro";"RS";1;0,18;0;0;NA;NA;NA;NA
 "Montes Altos";"MA";3;2,08;0;0;NA;3;1;2,08
-"Montes Claros";"MG";11;4,09;0;0;NA;6;0,55;2,11
+"Montes Claros";"MG";18;4,93;0;0;NA;6;0,33;2,11
 "Montezuma";"MG";1;0,46;0;0;NA;1;1;0,46
 "Montividiu";"GO";1;1,49;0;0;NA;1;1;1,49
+"Montividiu do Norte";"GO";2;0,87;0;0;NA;NA;NA;NA
+"Morada Nova";"CE";2;0;0;0;NA;NA;NA;NA
+"Moraújo";"CE";1;0;0;0;NA;NA;NA;NA
 "Moreira Sales";"PR";1;1,83;0;0;NA;1;1;1,83
+"Moreno";"PE";1;0,37;0;0;NA;NA;NA;NA
 "Morpará";"BA";1;1,3;0;0;NA;1;1;1,3
-"Morro do Chapéu";"BA";5;3,06;3;0,6;2,16;1;0,2;0,63
+"Morretes";"PR";1;0,24;0;0;NA;NA;NA;NA
+"Morrinhos";"CE";3;2,35;0;0;NA;NA;NA;NA
+"Morro Cabeça no Tempo";"PI";2;1,18;0;0;NA;NA;NA;NA
+"Morro do Chapéu";"BA";7;3,34;4;0,57;2,44;1;0,14;0,63
 "Morros";"MA";1;1,45;0;0;NA;NA;NA;NA
-"Mortugaba";"BA";1;1,27;0;0;NA;1;1;1,27
+"Mortugaba";"BA";3;3,24;1;0,33;0,93;1;0,33;1,27
 "Mossoró";"RN";4;3,11;0;0;NA;3;0,75;2,6
-"Muaná";"PA";3;2,75;0;0;NA;2;0,67;2,5
+"Mostardas";"RS";1;0,24;0;0;NA;1;1;0,24
+"Muaná";"PA";6;2,75;0;0;NA;2;0,33;2,5
+"Mucajaí";"RR";1;0;0;0;NA;NA;NA;NA
 "Mucambo";"CE";1;3,04;0;0;NA;NA;NA;NA
 "Mucugê";"BA";3;2,46;0;0;NA;2;0,67;2,06
 "Mucuri";"BA";2;1;0;0;NA;NA;NA;NA
-"Mulungu do Morro";"BA";1;0,5;0;0;NA;NA;NA;NA
-"Mundo Novo";"BA";1;0,49;0;0;NA;NA;NA;NA
+"Mulungu do Morro";"BA";3;0,93;0;0;NA;NA;NA;NA
+"Mundo Novo";"BA";3;2,51;1;0,33;0,19;NA;NA;NA
 "Mundo Novo";"GO";1;0,43;0;0;NA;NA;NA;NA
+"Mundo Novo";"MS";1;0,3;1;1;0,3;NA;NA;NA
+"Munhoz";"MG";2;0,34;0;0;NA;1;0,5;0,34
 "Munhoz de Melo";"PR";1;1;0;0;NA;NA;NA;NA
+"Muniz Ferreira";"BA";3;0;0;0;NA;NA;NA;NA
+"Muniz Freire";"ES";1;0;0;0;NA;NA;NA;NA
 "Muquém de São Francisco";"BA";2;1,25;1;0,5;0,41;1;0,5;0,84
 "Muqui";"ES";1;1,11;0;0;NA;NA;NA;NA
-"Murici";"AL";1;0,59;1;1;0,59;NA;NA;NA
+"Muriaé";"MG";1;0;0;0;NA;NA;NA;NA
+"Muribeca";"SE";1;0;0;0;NA;NA;NA;NA
+"Murici";"AL";6;0,59;1;0,17;0,59;2;0,33;0
 "Murici dos Portelas";"PI";1;0,52;0;0;NA;1;1;0,52
 "Muritiba";"BA";2;0,74;1;0,5;0,26;NA;NA;NA
 "Murutinga do Sul";"SP";1;1,48;0;0;NA;1;1;1,48
 "Mutum";"MG";1;0,47;0;0;NA;NA;NA;NA
-"Mutunópolis";"GO";1;0,32;0;0;NA;NA;NA;NA
+"Muzambinho";"MG";1;0;0;0;NA;NA;NA;NA
+"Nacip Raydan";"MG";1;0;0;0;NA;NA;NA;NA
 "Nanuque";"MG";1;0,84;0;0;NA;1;1;0,84
-"Não-Me-Toque";"RS";1;0,56;0;0;NA;NA;NA;NA
-"Natal";"RN";15;23,77;0;0;NA;7;0,47;2,95
-"Natividade";"TO";1;0,89;0;0;NA;NA;NA;NA
+"Não-Me-Toque";"RS";3;1,39;0;0;NA;1;0,33;0,83
+"Natal";"RN";20;29,55;0;0;NA;7;0,35;2,95
+"Natividade";"TO";1;0,89;0;0;NA;1;1;0,89
+"Natuba";"PB";1;0;0;0;NA;NA;NA;NA
 "Navegantes";"SC";1;3,86;0;0;NA;1;1;3,86
 "Naviraí";"MS";1;1,53;1;1;1,53;NA;NA;NA
-"Neópolis";"SE";1;0,42;0;0;NA;1;1;0,42
+"Nazaré Paulista";"SP";1;0;0;0;NA;NA;NA;NA
+"Nazarezinho";"PB";1;0;0;0;NA;NA;NA;NA
+"Nazária";"PI";1;0,36;0;0;NA;NA;NA;NA
+"Neópolis";"SE";2;1,01;0;0;NA;1;0,5;0,42
 "Nepomuceno";"MG";1;0,27;0;0;NA;NA;NA;NA
-"Nerópolis";"GO";1;1,76;0;0;NA;1;1;1,76
+"Nerópolis";"GO";2;4,6;0;0;NA;1;0,5;1,76
 "Nhamundá";"AM";2;1,61;0;0;NA;1;0,5;0,68
 "Nhandeara";"SP";1;0,9;0;0;NA;NA;NA;NA
-"Nilo Peçanha";"BA";1;0,54;0;0;NA;1;1;0,54
+"Nicolau Vergueiro";"RS";1;0;0;0;NA;NA;NA;NA
+"Nilo Peçanha";"BA";1;0,48;0;0;NA;NA;NA;NA
 "Nilópolis";"RJ";1;0,17;0;0;NA;NA;NA;NA
-"Nina Rodrigues";"MA";2;0,95;0;0;NA;2;1;0,95
+"Nina Rodrigues";"MA";3;0,95;0;0;NA;2;0,67;0,95
 "Ninheira";"MG";2;0,6;0;0;NA;1;0,5;0,33
-"Niquelândia";"GO";4;1,97;0;0;NA;1;0,25;0,36
+"Nioaque";"MS";1;0;0;0;NA;NA;NA;NA
+"Niquelândia";"GO";7;2,51;0;0;NA;3;0,43;0,65
+"Nísia Floresta";"RN";1;0;0;0;NA;NA;NA;NA
+"Nordestina";"BA";1;0,53;1;1;0,53;NA;NA;NA
+"Normandia";"RR";7;0,09;2;0,29;0,09;NA;NA;NA
 "Nossa Senhora das Dores";"SE";2;1,65;0;0;NA;NA;NA;NA
+"Nossa Senhora de Nazaré";"PI";1;0;0;0;NA;NA;NA;NA
 "Nossa Senhora do Livramento";"MT";1;0,64;0;0;NA;1;1;0,64
-"Nossa Senhora do Socorro";"SE";8;3,11;3;0,38;1,32;3;0,38;1,09
+"Nossa Senhora do Socorro";"SE";11;3,11;3;0,27;1,32;3;0,27;1,09
 "Nossa Senhora dos Remédios";"PI";1;0,62;1;1;0,62;NA;NA;NA
+"Nova Andradina";"MS";1;0,29;0;0;NA;NA;NA;NA
 "Nova Bandeirantes";"MT";2;1,21;1;0,5;0,59;NA;NA;NA
 "Nova Canaã";"BA";1;0,8;0;0;NA;1;1;0,8
+"Nova Cantu";"PR";1;0,19;0;0;NA;NA;NA;NA
 "Nova Cruz";"RN";2;1,18;0;0;NA;NA;NA;NA
 "Nova Esperança";"PR";1;0,25;1;1;0,25;NA;NA;NA
-"Nova Esperança do Piriá";"PA";1;1,34;1;1;1,34;NA;NA;NA
+"Nova Esperança do Piriá";"PA";2;1,34;1;0,5;1,34;NA;NA;NA
+"Nova Esperança do Sudoeste";"PR";1;0,46;1;1;0,46;NA;NA;NA
 "Nova Fátima";"BA";2;2,52;0;0;NA;2;1;2,52
 "Nova Fátima";"PR";1;0,06;1;1;0,06;NA;NA;NA
+"Nova Floresta";"PB";1;0;0;0;NA;NA;NA;NA
 "Nova Friburgo";"RJ";1;0,42;0;0;NA;1;1;0,42
+"Nova Glória";"GO";1;0,18;0;0;NA;NA;NA;NA
 "Nova Hartz";"RS";3;2,62;2;0,67;1,74;1;0,33;0,88
-"Nova Ibiá";"BA";1;0,86;0;0;NA;1;1;0,86
-"Nova Iguaçu";"RJ";8;4,15;0;0;NA;6;0,75;3,15
-"Nova Iorque";"MA";1;0,51;0;0;NA;1;1;0,51
+"Nova Ibiá";"BA";4;3,37;0;0;NA;1;0,25;0,86
+"Nova Iguaçu";"RJ";22;5,25;0;0;NA;9;0,41;3,15
+"Nova Iorque";"MA";3;1,49;0;0;NA;1;0,33;0,51
 "Nova Itarana";"BA";1;0,85;0;0;NA;1;1;0,85
+"Nova Laranjeiras";"PR";1;1,3;0;0;NA;1;1;1,3
 "Nova Lima";"MG";3;0,68;0;0;NA;1;0,33;0,25
+"Nova Londrina";"PR";1;2,21;1;1;2,21;NA;NA;NA
 "Nova Mamoré";"RO";2;1,04;0;0;NA;NA;NA;NA
 "Nova Monte Verde";"MT";1;0,83;0;0;NA;1;1;0,83
 "Nova Nazaré";"MT";7;2,85;2;0,29;2,31;5;0,71;0,54
-"Nova Odessa";"SP";1;1,34;0;0;NA;NA;NA;NA
-"Nova Olinda";"TO";2;1,06;0;0;NA;NA;NA;NA
+"Nova Olinda";"TO";3;2,17;1;0,33;1,1;NA;NA;NA
 "Nova Olinda do Maranhão";"MA";4;1,7;0;0;NA;4;1;1,7
-"Nova Olinda do Norte";"AM";2;1,41;1;0,5;0,56;1;0,5;0,85
-"Nova Ponte";"MG";1;0,59;0;0;NA;NA;NA;NA
+"Nova Olinda do Norte";"AM";5;1,71;2;0,4;0,87;1;0,2;0,85
+"Nova Ponte";"MG";3;0,59;0;0;NA;NA;NA;NA
+"Nova Prata";"RS";1;3,37;0;0;NA;NA;NA;NA
 "Nova Ramada";"RS";1;0,24;0;0;NA;NA;NA;NA
-"Nova Russas";"CE";1;1,11;0;0;NA;NA;NA;NA
-"Nova Santa Rita";"RS";1;0,88;0;0;NA;NA;NA;NA
-"Nova Serrana";"MG";4;3,11;0;0;NA;NA;NA;NA
+"Nova Redenção";"BA";1;0,44;0;0;NA;NA;NA;NA
+"Nova Russas";"CE";2;1,45;0;0;NA;1;0,5;1,11
+"Nova Santa Rita";"RS";2;1,15;0;0;NA;1;0,5;0,27
+"Nova Serrana";"MG";5;3,84;0;0;NA;NA;NA;NA
+"Nova Soure";"BA";1;0,41;0;0;NA;NA;NA;NA
 "Nova Timboteua";"PA";1;0,53;1;1;0,53;NA;NA;NA
-"Nova Veneza";"GO";1;1,24;0;0;NA;NA;NA;NA
+"Nova Ubiratã";"MT";1;0;0;0;NA;NA;NA;NA
+"Nova Venécia";"ES";1;0,9;0;0;NA;NA;NA;NA
+"Nova Veneza";"GO";1;1,24;0;0;NA;1;1;1,24
 "Novais";"SP";1;1,51;0;0;NA;1;1;1,51
 "Novo Acordo";"TO";1;0,51;0;0;NA;1;1;0,51
+"Novo Airão";"AM";1;0;0;0;NA;NA;NA;NA
 "Novo Aripuanã";"AM";1;1,44;0;0;NA;1;1;1,44
 "Novo Cruzeiro";"MG";2;1,11;0;0;NA;1;0,5;0,85
-"Novo Gama";"GO";8;3,11;2;0,25;0,48;NA;NA;NA
-"Novo Hamburgo";"RS";1;0,47;0;0;NA;NA;NA;NA
+"Novo Gama";"GO";14;3,11;2;0,14;0,48;3;0,21;0
+"Novo Hamburgo";"RS";2;0,47;0;0;NA;NA;NA;NA
+"Novo Horizonte";"SP";2;3,18;0;0;NA;1;0,5;0,3
 "Novo Lino";"AL";1;0,39;0;0;NA;1;1;0,39
 "Novo Oriente de Minas";"MG";1;0,35;0;0;NA;NA;NA;NA
 "Novo Planalto";"GO";1;0,07;0;0;NA;NA;NA;NA
+"Novo Progresso";"PA";4;0,49;0;0;NA;NA;NA;NA
 "Novo Repartimento";"PA";7;10,75;0;0;NA;6;0,86;10,45
 "Novo Santo Antônio";"PI";1;0,62;0;0;NA;1;1;0,62
 "Novo Triunfo";"BA";3;2,45;2;0,67;1,45;1;0,33;1
+"Óbidos";"PA";4;0;0;0;NA;NA;NA;NA
 "Ocara";"CE";1;0,65;0;0;NA;1;1;0,65
 "Ocauçu";"SP";1;1,11;0;0;NA;1;1;1,11
-"Oeiras";"PI";2;1,78;0;0;NA;NA;NA;NA
-"Oeiras do Pará";"PA";3;0,48;1;0,33;0,12;2;0,67;0,35
-"Oiapoque";"AP";1;0,29;0;0;NA;NA;NA;NA
-"Olho d'Água das Cunhãs";"MA";1;0,29;0;0;NA;1;1;0,29
+"Oeiras";"PI";2;1,78;0;0;NA;1;0,5;1,04
+"Oeiras do Pará";"PA";4;0,48;1;0,25;0,12;2;0,5;0,35
+"Oiapoque";"AP";3;0,29;0;0;NA;1;0,33;0
+"Olho d'Água das Cunhãs";"MA";3;0,54;0;0;NA;1;0,33;0,29
 "Olho d'Água das Flores";"AL";1;0,41;0;0;NA;NA;NA;NA
+"Olho d'Água do Casado";"AL";1;0,43;0;0;NA;NA;NA;NA
 "Olhos-d'Água";"MG";1;0,42;0;0;NA;1;1;0,42
 "Olímpia";"SP";1;0,47;0;0;NA;NA;NA;NA
 "Olinda";"PE";12;3,85;0;0;NA;8;0,67;2,66
 "Olinda Nova do Maranhão";"MA";2;0,62;2;1;0,62;NA;NA;NA
-"Oliveira";"MG";2;1,97;0;0;NA;1;0,5;1,51
+"Olindina";"BA";1;0,58;1;1;0,58;NA;NA;NA
+"Oliveira";"MG";3;2,23;0;0;NA;1;0,33;1,51
 "Oliveira dos Brejinhos";"BA";1;0,7;0;0;NA;NA;NA;NA
-"Oriximiná";"PA";1;0,9;1;1;0,9;NA;NA;NA
+"Olivença";"AL";2;1,42;0;0;NA;NA;NA;NA
+"Oriximiná";"PA";7;0,9;1;0,14;0,9;2;0,29;0
 "Orizona";"GO";1;0,51;1;1;0,51;NA;NA;NA
 "Orós";"CE";1;1,82;0;0;NA;NA;NA;NA
-"Osasco";"SP";8;2,92;0;0;NA;4;0,5;1,54
-"Osório";"RS";1;0,9;0;0;NA;1;1;0,9
-"Ourém";"PA";1;1,95;0;0;NA;NA;NA;NA
-"Ouricuri";"PE";5;3,56;2;0,4;2,13;NA;NA;NA
+"Ortigueira";"PR";1;0,5;0;0;NA;NA;NA;NA
+"Osasco";"SP";9;4,44;0;0;NA;4;0,44;1,54
+"Osório";"RS";2;0,9;0;0;NA;1;0,5;0,9
+"Ourém";"PA";3;2,65;0;0;NA;1;0,33;0,39
+"Ouriçangas";"BA";1;0,25;0;0;NA;1;1;0,25
+"Ouricuri";"PE";6;3,56;2;0,33;2,13;NA;NA;NA
 "Ourilândia do Norte";"PA";2;0,85;1;0,5;0,55;1;0,5;0,3
+"Ouro Preto do Oeste";"RO";1;0;0;0;NA;1;1;0
 "Ouro Verde";"SC";1;0,8;0;0;NA;NA;NA;NA
 "Ouro Verde";"SP";1;0,43;0;0;NA;1;1;0,43
+"Ouro Verde de Goiás";"GO";1;2,82;0;0;NA;NA;NA;NA
 "Ouro Verde de Minas";"MG";4;0,53;0;0;NA;NA;NA;NA
 "Ourolândia";"BA";2;1,48;0;0;NA;NA;NA;NA
-"Pacajá";"PA";9;3,1;0;0;NA;1;0,11;0,54
-"Pacajus";"CE";2;1,01;2;1;1,01;NA;NA;NA
-"Pacatuba";"CE";2;2,53;0;0;NA;2;1;2,53
-"Paço do Lumiar";"MA";5;3,66;1;0,2;1,95;2;0,4;0,98
-"Pacujá";"CE";1;1,11;0;0;NA;NA;NA;NA
-"Padre Bernardo";"GO";2;0,86;0;0;NA;NA;NA;NA
+"Pacajá";"PA";20;5,38;0;0;NA;1;0,05;0,54
+"Pacajus";"CE";3;1,29;3;1;1,29;NA;NA;NA
+"Pacaraima";"RR";3;0;0;0;NA;2;0,67;0
+"Pacatuba";"CE";4;3,01;0;0;NA;2;0,5;2,53
+"Pacatuba";"SE";1;0,88;0;0;NA;NA;NA;NA
+"Paço do Lumiar";"MA";7;3,66;1;0,14;1,95;3;0,43;0,98
+"Pacujá";"CE";1;1,11;0;0;NA;1;1;1,11
+"Padre Bernardo";"GO";3;0,86;0;0;NA;NA;NA;NA
 "Padre Carvalho";"MG";1;0,18;1;1;0,18;NA;NA;NA
+"Pai Pedro";"MG";1;0,25;0;0;NA;NA;NA;NA
 "Palhano";"CE";1;0,33;1;1;0,33;NA;NA;NA
 "Palhoça";"SC";6;2,25;0;0;NA;1;0,17;0,36
-"Palmácia";"CE";2;2,37;1;0,5;1,26;NA;NA;NA
-"Palmas";"TO";10;40,05;0;0;NA;2;0,2;21,54
+"Palmácia";"CE";2;2,37;1;0,5;1,26;1;0,5;1,11
+"Palmares";"PE";1;0;0;0;NA;NA;NA;NA
 "Palmas de Monte Alto";"BA";1;1,66;0;0;NA;NA;NA;NA
 "Palmeira";"SC";1;0,42;0;0;NA;1;1;0,42
 "Palmeira das Missões";"RS";2;2,02;0;0;NA;1;0,5;1,49
+"Palmeira do Piauí";"PI";1;0,26;0;0;NA;1;1;0,26
 "Palmeira dos Índios";"AL";1;0,42;0;0;NA;1;1;0,42
-"Palmeirândia";"MA";3;0,89;3;1;0,89;NA;NA;NA
+"Palmeirais";"PI";1;0,19;0;0;NA;NA;NA;NA
+"Palmeirândia";"MA";8;1,97;8;1;1,97;NA;NA;NA
+"Palmeirante";"TO";1;0,67;1;1;0,67;NA;NA;NA
 "Palmeiras";"BA";1;1,38;0;0;NA;1;1;1,38
 "Palmeiras de Goiás";"GO";1;0,43;0;0;NA;NA;NA;NA
 "Palmeiras do Tocantins";"TO";1;0,63;1;1;0,63;NA;NA;NA
+"Palmeirina";"PE";2;0,83;0;0;NA;NA;NA;NA
+"Palmeirópolis";"TO";1;0,54;0;0;NA;NA;NA;NA
 "Palmital";"PR";1;1;1;1;1;NA;NA;NA
+"Palmópolis";"MG";1;0,18;1;1;0,18;NA;NA;NA
 "Palotina";"PR";1;1,49;1;1;1,49;NA;NA;NA
-"Panelas";"PE";4;3,47;0;0;NA;NA;NA;NA
+"Panelas";"PE";5;4,43;0;0;NA;NA;NA;NA
 "Pantano Grande";"RS";1;0,92;0;0;NA;1;1;0,92
-"Pão de Açúcar";"AL";2;1,72;0;0;NA;1;0,5;0,42
+"Pão de Açúcar";"AL";4;2,65;0;0;NA;1;0,25;0,42
 "Papanduva";"SC";1;0,91;1;1;0,91;NA;NA;NA
+"Pará de Minas";"MG";1;0;0;0;NA;NA;NA;NA
 "Paracambi";"RJ";1;0,17;0;0;NA;NA;NA;NA
 "Paracatu";"MG";4;1,39;0;0;NA;NA;NA;NA
 "Paracuru";"CE";2;1,51;0;0;NA;2;1;1,51
+"Paragominas";"PA";1;0;0;0;NA;1;1;0
 "Paraguaçu";"MG";1;0,52;0;0;NA;NA;NA;NA
 "Paraíba do Sul";"RJ";1;0,24;0;0;NA;1;1;0,24
-"Paraibano";"MA";1;1;1;1;1;NA;NA;NA
+"Paraibano";"MA";2;1,36;2;1;1,36;NA;NA;NA
 "Paraipaba";"CE";1;0,18;0;0;NA;NA;NA;NA
-"Paraíso do Tocantins";"TO";2;1,5;0;0;NA;1;0,5;1,11
+"Paraíso das Águas";"MS";1;2,17;0;0;NA;NA;NA;NA
+"Paraíso do Norte";"PR";1;0,78;0;0;NA;NA;NA;NA
+"Paraíso do Tocantins";"TO";4;1,5;0;0;NA;2;0,5;1,11
 "Paraisópolis";"MG";1;1,49;0;0;NA;1;1;1,49
-"Parambu";"CE";2;2,08;2;1;2,08;NA;NA;NA
-"Paranã";"TO";3;0,77;0;0;NA;NA;NA;NA
+"Parambu";"CE";5;3,29;5;1;3,29;NA;NA;NA
+"Paramirim";"BA";1;0,3;0;0;NA;NA;NA;NA
+"Paranã";"TO";7;2,35;0;0;NA;NA;NA;NA
 "Paranacity";"PR";1;0,45;0;0;NA;1;1;0,45
-"Paranaguá";"PR";8;3,78;0;0;NA;NA;NA;NA
-"Paranaíta";"MT";1;1,05;0;0;NA;NA;NA;NA
+"Paranaguá";"PR";8;3,78;0;0;NA;1;0,12;1,33
+"Paranaíta";"MT";2;1,05;0;0;NA;1;0,5;0
 "Paranapanema";"SP";1;0,99;0;0;NA;NA;NA;NA
-"Paranatinga";"MT";1;0,81;0;0;NA;1;1;0,81
+"Paranatama";"PE";3;0,06;0;0;NA;1;0,33;0
+"Paranatinga";"MT";2;0,93;0;0;NA;2;1;0,93
+"Parapuã";"SP";1;0;0;0;NA;NA;NA;NA
+"Paratinga";"BA";1;0,48;0;0;NA;NA;NA;NA
 "Paraty";"RJ";2;0,5;1;0,5;0,25;1;0,5;0,25
-"Parauapebas";"PA";7;10,75;1;0,14;1,73;5;0,71;8,49
+"Parauapebas";"PA";11;10,75;1;0,09;1,73;6;0,55;8,49
 "Paraúna";"GO";2;1,33;0;0;NA;1;0,5;0,65
 "Parelhas";"RN";1;0,87;0;0;NA;1;1;0,87
-"Parintins";"AM";11;0,39;1;0,09;0,03;9;0,82;0,29
+"Pariconha";"AL";1;0;0;0;NA;NA;NA;NA
+"Parintins";"AM";26;2,91;1;0,04;0,03;17;0,65;0,67
+"Paripueira";"AL";1;0,4;0;0;NA;NA;NA;NA
 "Pariquera-Açu";"SP";1;0,46;0;0;NA;1;1;0,46
-"Parnaíba";"PI";2;1,25;0;0;NA;NA;NA;NA
-"Parnamirim";"RN";2;1,69;0;0;NA;1;0,5;1,33
+"Parnaguá";"PI";2;0,54;0;0;NA;NA;NA;NA
+"Parnaíba";"PI";4;2,42;0;0;NA;NA;NA;NA
+"Parnamirim";"PE";1;0;1;1;0;NA;NA;NA
+"Parnamirim";"RN";4;1,69;0;0;NA;1;0,25;1,33
 "Parnarama";"MA";2;0,73;2;1;0,73;NA;NA;NA
-"Parobé";"RS";2;1,38;0;0;NA;2;1;1,38
+"Parobé";"RS";3;2,03;0;0;NA;2;0,67;1,38
 "Passa Quatro";"MG";1;0,18;0;0;NA;1;1;0,18
+"Passagem";"PB";1;0,78;0;0;NA;NA;NA;NA
 "Passagem";"RN";1;0,63;0;0;NA;NA;NA;NA
-"Passagem Franca";"MA";9;4,6;0;0;NA;NA;NA;NA
-"Passo Fundo";"RS";1;0,93;0;0;NA;1;1;0,93
+"Passagem Franca";"MA";12;5,97;0;0;NA;NA;NA;NA
+"Passira";"PE";1;0,41;0;0;NA;1;1;0,41
+"Passo de Camaragibe";"AL";4;1,75;4;1;1,75;NA;NA;NA
+"Passo Fundo";"RS";2;1,25;0;0;NA;1;0,5;0,93
 "Passos";"MG";2;0,93;0;0;NA;NA;NA;NA
 "Pastos Bons";"MA";1;0,6;1;1;0,6;NA;NA;NA
 "Patis";"MG";2;1,08;2;1;1,08;NA;NA;NA
-"Pato Branco";"PR";1;1,2;0;0;NA;1;1;1,2
-"Patos";"PB";4;3,56;0;0;NA;2;0,5;2,07
+"Pato Branco";"PR";4;4,32;0;0;NA;1;0,25;1,2
+"Patos";"PB";5;3,56;0;0;NA;2;0,4;2,07
 "Patos de Minas";"MG";5;5,58;0;0;NA;1;0,2;1,53
-"Patrocínio";"MG";2;1,5;0;0;NA;2;1;1,5
-"Patu";"RN";1;1,11;0;0;NA;NA;NA;NA
-"Paudalho";"PE";1;0,7;0;0;NA;1;1;0,7
+"Patos do Piauí";"PI";1;0;0;0;NA;NA;NA;NA
+"Patrocínio";"MG";4;1,5;0;0;NA;2;0,5;1,5
+"Patu";"RN";2;1,11;0;0;NA;NA;NA;NA
+"Pau Brasil";"BA";1;0;0;0;NA;NA;NA;NA
+"Pau D'Arco do Piauí";"PI";1;0,2;0;0;NA;NA;NA;NA
+"Pau D Arco";"PA";1;1;0;0;NA;NA;NA;NA
+"Paudalho";"PE";5;1,51;0;0;NA;2;0,4;0,7
 "Pauini";"AM";1;0,36;0;0;NA;1;1;0,36
 "Paula Cândido";"MG";2;1,67;0;0;NA;NA;NA;NA
 "Paulínia";"SP";1;0,9;0;0;NA;1;1;0,9
-"Paulino Neves";"MA";1;0,63;0;0;NA;1;1;0,63
-"Paulista";"PE";3;1,27;0;0;NA;NA;NA;NA
+"Paulino Neves";"MA";2;0,63;0;0;NA;1;0,5;0,63
+"Paulista";"PB";1;0;0;0;NA;NA;NA;NA
+"Paulista";"PE";5;2,06;0;0;NA;NA;NA;NA
+"Paulo Frontin";"PR";1;0,2;0;0;NA;NA;NA;NA
+"Paulo Jacinto";"AL";2;0,4;1;0,5;0,4;NA;NA;NA
+"Paulo Ramos";"MA";8;0,74;6;0,75;0,21;1;0,12;0,03
+"Pé de Serra";"BA";1;0,6;1;1;0,6;NA;NA;NA
+"Peabiru";"PR";1;0;0;0;NA;NA;NA;NA
+"Peçanha";"MG";1;0,47;0;0;NA;NA;NA;NA
 "Pedra Azul";"MG";2;2,24;0;0;NA;NA;NA;NA
-"Pedra Branca";"CE";2;4,24;2;1;4,24;NA;NA;NA
+"Pedra Branca";"CE";3;4,24;2;0,67;4,24;NA;NA;NA
 "Pedra Branca";"PB";1;0,65;0;0;NA;1;1;0,65
 "Pedra do Anta";"MG";1;0,42;1;1;0,42;NA;NA;NA
+"Pedra do Indaiá";"MG";1;0;0;0;NA;NA;NA;NA
+"Pedra Grande";"RN";1;0,17;0;0;NA;NA;NA;NA
+"Pedra Mole";"SE";2;0;0;0;NA;NA;NA;NA
+"Pedra Preta";"MT";1;0,31;1;1;0,31;NA;NA;NA
+"Pedra Preta";"RN";1;0,21;1;1;0,21;NA;NA;NA
 "Pedralva";"MG";1;0,47;0;0;NA;NA;NA;NA
 "Pedrão";"BA";1;0,43;0;0;NA;1;1;0,43
 "Pedras de Fogo";"PB";2;2,02;0;0;NA;1;0,5;1,09
 "Pedregulho";"SP";1;0,85;0;0;NA;NA;NA;NA
 "Pedreira";"SP";1;1,34;1;1;1,34;NA;NA;NA
+"Pedreiras";"MA";1;0;0;0;NA;NA;NA;NA
 "Pedrinópolis";"MG";1;0,42;0;0;NA;1;1;0,42
-"Pedro Afonso";"TO";1;0,83;0;0;NA;NA;NA;NA
-"Pedro Alexandre";"BA";5;1,16;0;0;NA;NA;NA;NA
-"Pedro Canário";"ES";1;1,47;0;0;NA;1;1;1,47
-"Pedro do Rosário";"MA";3;2,11;3;1;2,11;NA;NA;NA
+"Pedro Afonso";"TO";3;1,77;0;0;NA;NA;NA;NA
+"Pedro Alexandre";"BA";13;1,75;0;0;NA;NA;NA;NA
+"Pedro Avelino";"RN";2;0,5;1;0,5;0,32;1;0,5;0,18
+"Pedro Canário";"ES";3;1,47;0;0;NA;1;0,33;1,47
+"Pedro do Rosário";"MA";5;2,73;4;0,8;2,25;NA;NA;NA
 "Pedro Gomes";"MS";2;2,01;0;0;NA;2;1;2,01
 "Pedro II";"PI";2;1,4;1;0,5;0,7;NA;NA;NA
+"Pedro Leopoldo";"MG";2;0;0;0;NA;NA;NA;NA
+"Pedro Régis";"PB";1;0;1;1;0;NA;NA;NA
+"Pedro Velho";"RN";1;0;0;0;NA;NA;NA;NA
 "Peixoto de Azevedo";"MT";2;1,61;0;0;NA;1;0,5;1,4
-"Pelotas";"RS";12;4,14;0;0;NA;7;0,58;2,88
-"Penalva";"MA";2;2,26;2;1;2,26;NA;NA;NA
+"Pelotas";"RS";16;4,14;0;0;NA;7;0,44;2,88
+"Penalva";"MA";4;2,26;2;0,5;2,26;1;0,25;0
 "Pendências";"RN";1;0,51;0;0;NA;1;1;0,51
 "Penedo";"AL";4;2,98;1;0,25;0,5;2;0,5;2,06
 "Pentecoste";"CE";2;1,15;1;0,5;0,64;1;0,5;0,5
@@ -1463,121 +2098,154 @@
 "Perdigão";"MG";1;1,72;0;0;NA;1;1;1,72
 "Peri Mirim";"MA";1;0,45;0;0;NA;NA;NA;NA
 "Peritoró";"MA";8;3,95;3;0,38;1,37;2;0,25;1,77
+"Pérola";"PR";1;0,96;0;0;NA;1;1;0,96
+"Pérola d'Oeste";"PR";1;0,19;1;1;0,19;NA;NA;NA
 "Perolândia";"GO";1;0,44;0;0;NA;NA;NA;NA
-"Peruíbe";"SP";2;1,92;0;0;NA;1;0,5;1,46
-"Pescaria Brava";"SC";1;0,19;0;0;NA;1;1;0,19
-"Pesqueira";"PE";2;1,42;0;0;NA;NA;NA;NA
-"Petrolândia";"PE";2;1,28;0;0;NA;1;0,5;0,43
-"Petrolina";"PE";15;13,54;2;0,13;7,7;9;0,6;3,81
-"Petrópolis";"RJ";1;0,24;0;0;NA;1;1;0,24
+"Peruíbe";"SP";3;2,56;1;0,33;0,64;1;0,33;1,46
+"Pescaria Brava";"SC";2;0,59;0;0;NA;2;1;0,59
+"Pesqueira";"PE";7;1,76;0;0;NA;NA;NA;NA
+"Petrolândia";"PE";4;1,4;0;0;NA;1;0,25;0,43
+"Petrolina";"PE";18;13,54;2;0,11;7,7;9;0,5;3,81
+"Petrópolis";"RJ";4;0,24;0;0;NA;1;0,25;0,24
 "Piaçabuçu";"AL";1;1,05;1;1;1,05;NA;NA;NA
 "Piancó";"PB";1;0,51;1;1;0,51;NA;NA;NA
 "Piatã";"BA";1;1,06;0;0;NA;NA;NA;NA
 "Piçarra";"PA";1;1,77;0;0;NA;NA;NA;NA
-"Picos";"PI";1;0,26;0;0;NA;1;1;0,26
+"Picos";"PI";2;0,75;0;0;NA;1;0,5;0,26
 "Picuí";"PB";3;2,75;0;0;NA;1;0,33;1,87
-"Piedade";"SP";1;1,51;0;0;NA;NA;NA;NA
+"Piedade";"SP";2;1,51;0;0;NA;NA;NA;NA
 "Piên";"PR";1;1,71;0;0;NA;NA;NA;NA
 "Pilão Arcado";"BA";2;0,69;0;0;NA;2;1;0,69
-"Pilar do Sul";"SP";1;0,25;0;0;NA;NA;NA;NA
+"Pilar de Goiás";"GO";1;0,37;0;0;NA;NA;NA;NA
+"Pilar do Sul";"SP";2;0,25;0;0;NA;NA;NA;NA
+"Pilões";"PB";1;0,78;0;0;NA;NA;NA;NA
 "Pimenta";"MG";1;0,52;0;0;NA;NA;NA;NA
 "Pimenta Bueno";"RO";2;1,49;0;0;NA;1;0,5;1,1
-"Pimenteiras";"PI";1;2,09;0;0;NA;NA;NA;NA
-"Pindaí";"BA";1;0,48;0;0;NA;NA;NA;NA
-"Pindamonhangaba";"SP";4;1,68;2;0,5;0,79;NA;NA;NA
+"Pimenteiras";"PI";5;3,15;1;0,2;0,09;NA;NA;NA
+"Pindaí";"BA";2;0,48;0;0;NA;NA;NA;NA
+"Pindamonhangaba";"SP";5;1,98;2;0,4;0,79;NA;NA;NA
 "Pindaré-Mirim";"MA";1;0,29;1;1;0,29;NA;NA;NA
 "Pindobaçu";"BA";1;1,46;0;0;NA;1;1;1,46
 "Pindoretama";"CE";1;0,88;0;0;NA;NA;NA;NA
+"Pinhalão";"PR";1;0;0;0;NA;NA;NA;NA
+"Pinhalzinho";"SC";1;2,31;0;0;NA;NA;NA;NA
 "Pinhão";"PR";1;0,5;0;0;NA;NA;NA;NA
-"Pinhão";"SE";1;0,68;0;0;NA;NA;NA;NA
-"Pinheiral";"RJ";1;0,84;0;0;NA;1;1;0,84
-"Pinheirinho do Vale";"RS";1;0,66;0;0;NA;NA;NA;NA
+"Pinhão";"SE";3;1,18;0;0;NA;1;0,33;0,24
+"Pinheiral";"RJ";2;0,84;0;0;NA;1;0,5;0,84
+"Pinheirinho do Vale";"RS";2;1,14;0;0;NA;NA;NA;NA
 "Pinheiro";"MA";12;7,38;10;0,83;6,27;1;0,08;0,85
 "Pinheiro Machado";"RS";1;0,54;0;0;NA;1;1;0,54
 "Pinheiro Preto";"SC";1;0,64;0;0;NA;1;1;0,64
-"Pintadas";"BA";2;2,07;0;0;NA;1;0,5;0,99
+"Pinheiros";"ES";1;0,42;0;0;NA;NA;NA;NA
+"Pintadas";"BA";3;2,07;1;0,33;0;1;0,33;0,99
 "Pio IX";"PI";1;0,92;0;0;NA;1;1;0,92
-"Pio XII";"MA";1;0,19;1;1;0,19;NA;NA;NA
+"Pio XII";"MA";3;0,41;1;0,33;0,19;NA;NA;NA
+"Piquet Carneiro";"CE";1;1,49;0;0;NA;NA;NA;NA
 "Piracanjuba";"GO";2;2,43;0;0;NA;1;0,5;1,06
+"Piraí";"RJ";1;0;1;1;0;NA;NA;NA
 "Piraí do Norte";"BA";1;0,36;0;0;NA;1;1;0,36
-"Piraí do Sul";"PR";1;0,17;0;0;NA;NA;NA;NA
+"Piraí do Sul";"PR";2;0,17;0;0;NA;NA;NA;NA
+"Pirajuba";"MG";1;1,07;0;0;NA;NA;NA;NA
+"Pirambu";"SE";1;0,22;0;0;NA;1;1;0,22
 "Piranga";"MG";1;0,48;1;1;0,48;NA;NA;NA
 "Pirangi";"SP";1;0,41;0;0;NA;1;1;0,41
 "Piranguçu";"MG";2;0,78;0;0;NA;NA;NA;NA
+"Piranguinho";"MG";1;0;0;0;NA;NA;NA;NA
 "Piranhas";"AL";2;2,61;0;0;NA;2;1;2,61
-"Pirapemas";"MA";14;1,96;0;0;NA;1;0,07;1,11
-"Piraquara";"PR";4;4,66;0;0;NA;3;0,75;4,41
-"Piraquê";"TO";1;0,17;0;0;NA;NA;NA;NA
+"Pirapemas";"MA";17;3,63;1;0,06;0,28;1;0,06;1,11
+"Pirapetinga";"MG";1;0;0;0;NA;NA;NA;NA
+"Pirapora";"MG";1;4,29;1;1;4,29;NA;NA;NA
+"Pirapozinho";"SP";1;0;0;0;NA;NA;NA;NA
+"Piraquara";"PR";7;4,9;0;0;NA;3;0,43;4,41
+"Piraquê";"TO";4;0,63;0;0;NA;NA;NA;NA
+"Pirassununga";"SP";3;0,26;0;0;NA;1;0,33;0
 "Piratini";"RS";1;1,4;1;1;1,4;NA;NA;NA
 "Piratuba";"SC";1;0,42;0;0;NA;1;1;0,42
+"Piraúba";"MG";2;0,94;1;0,5;0,94;NA;NA;NA
+"Pirenópolis";"GO";2;0,8;0;0;NA;NA;NA;NA
+"Pires Ferreira";"CE";5;2,18;0;0;NA;NA;NA;NA
 "Piripá";"BA";1;0,9;0;0;NA;1;1;0,9
-"Piripiri";"PI";2;0,99;2;1;0,99;NA;NA;NA
-"Piritiba";"BA";1;1,76;0;0;NA;NA;NA;NA
+"Piripiri";"PI";3;0,99;2;0,67;0,99;NA;NA;NA
+"Piritiba";"BA";2;1,96;1;0,5;0,2;1;0,5;1,76
 "Pitanga";"PR";1;1,01;0;0;NA;NA;NA;NA
 "Pitangui";"MG";1;0,66;0;0;NA;NA;NA;NA
-"Pitimbu";"PB";1;0,91;0;0;NA;1;1;0,91
-"Pium";"TO";3;0,24;0;0;NA;NA;NA;NA
+"Pitimbu";"PB";3;1,14;0;0;NA;2;0,67;0,97
+"Pium";"TO";4;0,24;0;0;NA;NA;NA;NA
 "Piúma";"ES";1;0,99;0;0;NA;1;1;0,99
 "Piumhi";"MG";1;0,77;0;0;NA;NA;NA;NA
-"Placas";"PA";2;0,81;0;0;NA;NA;NA;NA
-"Plácido de Castro";"AC";1;1,56;0;0;NA;1;1;1,56
-"Planaltina";"GO";5;3,97;0;0;NA;NA;NA;NA
+"Placas";"PA";7;1,93;1;0,14;1,12;NA;NA;NA
+"Plácido de Castro";"AC";2;1,87;0;0;NA;2;1;1,87
+"Planaltina";"GO";7;3,97;1;0,14;0;3;0,43;2,17
 "Planalto";"BA";2;1,84;0;0;NA;2;1;1,84
 "Planalto";"PR";1;1,8;0;0;NA;NA;NA;NA
 "Planalto da Serra";"MT";1;1,45;0;0;NA;1;1;1,45
 "Planura";"MG";1;1,04;0;0;NA;NA;NA;NA
-"Poção";"PE";1;0,42;0;0;NA;NA;NA;NA
-"Poção de Pedras";"MA";1;0,48;0;0;NA;1;1;0,48
+"Poção";"PE";4;0,65;0;0;NA;NA;NA;NA
+"Poção de Pedras";"MA";2;0,7;0;0;NA;1;0,5;0,48
 "Pocinhos";"PB";1;0,85;0;0;NA;1;1;0,85
 "Poço Branco";"RN";1;1,37;0;0;NA;NA;NA;NA
+"Poço Dantas";"PB";2;1,61;0;0;NA;NA;NA;NA
+"Poço das Trincheiras";"AL";3;2,21;0;0;NA;NA;NA;NA
 "Poço Fundo";"MG";1;0,47;0;0;NA;NA;NA;NA
 "Poço Redondo";"SE";3;3,29;0;0;NA;1;0,33;0,97
+"Poço Verde";"SE";1;0;0;0;NA;NA;NA;NA
 "Poconé";"MT";1;0,53;0;0;NA;NA;NA;NA
+"Poços de Caldas";"MG";1;0;0;0;NA;NA;NA;NA
 "Pojuca";"BA";1;0,39;0;0;NA;1;1;0,39
-"Pombal";"PB";1;0,48;0;0;NA;NA;NA;NA
 "Pombos";"PE";1;1,9;0;0;NA;1;1;1,9
+"Pomerode";"SC";1;0,28;0;0;NA;NA;NA;NA
 "Pompéu";"MG";1;1,09;0;0;NA;NA;NA;NA
-"Ponta de Pedras";"PA";3;4,13;0;0;NA;3;1;4,13
+"Ponta de Pedras";"PA";4;4,68;0;0;NA;3;0,75;4,13
 "Ponta Grossa";"PR";9;25,4;0;0;NA;8;0,89;24,97
-"Ponta Porã";"MS";3;1,19;0;0;NA;NA;NA;NA
+"Ponta Porã";"MS";4;1,75;0;0;NA;NA;NA;NA
 "Pontal";"SP";1;0,94;0;0;NA;NA;NA;NA
+"Pontalina";"GO";1;0,28;0;0;NA;NA;NA;NA
 "Ponte Alta do Bom Jesus";"TO";1;1,42;0;0;NA;1;1;1,42
 "Ponte Alta do Tocantins";"TO";1;1;0;0;NA;1;1;1
 "Ponte Branca";"MT";1;0,64;1;1;0,64;NA;NA;NA
 "Ponte Nova";"MG";1;0,47;0;0;NA;NA;NA;NA
+"Ponte Serrada";"SC";1;0,98;0;0;NA;NA;NA;NA
 "Pontes e Lacerda";"MT";2;2,38;0;0;NA;NA;NA;NA
 "Ponto dos Volantes";"MG";1;0,48;0;0;NA;NA;NA;NA
 "Ponto Novo";"BA";1;1,41;0;0;NA;NA;NA;NA
+"Poranga";"CE";2;1,02;0;0;NA;1;0,5;0
 "Porangatu";"GO";3;1,7;0;0;NA;NA;NA;NA
 "Portão";"RS";2;1,35;0;0;NA;2;1;1,35
+"Porteiras";"CE";1;0;0;0;NA;NA;NA;NA
 "Porteirinha";"MG";1;0,98;0;0;NA;NA;NA;NA
-"Portel";"PA";7;7,59;0;0;NA;NA;NA;NA
+"Portel";"PA";9;8,2;0;0;NA;NA;NA;NA
 "Portelândia";"GO";1;0,64;0;0;NA;NA;NA;NA
 "Porto";"PI";2;1,49;0;0;NA;1;0,5;0,88
-"Porto Acre";"AC";1;0,39;0;0;NA;1;1;0,39
-"Porto Alegre";"RS";32;14,65;1;0,03;0,25;6;0,19;3,96
+"Porto Acre";"AC";3;0,39;0;0;NA;1;0,33;0,39
+"Porto Alegre";"RS";31;12,02;0;0;NA;5;0,16;3,52
+"Porto Alegre do Norte";"MT";2;0,61;0;0;NA;NA;NA;NA
+"Porto Belo";"SC";1;0,81;1;1;0,81;NA;NA;NA
 "Porto Calvo";"AL";1;0,94;0;0;NA;1;1;0,94
-"Porto da Folha";"SE";1;0,59;0;0;NA;1;1;0,59
+"Porto da Folha";"SE";4;0,59;0;0;NA;1;0,25;0,59
 "Porto de Moz";"PA";6;5,76;0;0;NA;6;1;5,76
-"Porto de Pedras";"AL";1;0,21;0;0;NA;NA;NA;NA
+"Porto de Pedras";"AL";3;0,45;0;0;NA;NA;NA;NA
+"Porto dos Gaúchos";"MT";1;0,22;0;0;NA;NA;NA;NA
 "Porto Esperidião";"MT";1;1,37;0;0;NA;1;1;1,37
 "Porto Estrela";"MT";1;0,6;0;0;NA;1;1;0,6
 "Porto Feliz";"SP";1;0,26;0;0;NA;NA;NA;NA
-"Porto Franco";"MA";1;0,66;0;0;NA;NA;NA;NA
-"Porto Grande";"AP";1;0,53;0;0;NA;1;1;0,53
+"Porto Franco";"MA";3;0,66;0;0;NA;NA;NA;NA
+"Porto Grande";"AP";2;0,53;0;0;NA;1;0,5;0,53
 "Porto Murtinho";"MS";1;0,53;0;0;NA;NA;NA;NA
-"Porto Nacional";"TO";2;2,89;0;0;NA;NA;NA;NA
-"Porto Real";"RJ";1;1,11;0;0;NA;NA;NA;NA
+"Porto Nacional";"TO";5;4,38;0;0;NA;NA;NA;NA
+"Porto Real";"RJ";2;1,11;0;0;NA;NA;NA;NA
 "Porto Real do Colégio";"AL";1;1,33;0;0;NA;NA;NA;NA
-"Porto Rico do Maranhão";"MA";2;0,42;0;0;NA;NA;NA;NA
-"Porto Seguro";"BA";5;7,75;0;0;NA;NA;NA;NA
-"Porto Velho";"RO";13;5,63;1;0,08;1,64;2;0,15;0,67
-"Porto Walter";"AC";2;0,8;0;0;NA;NA;NA;NA
+"Porto Rico do Maranhão";"MA";3;0,7;0;0;NA;NA;NA;NA
+"Porto Seguro";"BA";7;7,75;0;0;NA;NA;NA;NA
+"Porto Velho";"RO";22;6,3;1;0,05;1,64;3;0,14;1,03
+"Porto Vera Cruz";"RS";1;0,26;1;1;0,26;NA;NA;NA
+"Porto Walter";"AC";4;0,8;0;0;NA;NA;NA;NA
 "Posse";"GO";3;1,88;1;0,33;0,44;NA;NA;NA
-"Potiraguá";"BA";1;0,5;0;0;NA;NA;NA;NA
-"Potirendaba";"SP";2;2,71;1;0,5;1,85;NA;NA;NA
+"Potengi";"CE";1;0,43;0;0;NA;1;1;0,43
+"Potiraguá";"BA";1;0,5;0;0;NA;1;1;0,5
+"Potirendaba";"SP";2;2,71;1;0,5;1,85;1;0,5;0,86
 "Potiretama";"CE";2;1,97;0;0;NA;2;1;1,97
 "Pouso Alegre";"MG";2;2,12;0;0;NA;NA;NA;NA
+"Pouso Redondo";"SC";2;0;0;0;NA;NA;NA;NA
 "Poxoréo";"MT";2;1,13;0;0;NA;1;0,5;0,21
 "Pracinha";"SP";1;0,41;0;0;NA;1;1;0,41
 "Prado";"BA";2;1,67;0;0;NA;1;0,5;1,26
@@ -1586,551 +2254,812 @@
 "Prainha";"PA";3;1,91;3;1;1,91;NA;NA;NA
 "Pranchita";"PR";1;0,42;0;0;NA;NA;NA;NA
 "Prata";"MG";1;0,39;0;0;NA;1;1;0,39
-"Presidente Dutra";"MA";1;0,98;0;0;NA;NA;NA;NA
-"Presidente Jânio Quadros";"BA";1;1,13;0;0;NA;1;1;1,13
-"Presidente Juscelino";"MA";2;0,74;2;1;0,74;NA;NA;NA
-"Presidente Prudente";"SP";1;1,01;0;0;NA;NA;NA;NA
-"Presidente Tancredo Neves";"BA";2;2,24;2;1;2,24;NA;NA;NA
+"Prata do Piauí";"PI";1;0,3;0;0;NA;1;1;0,3
+"Presidente Dutra";"MA";2;0,98;0;0;NA;NA;NA;NA
+"Presidente Getúlio";"SC";1;2,37;0;0;NA;NA;NA;NA
+"Presidente Jânio Quadros";"BA";2;3,2;0;0;NA;1;0,5;1,13
+"Presidente Juscelino";"MA";7;2,86;3;0,43;1,07;NA;NA;NA
+"Presidente Juscelino";"RN";2;0,28;0;0;NA;NA;NA;NA
+"Presidente Kennedy";"TO";1;0,74;0;0;NA;NA;NA;NA
+"Presidente Prudente";"SP";4;1,78;0;0;NA;NA;NA;NA
+"Presidente Tancredo Neves";"BA";3;2,5;3;1;2,5;NA;NA;NA
+"Presidente Vargas";"MA";7;1,95;6;0,86;1,65;NA;NA;NA
+"Primavera do Leste";"MT";1;0,43;0;0;NA;NA;NA;NA
 "Primeira Cruz";"MA";5;3,26;0;0;NA;NA;NA;NA
-"Princesa Isabel";"PB";1;0,16;0;0;NA;NA;NA;NA
+"Princesa Isabel";"PB";3;0,69;0;0;NA;1;0,33;0,16
 "Professor Jamil";"GO";1;0,86;0;0;NA;1;1;0,86
 "Progresso";"RS";1;0,86;0;0;NA;NA;NA;NA
-"Promissão";"SP";1;0,97;0;0;NA;1;1;0,97
-"Propriá";"SE";1;1,13;0;0;NA;1;1;1,13
-"Prudentópolis";"PR";2;0,7;0;0;NA;1;0,5;0,45
+"Promissão";"SP";2;0,97;0;0;NA;1;0,5;0,97
+"Propriá";"SE";2;1,39;0;0;NA;1;0,5;1,13
+"Prudentópolis";"PR";4;2,09;1;0,25;0,68;1;0,25;0,45
 "Puxinanã";"PB";1;0,93;0;0;NA;1;1;0,93
+"Quarto Centenário";"PR";1;0;0;0;NA;NA;NA;NA
 "Quatipuru";"PA";3;1,82;0;0;NA;3;1;1,82
+"Quatro Pontes";"PR";1;0,84;0;0;NA;NA;NA;NA
+"Quebrangulo";"AL";2;0;1;0,5;0;NA;NA;NA
+"Quedas do Iguaçu";"PR";1;0,57;0;0;NA;NA;NA;NA
+"Queimada Nova";"PI";4;0,4;0;0;NA;NA;NA;NA
+"Queimadas";"BA";1;0,95;0;0;NA;1;1;0,95
 "Queimadas";"PB";1;1,59;0;0;NA;1;1;1,59
+"Querência do Norte";"PR";1;0,45;1;1;0,45;NA;NA;NA
 "Quijingue";"BA";1;1,69;0;0;NA;1;1;1,69
+"Quilombo";"SC";2;1,51;0;0;NA;NA;NA;NA
 "Quinta do Sol";"PR";1;1,51;1;1;1,51;NA;NA;NA
-"Quipapá";"PE";1;0,41;0;0;NA;1;1;0,41
+"Quipapá";"PE";2;0,68;0;0;NA;1;0,5;0,41
 "Quirinópolis";"GO";1;1,82;1;1;1,82;NA;NA;NA
 "Quissamã";"RJ";1;0,84;0;0;NA;1;1;0,84
 "Quitandinha";"PR";2;1,49;1;0,5;0,95;NA;NA;NA
-"Quixadá";"CE";2;3,05;0;0;NA;2;1;3,05
+"Quixaba";"PE";2;3,19;2;1;3,19;NA;NA;NA
+"Quixabeira";"BA";1;0;0;0;NA;NA;NA;NA
+"Quixadá";"CE";3;3,05;0;0;NA;2;0,67;3,05
+"Quixeramobim";"CE";3;0,92;2;0,67;0,64;NA;NA;NA
+"Quixeré";"CE";1;1,11;1;1;1,11;NA;NA;NA
 "Rafael Fernandes";"RN";1;1,41;0;0;NA;1;1;1,41
 "Rafael Jambeiro";"BA";1;0,27;0;0;NA;1;1;0,27
-"Raposa";"MA";1;0,28;0;0;NA;NA;NA;NA
+"Raposa";"MA";2;0,55;0;0;NA;NA;NA;NA
 "Raposos";"MG";1;0,46;0;0;NA;NA;NA;NA
 "Raul Soares";"MG";1;0,65;0;0;NA;NA;NA;NA
 "Realeza";"PR";1;0,97;0;0;NA;NA;NA;NA
-"Recife";"PE";14;8,53;0;0;NA;3;0,21;1,14
+"Recife";"PE";12;3,06;0;0;NA;3;0,25;0,65
 "Recreio";"MG";1;1,49;0;0;NA;1;1;1,49
 "Recursolândia";"TO";1;1,23;0;0;NA;NA;NA;NA
+"Redenção";"CE";1;0;0;0;NA;NA;NA;NA
+"Redenção";"PA";1;0,73;0;0;NA;NA;NA;NA
 "Redentora";"RS";1;0,75;0;0;NA;NA;NA;NA
 "Regeneração";"PI";1;1,18;1;1;1,18;NA;NA;NA
-"Registro";"SP";1;1,11;0;0;NA;1;1;1,11
+"Regente Feijó";"SP";1;0;0;0;NA;NA;NA;NA
+"Registro";"SP";2;1,31;0;0;NA;2;1;1,31
+"Relvado";"RS";1;1,07;0;0;NA;NA;NA;NA
 "Remanso";"BA";2;1,19;0;0;NA;1;0,5;0,63
 "Remígio";"PB";1;0,54;0;0;NA;NA;NA;NA
-"Reriutaba";"CE";1;2,13;1;1;2,13;NA;NA;NA
-"Resende";"RJ";1;1,56;0;0;NA;NA;NA;NA
-"Reserva";"PR";2;1,71;0;0;NA;1;0,5;1,47
+"Renascença";"PR";1;0,87;0;0;NA;NA;NA;NA
+"Reriutaba";"CE";2;2,13;1;0,5;2,13;NA;NA;NA
+"Resende";"RJ";5;1,95;0;0;NA;NA;NA;NA
+"Reserva";"PR";4;1,71;0;0;NA;1;0,25;1,47
 "Reserva do Iguaçu";"PR";1;0,64;0;0;NA;1;1;0,64
 "Ressaquinha";"MG";1;1,51;0;0;NA;1;1;1,51
-"Riachão";"MA";1;1,9;0;0;NA;1;1;1,9
-"Riachão";"PB";1;1,04;0;0;NA;NA;NA;NA
-"Riachão das Neves";"BA";1;1,33;0;0;NA;NA;NA;NA
-"Riachão do Dantas";"SE";1;0,43;0;0;NA;1;1;0,43
-"Riachão do Jacuípe";"BA";1;1,02;0;0;NA;NA;NA;NA
+"Riachão";"MA";3;2,77;0;0;NA;1;0,33;1,9
+"Riachão";"PB";1;1,04;0;0;NA;1;1;1,04
+"Riachão das Neves";"BA";2;1,33;1;0,5;0;NA;NA;NA
+"Riachão do Bacamarte";"PB";1;0,22;0;0;NA;1;1;0,22
+"Riachão do Dantas";"SE";2;0,43;0;0;NA;1;0,5;0,43
+"Riachão do Jacuípe";"BA";5;2,41;0;0;NA;4;0,8;1,39
 "Riachinho";"TO";1;0,98;0;0;NA;1;1;0,98
+"Riacho das Almas";"PE";1;0;0;0;NA;1;1;0
 "Riacho de Santana";"BA";1;0,49;0;0;NA;NA;NA;NA
-"Riacho de Santo Antônio";"PB";1;0,65;0;0;NA;1;1;0,65
-"Ribamar Fiquene";"MA";1;1,84;0;0;NA;1;1;1,84
-"Ribeira do Amparo";"BA";1;0,96;1;1;0,96;NA;NA;NA
-"Ribeirão das Neves";"MG";6;2,69;0;0;NA;3;0,5;1,42
+"Riacho de Santo Antônio";"PB";2;0,65;0;0;NA;2;1;0,65
+"Riacho dos Machados";"MG";1;0;0;0;NA;NA;NA;NA
+"Ribamar Fiquene";"MA";2;1,84;0;0;NA;1;0,5;1,84
+"Ribeira do Amparo";"BA";2;1,48;1;0,5;0,96;NA;NA;NA
+"Ribeira do Pombal";"BA";4;1,12;0;0;NA;1;0,25;0
+"Ribeirão";"PE";3;1,06;0;0;NA;NA;NA;NA
+"Ribeirão das Neves";"MG";15;4,52;0;0;NA;3;0,2;1,42
 "Ribeirão do Largo";"BA";1;0,99;0;0;NA;1;1;0,99
+"Ribeirão Pires";"SP";2;0;0;0;NA;NA;NA;NA
 "Ribeirão Preto";"SP";3;1,29;0;0;NA;NA;NA;NA
 "Ribeirão Vermelho";"MG";1;1,49;0;0;NA;1;1;1,49
-"Rio Azul";"PR";1;0,81;0;0;NA;NA;NA;NA
+"Ribeirãozinho";"MT";1;0,41;0;0;NA;NA;NA;NA
+"Ribeiro Gonçalves";"PI";1;0;0;0;NA;1;1;0
+"Ribeirópolis";"SE";1;0,4;1;1;0,4;NA;NA;NA
+"Rio Acima";"MG";1;0;0;0;NA;NA;NA;NA
+"Rio Azul";"PR";2;1,21;0;0;NA;NA;NA;NA
 "Rio Bonito";"RJ";2;0,94;0;0;NA;2;1;0,94
-"Rio Branco";"AC";9;9,86;5;0,56;6,57;1;0,11;1,72
+"Rio Bonito do Iguaçu";"PR";2;0,95;0;0;NA;NA;NA;NA
+"Rio Branco";"AC";10;9,86;5;0,5;6,57;1;0,1;1,72
 "Rio Branco do Sul";"PR";2;1,19;0;0;NA;2;1;1,19
+"Rio Claro";"RJ";1;0,48;0;0;NA;1;1;0,48
 "Rio Claro";"SP";3;1,1;0;0;NA;NA;NA;NA
 "Rio da Conceição";"TO";1;0,41;0;0;NA;1;1;0,41
 "Rio das Flores";"RJ";1;1,09;0;0;NA;1;1;1,09
-"Rio das Ostras";"RJ";4;2,25;0;0;NA;2;0,5;0,84
+"Rio das Ostras";"RJ";6;2,25;0;0;NA;2;0,33;0,84
 "Rio das Pedras";"SP";1;0,46;0;0;NA;NA;NA;NA
-"Rio de Janeiro";"RJ";15;8,06;0;0;NA;2;0,13;1,45
+"Rio de Janeiro";"RJ";5;21,32;0;0;NA;NA;NA;NA
+"Rio do Fogo";"RN";2;1,34;1;0,5;1,05;NA;NA;NA
 "Rio do Pires";"BA";1;0,7;0;0;NA;NA;NA;NA
-"Rio do Sul";"SC";1;0,45;0;0;NA;NA;NA;NA
+"Rio do Sul";"SC";2;0,45;0;0;NA;NA;NA;NA
+"Rio dos Cedros";"SC";1;0;0;0;NA;NA;NA;NA
 "Rio Grande";"RS";9;9,08;5;0,56;5,11;NA;NA;NA
-"Rio Grande do Piauí";"PI";1;0,37;0;0;NA;NA;NA;NA
-"Rio Largo";"AL";2;1,51;0;0;NA;NA;NA;NA
-"Rio Negro";"PR";1;1,41;0;0;NA;NA;NA;NA
+"Rio Grande do Piauí";"PI";2;0,66;0;0;NA;NA;NA;NA
+"Rio Largo";"AL";9;3,57;0;0;NA;1;0,11;0,61
+"Rio Negrinho";"SC";1;0;0;0;NA;NA;NA;NA
+"Rio Negro";"PR";2;3,82;0;0;NA;NA;NA;NA
+"Rio Novo";"MG";1;0,18;0;0;NA;NA;NA;NA
 "Rio Paranaíba";"MG";2;1,71;0;0;NA;NA;NA;NA
-"Rio Pardo";"RS";1;0,54;0;0;NA;NA;NA;NA
+"Rio Pardo";"RS";1;0,54;0;0;NA;1;1;0,54
 "Rio Pardo de Minas";"MG";2;3,6;1;0,5;1,85;NA;NA;NA
 "Rio Piracicaba";"MG";1;0,43;0;0;NA;1;1;0,43
-"Rio Preto da Eva";"AM";1;0,78;0;0;NA;1;1;0,78
+"Rio Preto";"MG";1;0;0;0;NA;NA;NA;NA
+"Rio Preto da Eva";"AM";2;1,15;0;0;NA;1;0,5;0,78
+"Rio Real";"BA";2;0,95;0;0;NA;1;0,5;0,66
 "Rio Tinto";"PB";1;1,03;0;0;NA;NA;NA;NA
-"Rio Verde";"GO";7;9,9;2;0,29;5,08;1;0,14;1,06
+"Rio Verde";"GO";12;10,61;2;0,17;5,08;1;0,08;1,06
 "Rodeio Bonito";"RS";1;1,91;1;1;1,91;NA;NA;NA
-"Rodelas";"BA";1;0,51;0;0;NA;NA;NA;NA
+"Rodeiro";"MG";1;0,31;0;0;NA;NA;NA;NA
+"Rodelas";"BA";2;0,51;0;0;NA;NA;NA;NA
 "Rodrigues Alves";"AC";1;0,5;0;0;NA;NA;NA;NA
 "Rolândia";"PR";1;1,46;0;0;NA;NA;NA;NA
+"Rolante";"RS";1;1,46;0;0;NA;NA;NA;NA
 "Rolim de Moura";"RO";3;4,28;0;0;NA;NA;NA;NA
 "Rondinha";"RS";1;4,06;0;0;NA;NA;NA;NA
+"Rondolândia";"MT";5;0,32;0;0;NA;1;0,2;0,2
+"Rondon";"PR";1;0,8;0;0;NA;NA;NA;NA
 "Rondon do Pará";"PA";2;2,32;0;0;NA;NA;NA;NA
-"Rosário";"MA";1;1,06;1;1;1,06;NA;NA;NA
+"Rondonópolis";"MT";2;0;0;0;NA;NA;NA;NA
+"Rorainópolis";"RR";1;0;0;0;NA;NA;NA;NA
+"Rosana";"SP";1;0;0;0;NA;NA;NA;NA
+"Rosário";"MA";4;2,53;3;0,75;2,28;NA;NA;NA
 "Rosário do Catete";"SE";2;1,37;2;1;1,37;NA;NA;NA
-"Rosário do Sul";"RS";3;1,9;0;0;NA;1;0,33;0,94
-"Russas";"CE";2;1,59;1;0,5;0,51;NA;NA;NA
-"Ruy Barbosa";"BA";5;1,85;0;0;NA;NA;NA;NA
+"Rosário do Sul";"RS";5;2,21;0;0;NA;1;0,2;0,94
+"Roteiro";"AL";1;0,91;0;0;NA;NA;NA;NA
+"Rubelita";"MG";1;0;0;0;NA;NA;NA;NA
+"Rurópolis";"PA";4;0;0;0;NA;1;0,25;0
+"Russas";"CE";3;1,59;1;0,33;0,51;NA;NA;NA
+"Ruy Barbosa";"BA";13;3,7;3;0,23;0,2;NA;NA;NA
 "Sabará";"MG";5;1,82;1;0,2;0,59;4;0,8;1,23
 "Sabinópolis";"MG";1;0,79;0;0;NA;NA;NA;NA
-"Saboeiro";"CE";1;0,77;1;1;0,77;NA;NA;NA
+"Saboeiro";"CE";2;2,39;1;0,5;0,77;NA;NA;NA
+"Sagrada Família";"RS";1;0,56;0;0;NA;NA;NA;NA
 "Sagres";"SP";1;1,94;0;0;NA;1;1;1,94
+"Salesópolis";"SP";1;0;0;0;NA;NA;NA;NA
 "Salete";"SC";1;1,11;1;1;1,11;NA;NA;NA
 "Salgadinho";"PB";1;1,83;0;0;NA;1;1;1,83
 "Salgadinho";"PE";1;0,42;1;1;0,42;NA;NA;NA
 "Salgado de São Félix";"PB";1;0,77;0;0;NA;1;1;0,77
-"Salgueiro";"PE";3;1,29;0;0;NA;NA;NA;NA
+"Salgueiro";"PE";5;1,29;0;0;NA;NA;NA;NA
 "Salinas";"MG";1;0,93;1;1;0,93;NA;NA;NA
-"Salinópolis";"PA";5;1,97;0;0;NA;NA;NA;NA
-"Salitre";"CE";1;1,49;0;0;NA;1;1;1,49
-"Saloá";"PE";1;0,23;0;0;NA;1;1;0,23
+"Salinópolis";"PA";7;2,21;0;0;NA;NA;NA;NA
+"Saloá";"PE";2;0,45;0;0;NA;2;1;0,45
 "Salto";"SP";1;0,47;0;0;NA;NA;NA;NA
+"Salto da Divisa";"MG";1;0,18;1;1;0,18;NA;NA;NA
 "Salto do Céu";"MT";1;0,38;0;0;NA;NA;NA;NA
-"Salvador";"BA";15;6,79;0;0;NA;9;0,6;4,03
+"Salto do Jacuí";"RS";3;0,8;3;1;0,8;NA;NA;NA
+"Salvador";"BA";41;9,73;0;0;NA;19;0,46;4,03
 "Salvaterra";"PA";1;1,27;0;0;NA;NA;NA;NA
-"Sananduva";"RS";1;1,07;0;0;NA;1;1;1,07
+"Sambaíba";"MA";1;0,47;0;0;NA;NA;NA;NA
+"Sananduva";"RS";3;2,13;1;0,33;1,06;1;0,33;1,07
 "Sanclerlândia";"GO";1;0,8;0;0;NA;NA;NA;NA
 "Sandolândia";"TO";1;0,94;0;0;NA;1;1;0,94
 "Sangão";"SC";1;1,5;0;0;NA;NA;NA;NA
-"Santa Bárbara";"BA";1;0,97;0;0;NA;NA;NA;NA
+"Sanharó";"PE";1;0;0;0;NA;NA;NA;NA
+"Santa Bárbara";"BA";1;0,86;0;0;NA;NA;NA;NA
 "Santa Bárbara";"MG";1;1,57;0;0;NA;NA;NA;NA
-"Santa Bárbara d'Oeste";"SP";2;1,79;0;0;NA;2;1;1,79
+"Santa Bárbara d'Oeste";"SP";6;2,67;0;0;NA;3;0,5;1,79
+"Santa Bárbara do Monte Verde";"MG";1;0;0;0;NA;NA;NA;NA
+"Santa Cecília";"PB";1;0;0;0;NA;NA;NA;NA
+"Santa Clara do Sul";"RS";1;0;0;0;NA;NA;NA;NA
+"Santa Cruz";"PE";1;0,71;0;0;NA;NA;NA;NA
 "Santa Cruz";"RN";1;1,7;0;0;NA;NA;NA;NA
-"Santa Cruz Cabrália";"BA";1;0,57;0;0;NA;NA;NA;NA
-"Santa Cruz da Baixa Verde";"PE";1;0,68;0;0;NA;NA;NA;NA
+"Santa Cruz Cabrália";"BA";2;1,01;0;0;NA;NA;NA;NA
+"Santa Cruz da Baixa Verde";"PE";2;0,93;0;0;NA;NA;NA;NA
+"Santa Cruz da Esperança";"SP";1;0,57;0;0;NA;NA;NA;NA
+"Santa Cruz das Palmeiras";"SP";1;0;0;0;NA;NA;NA;NA
 "Santa Cruz de Goiás";"GO";1;0,85;0;0;NA;1;1;0,85
 "Santa Cruz de Minas";"MG";2;1,41;0;0;NA;NA;NA;NA
-"Santa Cruz do Arari";"PA";4;0,93;0;0;NA;4;1;0,93
-"Santa Cruz do Capibaribe";"PE";3;1,38;0;0;NA;NA;NA;NA
+"Santa Cruz do Arari";"PA";5;1,13;0;0;NA;4;0,8;0,93
+"Santa Cruz do Capibaribe";"PE";5;1,55;0;0;NA;NA;NA;NA
+"Santa Cruz do Piauí";"PI";1;0;0;0;NA;1;1;0
+"Santa Cruz do Rio Pardo";"SP";1;0,3;0;0;NA;NA;NA;NA
+"Santa Cruz do Sul";"RS";1;0,17;0;0;NA;NA;NA;NA
+"Santa Cruz do Xingu";"MT";2;0,29;0;0;NA;NA;NA;NA
 "Santa Efigênia de Minas";"MG";1;1,03;0;0;NA;NA;NA;NA
 "Santa Ernestina";"SP";1;0,17;0;0;NA;1;1;0,17
 "Santa Fé do Araguaia";"TO";3;1,78;3;1;1,78;NA;NA;NA
-"Santa Filomena";"PE";1;0,42;0;0;NA;NA;NA;NA
-"Santa Filomena do Maranhão";"MA";4;1,32;0;0;NA;4;1;1,32
-"Santa Helena";"MA";3;0,56;2;0,67;0,5;1;0,33;0,06
+"Santa Filomena";"PE";3;0,42;1;0,33;0;NA;NA;NA
+"Santa Filomena do Maranhão";"MA";6;1,99;0;0;NA;5;0,83;1,99
+"Santa Helena";"MA";8;1,48;2;0,25;0,5;5;0,62;0,98
 "Santa Helena";"PB";1;0,17;0;0;NA;NA;NA;NA
+"Santa Helena";"PR";1;1,37;0;0;NA;NA;NA;NA
 "Santa Helena de Goiás";"GO";2;0,87;2;1;0,87;NA;NA;NA
 "Santa Helena de Minas";"MG";1;0,43;0;0;NA;1;1;0,43
-"Santa Inês";"MA";4;1,31;1;0,25;0,48;NA;NA;NA
+"Santa Inês";"MA";6;1,79;3;0,5;0,96;NA;NA;NA
 "Santa Inês";"PR";2;0,73;0;0;NA;2;1;0,73
 "Santa Isabel";"GO";1;0,42;0;0;NA;NA;NA;NA
-"Santa Isabel do Pará";"PA";2;2,21;0;0;NA;NA;NA;NA
+"Santa Isabel do Pará";"PA";4;2,21;0;0;NA;1;0,25;0,29
 "Santa Izabel do Oeste";"PR";1;1,4;0;0;NA;NA;NA;NA
 "Santa Lúcia";"SP";1;1,26;0;0;NA;NA;NA;NA
-"Santa Luzia";"BA";1;1,01;0;0;NA;1;1;1,01
-"Santa Luzia";"MA";2;1,02;0;0;NA;2;1;1,02
-"Santa Luzia D'Oeste";"RO";1;0,28;0;0;NA;NA;NA;NA
+"Santa Luzia";"MA";6;2,99;0;0;NA;2;0,33;1,02
+"Santa Luzia D'Oeste";"RO";2;2,1;1;0,5;1,83;NA;NA;NA
+"Santa Luzia do Itanhy";"SE";4;1,14;2;0,5;0,9;NA;NA;NA
 "Santa Luzia do Pará";"PA";3;3,41;0;0;NA;1;0,33;1,04
-"Santa Maria";"RS";13;8,57;1;0,08;1,03;8;0,62;4,61
-"Santa Maria da Boa Vista";"PE";3;2,51;0;0;NA;2;0,67;2,24
+"Santa Maria";"RS";12;8,46;1;0,08;1,03;8;0,67;4,61
+"Santa Maria da Boa Vista";"PE";5;2,51;0;0;NA;3;0,6;2,24
 "Santa Maria da Vitória";"BA";2;1,93;0;0;NA;NA;NA;NA
-"Santa Maria das Barreiras";"PA";1;1,09;0;0;NA;NA;NA;NA
+"Santa Maria das Barreiras";"PA";3;2,25;0;0;NA;1;0,33;1,09
+"Santa Maria de Jetibá";"ES";2;0,65;0;0;NA;NA;NA;NA
 "Santa Maria do Cambucá";"PE";1;0,41;0;0;NA;1;1;0,41
+"Santa Maria do Salto";"MG";1;1,38;0;0;NA;NA;NA;NA
+"Santa Mariana";"PR";1;1,32;0;0;NA;NA;NA;NA
 "Santa Mônica";"PR";1;0,42;0;0;NA;NA;NA;NA
 "Santa Quitéria";"CE";1;0,62;1;1;0,62;NA;NA;NA
 "Santa Quitéria do Maranhão";"MA";10;4,04;8;0,8;2,17;2;0,2;1,87
-"Santa Rita";"MA";2;0,34;2;1;0,34;NA;NA;NA
+"Santa Rita";"MA";8;2,54;4;0,5;1,34;NA;NA;NA
 "Santa Rita";"PB";5;3,98;0;0;NA;5;1;3,98
+"Santa Rita de Caldas";"MG";1;0,57;0;0;NA;NA;NA;NA
+"Santa Rita de Cássia";"BA";2;0,39;0;0;NA;NA;NA;NA
+"Santa Rita de Minas";"MG";1;0,18;0;0;NA;1;1;0,18
+"Santa Rita do Araguaia";"GO";1;0,19;0;0;NA;1;1;0,19
 "Santa Rita do Pardo";"MS";1;0,81;0;0;NA;1;1;0,81
+"Santa Rita do Sapucaí";"MG";1;0;0;0;NA;NA;NA;NA
 "Santa Rita do Trivelato";"MT";1;0,66;0;0;NA;NA;NA;NA
-"Santa Rosa";"RS";2;4,02;1;0,5;3,55;NA;NA;NA
+"Santa Rosa";"RS";3;4,02;1;0,33;3,55;NA;NA;NA
+"Santa Rosa da Serra";"MG";1;0,37;0;0;NA;NA;NA;NA
+"Santa Rosa de Goiás";"GO";1;0,58;0;0;NA;1;1;0,58
+"Santa Rosa do Piauí";"PI";2;0,78;0;0;NA;NA;NA;NA
 "Santa Rosa do Purus";"AC";1;0,33;1;1;0,33;NA;NA;NA
 "Santa Rosa do Tocantins";"TO";1;1,24;0;0;NA;1;1;1,24
-"Santa Tereza do Oeste";"PR";1;1,54;1;1;1,54;NA;NA;NA
-"Santa Terezinha";"MT";1;0,96;0;0;NA;NA;NA;NA
+"Santa Tereza do Oeste";"PR";2;2,22;2;1;2,22;NA;NA;NA
+"Santa Terezinha";"MT";3;1,38;0;0;NA;NA;NA;NA
 "Santa Terezinha";"PE";1;1,83;0;0;NA;1;1;1,83
 "Santa Terezinha do Tocantins";"TO";1;0,63;0;0;NA;NA;NA;NA
 "Santa Vitória do Palmar";"RS";1;0,25;0;0;NA;1;1;0,25
-"Santana";"AP";5;2,45;0;0;NA;2;0,4;1,08
+"Santaluz";"BA";1;0,47;1;1;0,47;NA;NA;NA
+"Santana";"AP";14;5,42;0;0;NA;2;0,14;1,08
 "Santana";"BA";1;1,3;0;0;NA;NA;NA;NA
 "Santana da Boa Vista";"RS";1;1,25;0;0;NA;1;1;1,25
+"Santana da Vargem";"MG";1;0,18;1;1;0,18;NA;NA;NA
 "Santana de Pirapama";"MG";1;0,82;0;0;NA;1;1;0,82
-"Santana do Acaraú";"CE";2;0,89;0;0;NA;NA;NA;NA
+"Santana do Acaraú";"CE";4;2;0;0;NA;NA;NA;NA
 "Santana do Araguaia";"PA";5;4,78;3;0,6;2,58;2;0,4;2,2
 "Santana do Cariri";"CE";1;0,62;0;0;NA;NA;NA;NA
-"Santana do Livramento";"RS";6;3,81;2;0,33;0,09;3;0,5;3,66
+"Santana do Livramento";"RS";8;4,14;2;0,25;0,09;3;0,38;3,66
 "Santana do Manhuaçu";"MG";1;0,31;0;0;NA;NA;NA;NA
-"Santana do Seridó";"RN";1;0,8;0;0;NA;1;1;0,8
-"Santarém";"PA";15;12,47;2;0,13;1,7;7;0,47;5,63
+"Santana do Maranhão";"MA";1;0;0;0;NA;NA;NA;NA
+"Santana do Mundaú";"AL";2;0;0;0;NA;NA;NA;NA
+"Santana do São Francisco";"SE";1;0;0;0;NA;1;1;0
+"Santana do Seridó";"RN";3;0,8;0;0;NA;1;0,33;0,8
+"Santarém";"PA";22;12,7;2;0,09;1,7;9;0,41;5,63
 "Santiago";"RS";2;1,89;1;0,5;1,49;NA;NA;NA
-"Santo Amaro";"BA";1;0,98;0;0;NA;1;1;0,98
-"Santo Amaro do Maranhão";"MA";6;1,7;5;0,83;1,52;NA;NA;NA
+"Santo Afonso";"MT";2;0,24;0;0;NA;NA;NA;NA
+"Santo Amaro";"BA";2;0,98;0;0;NA;2;1;0,98
+"Santo Amaro da Imperatriz";"SC";1;0,37;1;1;0,37;NA;NA;NA
+"Santo Amaro do Maranhão";"MA";13;1,85;6;0,46;1,67;NA;NA;NA
 "Santo André";"PB";1;0,35;1;1;0,35;NA;NA;NA
-"Santo Ângelo";"RS";2;1,51;0;0;NA;NA;NA;NA
+"Santo Ângelo";"RS";2;1,51;0;0;NA;2;1;1,51
+"Santo Antônio";"RN";1;0,42;0;0;NA;NA;NA;NA
 "Santo Antônio da Alegria";"SP";1;0,83;0;0;NA;NA;NA;NA
 "Santo Antônio das Missões";"RS";1;0,24;0;0;NA;NA;NA;NA
 "Santo Antônio de Goiás";"GO";1;0,41;0;0;NA;NA;NA;NA
+"Santo Antônio de Pádua";"RJ";1;0;0;0;NA;NA;NA;NA
 "Santo Antônio do Amparo";"MG";1;0,46;0;0;NA;NA;NA;NA
-"Santo Antônio do Descoberto";"GO";2;2,32;0;0;NA;2;1;2,32
-"Santo Antônio do Içá";"AM";6;2,35;2;0,33;0,42;NA;NA;NA
+"Santo Antônio do Descoberto";"GO";8;2,32;0;0;NA;2;0,25;2,32
+"Santo Antônio do Içá";"AM";9;2,77;2;0,22;0,42;NA;NA;NA
 "Santo Antônio do Leverger";"MT";1;1,47;0;0;NA;NA;NA;NA
 "Santo Antônio do Monte";"MG";2;0,83;0;0;NA;1;0,5;0,48
 "Santo Antônio do Sudoeste";"PR";2;2,43;2;1;2,43;NA;NA;NA
-"Santo Antônio do Tauá";"PA";1;0,25;0;0;NA;1;1;0,25
-"Santo Estêvão";"BA";2;1,83;1;0,5;0,91;1;0,5;0,91
+"Santo Antônio do Tauá";"PA";6;0,31;0;0;NA;1;0,17;0,25
+"Santo Antônio dos Lopes";"MA";11;2,64;0;0;NA;NA;NA;NA
+"Santo Cristo";"RS";1;0,3;0;0;NA;NA;NA;NA
+"Santo Estêvão";"BA";3;1,97;2;0,67;1,05;1;0,33;0,91
 "Santo Hipólito";"MG";1;1,11;0;0;NA;1;1;1,11
+"Santópolis do Aguapeí";"SP";1;0,63;0;0;NA;NA;NA;NA
 "Santos Dumont";"MG";1;1,11;0;0;NA;1;1;1,11
-"São Benedito";"CE";2;2,85;2;1;2,85;NA;NA;NA
-"São Benedito do Rio Preto";"MA";3;2,82;0;0;NA;3;1;2,82
+"São Benedito";"CE";3;2,85;2;0,67;2,85;NA;NA;NA
+"São Benedito do Rio Preto";"MA";9;3,95;6;0,67;1,13;3;0,33;2,82
 "São Benedito do Sul";"PE";1;0,92;0;0;NA;1;1;0,92
-"São Bento";"MA";8;1,31;7;0,88;1,05;NA;NA;NA
-"São Bento do Una";"PE";1;0,42;0;0;NA;NA;NA;NA
+"São Bento";"MA";9;1,49;7;0,78;1,05;NA;NA;NA
+"São Bento";"PB";2;0,96;0;0;NA;NA;NA;NA
+"São Bento do Tocantins";"TO";1;0;0;0;NA;NA;NA;NA
+"São Bento do Una";"PE";2;0,82;0;0;NA;NA;NA;NA
 "São Bernardo";"MA";1;1,79;0;0;NA;1;1;1,79
-"São Bernardo do Campo";"SP";5;64,12;0;0;NA;3;0,6;60,67
-"São Borja";"RS";1;1,05;1;1;1,05;NA;NA;NA
-"São Caetano de Odivelas";"PA";2;1,29;0;0;NA;NA;NA;NA
+"São Bernardo do Campo";"SP";1;0;0;0;NA;NA;NA;NA
+"São Borja";"RS";3;1,31;1;0,33;1,05;NA;NA;NA
+"São Caetano de Odivelas";"PA";3;1,65;0;0;NA;1;0,33;0,36
+"São Caetano do Sul";"SP";2;0;0;0;NA;NA;NA;NA
 "São Caitano";"PE";2;1,28;2;1;1,28;NA;NA;NA
-"São Carlos";"SP";2;1,04;0;0;NA;NA;NA;NA
+"São Carlos";"SC";1;0,34;0;0;NA;1;1;0,34
+"São Carlos";"SP";5;6,09;0;0;NA;NA;NA;NA
+"São Carlos do Ivaí";"PR";1;0,2;0;0;NA;1;1;0,2
+"São Cristóvão";"SE";4;0,91;0;0;NA;NA;NA;NA
 "São Desidério";"BA";2;3,07;2;1;3,07;NA;NA;NA
 "São Domingos";"BA";1;0,83;0;0;NA;NA;NA;NA
 "São Domingos";"GO";1;1,31;0;0;NA;NA;NA;NA
 "São Domingos";"SE";1;0,27;0;0;NA;1;1;0,27
-"São Domingos do Araguaia";"PA";4;2,6;0;0;NA;1;0,25;0,6
-"São Domingos do Capim";"PA";2;3,43;0;0;NA;2;1;3,43
+"São Domingos do Araguaia";"PA";5;4,68;0;0;NA;1;0,2;0,6
+"São Domingos do Azeitão";"MA";2;0,42;2;1;0,42;NA;NA;NA
+"São Domingos do Capim";"PA";3;3,59;0;0;NA;3;1;3,59
 "São Domingos do Maranhão";"MA";5;1,85;0;0;NA;NA;NA;NA
 "São Domingos do Norte";"ES";1;1,47;0;0;NA;1;1;1,47
 "São Domingos do Prata";"MG";1;0,4;0;0;NA;NA;NA;NA
+"São Felipe";"BA";1;0,2;1;1;0,2;NA;NA;NA
+"São Félix";"BA";2;0;0;0;NA;1;0,5;0
 "São Félix de Minas";"MG";1;0,32;0;0;NA;NA;NA;NA
-"São Félix do Araguaia";"MT";1;0,54;0;0;NA;NA;NA;NA
+"São Félix do Araguaia";"MT";4;0,54;0;0;NA;NA;NA;NA
 "São Félix do Piauí";"PI";1;0,57;0;0;NA;1;1;0,57
 "São Félix do Tocantins";"TO";1;0,68;1;1;0,68;NA;NA;NA
-"São Félix do Xingu";"PA";5;3,29;0;0;NA;2;0,4;1,05
+"São Félix do Xingu";"PA";8;4,48;0;0;NA;2;0,25;1,05
 "São Francisco";"MG";4;1,96;3;0,75;1,57;NA;NA;NA
-"São Francisco de Paula";"RS";2;1,14;0;0;NA;1;0,5;0,89
+"São Francisco de Assis do Piauí";"PI";1;0,39;0;0;NA;NA;NA;NA
+"São Francisco de Paula";"RS";3;1,14;0;0;NA;2;0,67;0,89
 "São Francisco de Sales";"MG";1;0,85;0;0;NA;1;1;0,85
 "São Francisco do Brejão";"MA";1;0,89;0;0;NA;1;1;0,89
 "São Francisco do Conde";"BA";1;0,98;0;0;NA;1;1;0,98
+"São Francisco do Glória";"MG";1;0;0;0;NA;NA;NA;NA
+"São Francisco do Guaporé";"RO";1;0,19;0;0;NA;NA;NA;NA
 "São Francisco do Maranhão";"MA";7;1,36;2;0,29;0,72;NA;NA;NA
-"São Francisco do Piauí";"PI";5;2,42;3;0,6;1,71;NA;NA;NA
-"São Francisco do Sul";"SC";1;0,39;0;0;NA;1;1;0,39
-"São Gabriel";"BA";1;1,38;0;0;NA;NA;NA;NA
-"São Gabriel";"RS";3;1,76;0;0;NA;1;0,33;0,24
-"São Gabriel da Cachoeira";"AM";2;2,33;0;0;NA;2;1;2,33
+"São Francisco do Piauí";"PI";6;3,5;4;0,67;2,79;NA;NA;NA
+"São Francisco do Sul";"SC";2;1,52;1;0,5;1,13;1;0,5;0,39
+"São Gabriel";"BA";2;1,38;0;0;NA;NA;NA;NA
+"São Gabriel";"RS";5;2;0;0;NA;2;0,4;0,78
+"São Gabriel da Cachoeira";"AM";59;24,3;0;0;NA;2;0,03;2,33
 "São Geraldo";"MG";1;1,86;0;0;NA;NA;NA;NA
-"São Gonçalo";"RJ";7;1,75;0;0;NA;1;0,14;0,18
+"São Geraldo do Araguaia";"PA";2;0,29;0;0;NA;NA;NA;NA
+"São Gonçalo";"RJ";25;1,89;0;0;NA;9;0,36;0,32
 "São Gonçalo do Abaeté";"MG";1;1,9;0;0;NA;1;1;1,9
 "São Gonçalo do Amarante";"CE";1;1,44;0;0;NA;NA;NA;NA
-"São Gonçalo do Amarante";"RN";1;1,52;0;0;NA;NA;NA;NA
+"São Gonçalo do Amarante";"RN";2;3,25;0;0;NA;NA;NA;NA
 "São Gonçalo do Sapucaí";"MG";1;0,47;0;0;NA;NA;NA;NA
+"São Gonçalo dos Campos";"BA";3;0;0;0;NA;NA;NA;NA
 "São Gotardo";"MG";1;0,1;0;0;NA;NA;NA;NA
-"São Jerônimo da Serra";"PR";1;1,16;1;1;1,16;NA;NA;NA
-"São João Batista";"MA";1;1,04;0;0;NA;NA;NA;NA
+"São Jerônimo";"RS";1;0;1;1;0;NA;NA;NA
+"São Jerônimo da Serra";"PR";2;1,41;2;1;1,41;NA;NA;NA
+"São João";"PR";1;2,06;0;0;NA;NA;NA;NA
+"São João Batista";"MA";2;1,21;1;0,5;0,17;NA;NA;NA
 "São João Batista";"SC";1;1,73;1;1;1,73;NA;NA;NA
 "São João Batista do Glória";"MG";1;1,11;0;0;NA;1;1;1,11
-"São João da Ponta";"PA";1;0,42;1;1;0,42;NA;NA;NA
+"São João da Baliza";"RR";2;0,49;0;0;NA;NA;NA;NA
+"São João da Fronteira";"PI";1;0;0;0;NA;1;1;0
+"São João da Paraúna";"GO";1;0,84;0;0;NA;NA;NA;NA
+"São João da Ponta";"PA";4;0,5;2;0,5;0,5;NA;NA;NA
 "São João da Ponte";"MG";5;3,58;0;0;NA;NA;NA;NA
+"São João da Varjota";"PI";2;0,45;0;0;NA;2;1;0,45
 "São João das Missões";"MG";1;1,81;0;0;NA;NA;NA;NA
 "São João de Iracema";"SP";1;0,42;0;0;NA;NA;NA;NA
+"São João de Meriti";"RJ";2;0,36;0;0;NA;NA;NA;NA
 "São João de Pirabas";"PA";4;2,29;1;0,25;0,85;NA;NA;NA
 "São João del Rei";"MG";5;2,32;4;0,8;1,59;1;0,2;0,73
-"São João do Araguaia";"PA";4;2,1;0;0;NA;1;0,25;0,15
+"São João do Araguaia";"PA";6;2,67;1;0,17;0,39;1;0,17;0,15
+"São João do Arraial";"PI";1;0,31;0;0;NA;NA;NA;NA
 "São João do Carú";"MA";5;1,85;0;0;NA;5;1;1,85
+"São João do Jaguaribe";"CE";1;0;0;0;NA;1;1;0
 "São João do Pacuí";"MG";1;0,91;0;0;NA;NA;NA;NA
+"São João do Paraíso";"MA";2;0,68;1;0,5;0,4;NA;NA;NA
 "São João do Paraíso";"MG";1;1,21;0;0;NA;NA;NA;NA
-"São João do Piauí";"PI";2;0,94;0;0;NA;1;0,5;0,45
+"São João do Piauí";"PI";3;1,11;0;0;NA;2;0,67;0,62
 "São João do Soter";"MA";2;0,14;0;0;NA;NA;NA;NA
-"São João dos Patos";"MA";2;0,62;0;0;NA;1;0,5;0,33
+"São João do Triunfo";"PR";1;0;0;0;NA;NA;NA;NA
+"São João dos Patos";"MA";3;0,86;0;0;NA;2;0,67;0,57
 "São Joaquim";"SC";1;0,87;0;0;NA;NA;NA;NA
+"São Joaquim de Bicas";"MG";1;0;0;0;NA;NA;NA;NA
+"São Joaquim do Monte";"PE";2;0,27;0;0;NA;1;0,5;0,27
+"São Jorge d'Oeste";"PR";1;3,22;0;0;NA;NA;NA;NA
 "São José";"SC";3;1,03;1;0,33;0,39;NA;NA;NA
+"São José da Boa Vista";"PR";1;0,61;0;0;NA;NA;NA;NA
+"São José da Laje";"AL";9;0,71;0;0;NA;6;0,67;0,71
+"São José da Varginha";"MG";1;0;0;0;NA;NA;NA;NA
+"São José da Vitória";"BA";1;0;0;0;NA;1;1;0
 "São José das Missões";"RS";2;1,54;1;0,5;1,11;NA;NA;NA
 "São José de Caiana";"PB";1;0,77;0;0;NA;1;1;0,77
-"São José de Espinharas";"PB";1;0,25;1;1;0,25;NA;NA;NA
+"São José de Espinharas";"PB";2;0,61;1;0,5;0,25;1;0,5;0,36
 "São José de Mipibu";"RN";1;0,25;0;0;NA;NA;NA;NA
 "São José de Ribamar";"MA";3;1,49;0;0;NA;2;0,67;0,51
 "São José do Alegre";"MG";1;0,82;0;0;NA;1;1;0,82
-"São José do Divino";"PI";1;0,55;0;0;NA;NA;NA;NA
-"São José do Egito";"PE";1;2,31;0;0;NA;NA;NA;NA
+"São José do Campestre";"RN";1;0;0;0;NA;NA;NA;NA
+"São José do Divino";"PI";2;1,03;0;0;NA;NA;NA;NA
+"São José do Egito";"PE";2;3,28;0;0;NA;NA;NA;NA
 "São José do Goiabal";"MG";1;0,58;0;0;NA;NA;NA;NA
+"São José do Inhacorá";"RS";1;1,01;0;0;NA;NA;NA;NA
 "São José do Jacuípe";"BA";1;0,62;0;0;NA;1;1;0,62
-"São José do Norte";"RS";1;0,99;0;0;NA;1;1;0,99
+"São José do Norte";"RS";2;1,44;0;0;NA;1;0,5;0,99
 "São José do Piauí";"PI";1;0,43;1;1;0,43;NA;NA;NA
 "São José do Povo";"MT";1;0,42;0;0;NA;NA;NA;NA
-"São José do Rio Preto";"SP";1;1,11;0;0;NA;1;1;1,11
-"São José dos Campos";"SP";3;8,38;0;0;NA;NA;NA;NA
-"São José dos Pinhais";"PR";3;0,96;0;0;NA;NA;NA;NA
+"São José do Rio Claro";"MT";1;0,5;0;0;NA;NA;NA;NA
+"São José do Rio Preto";"SP";2;1,11;0;0;NA;1;0,5;1,11
+"São José do Vale do Rio Preto";"RJ";1;0;0;0;NA;NA;NA;NA
+"São José do Xingu";"MT";1;0,2;1;1;0,2;NA;NA;NA
+"São José dos Basílios";"MA";2;0,3;2;1;0,3;NA;NA;NA
+"São José dos Campos";"SP";1;0,9;0;0;NA;NA;NA;NA
+"São José dos Cordeiros";"PB";1;0,76;0;0;NA;NA;NA;NA
+"São José dos Pinhais";"PR";5;0,96;0;0;NA;NA;NA;NA
 "São José dos Quatro Marcos";"MT";1;1,03;1;1;1,03;NA;NA;NA
-"São Leopoldo";"RS";5;1,94;0;0;NA;1;0,2;0,52
+"São José dos Ramos";"PB";1;0,18;1;1;0,18;NA;NA;NA
+"São Julião";"PI";2;0,96;0;0;NA;2;1;0,96
+"São Leopoldo";"RS";10;2,38;0;0;NA;4;0,4;0,52
+"São Lourenço";"MG";1;0;0;0;NA;NA;NA;NA
+"São Lourenço da Mata";"PE";1;0,17;0;0;NA;NA;NA;NA
 "São Lourenço do Oeste";"SC";1;1,49;0;0;NA;1;1;1,49
 "São Lourenço do Sul";"RS";2;2,23;0;0;NA;1;0,5;1,03
-"São Luís";"MA";16;8,78;12;0,75;6,1;NA;NA;NA
+"São Luís";"MA";33;16,16;23;0,7;8,28;NA;NA;NA
 "São Luís de Montes Belos";"GO";1;0,34;1;1;0,34;NA;NA;NA
 "São Luís do Curu";"CE";1;0,42;0;0;NA;1;1;0,42
+"São Luís do Quitunde";"AL";2;0,41;0;0;NA;NA;NA;NA
 "São Luíz do Norte";"GO";1;1,11;0;0;NA;NA;NA;NA
+"São Manoel do Paraná";"PR";1;0,79;0;0;NA;NA;NA;NA
 "São Manuel";"SP";1;1,75;1;1;1,75;NA;NA;NA
-"São Mateus";"ES";3;2,55;0;0;NA;NA;NA;NA
+"São Mateus";"ES";6;2,55;0;0;NA;NA;NA;NA
+"São Mateus do Maranhão";"MA";2;0;0;0;NA;2;1;0
 "São Mateus do Sul";"PR";1;1,34;0;0;NA;NA;NA;NA
 "São Miguel Arcanjo";"SP";2;1,53;1;0,5;0,6;1;0,5;0,93
 "São Miguel da Boa Vista";"SC";1;0,42;0;0;NA;NA;NA;NA
 "São Miguel das Matas";"BA";1;0,49;0;0;NA;1;1;0,49
 "São Miguel de Taipu";"PB";1;0,85;0;0;NA;1;1;0,85
-"São Miguel do Guamá";"PA";3;3,39;0;0;NA;3;1;3,39
+"São Miguel do Araguaia";"GO";1;3,16;0;0;NA;NA;NA;NA
+"São Miguel do Guamá";"PA";5;4,31;0;0;NA;4;0,8;4,31
 "São Miguel do Guaporé";"RO";1;0,52;0;0;NA;NA;NA;NA
-"São Miguel do Passa Quatro";"GO";1;0,37;0;0;NA;NA;NA;NA
-"São Miguel do Tapuio";"PI";1;2,12;0;0;NA;1;1;2,12
+"São Miguel do Passa Quatro";"GO";2;0,37;1;0,5;0;NA;NA;NA
+"São Miguel do Tapuio";"PI";2;2,12;0;0;NA;1;0,5;2,12
 "São Miguel do Tocantins";"TO";1;0,89;0;0;NA;1;1;0,89
-"São Miguel dos Campos";"AL";3;1,41;0;0;NA;NA;NA;NA
-"São Paulo";"SP";18;5,26;0;0;NA;1;0,06;0,21
+"São Miguel dos Campos";"AL";4;3,67;0;0;NA;NA;NA;NA
+"São Paulo de Olivença";"AM";6;1,32;1;0,17;0,3;NA;NA;NA
+"São Paulo do Potengi";"RN";2;0,85;0;0;NA;NA;NA;NA
 "São Pedro da Água Branca";"MA";1;1,78;0;0;NA;1;1;1,78
-"São Pedro da Aldeia";"RJ";3;0,91;0;0;NA;NA;NA;NA
+"São Pedro da Aldeia";"RJ";4;1,33;0;0;NA;NA;NA;NA
+"São Pedro da Cipa";"MT";1;0,31;0;0;NA;NA;NA;NA
+"São Pedro da Serra";"RS";1;1,14;0;0;NA;NA;NA;NA
 "São Pedro das Missões";"RS";1;0,9;0;0;NA;NA;NA;NA
 "São Pedro do Piauí";"PI";1;0,88;1;1;0,88;NA;NA;NA
+"São Pedro do Sul";"RS";1;3,91;0;0;NA;NA;NA;NA
+"São Pedro dos Crentes";"MA";1;0;0;0;NA;NA;NA;NA
 "São Rafael";"RN";1;0,93;0;0;NA;1;1;0,93
+"São Raimundo do Doca Bezerra";"MA";5;0,49;5;1;0,49;NA;NA;NA
 "São Raimundo Nonato";"PI";4;5,26;0;0;NA;NA;NA;NA
-"São Roberto";"MA";4;1,02;0;0;NA;NA;NA;NA
+"São Roberto";"MA";5;1,21;0;0;NA;NA;NA;NA
 "São Romão";"MG";1;1,86;0;0;NA;1;1;1,86
-"São Roque de Minas";"MG";1;0,73;0;0;NA;1;1;0,73
+"São Roque";"SP";2;0;0;0;NA;NA;NA;NA
+"São Roque de Minas";"MG";2;1,52;1;0,5;0,79;1;0,5;0,73
+"São Roque do Canaã";"ES";2;0;0;0;NA;NA;NA;NA
 "São Sebastião";"AL";1;0,88;0;0;NA;NA;NA;NA
+"São Sebastião";"SP";1;0;0;0;NA;NA;NA;NA
+"São Sebastião da Bela Vista";"MG";1;1,16;0;0;NA;NA;NA;NA
+"São Sebastião da Boa Vista";"PA";1;0;0;0;NA;NA;NA;NA
 "São Sebastião de Lagoa de Roça";"PB";1;1,75;0;0;NA;1;1;1,75
 "São Sebastião do Alto";"RJ";1;0,7;0;0;NA;NA;NA;NA
-"São Sebastião do Anta";"MG";1;1,07;0;0;NA;NA;NA;NA
+"São Sebastião do Anta";"MG";2;1,29;0;0;NA;NA;NA;NA
+"São Sebastião do Caí";"RS";1;1,16;0;0;NA;NA;NA;NA
 "São Sebastião do Maranhão";"MG";1;1,23;0;0;NA;NA;NA;NA
-"São Sebastião do Paraíso";"MG";1;0,47;0;0;NA;NA;NA;NA
+"São Sebastião do Paraíso";"MG";2;0,47;0;0;NA;NA;NA;NA
+"São Sebastião do Passé";"BA";1;0,29;1;1;0,29;NA;NA;NA
 "São Sebastião do Tocantins";"TO";1;0,44;0;0;NA;1;1;0,44
+"São Sebastião do Uatumã";"AM";1;0,19;1;1;0,19;NA;NA;NA
 "São Sepé";"RS";1;0,91;0;0;NA;1;1;0,91
+"São Tiago";"MG";1;0,68;0;0;NA;NA;NA;NA
 "São Vicente";"SP";7;6,23;0;0;NA;4;0,57;2,52
-"São Vicente Ferrer";"MA";1;1,47;1;1;1,47;NA;NA;NA
+"São Vicente do Sul";"RS";1;0,19;1;1;0,19;NA;NA;NA
+"São Vicente Ferrer";"MA";2;1,47;1;0,5;1,47;NA;NA;NA
+"São Vicente Ferrer";"PE";1;0,29;1;1;0,29;NA;NA;NA
 "Sapé";"PB";1;1,48;0;0;NA;1;1;1,48
+"Sapeaçu";"BA";1;0,5;0;0;NA;1;1;0,5
+"Sapiranga";"RS";1;0,27;0;0;NA;NA;NA;NA
+"Sapucaí-Mirim";"MG";1;0,18;0;0;NA;NA;NA;NA
 "Sapucaia do Sul";"RS";2;2,77;2;1;2,77;NA;NA;NA
+"Saquarema";"RJ";2;0;0;0;NA;NA;NA;NA
 "Sátiro Dias";"BA";1;0,81;1;1;0,81;NA;NA;NA
+"Satuba";"AL";1;0;0;0;NA;1;1;0
 "Satubinha";"MA";1;1,78;0;0;NA;1;1;1,78
+"Saudades";"SC";1;1,99;0;0;NA;NA;NA;NA
+"Saúde";"BA";2;0,81;2;1;0,81;NA;NA;NA
+"Schroeder";"SC";1;1,46;0;0;NA;NA;NA;NA
 "Seabra";"BA";2;1,05;0;0;NA;2;1;1,05
 "Sebastião Barros";"PI";1;1,15;0;0;NA;NA;NA;NA
-"Sebastião Laranjeiras";"BA";1;0,49;0;0;NA;1;1;0,49
+"Sebastião Laranjeiras";"BA";2;1,31;0;0;NA;1;0,5;0,49
+"Sebastião Leal";"PI";1;0,74;0;0;NA;NA;NA;NA
+"Sem-Peixe";"MG";1;1,01;0;0;NA;NA;NA;NA
+"Sena Madureira";"AC";1;0;0;0;NA;NA;NA;NA
 "Senador Alexandre Costa";"MA";1;0,48;0;0;NA;NA;NA;NA
-"Senador Canedo";"GO";3;3,19;0;0;NA;2;0,67;2,4
+"Senador Canedo";"GO";4;3,19;0;0;NA;2;0,5;2,4
+"Senador Firmino";"MG";1;0,44;0;0;NA;NA;NA;NA
 "Senador Georgino Avelino";"RN";1;0,62;0;0;NA;1;1;0,62
 "Senador Guiomard";"AC";1;1,05;0;0;NA;NA;NA;NA
 "Senador José Bento";"MG";1;0,83;0;0;NA;1;1;0,83
+"Senador José Porfírio";"PA";2;1,31;0;0;NA;NA;NA;NA
 "Senador La Rocque";"MA";1;1,47;1;1;1,47;NA;NA;NA
 "Senador Pompeu";"CE";1;0,7;0;0;NA;NA;NA;NA
+"Senador Rui Palmeira";"AL";1;0;0;0;NA;NA;NA;NA
 "Sengés";"PR";1;1,01;0;0;NA;1;1;1,01
 "Senhor do Bonfim";"BA";2;2,84;0;0;NA;NA;NA;NA
 "Senhora dos Remédios";"MG";1;0,25;1;1;0,25;NA;NA;NA
-"Sento Sé";"BA";3;1,61;0;0;NA;3;1;1,61
+"Sento Sé";"BA";4;1,97;0;0;NA;3;0,75;1,61
+"Sericita";"MG";1;0,82;0;0;NA;NA;NA;NA
 "Seridó";"PB";1;0,85;0;0;NA;1;1;0,85
 "Seringueiras";"RO";1;1,53;0;0;NA;1;1;1,53
-"Serra";"ES";8;6,61;6;0,75;5,34;NA;NA;NA
+"Seropédica";"RJ";1;0,17;0;0;NA;NA;NA;NA
+"Serra";"ES";14;6,14;5;0,36;4,86;NA;NA;NA
 "Serra Branca";"PB";1;1,83;0;0;NA;NA;NA;NA
 "Serra da Raiz";"PB";1;0,41;1;1;0,41;NA;NA;NA
-"Serra de São Bento";"RN";1;0,85;0;0;NA;NA;NA;NA
+"Serra de São Bento";"RN";2;1,02;0;0;NA;1;0,5;0,18
+"Serra do Navio";"AP";1;0;0;0;NA;NA;NA;NA
 "Serra do Ramalho";"BA";1;0,27;0;0;NA;NA;NA;NA
+"Serra do Salitre";"MG";1;0,26;0;0;NA;NA;NA;NA
 "Serra dos Aimorés";"MG";1;0,84;0;0;NA;1;1;0,84
 "Serra Dourada";"BA";1;1,82;0;0;NA;1;1;1,82
 "Serra Preta";"BA";1;0,49;0;0;NA;1;1;0,49
 "Serra Talhada";"PE";2;4,91;0;0;NA;NA;NA;NA
 "Serrana";"SP";1;0,17;0;0;NA;NA;NA;NA
-"Serrano do Maranhão";"MA";1;0,47;0;0;NA;1;1;0,47
+"Serrano do Maranhão";"MA";4;1,01;0;0;NA;4;1;1,01
 "Serranópolis";"GO";1;1,11;0;0;NA;NA;NA;NA
 "Serranópolis de Minas";"MG";1;0,15;0;0;NA;NA;NA;NA
+"Serranos";"MG";1;1,09;1;1;1,09;NA;NA;NA
 "Serrinha";"BA";5;3,69;0;0;NA;5;1;3,69
-"Serrinha";"RN";1;1,11;0;0;NA;1;1;1,11
+"Serrinha";"RN";2;2,02;0;0;NA;1;0,5;1,11
 "Serrinha dos Pintos";"RN";1;2,18;0;0;NA;NA;NA;NA
 "Serrita";"PE";1;0,45;0;0;NA;NA;NA;NA
 "Serrolândia";"BA";1;1,22;0;0;NA;1;1;1,22
 "Sertânia";"PE";1;0,85;0;0;NA;1;1;0,85
 "Sertão";"RS";1;2,12;1;1;2,12;NA;NA;NA
-"Sete Lagoas";"MG";2;0,54;0;0;NA;NA;NA;NA
+"Sete Barras";"SP";1;0,2;0;0;NA;NA;NA;NA
+"Sete Lagoas";"MG";5;1,36;0;0;NA;NA;NA;NA
 "Severínia";"SP";1;1,04;0;0;NA;NA;NA;NA
 "Siderópolis";"SC";1;1,11;0;0;NA;1;1;1,11
+"Sidrolândia";"MS";1;0,19;0;0;NA;1;1;0,19
 "Sigefredo Pacheco";"PI";1;0,48;0;0;NA;NA;NA;NA
-"Silvânia";"GO";1;0,43;0;0;NA;1;1;0,43
-"Silvanópolis";"TO";1;1,88;0;0;NA;1;1;1,88
+"Silva Jardim";"RJ";1;0;0;0;NA;NA;NA;NA
+"Silvânia";"GO";3;1,92;0;0;NA;1;0,33;0,43
+"Silvanópolis";"TO";3;2,98;0;0;NA;1;0,33;1,88
+"Silves";"AM";1;0;0;0;NA;NA;NA;NA
 "Simão Dias";"SE";1;1,86;0;0;NA;NA;NA;NA
+"Simões";"PI";1;0,05;0;0;NA;1;1;0,05
+"Simões Filho";"BA";2;0;0;0;NA;1;0,5;0
 "Simonésia";"MG";2;0,67;1;0,5;0,49;NA;NA;NA
-"Sinop";"MT";3;3,21;0;0;NA;NA;NA;NA
-"Siqueira Campos";"PR";1;0,37;0;0;NA;NA;NA;NA
-"Sítio do Mato";"BA";1;0,27;0;0;NA;NA;NA;NA
+"Simplício Mendes";"PI";1;1;0;0;NA;NA;NA;NA
+"Sinop";"MT";4;4,13;1;0,25;0,92;NA;NA;NA
+"Siqueira Campos";"PR";2;0,37;0;0;NA;NA;NA;NA
+"Sirinhaém";"PE";2;0,68;0;0;NA;NA;NA;NA
+"Sítio do Mato";"BA";2;0,27;0;0;NA;NA;NA;NA
 "Sítio do Quinto";"BA";1;0,49;1;1;0,49;NA;NA;NA
-"Sítio Novo";"MA";3;2,52;0;0;NA;1;0,33;0,97
+"Sítio Novo";"MA";4;2,91;0;0;NA;1;0,25;0,97
 "Sítio Novo";"RN";3;2,66;0;0;NA;3;1;2,66
+"Sobradinho";"BA";1;0,91;1;1;0,91;NA;NA;NA
+"Sobradinho";"RS";1;0,7;0;0;NA;NA;NA;NA
 "Sobrado";"PB";1;0,65;0;0;NA;NA;NA;NA
-"Sobral";"CE";6;10,76;0;0;NA;NA;NA;NA
+"Sobral";"CE";10;12,03;0;0;NA;1;0,1;0
+"Socorro";"SP";1;0,19;1;1;0,19;NA;NA;NA
 "Socorro do Piauí";"PI";1;0,41;0;0;NA;1;1;0,41
-"Solonópole";"CE";2;2,6;0;0;NA;NA;NA;NA
-"Sorriso";"MT";2;1,06;1;0,5;0,53;NA;NA;NA
-"Soure";"PA";1;0,91;0;0;NA;NA;NA;NA
-"Sousa";"PB";3;3,67;0;0;NA;3;1;3,67
+"Soledade";"PB";1;0,27;0;0;NA;NA;NA;NA
+"Soledade";"RS";1;0;0;0;NA;NA;NA;NA
+"Solonópole";"CE";1;0,85;0;0;NA;NA;NA;NA
+"Sooretama";"ES";2;0,41;0;0;NA;1;0,5;0,41
+"Sorriso";"MT";3;2,21;1;0,33;0,53;NA;NA;NA
+"Soure";"PA";3;1,57;0;0;NA;NA;NA;NA
+"Sousa";"PB";4;3,67;0;0;NA;3;0,75;3,67
 "Souto Soares";"BA";2;1,18;1;0,5;0,69;1;0,5;0,49
 "Sucupira do Norte";"MA";3;2,07;2;0,67;1,23;1;0,33;0,85
-"Sucupira do Riachão";"MA";6;2,75;0;0;NA;NA;NA;NA
+"Sucupira do Riachão";"MA";9;2,87;0;0;NA;1;0,11;0
+"Sul Brasil";"SC";1;0;0;0;NA;NA;NA;NA
 "Sumaré";"SP";1;0,92;1;1;0,92;NA;NA;NA
-"Sumé";"PB";1;0,38;0;0;NA;NA;NA;NA
+"Sumé";"PB";1;1,71;0;0;NA;NA;NA;NA
+"Sumidouro";"RJ";2;0;0;0;NA;NA;NA;NA
 "Surubim";"PE";1;0,56;0;0;NA;NA;NA;NA
-"Suzano";"SP";2;3,1;0;0;NA;1;0,5;0,43
+"Suzano";"SP";5;3,1;0;0;NA;1;0,2;0,43
 "Tabaporã";"MT";1;1,49;1;1;1,49;NA;NA;NA
-"Tabatinga";"AM";5;3,38;0;0;NA;4;0,8;2,31
+"Tabatinga";"AM";11;5,08;0;0;NA;6;0,55;2,31
+"Taboão da Serra";"SP";1;0,88;0;0;NA;NA;NA;NA
 "Tabocas do Brejo Velho";"BA";2;1,25;0;0;NA;NA;NA;NA
 "Taboleiro Grande";"RN";1;0,88;0;0;NA;NA;NA;NA
 "Tabuleiro do Norte";"CE";1;0,29;0;0;NA;NA;NA;NA
+"Tacaimbó";"PE";2;1,13;0;0;NA;NA;NA;NA
 "Tacima";"PB";1;0,81;0;0;NA;NA;NA;NA
-"Tacuru";"MS";1;1,42;0;0;NA;NA;NA;NA
+"Tacuru";"MS";2;1,89;0;0;NA;NA;NA;NA
 "Taguatinga";"TO";2;1,18;0;0;NA;1;0,5;0,42
 "Tailândia";"PA";3;1,56;0;0;NA;3;1;1,56
 "Taiobeiras";"MG";2;1,46;1;0,5;0,59;NA;NA;NA
+"Taipas do Tocantins";"TO";1;0,43;0;0;NA;NA;NA;NA
 "Taipu";"RN";1;1,12;0;0;NA;NA;NA;NA
 "Tamarana";"PR";1;0,62;1;1;0,62;NA;NA;NA
 "Tamboara";"PR";1;0,88;0;0;NA;NA;NA;NA
+"Tamboril";"CE";3;1,98;0;0;NA;1;0,33;0,94
 "Tangará";"RN";1;0,77;0;0;NA;NA;NA;NA
+"Tangará";"SC";1;2,2;1;1;2,2;NA;NA;NA
 "Tangará da Serra";"MT";4;3,77;0;0;NA;2;0,5;1,06
+"Tanguá";"RJ";1;0,32;1;1;0,32;NA;NA;NA
+"Tanhaçu";"BA";1;0,26;0;0;NA;1;1;0,26
 "Tanque d'Arca";"AL";1;0,56;0;0;NA;NA;NA;NA
+"Tanque Novo";"BA";1;0;0;0;NA;NA;NA;NA
+"Tapauá";"AM";1;0,98;0;0;NA;NA;NA;NA
 "Tapejara";"RS";1;1,09;0;0;NA;NA;NA;NA
-"Taperoá";"BA";1;0,48;0;0;NA;1;1;0,48
+"Tapera";"RS";1;0,62;1;1;0,62;NA;NA;NA
+"Taperoá";"BA";4;1,86;0;0;NA;2;0,5;0,74
+"Taperoá";"PB";1;1,21;0;0;NA;NA;NA;NA
+"Tapes";"RS";1;0,98;1;1;0,98;NA;NA;NA
 "Taquaral de Goiás";"GO";1;1,33;0;0;NA;NA;NA;NA
-"Taquarana";"AL";1;1,3;1;1;1,3;NA;NA;NA
+"Taquarana";"AL";2;1,3;1;0,5;1,3;NA;NA;NA
 "Taquari";"RS";1;0,49;0;0;NA;1;1;0,49
-"Taquaritinga";"SP";1;0,46;0;0;NA;NA;NA;NA
+"Taquaritinga";"SP";2;0,83;0;0;NA;NA;NA;NA
 "Taquaritinga do Norte";"PE";1;1,82;0;0;NA;NA;NA;NA
-"Tarauacá";"AC";1;0,92;0;0;NA;1;1;0,92
+"Tarauacá";"AC";12;7,98;0;0;NA;6;0,5;5,1
 "Tarumã";"SP";1;1,5;0;0;NA;1;1;1,5
-"Tatuí";"SP";3;2,32;1;0,33;1,47;2;0,67;0,86
+"Tasso Fragoso";"MA";1;0;0;0;NA;1;1;0
+"Tatuí";"SP";4;2,32;1;0,25;1,47;3;0,75;0,86
 "Tauá";"CE";4;5,96;1;0,25;1,16;NA;NA;NA
-"Taubaté";"SP";3;1,77;0;0;NA;NA;NA;NA
-"Tavares";"PB";1;1,82;1;1;1,82;NA;NA;NA
-"Tefé";"AM";12;7,72;0;0;NA;NA;NA;NA
-"Teixeira";"PB";1;0,42;1;1;0,42;NA;NA;NA
-"Teixeira de Freitas";"BA";7;5,51;0;0;NA;2;0,29;2,65
-"Tejuçuoca";"CE";2;1,86;0;0;NA;NA;NA;NA
-"Telêmaco Borba";"PR";1;0,29;0;0;NA;NA;NA;NA
+"Taubaté";"SP";4;2,98;0;0;NA;NA;NA;NA
+"Tavares";"PB";3;4,01;1;0,33;1,82;NA;NA;NA
+"Tefé";"AM";16;7,72;0;0;NA;NA;NA;NA
+"Teixeira";"PB";2;3,47;1;0,5;0,42;NA;NA;NA
+"Teixeira de Freitas";"BA";8;6,01;0;0;NA;2;0,25;2,65
+"Tejuçuoca";"CE";4;2,38;1;0,25;0,28;NA;NA;NA
+"Telêmaco Borba";"PR";2;0,58;0;0;NA;NA;NA;NA
 "Tenente Laurentino Cruz";"RN";1;0,84;0;0;NA;NA;NA;NA
-"Tenente Portela";"RS";1;0,47;0;0;NA;NA;NA;NA
+"Tenente Portela";"RS";2;0,47;0;0;NA;NA;NA;NA
+"Tenório";"PB";1;0,29;1;1;0,29;NA;NA;NA
+"Teodoro Sampaio";"BA";1;0,19;0;0;NA;NA;NA;NA
 "Teodoro Sampaio";"SP";1;1,47;0;0;NA;1;1;1,47
-"Teófilo Otoni";"MG";5;2,36;0;0;NA;1;0,2;0,47
-"Teolândia";"BA";2;0,98;0;0;NA;2;1;0,98
-"Teresina";"PI";19;19,97;1;0,05;2,24;4;0,21;5,8
-"Terezinha";"PE";1;1,35;0;0;NA;1;1;1,35
+"Teófilo Otoni";"MG";6;2,36;0;0;NA;1;0,17;0,47
+"Teolândia";"BA";3;1,82;0;0;NA;2;0,67;0,98
+"Teotônio Vilela";"AL";4;3,04;0;0;NA;NA;NA;NA
+"Teresina";"PI";28;21,47;1;0,04;2,24;4;0,14;5,8
+"Teresópolis";"RJ";3;0,52;0;0;NA;NA;NA;NA
+"Terezinha";"PE";2;1,79;1;0,5;0,44;1;0,5;1,35
 "Terra Alta";"PA";1;1,43;1;1;1,43;NA;NA;NA
+"Terra de Areia";"RS";2;0,92;0;0;NA;1;0,5;0,47
 "Terra Nova";"BA";1;0,97;0;0;NA;1;1;0,97
+"Terra Nova";"PE";1;0;0;0;NA;1;1;0
+"Terra Rica";"PR";1;0,52;0;0;NA;1;1;0,52
+"Terra Roxa";"PR";1;0,53;0;0;NA;NA;NA;NA
 "Terra Santa";"PA";1;0,57;0;0;NA;NA;NA;NA
-"Teutônia";"RS";1;0,45;0;0;NA;1;1;0,45
-"Tianguá";"CE";2;3,81;0;0;NA;NA;NA;NA
-"Tibagi";"PR";1;0,45;0;0;NA;NA;NA;NA
-"Timbaúba";"PE";1;0,41;0;0;NA;NA;NA;NA
+"Tianguá";"CE";4;3,81;0;0;NA;NA;NA;NA
+"Tibagi";"PR";2;0,69;0;0;NA;NA;NA;NA
+"Timbaúba";"PE";3;1,02;0;0;NA;NA;NA;NA
 "Timbiras";"MA";2;1,62;0;0;NA;1;0,5;0,98
-"Timon";"MA";3;1,47;2;0,67;0,98;NA;NA;NA
+"Timbó Grande";"SC";1;0,82;0;0;NA;NA;NA;NA
+"Timon";"MA";4;2,36;2;0,5;0,98;NA;NA;NA
 "Timóteo";"MG";2;0,66;0;0;NA;NA;NA;NA
 "Tiros";"MG";1;0,24;0;0;NA;NA;NA;NA
-"Tobias Barreto";"SE";3;4,45;0;0;NA;2;0,67;3,52
-"Tocantínia";"TO";2;3,26;1;0,5;1,98;1;0,5;1,29
+"Tobias Barreto";"SE";4;4,45;0;0;NA;2;0,5;3,52
+"Tocantínia";"TO";4;3,86;1;0,25;1,98;2;0,5;1,29
 "Toledo";"PR";3;0,94;1;0,33;0,25;NA;NA;NA
+"Tomar do Geru";"SE";1;0,96;0;0;NA;NA;NA;NA
 "Tomé-Açu";"PA";8;3,31;0;0;NA;1;0,12;0,55
-"Toritama";"PE";2;1,84;1;0,5;1,42;1;0,5;0,42
+"Tonantins";"AM";10;1,41;7;0,7;1,33;NA;NA;NA
+"Toritama";"PE";4;1,84;1;0,25;1,42;3;0,75;0,42
+"Torres";"RS";1;0;0;0;NA;NA;NA;NA
 "Touros";"RN";1;0,38;0;0;NA;1;1;0,38
-"Tracuateua";"PA";7;2,71;1;0,14;0,63;3;0,43;0,74
+"Tracuateua";"PA";8;2,78;2;0,25;0,69;5;0,62;1,8
+"Tracunhaém";"PE";1;0,4;0;0;NA;1;1;0,4
 "Traipu";"AL";2;1,84;0;0;NA;NA;NA;NA
 "Trairão";"PA";1;0,8;0;0;NA;1;1;0,8
-"Trairi";"CE";1;0,51;0;0;NA;NA;NA;NA
+"Trairi";"CE";2;0,51;0;0;NA;NA;NA;NA
 "Tramandaí";"RS";1;0,91;0;0;NA;1;1;0,91
 "Tremedal";"BA";1;0,39;1;1;0,39;NA;NA;NA
 "Tremembé";"SP";2;0,68;0;0;NA;NA;NA;NA
-"Três Arroios";"RS";1;0,21;0;0;NA;NA;NA;NA
 "Três Barras";"SC";1;1,1;1;1;1,1;NA;NA;NA
 "Três Barras do Paraná";"PR";1;0,78;0;0;NA;NA;NA;NA
+"Três Cachoeiras";"RS";1;0,47;0;0;NA;NA;NA;NA
 "Três Corações";"MG";4;1,47;3;0,75;1,2;NA;NA;NA
+"Três Forquilhas";"RS";2;0,25;1;0,5;0,25;NA;NA;NA
+"Três Lagoas";"MS";2;0;0;0;NA;NA;NA;NA
+"Três Marias";"MG";1;0;0;0;NA;NA;NA;NA
+"Três Passos";"RS";1;1,58;0;0;NA;NA;NA;NA
 "Três Pontas";"MG";2;0,94;1;0,5;0,47;NA;NA;NA
-"Três Rios";"RJ";1;0,42;0;0;NA;NA;NA;NA
+"Três Rios";"RJ";3;0,42;0;0;NA;NA;NA;NA
 "Treze Tílias";"SC";1;0,85;1;1;0,85;NA;NA;NA
-"Trindade";"GO";3;1,95;0;0;NA;NA;NA;NA
-"Trindade";"PE";1;0,86;1;1;0,86;NA;NA;NA
+"Trindade";"GO";4;1,95;1;0,25;0;NA;NA;NA
+"Trindade";"PE";2;1,15;2;1;1,15;NA;NA;NA
 "Triunfo";"PE";1;1,45;0;0;NA;NA;NA;NA
+"Triunfo";"RS";1;1,07;0;0;NA;NA;NA;NA
 "Triunfo Potiguar";"RN";1;0,95;0;0;NA;1;1;0,95
-"Trizidela do Vale";"MA";1;0,5;0;0;NA;NA;NA;NA
+"Trizidela do Vale";"MA";3;1,5;0;0;NA;NA;NA;NA
+"Trombas";"GO";1;0,16;0;0;NA;1;1;0,16
 "Trombudo Central";"SC";1;0,86;0;0;NA;1;1;0,86
+"Tubarão";"SC";2;0;0;0;NA;NA;NA;NA
 "Tucunduva";"RS";1;1,11;0;0;NA;NA;NA;NA
 "Tucuruí";"PA";5;3,69;0;0;NA;4;0,8;3,14
 "Tufilândia";"MA";3;1,15;1;0,33;0,04;2;0,67;1,11
-"Tuneiras do Oeste";"PR";1;0,93;0;0;NA;1;1;0,93
+"Tuneiras do Oeste";"PR";2;1,74;0;0;NA;2;1;1,74
+"Tuntum";"MA";6;4,98;0;0;NA;NA;NA;NA
 "Tupã";"SP";1;0,66;0;0;NA;NA;NA;NA
-"Tupaciguara";"MG";2;2,01;0;0;NA;2;1;2,01
+"Tupaciguara";"MG";3;2,01;0;0;NA;2;0,67;2,01
 "Tupanatinga";"PE";5;2,4;0;0;NA;NA;NA;NA
 "Tupanciretã";"RS";1;0,24;0;0;NA;NA;NA;NA
 "Tuparetama";"PE";1;1,65;0;0;NA;1;1;1,65
-"Tupiratins";"TO";1;0,42;0;0;NA;NA;NA;NA
-"Turiaçu";"MA";3;1,98;2;0,67;1,08;1;0,33;0,9
-"Tutóia";"MA";2;0,52;0;0;NA;1;0,5;0,26
+"Tupirama";"TO";3;0;0;0;NA;NA;NA;NA
+"Tupiratins";"TO";1;0,42;0;0;NA;1;1;0,42
+"Turiaçu";"MA";4;1,98;2;0,5;1,08;1;0,25;0,9
+"Turilândia";"MA";1;0,29;1;1;0,29;NA;NA;NA
+"Tururu";"CE";1;0,19;1;1;0,19;NA;NA;NA
+"Tutóia";"MA";4;2,49;0;0;NA;1;0,25;0,26
 "Uarini";"AM";1;1,46;0;0;NA;1;1;1,46
-"Uauá";"BA";1;0,98;0;0;NA;NA;NA;NA
+"Uauá";"BA";3;1,45;0;0;NA;NA;NA;NA
 "Ubá";"MG";2;1,91;0;0;NA;NA;NA;NA
+"Ubajara";"CE";3;1,15;0;0;NA;3;1;1,15
 "Ubaporanga";"MG";1;0,55;0;0;NA;NA;NA;NA
-"Uberaba";"MG";2;1,22;0;0;NA;NA;NA;NA
-"Uberlândia";"MG";20;28,64;0;0;NA;1;0,05;1,63
+"Ubarana";"SP";1;0,41;0;0;NA;NA;NA;NA
+"Ubatã";"BA";1;0,09;0;0;NA;NA;NA;NA
+"Ubatuba";"SP";2;0;0;0;NA;NA;NA;NA
+"Uberaba";"MG";4;1,49;0;0;NA;NA;NA;NA
+"Uberlândia";"MG";21;29,11;0;0;NA;1;0,05;1,63
 "Ubiratã";"PR";1;1;0;0;NA;NA;NA;NA
-"Uiramutã";"RR";1;0,8;0;0;NA;1;1;0,8
+"Uiramutã";"RR";5;0,8;0;0;NA;2;0,4;0,8
 "Uiraúna";"PB";1;1,36;0;0;NA;1;1;1,36
-"Ulianópolis";"PA";1;1,85;0;0;NA;NA;NA;NA
+"Ulianópolis";"PA";2;5,18;0;0;NA;NA;NA;NA
 "Umari";"CE";1;0,84;0;0;NA;1;1;0,84
+"Umarizal";"RN";1;0;0;0;NA;NA;NA;NA
+"Umbaúba";"SE";5;0,69;0;0;NA;NA;NA;NA
+"Umbuzeiro";"PB";1;0;0;0;NA;NA;NA;NA
 "Umirim";"CE";1;1,67;0;0;NA;1;1;1,67
 "Umuarama";"PR";2;1,51;0;0;NA;NA;NA;NA
-"Una";"BA";2;1,16;0;0;NA;1;0,5;0,54
+"Una";"BA";6;1,44;4;0,67;0,28;1;0,17;0,54
 "Unaí";"MG";3;1,86;0;0;NA;NA;NA;NA
-"União da Vitória";"PR";2;1,74;0;0;NA;NA;NA;NA
+"União";"PI";1;0,29;1;1;0,29;NA;NA;NA
+"União da Vitória";"PR";3;2,11;0;0;NA;NA;NA;NA
+"União dos Palmares";"AL";4;0,67;0;0;NA;2;0,5;0,67
 "Unistalda";"RS";1;0,81;0;0;NA;NA;NA;NA
-"Urbano Santos";"MA";4;2,2;0;0;NA;3;0,75;1,46
-"Uruaçu";"GO";2;2,94;0;0;NA;NA;NA;NA
+"Urbano Santos";"MA";7;3,43;0;0;NA;3;0,43;1,46
+"Uruaçu";"GO";3;3,73;0;0;NA;NA;NA;NA
 "Uruana";"GO";1;0,43;0;0;NA;NA;NA;NA
-"Uruará";"PA";2;1,87;0;0;NA;2;1;1,87
+"Uruará";"PA";6;2,72;0;0;NA;2;0,33;1,87
+"Urubici";"SC";1;0,06;0;0;NA;NA;NA;NA
 "Uruburetama";"CE";2;2,36;0;0;NA;1;0,5;1,27
-"Uruçuca";"BA";1;0,98;0;0;NA;NA;NA;NA
+"Urucânia";"MG";1;0,7;0;0;NA;NA;NA;NA
+"Urucará";"AM";1;0,31;1;1;0,31;NA;NA;NA
+"Uruçuca";"BA";3;1,22;0;0;NA;1;0,33;0,98
+"Uruçuí";"PI";1;0,29;1;1;0,29;NA;NA;NA
 "Urucuia";"MG";2;1,16;0;0;NA;1;0,5;0,91
 "Urucurituba";"AM";4;3,64;1;0,25;0,29;3;0,75;3,35
-"Uruoca";"CE";1;0,63;0;0;NA;1;1;0,63
+"Uruguaiana";"RS";1;0;0;0;NA;1;1;0
+"Uruoca";"CE";2;1,24;0;0;NA;1;0,5;0,63
 "Urupema";"SC";1;0,42;0;0;NA;NA;NA;NA
 "Urussanga";"SC";1;0,76;0;0;NA;1;1;0,76
 "Utinga";"BA";1;0,29;1;1;0,29;NA;NA;NA
+"Vacaria";"RS";2;1,71;1;0,5;1,71;NA;NA;NA
+"Vale do Paraíso";"RO";1;0;0;0;NA;NA;NA;NA
 "Vale do Sol";"RS";1;0,49;1;1;0,49;NA;NA;NA
-"Valença";"BA";2;0,97;1;0,5;0,49;NA;NA;NA
+"Valença";"BA";7;1,42;3;0,43;0,93;NA;NA;NA
+"Valente";"BA";2;0;0;0;NA;NA;NA;NA
 "Valinhos";"SP";1;0,36;0;0;NA;NA;NA;NA
-"Valparaíso de Goiás";"GO";7;3,93;0;0;NA;5;0,71;3,06
-"Vargem Alta";"ES";1;0,18;0;0;NA;NA;NA;NA
-"Vargem Grande";"MA";3;0,81;2;0,67;0,53;NA;NA;NA
+"Valparaíso de Goiás";"GO";12;3,93;0;0;NA;5;0,42;3,06
+"Vargem Alta";"ES";2;0,45;1;0,5;0,28;NA;NA;NA
+"Vargem Grande";"MA";4;1,74;2;0,5;0,53;NA;NA;NA
 "Vargem Grande do Sul";"SP";1;0,37;0;0;NA;1;1;0,37
 "Varginha";"MG";1;0,17;0;0;NA;NA;NA;NA
+"Varjão de Minas";"MG";1;0,34;1;1;0,34;NA;NA;NA
+"Varjota";"CE";1;0,97;0;0;NA;NA;NA;NA
 "Várzea Branca";"PI";3;2,41;0;0;NA;3;1;2,41
 "Várzea da Palma";"MG";1;0,42;0;0;NA;1;1;0,42
-"Várzea Grande";"MT";15;6,97;0;0;NA;2;0,13;0,81
-"Várzea Paulista";"SP";1;1,5;0;0;NA;1;1;1,5
+"Várzea da Roça";"BA";1;0,6;0;0;NA;NA;NA;NA
+"Várzea Grande";"MT";15;5,68;0;0;NA;2;0,13;0,81
+"Várzea Nova";"BA";1;0;0;0;NA;1;1;0
+"Várzea Paulista";"SP";3;1,85;0;0;NA;1;0,33;1,5
 "Varzelândia";"MG";1;0,9;0;0;NA;1;1;0,9
-"Vassouras";"RJ";1;0,84;0;0;NA;1;1;0,84
+"Vassouras";"RJ";3;0,84;0;0;NA;1;0,33;0,84
 "Vazante";"MG";1;0,47;0;0;NA;NA;NA;NA
 "Venâncio Aires";"RS";1;0,46;0;0;NA;NA;NA;NA
+"Venda Nova do Imigrante";"ES";1;0,34;1;1;0,34;NA;NA;NA
 "Vera Cruz";"BA";1;1,72;0;0;NA;1;1;1,72
+"Vera Cruz do Oeste";"PR";1;0,44;0;0;NA;NA;NA;NA
 "Veranópolis";"RS";2;1,3;0;0;NA;1;0,5;1,11
-"Verê";"PR";1;0,74;0;0;NA;NA;NA;NA
-"Veríssimo";"MG";1;0,64;0;0;NA;1;1;0,64
+"Verê";"PR";2;1,43;0;0;NA;NA;NA;NA
+"Vereda";"BA";2;0,6;0;0;NA;NA;NA;NA
+"Veríssimo";"MG";2;1;0;0;NA;1;0,5;0,64
+"Vertente do Lério";"PE";1;0,34;0;0;NA;NA;NA;NA
 "Vespasiano";"MG";4;1,54;0;0;NA;NA;NA;NA
-"Viamão";"RS";1;0,44;0;0;NA;1;1;0,44
-"Viana";"ES";2;1,34;1;0,5;0,85;NA;NA;NA
+"Viamão";"RS";17;2;0;0;NA;12;0,71;2
+"Viana";"ES";3;1,34;1;0,33;0,85;NA;NA;NA
+"Viana";"MA";4;0;1;0,25;0;NA;NA;NA
 "Vianópolis";"GO";1;1,66;0;0;NA;1;1;1,66
 "Vicência";"PE";2;0,82;1;0,5;0,42;NA;NA;NA
 "Vicente Dutra";"RS";1;0,76;0;0;NA;NA;NA;NA
+"Vicentinópolis";"GO";1;0,19;1;1;0,19;NA;NA;NA
 "Viçosa";"AL";2;0,9;0;0;NA;2;1;0,9
-"Viçosa";"MG";1;0,86;0;0;NA;1;1;0,86
-"Viçosa do Ceará";"CE";2;1,35;1;0,5;0,83;NA;NA;NA
-"Vigia";"PA";1;0,56;1;1;0,56;NA;NA;NA
+"Viçosa";"MG";3;0,86;0;0;NA;1;0,33;0,86
+"Viçosa do Ceará";"CE";3;2,18;1;0,33;0,83;NA;NA;NA
+"Vigia";"PA";5;1,08;2;0,4;0,56;2;0,4;0,52
+"Vila Bela da Santíssima Trindade";"MT";1;0;0;0;NA;1;1;0
+"Vila Boa";"GO";1;0;0;0;NA;NA;NA;NA
+"Vila Nova do Piauí";"PI";1;1,1;0;0;NA;NA;NA;NA
 "Vila Nova dos Martírios";"MA";1;1,77;0;0;NA;1;1;1,77
+"Vila Pavão";"ES";1;0;0;0;NA;NA;NA;NA
 "Vila Rica";"MT";4;0,46;1;0,25;0,11;3;0,75;0,35
 "Vila Valério";"ES";1;0,95;0;0;NA;1;1;0,95
-"Vila Velha";"ES";7;4,1;0;0;NA;3;0,43;1,59
-"Vilhena";"RO";1;0,52;0;0;NA;NA;NA;NA
-"Virginópolis";"MG";1;0,25;0;0;NA;NA;NA;NA
+"Vila Velha";"ES";10;4,1;0;0;NA;3;0,3;1,59
+"Vilhena";"RO";8;3,37;0;0;NA;3;0,38;1,45
+"Vinhedo";"SP";1;0,46;0;0;NA;NA;NA;NA
+"Virginópolis";"MG";2;0,56;0;0;NA;1;0,5;0,25
 "Visconde do Rio Branco";"MG";1;1,08;0;0;NA;NA;NA;NA
-"Viseu";"PA";13;6,86;0;0;NA;NA;NA;NA
-"Vitória";"ES";2;1,82;1;0,5;0,91;NA;NA;NA
+"Viseu";"PA";20;7,28;0;0;NA;NA;NA;NA
 "Vitória da Conquista";"BA";8;4,03;1;0,12;0,8;NA;NA;NA
-"Vitória de Santo Antão";"PE";5;2,28;1;0,2;0,64;1;0,2;0,42
+"Vitória de Santo Antão";"PE";8;2,82;1;0,12;0,64;1;0,12;0,42
 "Vitória do Jari";"AP";1;0,19;0;0;NA;NA;NA;NA
-"Vitória do Mearim";"MA";1;0,91;0;0;NA;NA;NA;NA
-"Volta Redonda";"RJ";3;1,72;0;0;NA;1;0,33;0,42
+"Vitória do Mearim";"MA";2;0,91;0;0;NA;NA;NA;NA
+"Vitorino";"PR";1;1;0;0;NA;NA;NA;NA
+"Vitorino Freire";"MA";1;0;0;0;NA;NA;NA;NA
+"Volta Redonda";"RJ";6;1,72;0;0;NA;1;0,17;0,42
 "Votuporanga";"SP";1;1,12;0;0;NA;NA;NA;NA
+"Wagner";"BA";1;0;0;0;NA;NA;NA;NA
 "Wanderlândia";"TO";1;0,79;0;0;NA;NA;NA;NA
-"Wanderley";"BA";1;0,97;0;0;NA;1;1;0,97
+"Wanderley";"BA";3;2,23;0;0;NA;1;0,33;0,97
 "Wenceslau Guimarães";"BA";2;1,51;0;0;NA;2;1;1,51
-"Xambioá";"TO";1;0,93;0;0;NA;NA;NA;NA
+"Xambioá";"TO";1;0,93;0;0;NA;1;1;0,93
 "Xaxim";"SC";1;0,85;0;0;NA;1;1;0,85
+"Xexéu";"PE";1;0,4;0;0;NA;NA;NA;NA
 "Xinguara";"PA";2;2,37;0;0;NA;NA;NA;NA
-"Xique-Xique";"BA";3;2,84;1;0,33;0,66;1;0,33;0,83
+"Xique-Xique";"BA";6;2,97;1;0,17;0,66;3;0,5;0,9
 "Zé Doca";"MA";10;2,49;5;0,5;2,38;2;0,2;0,02
+"Zortéa";"SC";1;0,93;1;1;0,93;NA;NA;NA
