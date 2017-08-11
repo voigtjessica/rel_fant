@@ -4,6 +4,18 @@ library(tidyverse)
 library(stringr)
 library(lubridate)
 library(scales)
+library(janitor)
+library(raster) # Para baixar o polígono 426
+library(rvest) # Para importar a base de dados
+library(viridis) # Para selecionar uma bonita paleta de cores
+library(tmap) # Para plotar o mapa
+library(tmaptools)
+library(raster) # Para baixar o polígono
+library(rvest) # Para importar a base de dados
+library(stringr) # Para manipulação dos dados
+library(viridis) # Para selecionar uma bonita paleta de cores
+library(tmap) 
+
 
 #Endereço para achar as obras: http://simec.mec.gov.br/painelObras/dadosobra.php?obra=
 setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\planilhas\\tadepe")
@@ -308,6 +320,7 @@ obras_iniciadas <- simec_atraso %>%
   mutate(situacao_tb = ifelse(!Situação %in% c("Obra Cancelada","Execução","Contratação"), 
          "paralisada", "não-paralisada")) %>%
   select(-Situação)
+
 
 ## da tb
 obras_iniciadas %>%
@@ -687,48 +700,65 @@ pacto_concluidas_andamento %>%
 # Dados do pedido do Manoel
 
 library(readr)
-pedido_supervisao_in_loco <- read_delim("~/tadepe/fantastico/rel_fant/pedido_supervisao_in_loco.csv", 
-                                        ";", escape_double = FALSE, col_types = cols(`Ano Termo/Convjnio` = col_date(format = "%Y"), 
-                                                                                     ID = col_character(), `N: Processo` = col_character(), 
-                                                                                     `Termo/N: Convjnio` = col_character(), 
-                                                                                     perc_executado_empresa = col_number(), 
-                                                                                     perc_informado_munic = col_number()), 
-                                        locale = locale(encoding = "ASCII"), 
-                                        trim_ws = TRUE)
+supervisao <- read.table("pedido_manoel.txt", sep="\t",  
+                                        header=T, encoding="UTF-8", comment.char = "", quote = "\"", as.is = TRUE,
+                                        na.strings="")
+
+head(supervisao)
+supervisao <- supervisao %>%
+  clean_names()
+
+as.numeric(gsub("%", "", '99.42%'))
+
+
+names(supervisao) <- gsub("x_", "", names(supervisao))
+
+supervisao1 <- supervisao %>%
+  mutate(executado_informado_pelo_municipo = as.numeric(gsub("%", "", executado_informado_pelo_municipo))/100,
+         executado_empresa = as.numeric(gsub("%", "", executado_empresa))/100,
+         ultima_vistoria_empresa = as.Date(ultima_vistoria_empresa, "%d/%m/%Y"),
+         filtro_concluida = as.numeric(restricoes == "NÃO" & 
+             ultima_vistoria_empresa < as.Date("2015-09-01") & executado_empresa > .9999999))
+           
+sum(supervisao1$filtro_concluida==1)
+head(supervisao1)
+
+obras_andamento2016 <- simec %>%
+  filter(Data.de.Assinatura.do.Contrato < as.Date("2016-09-01")) %>%
+  left_join(supervisao1, by = c("ID"="id")) %>%
+  filter(is.na(filtro_concluida) | filtro_concluida == 0) %>%
+  summarise(n())
+obras_andamento2016
+
+obras_vistoriadas <- supervisao1 %>%
+  filter(ultima_vistoria_empresa >= as.Date("2015-09-01"),
+         ultima_vistoria_empresa <= as.Date("2016-08-30"))%>%
+  summarise(n())
+obras_vistoriadas
+
+obras_vistoriadas/obras_andamento2016
+
 
 #Vou verificar a diferença entre o que foi atestado percentualmente pelos engenheiros e 
 #o que a verificação in loco demonstrou ser o verdadeiro percentual #
 
-dif_execucao_ver_in_loco <- pedido_supervisao_in_loco %>%
-  mutate(dif_vistoria = perc_informado_munic - perc_executado_empresa) %>%
-  mutate(ano_vistoria = str_sub(Termo.Convênio, start = -4)) %>%
-  mutate(ano_pacto = as.Date(ano_pacto, "%Y"))
+dif_execucao_ver_in_loco <- supervisao  %>%
+  mutate(executado_informado_pelo_municipo = as.numeric(gsub("%", "", executado_informado_pelo_municipo))/100,
+         executado_empresa = as.numeric(gsub("%", "", executado_empresa))/100 ,
+         dif_vistoria = executado_informado_pelo_municipo - executado_empresa,
+         ano_vistoria = str_sub(termo_nº_convenio, start = -4),
+         ano_vistoria = as.Date(ano_vistoria, "%Y"))
 
-mean(dif_execucao_ver_in_loco$dif_vistoria)  #20.93389
-median(dif_execucao_ver_in_loco$dif_vistoria) #12.23
-
-dif_execucao_ver_in_loco %>%
-  select(ID) %>%
-  distinct(ID, .keep_all = TRUE) %>%
-  summarise(n())    #15529 - número de obras que tiveram ao menos uma vistoria
-
-base_vist <- simec %>%
-  mutate(ano_pacto = str_sub(Termo.Convênio, start = -4)) %>%
-  filter(ano_pacto <= 2016) %>%
-  group_by(ano_pacto) %>%
-  summarise(obras = n())
-
-sum(base_vist$obras)  #27266
-
-15529/27266 #0.5695372 - estimativa percentual de obras vistoriadas pelo CGIMP
+mean(dif_execucao_ver_in_loco$dif_vistoria)  #0.2093389
+median(dif_execucao_ver_in_loco$dif_vistoria) #0.1223
 
 dif_execucao_ver_in_loco %>%
   filter(dif_vistoria >= 90) %>%
   summarise(n())
 
 dif_execucao_ver_in_loco %>%
-  filter(Inconformidades == "SIM") %>%
-  group_by(Empresa) %>%
+  filter(inconformidades == "SIM") %>%
+  group_by(empresa_realizadora_da_supervisao) %>%
   summarise(num_inconformidades = n()) %>%
   mutate(perc = round(num_inconformidades/9019 ,2))
 
@@ -749,32 +779,15 @@ View(cruz_para_pedidos)
 
 #Qual foi o % de obras analisadas entre Set de 2015 e Ago 2016
 
-obras_concluidas2016 <- simec %>%
-  filter(Situação != "Obra Cancelada",
-         Situação == "Concluída") %>%
-  mutate(Data.da.Última.Vistoria.do.Estado.ou.Município = 
-           as.Date(gsub("\\s.+", "", Data.da.Última.Vistoria.do.Estado.ou.Município), "%Y-%m-%d"),
-         data_final_gov = as.Date(Data.Prevista.de.Conclusão.da.Obra, "%d/%m/%Y"),
-         data_final_gov = case_when (
-           is.na(data_final_gov) ~ Data.da.Última.Vistoria.do.Estado.ou.Município, 
-           TRUE ~ data_final_gov),
-         mes_ano_entrega = format(data_final_gov, "%m/%Y"),
-         concluida_2016 = ifelse(mes_ano_entrega <= "08/2016", "andamento", "concluída")) %>%
-  filter(concluida_2016 == "andamento") %>%
-  summarise(n())    
 
 
-obras_andamento2016 <- simec %>%
-  filter(Situação != "Obra Cancelada",
-         Situação != "Concluída") %>%
-  mutate(iniciada_2016 = ifelse(mes_ano_assinatura_contrato >= "09/2015", "andamento", "não-iniciada")) %>%
-  filter(iniciada_2016 == "andamento") %>%
-  summarise(n())    #aqui não soma nada, conta todas as iniciadas
-
+obras_andamento2016 %>%
+  group_by(iniciada_2016) %>%
+  summarise(n())
 
 obras_andamento2016+obras_concluidas2016 #10102
 
-4829/10102 # 48% das obras naquela data
+4829/10102 # 48% das obras naquela data Foram 4829 obras vistoriadas até então
 
 #Quanto dinheiro ainda precisa para terminar as obras em execução
 
@@ -809,7 +822,7 @@ graf_pagto_ano # 521.445.932 foram pagos em 2016
 anexo1_atrasadas <- obras_situacao_tb %>%
   filter(obra_a_ser_entregue == "sim",
          atrasada == "sim",
-         Situação == "Execução") %>%
+         paralisada_tb == "não-paralisada") %>%
   group_by(UF) %>%
   summarise(obras_atrasadas = n(),
             gasto_atrasadas = sum(pagamento_cte_jun17, na.rm=TRUE),
@@ -823,8 +836,8 @@ anexo1_paralisadas <- obras_situacao_tb %>%
             gasto_paralisadas = sum(pagamento_cte_jun17, na.rm=TRUE),
             gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
 
-anexo1 <- simec_atraso %>%
-  filter(Situação != "Concluída") %>%
+anexo1 <- obras_situacao_tb %>%
+  filter(obra_a_ser_entregue == "sim") %>%
   group_by(UF) %>%
   summarise(total_obras = n(),
             gasto_total = sum(pagamento_cte_jun17, na.rm = TRUE),
@@ -848,8 +861,9 @@ write.table(anexo1, file="anexo1.csv", sep=";", dec=",", row.names = FALSE)
 
 escolas_rj_atraso <- obras_situacao_tb %>%
   filter(UF == "RJ",
-         Situação == "Execução",
-         atrasada == "sim") %>%
+         obra_a_ser_entregue == "sim",
+         atrasada == "sim",
+         paralisada_tb == "não-paralisada") %>%
   mutate(classificação_tb = "atrasada") %>%
   select(ID, Nome, Logradouro, Município, Percentual.de.Execução, classificação_tb,
          pagamento_cte_jun17, Empresa.Contratada)
@@ -857,6 +871,7 @@ escolas_rj_atraso <- obras_situacao_tb %>%
 
 escolas_rj_paralisadas <- obras_situacao_tb %>%
   filter( UF == "RJ",
+          obra_a_ser_entregue == "sim",
          paralisada_tb == "paralisada") %>%
   mutate(classificação_tb = "paralisada") %>%
   select(ID, Nome, Logradouro, Município, Percentual.de.Execução, classificação_tb,
@@ -876,7 +891,7 @@ write.table(escolas_rj, file="escolas_rj.csv", sep=";", dec=",", row.names = FAL
 anexo2_atrasadas <- obras_situacao_tb %>%
   filter(obra_a_ser_entregue == "sim",
          atrasada == "sim",
-         Situação == "Execução") %>%
+         paralisada_tb == "não-paralisada") %>%
   group_by(Município, UF) %>%
   summarise(obras_atrasadas = n(),
             gasto_atrasadas = sum(pagamento_cte_jun17, na.rm = TRUE),
@@ -890,8 +905,8 @@ anexo2_paralisadas <- obras_situacao_tb %>%
             gasto_paralisadas = sum(pagamento_cte_jun17, na.rm=TRUE),
             gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
 
-anexo2 <- simec_atraso %>%
-  filter(Situação != "Concluída") %>%
+anexo2 <- obras_situacao_tb %>%
+  filter(obra_a_ser_entregue == "sim") %>%
   group_by(Município, UF) %>%
   summarise(total_obras = n(),
             gasto_total = sum(pagamento_cte_jun17, na.rm=TRUE),
@@ -904,6 +919,7 @@ anexo2 <- simec_atraso %>%
          obras_paralisadas, perc_paralisada, gasto_paralisadas_mi) %>%
   mutate(obras_atrasadas = ifelse(is.na(obras_atrasadas), 0, obras_atrasadas),
          perc_atrasada = ifelse(is.na(perc_atrasada), 0, perc_atrasada))
+
 
 View(anexo2)  
 
@@ -944,3 +960,50 @@ x <- escolas_br %>%
 write.table(escolas_br, file="escolas_br.csv", sep=";", dec=",", row.names = FALSE)
 
 
+### Tabela e mapa de obras a serem entregues pro estado
+#importar o polígono contendo o mapa do Brasil
+br <- getData('GADM', country='BRA', level=1) # 
+
+
+mapa_uf_atrasadas_paralisadas <- anexo1 #vai ser daqui onde vamos tirar o gráfico
+
+# importando tabela que converge sigla em extenso
+codigo_uf <- read_delim("codigo_uf.txt", delim="\t")
+
+# checando que nome dos estados bate
+codigo_uf$UFN %in% br$NAME_1
+
+mapa_uf_atrasadas_paralisadas <- mapa_uf_atrasadas_paralisadas %>%
+  inner_join(codigo_uf[,-1], by=c("UF"="Sigla")) %>%
+  rename(uf = UFN)
+
+# adiciona no shape file os dados do simec já resumidos
+br <- append_data(br, mapa_uf_atrasadas_paralisadas, key.shp="NAME_1",key.data="uf", ignore.na = F)
+
+br$sigla <- str_replace(br$HASC_1,"BR.","")
+
+## plotando o mapa
+perc_mapa_entregar <- tm_shape(br) + 
+  tm_fill(col="obras_paralisadas",
+          #labels=c("De 0 a 200","De 200 a 400","De 400 a 600","De 600 a 800", "> 800"),
+          #palette= c(),
+          title="",
+          convert2density=F,
+          n=4) +
+  tm_borders(col="white",alpha=.8) +
+  tm_text("sigla",size=.8,legend.size.show=F) + # retirar commentário coloca sigla
+  # tm_compass(position=c("RIGHT","TOP"),type="4star")  +
+  tm_legend(position=c("left","bottom"), scale=1.2,
+            legend.title.size = 1.5, legend.text.size = 1.5) 
+#+
+  # tm_scale_bar() +
+  tm_layout(title="",title.size=1.3,scale=1.6)
+# Obs. Se demorar muito para plotar, retire a última camada +tm_layout(...). Ela atrasa a plotagem, mas não apresenta problemas para salvar.
+
+perc_mapa_entregar
+
+save_tmap(perc_mapa_entregar,
+          "mapa_obras_a_entregar_com_sigla_v4.png", 
+          width = 10,height=10, dpi=300)
+## tabela para Bárbara
+write.table(obras_uf, "obras_uf.csv", sep=";", row.names=T)
