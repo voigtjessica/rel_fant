@@ -295,8 +295,7 @@ dia_final <- as.Date("2017-07-27")
 
 obras_iniciadas <- simec_atraso %>%
   filter(!is.na(Data.de.Assinatura.do.Contrato),
-         Situação != "Concluída",
-         Situação != "Obra Cancelada") %>%
+         Situação != "Concluída") %>%
   mutate(data_estimada_de_entrega = Data.Prevista.de.Conclusão.da.Obra,
          data_estimada_de_entrega = case_when(!is.na(Data.Prevista.de.Conclusão.da.Obra) ~ data_estimada_de_entrega,
                                               TRUE ~ Data.de.Assinatura.do.Contrato + tempo_exe_dias),
@@ -344,7 +343,7 @@ obras_situacao_tb %>%
   mutate(obras_a_serem_entregues = sum(total),
          perc = round(total/obras_a_serem_entregues, 2))
 
-obras_situacao_tb %>%     #atrasadas e paralisdas que estao atrasdadas
+atrasadas_paralisadas <- obras_situacao_tb %>%     #atrasadas e paralisdas que estao atrasdadas
   filter(obra_a_ser_entregue == "sim") %>%
   group_by(paralisada_tb, atrasada) %>%
   summarise(total=n(), 
@@ -353,6 +352,9 @@ obras_situacao_tb %>%     #atrasadas e paralisdas que estao atrasdadas
   ungroup() %>%
   mutate(obras_a_serem_entregues = sum(total),
          perc = round(total/obras_a_serem_entregues, 2))
+
+write.table(atrasadas_paralisadas, file="atrasadas_paralisadas.csv", row.names = FALSE, sep=";",
+            dec=",")
 
 obras_situacao_tb %>%
   filter(Situação == "Licitação" |
@@ -698,7 +700,9 @@ pedido_supervisao_in_loco <- read_delim("~/tadepe/fantastico/rel_fant/pedido_sup
 #o que a verificação in loco demonstrou ser o verdadeiro percentual #
 
 dif_execucao_ver_in_loco <- pedido_supervisao_in_loco %>%
-  mutate(dif_vistoria = perc_informado_munic - perc_executado_empresa)
+  mutate(dif_vistoria = perc_informado_munic - perc_executado_empresa) %>%
+  mutate(ano_vistoria = str_sub(Termo.Convênio, start = -4)) %>%
+  mutate(ano_pacto = as.Date(ano_pacto, "%Y"))
 
 mean(dif_execucao_ver_in_loco$dif_vistoria)  #20.93389
 median(dif_execucao_ver_in_loco$dif_vistoria) #12.23
@@ -721,6 +725,56 @@ sum(base_vist$obras)  #27266
 dif_execucao_ver_in_loco %>%
   filter(dif_vistoria >= 90) %>%
   summarise(n())
+
+dif_execucao_ver_in_loco %>%
+  filter(Inconformidades == "SIM") %>%
+  group_by(Empresa) %>%
+  summarise(num_inconformidades = n()) %>%
+  mutate(perc = round(num_inconformidades/9019 ,2))
+
+#Empresas com o maior número de inconformidades segundo o FNDE
+
+
+#cruzamento entre as paralisada e atrasadas com essas do pedido:
+
+cruz_para_pedidos <- obras_situacao_tb %>%
+  filter(obra_a_ser_entregue == "sim",
+         paralisada_tb == "paralisada") %>%
+  mutate(ID = as.character(ID)) %>%
+  select(ID, Situação) %>%
+  rename(situacao_simec_2017 = Situação) %>%
+  inner_join(dif_execucao_ver_in_loco, by="ID")
+
+View(cruz_para_pedidos)
+
+#Qual foi o % de obras analisadas entre Set de 2015 e Ago 2016
+
+obras_concluidas2016 <- simec %>%
+  filter(Situação != "Obra Cancelada",
+         Situação == "Concluída") %>%
+  mutate(Data.da.Última.Vistoria.do.Estado.ou.Município = 
+           as.Date(gsub("\\s.+", "", Data.da.Última.Vistoria.do.Estado.ou.Município), "%Y-%m-%d"),
+         data_final_gov = as.Date(Data.Prevista.de.Conclusão.da.Obra, "%d/%m/%Y"),
+         data_final_gov = case_when (
+           is.na(data_final_gov) ~ Data.da.Última.Vistoria.do.Estado.ou.Município, 
+           TRUE ~ data_final_gov),
+         mes_ano_entrega = format(data_final_gov, "%m/%Y"),
+         concluida_2016 = ifelse(mes_ano_entrega <= "08/2016", "andamento", "concluída")) %>%
+  filter(concluida_2016 == "andamento") %>%
+  summarise(n())    
+
+
+obras_andamento2016 <- simec %>%
+  filter(Situação != "Obra Cancelada",
+         Situação != "Concluída") %>%
+  mutate(iniciada_2016 = ifelse(mes_ano_assinatura_contrato >= "09/2015", "andamento", "não-iniciada")) %>%
+  filter(iniciada_2016 == "andamento") %>%
+  summarise(n())    #aqui não soma nada, conta todas as iniciadas
+
+
+obras_andamento2016+obras_concluidas2016 #10102
+
+4829/10102 # 48% das obras naquela data
 
 #Quanto dinheiro ainda precisa para terminar as obras em execução
 
@@ -762,15 +816,15 @@ anexo1_atrasadas <- obras_situacao_tb %>%
             gasto_atrasadas_mi = round(gasto_atrasadas/1000000, 2))
 
 anexo1_paralisadas <- obras_situacao_tb %>%
-  filter(paralisada_tb == "paralisada") %>%
+  filter(paralisada_tb == "paralisada",
+         obra_a_ser_entregue == "sim") %>%
   group_by(UF) %>%
   summarise(obras_paralisadas = n(),
             gasto_paralisadas = sum(pagamento_cte_jun17, na.rm=TRUE),
             gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
 
 anexo1 <- simec_atraso %>%
-  filter(Situação != "Concluída",
-         Situação != "Obra Cancelada") %>%
+  filter(Situação != "Concluída") %>%
   group_by(UF) %>%
   summarise(total_obras = n(),
             gasto_total = sum(pagamento_cte_jun17, na.rm = TRUE),
@@ -829,15 +883,15 @@ anexo2_atrasadas <- obras_situacao_tb %>%
             gasto_atrasadas_mi = round(gasto_atrasadas/1000000, 2))
 
 anexo2_paralisadas <- obras_situacao_tb %>%
-  filter(paralisada_tb == "paralisada") %>%
+  filter(paralisada_tb == "paralisada",
+         obra_a_ser_entregue == "sim") %>%
   group_by(Município, UF) %>%
   summarise(obras_paralisadas = n(),
             gasto_paralisadas = sum(pagamento_cte_jun17, na.rm=TRUE),
             gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
 
 anexo2 <- simec_atraso %>%
-  filter(Situação != "Concluída",
-         Situação != "Obra Cancelada") %>%
+  filter(Situação != "Concluída") %>%
   group_by(Município, UF) %>%
   summarise(total_obras = n(),
             gasto_total = sum(pagamento_cte_jun17, na.rm=TRUE),
@@ -882,8 +936,11 @@ escolas_br <- escolas_br_atraso %>%
 
 View(escolas_br)
 
-escolas_br %>%
-  group_by(classificação_tb) %>%
+x <- escolas_br %>%
+  filter(classificação_tb == "paralisada") %>%
+  group_by(UF) %>%
   summarise(obras = n())
 
 write.table(escolas_br, file="escolas_br.csv", sep=";", dec=",", row.names = FALSE)
+
+
