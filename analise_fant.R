@@ -295,7 +295,8 @@ dia_final <- as.Date("2017-07-27")
 
 obras_iniciadas <- simec_atraso %>%
   filter(!is.na(Data.de.Assinatura.do.Contrato),
-         Situação != "Concluída") %>%
+         Situação != "Concluída",
+         Situação != "Obra Cancelada") %>%
   mutate(data_estimada_de_entrega = Data.Prevista.de.Conclusão.da.Obra,
          data_estimada_de_entrega = case_when(!is.na(Data.Prevista.de.Conclusão.da.Obra) ~ data_estimada_de_entrega,
                                               TRUE ~ Data.de.Assinatura.do.Contrato + tempo_exe_dias),
@@ -311,7 +312,7 @@ obras_iniciadas <- simec_atraso %>%
 
 ## da tb
 obras_iniciadas %>%
-  group_by(ja_devia_estar_concluida) %>%
+  group_by(situacao_tb) %>%
   summarise(total=n()) %>%
   ungroup() %>%
   mutate(obras_a_serem_entregues = sum(total),
@@ -323,7 +324,8 @@ obras_situacao_tb <- obras_iniciadas %>%
                                 ifelse(!is.na(situacao_tb) & situacao_tb == "paralisada", 
                                        "paralisada", "não-paralisada")),
          atrasada = ifelse(is.na(ja_devia_estar_concluida), "não", ja_devia_estar_concluida),
-         obra_a_ser_entregue = ifelse(Situação %in% c("Obra Cancelada", "Concluída"), "não", "sim"))
+         obra_a_ser_entregue = ifelse(Situação %in% c("Obra Cancelada", "Concluída"), "não", "sim"),
+         tempo_atraso = )
 
 
 obras_situacao_tb %>%
@@ -342,7 +344,7 @@ obras_situacao_tb %>%
   mutate(obras_a_serem_entregues = sum(total),
          perc = round(total/obras_a_serem_entregues, 2))
 
-obras_situacao_tb %>%
+obras_situacao_tb %>%     #atrasadas e paralisdas que estao atrasdadas
   filter(obra_a_ser_entregue == "sim") %>%
   group_by(paralisada_tb, atrasada) %>%
   summarise(total=n(), 
@@ -352,58 +354,44 @@ obras_situacao_tb %>%
   mutate(obras_a_serem_entregues = sum(total),
          perc = round(total/obras_a_serem_entregues, 2))
 
-
-#obras canceladas 
-#numero de obras iniciadas exceto canceladas e concluidas
-3083 +1189 +510 +1414 #temos informação de gastos de apenas 6.196
- 
-
-custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$Situação == "Paralisada",
-                                      simec_gastos_tb$num_obras[simec_gastos_tb$Situação == "Paralisada"], custo_paralisadas_tb$obras))
-custo_paralisadas_tb$obras <- (ifelse(custo_paralisadas_tb$Situação == "Inacabada",
-                                      simec_gastos_tb$num_obras[simec_gastos_tb$Situação == "Inacabada"], custo_paralisadas_tb$obras))
-
-custo_paralisadas_tb
-sum(custo_paralisadas_tb$obras)
-
-custo_paralisadas %>%
-  summarise(custo = sum(pagamento_cte_jun17, na.rm=T)/1000000000) #1.429633 bilhões
-
-write.table(custo_paralisadas_tb, file="custo_paralisadas_tb.csv", row.names = F, sep=";")
-
-#quantas obras já deveriam ter sido concluídas de fato foram?
-
-#7. Obras iniciadas e atrasadas:
-
-#para obras que ainda não foram concluidas
-#e que não foram canceladas
-#e que possuem Data de assinatura de contrato ou constam como "em execução
-#e cujos projetos tem tempo de execução conhecida
-
-#OBS: A data da última vistoria como procy da entrega vale só para as obras já concluídas
-
-execucao_e_atrasos <- simec_atraso %>%
-  filter(Situação != "Concluída",           
-         Situação!= "Obra Cancelada",
-         !is.na(Data.de.Assinatura.do.Contrato),    
-         !is.na(tempo_exe_dias) | !is.na(Data.Prevista.de.Conclusão.da.Obra)) %>%  
-  mutate(data_estimada_de_entrega = Data.Prevista.de.Conclusão.da.Obra,
-         data_estimada_de_entrega = case_when(!is.na(Data.Prevista.de.Conclusão.da.Obra) ~ data_estimada_de_entrega,
-                                              TRUE ~ Data.de.Assinatura.do.Contrato + tempo_exe_dias),
-         dia_final = dia_final,
-         ja_devia_estar_concluida = ifelse(data_estimada_de_entrega <= dia_final ,
-                                           "sim", "não"),
-         tempo_de_atraso = dia_final,
-         tempo_de_atraso = dia_final - data_estimada_de_entrega)
-
-# 7 Quantidade de obras atrasadas -
-
-obras_atrasadas <- execucao_e_atrasos %>%
-  filter(Situação == "Execução") %>%
-  group_by(ja_devia_estar_concluida) %>%
+obras_situacao_tb %>%
+  filter(Situação == "Licitação" |
+           Situação == "Em Reformulação"|
+           Situação == "Planejamento pelo proponente") %>%
+  group_by(paralisada_tb, Situação) %>%
   summarise(obras = n())
 
-obras_atrasadas
+#2.477 obras em reformulação
+
+obras_situacao_tb %>%     #atrasadas e paralisdas que estao atrasdadas
+  filter(obra_a_ser_entregue == "sim",
+         atrasada == "sim") %>%
+  group_by(atrasada, Situação) %>%
+  summarise(total=n(), 
+            custo = sum(pagamento_cte_jun17, na.rm=T),
+            num_obras_custo = sum(!is.na(pagamento_cte_jun17))) %>%
+  ungroup() %>%
+  mutate(obras_a_serem_entregues = sum(total),
+         perc = round(total/obras_a_serem_entregues, 2))
+
+
+tabela2 <- obras_situacao_tb %>%
+  filter(paralisada_tb == "paralisada") %>%
+  group_by(Situação) %>%
+  summarise(obras = n())
+
+tabela2
+
+write.table(tabela2, file="tabela2.csv", row.names=F, sep=";", dec=",")
+#quantas obras já deveriam ter sido concluídas de fato foram?
+
+#média do atraso de obras
+
+obras_atrasadas <- obras_situacao_tb %>%
+  group_by(atrasada) %>%
+  summarise(tempo_medio_atraso = mean(tempo_de_atraso))
+
+obras_atrasadas #aqui estão as obras atrasda\as
 
 #Quantas obras já deviam estar concluídas e qual é a situação de cada uma delas:
 
@@ -550,9 +538,10 @@ ww <- simec_atraso %>%
   filter(Situação != "Concluída",
          Situação != "Obra Cancelada") %>%
   filter(is.na(Total.Pago)) %>%
-  select(Fim.da.Vigência.Termo.Convênio, Total.Pago)  #Essas duas colunas são ausentes nos mesmos casos
+  select(Data.Prevista.de.Conclusão.da.Obra, Total.Pago)  #Essas duas colunas são ausentes nos mesmos casos
 
-sum(is.na(ww$Fim.da.Vigência.Termo.Convênio)) 
+sum(is.na(ww$Data.Prevista.de.Conclusão.da.Obra)) 
+1231/7453  = #17%
 sum(is.na(ww$Total.Pago)) 
 
 
@@ -597,8 +586,7 @@ simec %>%
 simec_atraso %>%
   filter(Situação != "Obra Cancelada",
          is.na(Logradouro)) %>%
-  group_by(Situação)%>%
-  summarise(n())    #929 escolas sem endereço ou 10%
+  summarise(n())    #1277 escolas sem endereço ou 10%
 
 
 simec_atraso %>%
@@ -612,7 +600,7 @@ simec_atraso %>%
 # 1           0  8099   escolas sem número ou sem endereço
 # 2           1   948   escolas com número
 
-8099 - 929 # = 7170 ou 76% das escolas
+10856 - 1277 # = 9579 ou 74% das escolas
 
 #Quando foram pactuadas as obras?
 
@@ -764,21 +752,20 @@ graf_pagto_ano # 521.445.932 foram pagos em 2016
 # Anexo I - Obras por estado 
 # (Obras total, em execução, atrasadas, paralisadas e dinheiro investido nessas obras)
 
-anexo1_atrasadas <- execucao_e_atrasos %>%
-  filter(Situação == "Execução",
-         ja_devia_estar_concluida == "sim") %>%
+anexo1_atrasadas <- obras_situacao_tb %>%
+  filter(obra_a_ser_entregue == "sim",
+         atrasada == "sim",
+         Situação == "Execução") %>%
   group_by(UF) %>%
   summarise(obras_atrasadas = n(),
-            gasto_atrasadas = sum(pagamento_cte_jun17),
+            gasto_atrasadas = sum(pagamento_cte_jun17, na.rm=TRUE),
             gasto_atrasadas_mi = round(gasto_atrasadas/1000000, 2))
 
-anexo1_paralisadas <- obras_iniciadas %>%
-  filter(Situação != "Obra Cancelada",
-         Situação != "Execução",
-         Situação != "Contratação") %>%
+anexo1_paralisadas <- obras_situacao_tb %>%
+  filter(paralisada_tb == "paralisada") %>%
   group_by(UF) %>%
   summarise(obras_paralisadas = n(),
-            gasto_paralisadas = sum(pagamento_cte_jun17),
+            gasto_paralisadas = sum(pagamento_cte_jun17, na.rm=TRUE),
             gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
 
 anexo1 <- simec_atraso %>%
@@ -786,7 +773,7 @@ anexo1 <- simec_atraso %>%
          Situação != "Obra Cancelada") %>%
   group_by(UF) %>%
   summarise(total_obras = n(),
-            gasto_total = sum(pagamento_cte_jun17),
+            gasto_total = sum(pagamento_cte_jun17, na.rm = TRUE),
             gasto_total_mi = round(gasto_total /1000000,2)) %>%
   left_join(anexo1_atrasadas) %>%
   left_join(anexo1_paralisadas) %>%
@@ -805,23 +792,21 @@ write.table(anexo1, file="anexo1.csv", sep=";", dec=",", row.names = FALSE)
 ## Escolas Rio de Janeiro UF
 ## Nome , endereço, % de execução, Calssificação (atrasada , paralisada) 
 
-escolas_rj_atraso <- execucao_e_atrasos %>%
+escolas_rj_atraso <- obras_situacao_tb %>%
   filter(UF == "RJ",
          Situação == "Execução",
-         ja_devia_estar_concluida == "sim") %>%
+         atrasada == "sim") %>%
   mutate(classificação_tb = "atrasada") %>%
   select(ID, Nome, Logradouro, Município, Percentual.de.Execução, classificação_tb,
-         pagamento_cte_jun17)
+         pagamento_cte_jun17, Empresa.Contratada)
 
 
-escolas_rj_paralisadas <- obras_iniciadas %>%
+escolas_rj_paralisadas <- obras_situacao_tb %>%
   filter( UF == "RJ",
-         Situação != "Obra Cancelada",
-         Situação != "Execução",
-         Situação != "Contratação") %>%
+         paralisada_tb == "paralisada") %>%
   mutate(classificação_tb = "paralisada") %>%
   select(ID, Nome, Logradouro, Município, Percentual.de.Execução, classificação_tb,
-         pagamento_cte_jun17)
+         pagamento_cte_jun17, Empresa.Contratada)
 
 escolas_rj <- escolas_rj_atraso %>%
   bind_rows(escolas_rj_paralisadas) %>%
@@ -834,21 +819,20 @@ write.table(escolas_rj, file="escolas_rj.csv", sep=";", dec=",", row.names = FAL
 
 ## Anexo 2 - obras por munic
 
-anexo2_atrasadas <- execucao_e_atrasos %>%
-  filter(Situação == "Execução",
-         ja_devia_estar_concluida == "sim") %>%
+anexo2_atrasadas <- obras_situacao_tb %>%
+  filter(obra_a_ser_entregue == "sim",
+         atrasada == "sim",
+         Situação == "Execução") %>%
   group_by(Município, UF) %>%
   summarise(obras_atrasadas = n(),
-            gasto_atrasadas = sum(pagamento_cte_jun17),
+            gasto_atrasadas = sum(pagamento_cte_jun17, na.rm = TRUE),
             gasto_atrasadas_mi = round(gasto_atrasadas/1000000, 2))
 
-anexo2_paralisadas <- obras_iniciadas %>%
-  filter(Situação != "Obra Cancelada",
-         Situação != "Execução",
-         Situação != "Contratação") %>%
+anexo2_paralisadas <- obras_situacao_tb %>%
+  filter(paralisada_tb == "paralisada") %>%
   group_by(Município, UF) %>%
   summarise(obras_paralisadas = n(),
-            gasto_paralisadas = sum(pagamento_cte_jun17),
+            gasto_paralisadas = sum(pagamento_cte_jun17, na.rm=TRUE),
             gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
 
 anexo2 <- simec_atraso %>%
@@ -856,7 +840,7 @@ anexo2 <- simec_atraso %>%
          Situação != "Obra Cancelada") %>%
   group_by(Município, UF) %>%
   summarise(total_obras = n(),
-            gasto_total = sum(pagamento_cte_jun17),
+            gasto_total = sum(pagamento_cte_jun17, na.rm=TRUE),
             gasto_total_mi = round(gasto_total /1000000,2)) %>%
   left_join(anexo2_atrasadas) %>%
   left_join(anexo2_paralisadas) %>%
@@ -872,3 +856,34 @@ View(anexo2)
 write.table(anexo2, file="anexo2.csv", sep=";", dec=",", row.names = FALSE)
 
 
+
+## Escolas Brasil UF, MUNIC
+## Nome , endereço, % de execução, Calssificação (atrasada , paralisada) 
+
+escolas_br_atraso <- obras_situacao_tb %>%
+  filter(atrasada == "sim",
+         paralisada_tb == "não-paralisada",
+         Situação != "Obra Cancelada") %>%
+  mutate(classificação_tb = "atrasada") %>%
+  select(ID, Nome, Logradouro, Município, UF, Percentual.de.Execução, classificação_tb,
+         pagamento_cte_jun17, Empresa.Contratada)
+
+
+escolas_br_paralisadas <- obras_situacao_tb %>%
+  filter(paralisada_tb == "paralisada",
+         Situação != "Obra Cancelada") %>%
+  mutate(classificação_tb = "paralisada") %>%
+  select(ID, Nome, Logradouro, Município, UF, Percentual.de.Execução, classificação_tb,
+         pagamento_cte_jun17, Empresa.Contratada)
+
+escolas_br <- escolas_br_atraso %>%
+  bind_rows(escolas_br_paralisadas) %>%
+  rename(total_repassado =  pagamento_cte_jun17)
+
+View(escolas_br)
+
+escolas_br %>%
+  group_by(classificação_tb) %>%
+  summarise(obras = n())
+
+write.table(escolas_br, file="escolas_br.csv", sep=";", dec=",", row.names = FALSE)
