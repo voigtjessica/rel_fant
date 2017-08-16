@@ -10,11 +10,6 @@ library(rvest) # Para importar a base de dados
 library(viridis) # Para selecionar uma bonita paleta de cores
 library(tmap) # Para plotar o mapa
 library(tmaptools)
-library(raster) # Para baixar o polígono
-library(rvest) # Para importar a base de dados
-library(stringr) # Para manipulação dos dados
-library(viridis) # Para selecionar uma bonita paleta de cores
-library(tmap) 
 
 
 #Endereço para achar as obras: http://simec.mec.gov.br/painelObras/dadosobra.php?obra=
@@ -316,7 +311,7 @@ obras_iniciadas <- simec_atraso %>%
                                            "sim", "não"),
          tempo_de_atraso = dia_final,
          tempo_de_atraso = dia_final - data_estimada_de_entrega) %>%
-  select(ID, Situação, ja_devia_estar_concluida) %>%
+  select(ID, Situação, ja_devia_estar_concluida, tempo_de_atraso) %>%
   mutate(situacao_tb = ifelse(!Situação %in% c("Obra Cancelada","Execução","Contratação"), 
          "paralisada", "não-paralisada")) %>%
   select(-Situação)
@@ -336,9 +331,17 @@ obras_situacao_tb <- obras_iniciadas %>%
                                 ifelse(!is.na(situacao_tb) & situacao_tb == "paralisada", 
                                        "paralisada", "não-paralisada")),
          atrasada = ifelse(is.na(ja_devia_estar_concluida), "não", ja_devia_estar_concluida),
-         obra_a_ser_entregue = ifelse(Situação %in% c("Obra Cancelada", "Concluída"), "não", "sim"),
-         tempo_atraso = )
+         obra_a_ser_entregue = ifelse(Situação %in% c("Obra Cancelada", "Concluída"), "não", "sim"))
 
+setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\tadepe\\fantastico\\rel_fant")
+save(obras_situacao_tb, file="obras_situacao_tb.Rdata")
+
+atrasadas_paralisdas_atraso <- obras_situacao_tb %>%
+  filter(paralisada_tb == "paralisada",
+         atrasada == "sim") %>%
+  distinct(ID, .keep_all = TRUE)
+  
+mean(atrasadas_paralisdas_atraso$tempo_de_atraso)
 
 obras_situacao_tb %>%
   filter(obra_a_ser_entregue == "sim") %>%
@@ -365,6 +368,8 @@ atrasadas_paralisadas <- obras_situacao_tb %>%     #atrasadas e paralisdas que e
   ungroup() %>%
   mutate(obras_a_serem_entregues = sum(total),
          perc = round(total/obras_a_serem_entregues, 2))
+
+atrasadas_paralisadas
 
 write.table(atrasadas_paralisadas, file="atrasadas_paralisadas.csv", row.names = FALSE, sep=";",
             dec=",")
@@ -406,7 +411,7 @@ obras_atrasadas <- obras_situacao_tb %>%
   group_by(atrasada) %>%
   summarise(tempo_medio_atraso = mean(tempo_de_atraso))
 
-obras_atrasadas #aqui estão as obras atrasda\as
+obras_atrasadas #537 dias de atraso
 
 #Quantas obras já deviam estar concluídas e qual é a situação de cada uma delas:
 
@@ -825,66 +830,37 @@ anexo1_atrasadas <- obras_situacao_tb %>%
          paralisada_tb == "não-paralisada") %>%
   group_by(UF) %>%
   summarise(obras_atrasadas = n(),
-            gasto_atrasadas = sum(pagamento_cte_jun17, na.rm=TRUE),
-            gasto_atrasadas_mi = round(gasto_atrasadas/1000000, 2))
+            repasse_atrasadas = sum(pagamento_cte_jun17, na.rm=TRUE),
+            repasse_atrasadas_mi = round(repasse_atrasadas/1000000, 2))
 
 anexo1_paralisadas <- obras_situacao_tb %>%
   filter(paralisada_tb == "paralisada",
          obra_a_ser_entregue == "sim") %>%
   group_by(UF) %>%
   summarise(obras_paralisadas = n(),
-            gasto_paralisadas = sum(pagamento_cte_jun17, na.rm=TRUE),
-            gasto_paralisadas_mi = round(gasto_paralisadas/1000000, 2))
+            repasse_paralisadas = sum(pagamento_cte_jun17, na.rm=TRUE),
+            repasse_paralisadas_mi = round(repasse_paralisadas/1000000, 2))
 
 anexo1 <- obras_situacao_tb %>%
   filter(obra_a_ser_entregue == "sim") %>%
   group_by(UF) %>%
   summarise(total_obras = n(),
-            gasto_total = sum(pagamento_cte_jun17, na.rm = TRUE),
-            gasto_total_mi = round(gasto_total /1000000,2)) %>%
-  left_join(anexo1_atrasadas) %>%
-  left_join(anexo1_paralisadas) %>%
+            repasse_total = sum(pagamento_cte_jun17, na.rm = TRUE),
+            repasse_total_mi = round(repasse_total /1000000,2)) %>%
+  left_join(anexo11_atrasadas) %>%
+  left_join(anexo11_paralisadas) %>%
   mutate(perc_atrasada = round(obras_atrasadas / total_obras, 2),
          perc_paralisada = round(obras_paralisadas / total_obras, 2)) %>%
-  select(UF, total_obras, gasto_total_mi, obras_atrasadas,  perc_atrasada, gasto_atrasadas_mi,
-         obras_paralisadas, perc_paralisada, gasto_paralisadas_mi) %>%
+  select(UF, total_obras, repasse_total_mi, obras_atrasadas,  perc_atrasada, repasse_atrasadas_mi,
+         obras_paralisadas, perc_paralisada, repasse_paralisadas_mi) %>%
   mutate(obras_atrasadas = ifelse(is.na(obras_atrasadas), 0, obras_atrasadas),
          perc_atrasada = ifelse(is.na(perc_atrasada), 0, perc_atrasada))
   
-View(anexo1)  
+View(anexo11)  
 
 write.table(anexo1, file="anexo1.csv", sep=";", dec=",", row.names = FALSE)
 
 
-## Escolas Rio de Janeiro UF
-## Nome , endereço, % de execução, Calssificação (atrasada , paralisada) 
-
-escolas_rj_atraso <- obras_situacao_tb %>%
-  filter(UF == "RJ",
-         obra_a_ser_entregue == "sim",
-         atrasada == "sim",
-         paralisada_tb == "não-paralisada") %>%
-  mutate(classificação_tb = "atrasada") %>%
-  select(ID, Nome, Logradouro, Município, Percentual.de.Execução, classificação_tb,
-         pagamento_cte_jun17, Empresa.Contratada)
-
-
-escolas_rj_paralisadas <- obras_situacao_tb %>%
-  filter( UF == "RJ",
-          obra_a_ser_entregue == "sim",
-         paralisada_tb == "paralisada") %>%
-  mutate(classificação_tb = "paralisada") %>%
-  select(ID, Nome, Logradouro, Município, Percentual.de.Execução, classificação_tb,
-         pagamento_cte_jun17, Empresa.Contratada)
-
-escolas_rj <- escolas_rj_atraso %>%
-  bind_rows(escolas_rj_paralisadas) %>%
-  rename(total_repassado =  pagamento_cte_jun17)
-
-View(escolas_rj)
-
-setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\tadepe\\fantastico\\rel_fant")
-write.table(escolas_rj, file="escolas_rj.csv", sep=";", dec=",", row.names = FALSE)
 
 ## Anexo 2 - obras por munic
 
@@ -927,38 +903,6 @@ write.table(anexo2, file="anexo2.csv", sep=";", dec=",", row.names = FALSE)
 
 
 
-## Escolas Brasil UF, MUNIC
-## Nome , endereço, % de execução, Calssificação (atrasada , paralisada) 
-
-escolas_br_atraso <- obras_situacao_tb %>%
-  filter(atrasada == "sim",
-         paralisada_tb == "não-paralisada",
-         Situação != "Obra Cancelada") %>%
-  mutate(classificação_tb = "atrasada") %>%
-  select(ID, Nome, Logradouro, Município, UF, Percentual.de.Execução, classificação_tb,
-         pagamento_cte_jun17, Empresa.Contratada)
-
-
-escolas_br_paralisadas <- obras_situacao_tb %>%
-  filter(paralisada_tb == "paralisada",
-         Situação != "Obra Cancelada") %>%
-  mutate(classificação_tb = "paralisada") %>%
-  select(ID, Nome, Logradouro, Município, UF, Percentual.de.Execução, classificação_tb,
-         pagamento_cte_jun17, Empresa.Contratada)
-
-escolas_br <- escolas_br_atraso %>%
-  bind_rows(escolas_br_paralisadas) %>%
-  rename(total_repassado =  pagamento_cte_jun17)
-
-View(escolas_br)
-
-x <- escolas_br %>%
-  filter(classificação_tb == "paralisada") %>%
-  group_by(UF) %>%
-  summarise(obras = n())
-
-write.table(escolas_br, file="escolas_br.csv", sep=";", dec=",", row.names = FALSE)
-
 
 ### Tabela e mapa de obras a serem entregues pro estado
 #importar o polígono contendo o mapa do Brasil
@@ -968,6 +912,7 @@ br <- getData('GADM', country='BRA', level=1) #
 mapa_uf_atrasadas_paralisadas <- anexo1 #vai ser daqui onde vamos tirar o gráfico
 
 # importando tabela que converge sigla em extenso
+setwd("C:\\Users\\jvoig\\OneDrive\\Documentos\\tadepe\\fantastico\\rel_fant")
 codigo_uf <- read_delim("codigo_uf.txt", delim="\t")
 
 # checando que nome dos estados bate
@@ -983,9 +928,9 @@ br <- append_data(br, mapa_uf_atrasadas_paralisadas, key.shp="NAME_1",key.data="
 br$sigla <- str_replace(br$HASC_1,"BR.","")
 
 ## plotando o mapa
-perc_mapa_entregar <- tm_shape(br) + 
+perc_mapa_paralisadas <- tm_shape(br) + 
   tm_fill(col="obras_paralisadas",
-          #labels=c("De 0 a 200","De 200 a 400","De 400 a 600","De 600 a 800", "> 800"),
+          labels=c("De 0 a 50","De 50 a 100","De 100 a 150","De 150 a 200", "200 a 250"),
           #palette= c(),
           title="",
           convert2density=F,
@@ -994,16 +939,82 @@ perc_mapa_entregar <- tm_shape(br) +
   tm_text("sigla",size=.8,legend.size.show=F) + # retirar commentário coloca sigla
   # tm_compass(position=c("RIGHT","TOP"),type="4star")  +
   tm_legend(position=c("left","bottom"), scale=1.2,
-            legend.title.size = 1.5, legend.text.size = 1.5) 
+            legend.title.size = 1.2, legend.text.size = 1.2) 
 #+
   # tm_scale_bar() +
   tm_layout(title="",title.size=1.3,scale=1.6)
 # Obs. Se demorar muito para plotar, retire a última camada +tm_layout(...). Ela atrasa a plotagem, mas não apresenta problemas para salvar.
 
-perc_mapa_entregar
+perc_mapa_paralisadas
 
-save_tmap(perc_mapa_entregar,
-          "mapa_obras_a_entregar_com_sigla_v4.png", 
+save_tmap(perc_mapa_paralisadas,
+          "mapa_uf_atrasadas_paralisadas.png", 
           width = 10,height=10, dpi=300)
 ## tabela para Bárbara
-write.table(obras_uf, "obras_uf.csv", sep=";", row.names=T)
+write.table(mapa_uf_atrasadas_paralisadas, "mapa_uf_atrasadas_paralisadas.csv", sep=";", row.names=T)
+
+#mapa atrasadas
+mapa_uf_atrasadas_paralisadas <- anexo1 
+
+codigo_uf$UFN %in% br$NAME_1
+
+mapa_uf_atrasadas_paralisadas <- mapa_uf_atrasadas_paralisadas %>%
+  inner_join(codigo_uf[,-1], by=c("UF"="Sigla")) %>%
+  rename(uf = UFN)
+
+# adiciona no shape file os dados do simec já resumidos
+br <- append_data(br, mapa_uf_atrasadas_paralisadas, key.shp="NAME_1",key.data="uf", ignore.na = F)
+
+br$sigla <- str_replace(br$HASC_1,"BR.","")
+
+
+perc_mapa_atrasadas <- tm_shape(br) + 
+  tm_fill(col="obras_atrasadas",
+          labels=c("De 0 a 100","De 100 a 200","De 200 a 300"),
+          #palette= c(),
+          title="",
+          convert2density=F,
+          n=4) +
+  tm_borders(col="white",alpha=.8) +
+  tm_text("sigla",size=.8,legend.size.show=F) + # retirar commentário coloca sigla
+  # tm_compass(position=c("RIGHT","TOP"),type="4star")  +
+  tm_legend(position=c("left","bottom"), scale=1.2,
+            legend.title.size = 1.2, legend.text.size = 1.2) 
+#+
+# tm_scale_bar() +
+tm_layout(title="",title.size=1.3,scale=1.6)
+# Obs. Se demorar muito para plotar, retire a última camada +tm_layout(...). Ela atrasa a plotagem, mas não apresenta problemas para salvar.
+
+perc_mapa_atrasadas
+
+save_tmap(perc_mapa_atrasadas,
+          "mapa_uf_atrasadas.png", 
+          width = 10,height=10, dpi=300)
+## tabela para Bárbara
+write.table(mapa_uf_atrasadas_paralisadas, "mapa_uf_atrasadas_paralisadas.csv", sep=";", row.names=T)
+
+
+#Gráfico de obras paralisadas e inacabadas
+#objeto : atrasadas_paralisadas
+
+atrasadas_paralisadas_graf <- atrasadas_paralisadas %>%
+  mutate(situacao = ifelse(paralisada_tb == "paralisada" , "paralisada",
+                           ifelse(paralisada_tb == "não-paralisada" & atrasada == "sim", "obra atrasada",
+                                  "obra em andamento")),
+         posicao = ifelse(situacao == "paralisada", 1, 
+                                 ifelse(situacao == "obra atrasada", 2,3))) %>%
+  group_by(situacao, posicao) %>%
+  summarise(obras = sum(total)) %>%
+  mutate(obra = "obra")
+
+write.table(atrasadas_paralisadas_graf, file="atrasadas_paralisadas_graf.csv",
+            row.names = FALSE, dec=",", sep=";")
+
+atrasadas_paralisadas_graf$posicao <- as.factor(atrasadas_paralisadas_graf$posicao)
+levels(atrasadas_paralisadas_graf$posicao) <- rev(levels(atrasadas_paralisadas_graf$posicao))
+
+atrasadas_paralisadas_graf %>%
+  ggplot(aes(x = obra, y = obras, fill = situacao)) + 
+  geom_bar(stat="identity", colour="white", position = position_stack(reverse = TRUE))
+
+
