@@ -1018,3 +1018,29 @@ atrasadas_paralisadas_graf %>%
   geom_bar(stat="identity", colour="white", position = position_stack(reverse = TRUE))
 
 
+#reparo do gráfico
+
+chart_uf <- obras_situacao_tb %>%
+  filter(obra_a_ser_entregue == "sim") %>%
+  group_by(UF) %>%
+  summarise(obras_a_serem_entregues_uf=n())
+
+chart_uf_atrasadas <- obras_situacao_tb %>%
+  filter(obra_a_ser_entregue == "sim",
+         paralisada_tb == "não-paralisada",
+         atrasada == "sim") %>%
+  group_by(UF) %>%
+  summarise(obras_atrasadas = n()) %>%
+  left_join(chart_uf, by="UF") %>%
+  mutate(perc = round(obras_atrasadas/obras_a_serem_entregues_uf, 2))
+
+chart_uf_atrasadas$UF <- factor(chart_uf_atrasadas$UF, levels = chart_uf_atrasadas$UF[order(-chart_uf_atrasadas$perc)]) 
+
+
+chart_uf__atrasado_g <- chart_uf_atrasadas %>%
+  ggplot(aes(y=perc, x=UF)) + 
+  geom_bar(stat= "identity") + coord_flip() +
+  scale_y_continuous(labels = scales::percent, lim = c(0 ,.6)) + theme_bw() +
+  xlab("") + ylab("Percentual de obras atrasadas")
+
+ggsave(chart_uf__atrasado_g, file="chart_uf_g_atrasadas.png", height = 10, width=8)
